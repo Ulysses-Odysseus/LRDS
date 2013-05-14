@@ -23,10 +23,6 @@
   	<!-- JS
   	================================================== -->
     <script src="./js/modernizr.js"></script>
-    <script src="./js/isotope.js"></script>
-    <script>
-
-    </script>
 
   </head>
 
@@ -49,15 +45,15 @@
         ---------------------->
         <div class="navBar">
           <ul>
-            <li><a href="#home"><img src="./img/nav-icon-home.png" alt=""></a></li>
+            <li class="navButton"><a href="#home"><img src="./img/nav-icon-home.png" alt=""></a></li>
             <li class="divider"></li>
-            <li><a href="#store"><img src="./img/nav-icon-store.png" alt=""></a></li>
+            <li class="navButton"><a href="#store"><img src="./img/nav-icon-store.png" alt=""></a></li>
             <li class="divider"></li>
-            <li><a href="#shows"><img src="./img/nav-icon-shows.png" alt=""></a></li>
+            <li class="navButton"><a href="#shows"><img src="./img/nav-icon-shows.png" alt=""></a></li>
             <li class="divider"></li>
-            <li><a href="#about"><img src="./img/nav-icon-about.png" alt=""></a></li>
+            <li class="navButton"><a href="#about"><img src="./img/nav-icon-about.png" alt=""></a></li>
             <li class="divider"></li>
-            <li><a href="#contact"><img src="./img/nav-icon-home.png" alt=""></a></li>
+            <li class="navButton"><a href="#contact"><img src="./img/nav-icon-home.png" alt=""></a></li>
             <li class="divider"></li>
           </ul>
         </div>
@@ -131,12 +127,12 @@
           <!-- Social Feed Area
           ---------------------->
           <div class="socialFeedArea">
-            <ul>
-              <li class="big"></li>
-              <li class="small"></li>
-              <li class="small"></li>
-              <li class="small"></li>
-              <li class="small"></li>
+            <ul class="">
+              <li class="socialItem big"></li>
+              <li class="socialItem small"></li>
+              <li class="socialItem small"></li>
+              <li class="socialItem small"></li>
+              <li class="socialItem small"></li>
             </ul>
           </div><!-- End Social Area -->
         </div><!-- End Home Div -->
@@ -152,7 +148,19 @@
 
     <!-- Heavy JS
     ================================================== -->
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/isotope.js"></script>
+    <script>
+    $(window).load(function(){
+
+      // Isotope 
+      $('.socialFeedArea ul').isotope({
+        itemSelector:'.socialItem'
+        //layoutMode:'fitRows'
+      });
+    });
+    </script>
+    <!-- <script src="http://code.jquery.com/jquery-latest.js"></script> -->
 
   </body>
 </html>

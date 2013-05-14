@@ -163,6 +163,7 @@ body {
 	/* HOME
 	=============================*/
 	.home{
+		width: 100%;
 
 		/* Social Sub Nav
 		-------------------------*/
@@ -238,16 +239,18 @@ body {
 		/* Social Feed Area
 		-------------------------*/
 		.socialFeedArea{
-			float: left;
+			// float: left;
 			width: 100%;
-			background: gray;
+			// background: gray;
 			ul{
-				width: inherit;
+				width: 110%;
 				margin: 0; padding: 0;
 				overflow: hidden;
+				list-style-type: none;
+				background: yellow;
 				li{
 					float: left;
-					// margin: 20px 20px 0 0;
+					margin: 20px 20px 0 0;
 					overflow: hidden;
 				}
 				.small{
@@ -267,4 +270,66 @@ body {
 	.store{
 		
 	} /* End Store */
+}
+
+/* =============================================================================
+	Isotope
+   ========================================================================== */
+/**** Isotope Filtering ****/
+
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**** Isotope CSS3 transitions ****/
+
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:      -o-transform, opacity;
+          transition-property:         transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+      -ms-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
+}
+
+/* =============================================================================
+	Media Query's
+   ========================================================================== */
+@media (max-width: 780px) {
+	.content{
+		width: 420px;
+	}
 }
