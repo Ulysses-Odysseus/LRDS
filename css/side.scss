@@ -1,0 +1,161 @@
+/* =============================================================================
+	Style CSS by FatCat Online											
+  	http://fatcatonline.net/ 
+	Last Update May/03/13 
+   ========================================================================== */
+
+/* SASS Settings -- Delete this title when done ediitng
+=============================*/  
+
+/* Background */
+$background:url('../img/bar-bg-active.png') repeat;
+
+/* Font Color */ 
+$fc-white: #efefef;
+$fc-grey: #555555;
+
+/* Line Color */
+$lc-white: #858585;
+
+$hder-margin: 20px 0 0 20px;
+$leftIm:left!important;
+
+/* General Settings
+=============================*/
+
+// Google Font Raleway (100 & 400)
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,100);
+
+.ralelight{font-family: 'Raleway', arial , sans-serif;font-weight: 100;}
+.ralenormal{font-family: 'Raleway', arial , sans-serif;font-weight: 400;}
+
+.wrapper{
+	width: 100%;
+	background: #107685 url('../img/body-bg.jpg');
+}
+.divider{
+	height: 0;
+	padding: 0;
+	opacity: 0.3;
+	list-style: none;
+	border-top: 1px solid;
+	border-top-color: $lc-white;
+}
+.dividerVertical{
+	height: 0;
+	padding: 0;
+	list-style: none;
+	border-top-color: $lc-white;
+	border-right: 1px solid;
+}
+
+/*  Wrapper
+=============================*/
+.container{
+	width: 960px;
+}
+
+
+/* Header
+=============================*/
+.header{
+	height: 170px;
+	background: $background;
+
+	/* Logo */
+	.logoarea{
+		width: 150px; height: 100%;
+		background: $background;		
+		.logo{
+			width: inherit; height: inherit;
+			background:url('../img/logo.png');
+		}
+	}
+
+	.feuturedArea{
+		height: 130px;
+		/* Bar */
+		.separationBar{
+			width: 1px; height: 130px;
+			background: $lc-white;
+			margin: $hder-margin;
+		}
+
+		/* Video */
+		.videoArea{
+			height: 130px;
+			background: black;
+			margin: $hder-margin;
+		}
+
+		/* Video Info Area */
+		.infoArea{
+			height: 130px;
+			color: white;
+			float: $leftIm;
+			// background: red;
+			margin: $hder-margin;
+		}
+
+		/* Text */
+		ul{
+			list-style-type: none;
+			li{
+				// display: inline-block;
+			}
+			.info{
+				font-size: 29px;
+			}
+			.videolink{
+				margin: 5px 0 0 0;
+				font-size: 13px;
+				a{
+					color: white;
+				}
+			}
+		}
+	}
+}
+
+/* Content
+=============================*/
+.content{
+	padding: 19px 0 0 0;
+	/* Navigation Bar
+	-------------------------*/
+	.navBar{
+		// background: red;
+		ul{
+			width: 70px;
+			background: $background;
+			li{
+				list-style-type: none;
+			}
+			li:hover{
+				background: $background;
+			}
+		}
+	}
+
+	/* Social Sub Nav
+	-------------------------*/
+	.socialFeedArea{
+		// width: 600px;
+		.subBarSearch{
+			padding: 0 0 0 50px;
+			ul{	
+				height: 70px;
+				list-style-type: none;
+				background: $background;
+				li{
+					float: left;
+					display: block;
+					// background: green;
+				}
+				li:hover{
+					background: $background;
+				}
+			}
+		}
+	}
+}

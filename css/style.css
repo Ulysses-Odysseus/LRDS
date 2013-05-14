@@ -1,0 +1,215 @@
+/* =============================================================================
+	Style CSS by FatCat Online											
+  	http://fatcatonline.net/ 
+	Last Update May/03/13 
+   ========================================================================== */
+/* SASS Settings -- Delete this title when done ediitng
+=============================*/
+/* Background */
+/* Font Color */
+/* Line Color */
+/* General Settings
+=============================*/
+html,
+body {
+  width: 100% !important;
+  height: 100% !important;
+  background: black url("../img/body-bg.jpg") no-repeat top left !important;
+  background-size: 100% !important; }
+
+/* Divider for nav Bar */
+.divider {
+  height: 0;
+  padding: 0;
+  opacity: 0.3;
+  list-style: none;
+  border-top: 1px solid;
+  border-top-color: #858585; }
+
+.dividerVertical {
+  opacity: 0.3;
+  height: 70px;
+  list-style: none;
+  border-right: 1px solid #858585; }
+
+/* =============================================================================
+	Container
+   ========================================================================== */
+.container {
+  width: 960px;
+  height: 100%; }
+
+/* =============================================================================
+	Side Bar
+   ========================================================================== */
+.sideBar {
+  width: 150px;
+  height: 100% !important;
+  float: left;
+  /* Logo */
+  /* Navigation Bar
+  -------------------------*/ }
+  .sideBar .logoarea {
+    width: 150px;
+    height: 168px;
+    background: url("../img/bar-bg-active.png") repeat; }
+    .sideBar .logoarea .logo {
+      width: inherit;
+      height: inherit;
+      background: url("../img/logo.png"); }
+  .sideBar .navBar {
+    width: 70px;
+    height: 100%;
+    background: url("../img/bar-bg-active.png") repeat; }
+    .sideBar .navBar ul {
+      padding: 0;
+      margin: 19px 0 0 0; }
+      .sideBar .navBar ul li {
+        width: 70px;
+        list-style-type: none; }
+      .sideBar .navBar ul li:hover {
+        background: url("../img/bar-bg-active.png") repeat; }
+
+/* =============================================================================
+	Header
+   ========================================================================== */
+.header {
+  width: 630px;
+  height: 168px;
+  background: url("../img/bar-bg-active.png") repeat; }
+  .header .feuturedArea {
+    height: 130px;
+    padding: 19px 0 0 0;
+    /* Bar */
+    /* Video */
+    /* Video Info Area */
+    /* Text */ }
+    .header .feuturedArea div {
+      display: inline-block; }
+    .header .feuturedArea .separationBar {
+      width: 1px;
+      height: 130px;
+      background: #858585;
+      margin: 0 0 0 19px; }
+    .header .feuturedArea .videoArea {
+      width: 228px;
+      height: 130px;
+      background: black;
+      margin: 0 0 0 19px; }
+    .header .feuturedArea .infoArea {
+      width: 190px;
+      height: 130px;
+      margin: 0 0 0 10px;
+      overflow: hidden;
+      position: relative;
+      vertical-align: top; }
+    .header .feuturedArea ul {
+      height: 130px;
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+      vertical-align: middle; }
+      .header .feuturedArea ul li {
+        color: white; }
+      .header .feuturedArea ul .info {
+        font-size: 29px; }
+      .header .feuturedArea ul .videolink {
+        margin: 5px 0 0 0;
+        font-size: 13px; }
+        .header .feuturedArea ul .videolink a {
+          color: white;
+          text-decoration: none; }
+
+/* =============================================================================
+	Content
+   ========================================================================== */
+.content {
+  width: 780px;
+  margin: 19px 0 0 169px;
+  /* HOME
+  =============================*/
+  /* End Home */
+  /* STORE
+  =============================*/
+  /* End Store */ }
+  .content .home {
+    /* Social Sub Nav
+    -------------------------*/
+    /* Search Bar
+    -------------------------*/
+    /* Social Feed Area
+    -------------------------*/ }
+    .content .home .socialFeedBar {
+      float: left; }
+      .content .home .socialFeedBar ul {
+        margin: 0;
+        padding: 0;
+        width: 461px;
+        height: 70px;
+        list-style-type: none;
+        background: url("../img/bar-bg-active.png") repeat; }
+        .content .home .socialFeedBar ul li {
+          float: left !important; }
+          .content .home .socialFeedBar ul li a img {
+            margin: 0 auto;
+            padding: 30% 0;
+            display: block; }
+        .content .home .socialFeedBar ul .socialIcon {
+          width: 76px;
+          height: inherit;
+          vertical-align: middle;
+          float: left !important; }
+        .content .home .socialFeedBar ul li:hover {
+          background: url("../img/bar-bg-active.png") repeat; }
+    .content .home .searchBar {
+      width: 300px;
+      height: 70px;
+      margin: 0 0 0 19px;
+      float: left !important; }
+      .content .home .searchBar .searchForm {
+        height: 70px; }
+        .content .home .searchBar .searchForm .searchInput {
+          width: 220px;
+          border: none;
+          height: 100%;
+          color: #555555;
+          font-size: 16px;
+          position: relative;
+          padding: 0 60px 0 20px; }
+        .content .home .searchBar .searchForm .searchInput:focus {
+          outline: none;
+          border-color: #999999;
+          -webkit-box-shadow: 0 0 5px #999999;
+          -moz-box-shadow: 0 0 5px #999999;
+          box-shadow: 0 0 5px #999999; }
+        .content .home .searchBar .searchForm .searchIcon {
+          z-index: 1;
+          width: 10px;
+          height: inherit;
+          margin: 0 0 0 240px;
+          padding: 0px 30px;
+          float: right;
+          position: absolute;
+          border: none !important;
+          outline: none !important;
+          background: white url("../img/icon-search.png") no-repeat center; }
+    .content .home .socialFeedArea {
+      float: left;
+      width: 100%;
+      background: gray; }
+      .content .home .socialFeedArea ul {
+        width: inherit;
+        margin: 0;
+        padding: 0;
+        overflow: hidden; }
+        .content .home .socialFeedArea ul li {
+          float: left;
+          overflow: hidden; }
+        .content .home .socialFeedArea ul .small {
+          width: 140px;
+          height: 140px;
+          background: url("../img/bar-bg-active.png") repeat; }
+        .content .home .socialFeedArea ul .big {
+          width: 300px;
+          height: 300px;
+          background: url("../img/bar-bg-active.png") repeat; }

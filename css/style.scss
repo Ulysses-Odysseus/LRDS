@@ -1,0 +1,270 @@
+/* =============================================================================
+	Style CSS by FatCat Online											
+  	http://fatcatonline.net/ 
+	Last Update May/03/13 
+   ========================================================================== */
+
+/* SASS Settings -- Delete this title when done ediitng
+=============================*/  
+
+/* Background */
+$background:url('../img/bar-bg-active.png') repeat;
+
+/* Font Color */ 
+$fc-white: #efefef;
+$fc-grey: #555555;
+
+/* Line Color */
+$lc-white: #858585;
+
+$leftIm:left!important;
+
+/* General Settings
+=============================*/
+html,
+body {
+	width:100%!important;
+	height:100%!important;
+	background: #000 url('../img/body-bg.jpg') no-repeat top left!important;
+	background-size:100%!important;
+}
+
+/* Divider for nav Bar */
+.divider{
+	height: 0;
+	padding: 0;
+	opacity: 0.3;
+	list-style: none;
+	border-top: 1px solid;
+	border-top-color: $lc-white;
+}
+.dividerVertical{
+	opacity: 0.3;
+	height: 70px;
+	list-style: none;
+	border-right: 1px solid $lc-white;
+}
+
+/* =============================================================================
+	Container
+   ========================================================================== */
+.container{
+	width: 960px; height: 100%;
+}
+
+/* =============================================================================
+	Side Bar
+   ========================================================================== */
+.sideBar{
+	width: 150px; height: 100%!important;
+	float: left;
+	// background: yellow;
+
+	/* Logo */
+	.logoarea{
+		width: 150px; height: 168px;
+		// float: left;
+		background: $background;		
+		.logo{
+			width: inherit; height: inherit;
+			background:url('../img/logo.png');
+		}
+	}
+
+	/* Navigation Bar
+	-------------------------*/
+	.navBar{
+		width: 70px;height: 100%;
+		background: $background;
+		// background: red;
+		ul{
+			padding:0; margin:19px 0 0 0;
+			li{
+				width: 70px;
+				list-style-type: none;
+			}
+			li:hover{
+				background: $background;
+			}
+		}
+	}
+}
+
+/* =============================================================================
+	Header
+   ========================================================================== */
+.header{
+	width: 630px; height: 168px;
+	background: $background;
+
+	.feuturedArea{
+		height: 130px;
+		padding: 19px 0 0 0;
+		// background: green;
+		div{
+			display: inline-block;
+		}
+		/* Bar */
+		.separationBar{
+			width: 1px; height: 130px;
+			background: $lc-white;
+			margin: 0 0 0 19px;
+		}
+
+		/* Video */
+		.videoArea{
+			width: 228px; height: 130px; 
+			background: black;
+			margin: 0 0 0 19px;
+		}
+
+		/* Video Info Area */
+		.infoArea{
+			width: 190px; height: 130px;
+			margin: 0 0 0 10px;
+			overflow: hidden;
+			position: relative;
+			vertical-align: top;
+			// background: red;
+		}
+
+		/* Text */
+		ul{
+			height: 130px;
+			padding: 0; margin: 0;
+			list-style-type: none;
+			vertical-align: middle;
+			li{
+				color: white;
+			}
+			.info{
+				font-size: 29px;
+			}
+			.videolink{
+				margin: 5px 0 0 0;
+				font-size: 13px;
+				a{
+					color: white;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+
+/* =============================================================================
+	Content
+   ========================================================================== */
+.content{
+	width: 780px;
+	margin: 19px 0 0 169px;
+	// background: yellow;
+
+	/* HOME
+	=============================*/
+	.home{
+
+		/* Social Sub Nav
+		-------------------------*/
+		.socialFeedBar{
+			float: left;
+			ul{	
+				margin: 0; padding: 0;
+				width: 461px; height: 70px;
+				list-style-type: none;
+				background: $background;
+				li{
+					float: $leftIm;
+					a{
+						img{
+							margin: 0 auto;
+							padding: 30% 0;
+							display: block;
+						}
+					}
+				}
+				.socialIcon{
+					width: 76px; height:inherit; 
+					vertical-align: middle;
+					float: $leftIm;
+					// background: green;
+				}
+				li:hover{
+					background: $background;
+				}
+			}
+		}
+
+		/* Search Bar
+		-------------------------*/
+		.searchBar{
+			width: 300px; height: 70px;
+			margin: 0 0 0 19px;
+			// background: green;
+			float: $leftIm;
+
+			.searchForm{
+				height: 70px;
+
+				.searchInput{
+					width: 220px;
+					border: none;
+					height: 100%;
+					color: $fc-grey;
+					font-size: 16px;
+					position: relative;
+					padding: 0 60px 0 20px;				
+				}
+				.searchInput:focus{
+					outline: none;
+				    border-color: #999999;
+				   	-webkit-box-shadow: 0 0 5px #999999;
+			           -moz-box-shadow: 0 0 5px #999999;
+				    	    box-shadow: 0 0 5px #999999;
+				}
+				.searchIcon{
+					z-index: 1;
+					width: 10px; height: inherit;
+					margin: 0 0 0 240px; padding: 0px 30px;
+					float: right;
+					position: absolute;
+					border: none!important;
+					outline: none!important;
+					background:white url('../img/icon-search.png') no-repeat center;
+				}
+			}
+		}
+
+		/* Social Feed Area
+		-------------------------*/
+		.socialFeedArea{
+			float: left;
+			width: 100%;
+			background: gray;
+			ul{
+				width: inherit;
+				margin: 0; padding: 0;
+				overflow: hidden;
+				li{
+					float: left;
+					// margin: 20px 20px 0 0;
+					overflow: hidden;
+				}
+				.small{
+					width: 140px; height: 140px;
+					background: $background;
+				}
+				.big{
+					width: 300px; height: 300px;
+					background: $background;
+				}
+			}
+		}
+	} /* End Home */
+
+	/* STORE
+	=============================*/
+	.store{
+		
+	} /* End Store */
+}
