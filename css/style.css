@@ -14,7 +14,7 @@ html,
 body {
   width: 100% !important;
   height: 100% !important;
-  background: black url("../img/body-bg.jpg") no-repeat top left !important;
+  background: black url("../img/body-bg.jpg") no-repeat top left fixed !important;
   background-size: 100% !important; }
 
 /* Divider for nav Bar */
@@ -46,6 +46,7 @@ body {
   width: 150px;
   height: 100% !important;
   float: left;
+  position: fixed;
   /* Logo */
   /* Navigation Bar
   -------------------------*/ }
@@ -54,9 +55,15 @@ body {
     height: 168px;
     background: url("../img/bar-bg-active.png") repeat; }
     .sideBar .logoarea .logo {
-      width: inherit;
-      height: inherit;
-      background: url("../img/logo.png"); }
+      background: url("../img/bar-bg-active.png") repeat; }
+      .sideBar .logoarea .logo h1 {
+        margin: 0;
+        padding: 0;
+        width: 150px;
+        height: 168px;
+        display: block;
+        text-indent: -99999em;
+        background: url("../img/logo.png"); }
   .sideBar .navBar {
     width: 70px;
     height: 100%;
@@ -74,8 +81,9 @@ body {
 	Header
    ========================================================================== */
 .header {
-  width: 630px;
+  width: 480px;
   height: 168px;
+  margin: 0 0 0 150px;
   background: url("../img/bar-bg-active.png") repeat; }
   .header .feuturedArea {
     height: 130px;
@@ -126,17 +134,56 @@ body {
 .content {
   width: 780px;
   margin: 19px 0 0 169px;
+  /* Search Bar
+  -------------------------*/
   /* HOME
   =============================*/
   /* End Home */
   /* STORE
   =============================*/
-  /* End Store */ }
+  /* End Store */
+  /* SHOWS
+  =============================*/
+  /* End Shows */
+  /* ABOUT
+  =============================*/
+  /* End About */ }
+  .content .searchBar {
+    width: 300px;
+    height: 70px;
+    margin: 0 0 0 19px;
+    float: left !important; }
+    .content .searchBar .searchForm {
+      height: 70px; }
+      .content .searchBar .searchForm .searchInput {
+        width: 220px;
+        border: none;
+        height: 100%;
+        color: #555555;
+        font-size: 16px;
+        position: relative;
+        padding: 0 60px 0 20px; }
+      .content .searchBar .searchForm .searchInput:focus {
+        outline: none;
+        border-color: #999999;
+        -webkit-box-shadow: 0 0 5px #999999;
+        -moz-box-shadow: 0 0 5px #999999;
+        box-shadow: 0 0 5px #999999; }
+      .content .searchBar .searchForm .searchIcon {
+        z-index: 1;
+        width: 10px;
+        height: inherit;
+        margin: 0 0 0 240px;
+        padding: 0px 30px;
+        float: right;
+        position: absolute;
+        border: none !important;
+        outline: none !important;
+        background: white url("../img/icon-search.png") no-repeat center; }
   .content .home {
+    display: none;
     width: 100%;
     /* Social Sub Nav
-    -------------------------*/
-    /* Search Bar
     -------------------------*/
     /* Social Feed Area
     -------------------------*/ }
@@ -151,60 +198,26 @@ body {
         background: url("../img/bar-bg-active.png") repeat; }
         .content .home .socialFeedBar ul li {
           float: left !important; }
-          .content .home .socialFeedBar ul li a img {
-            margin: 0 auto;
-            padding: 30% 0;
-            display: block; }
-        .content .home .socialFeedBar ul .socialIcon {
-          width: 76px;
-          height: inherit;
-          vertical-align: middle;
-          float: left !important; }
-        .content .home .socialFeedBar ul li:hover {
-          background: url("../img/bar-bg-active.png") repeat; }
-    .content .home .searchBar {
-      width: 300px;
-      height: 70px;
-      margin: 0 0 0 19px;
-      float: left !important; }
-      .content .home .searchBar .searchForm {
-        height: 70px; }
-        .content .home .searchBar .searchForm .searchInput {
-          width: 220px;
-          border: none;
-          height: 100%;
-          color: #555555;
-          font-size: 16px;
-          position: relative;
-          padding: 0 60px 0 20px; }
-        .content .home .searchBar .searchForm .searchInput:focus {
-          outline: none;
-          border-color: #999999;
-          -webkit-box-shadow: 0 0 5px #999999;
-          -moz-box-shadow: 0 0 5px #999999;
-          box-shadow: 0 0 5px #999999; }
-        .content .home .searchBar .searchForm .searchIcon {
-          z-index: 1;
-          width: 10px;
-          height: inherit;
-          margin: 0 0 0 240px;
-          padding: 0px 30px;
-          float: right;
-          position: absolute;
-          border: none !important;
-          outline: none !important;
-          background: white url("../img/icon-search.png") no-repeat center; }
+          .content .home .socialFeedBar ul li a {
+            width: 76px;
+            height: inherit;
+            vertical-align: middle;
+            float: left !important; }
+            .content .home .socialFeedBar ul li a img {
+              margin: 0 auto;
+              padding: 30% 0;
+              display: block; }
+          .content .home .socialFeedBar ul li a:hover, .content .home .socialFeedBar ul li .active {
+            background: url("../img/bar-bg-active.png") repeat; }
     .content .home .socialFeedArea {
       width: 100%; }
       .content .home .socialFeedArea ul {
-        width: 110%;
+        width: 105%;
         margin: 0;
         padding: 0;
         overflow: hidden;
-        list-style-type: none;
-        background: yellow; }
+        list-style-type: none; }
         .content .home .socialFeedArea ul li {
-          float: left;
           margin: 20px 20px 0 0;
           overflow: hidden; }
         .content .home .socialFeedArea ul .small {
@@ -215,6 +228,139 @@ body {
           width: 300px;
           height: 300px;
           background: url("../img/bar-bg-active.png") repeat; }
+  .content .store {
+    width: 100%;
+    /* Shop Sub Nav
+    -------------------------*/
+    /* Products List Area
+    -------------------------*/ }
+    .content .store .shopBar {
+      float: left;
+      width: 461px; }
+      .content .store .shopBar div {
+        float: left; }
+      .content .store .shopBar ul {
+        margin: 0;
+        padding: 0;
+        width: 337px;
+        height: 70px;
+        list-style-type: none;
+        background: url("../img/bar-bg-active.png") repeat; }
+        .content .store .shopBar ul li {
+          float: left !important;
+          text-align: center;
+          line-height: 70px;
+          vertical-align: middle; }
+          .content .store .shopBar ul li a {
+            height: inherit;
+            float: left !important;
+            color: #ffffff;
+            font-size: 13px;
+            text-decoration: none; }
+          .content .store .shopBar ul li a:hover, .content .store .shopBar ul li .active {
+            background: url("../img/bar-bg-active.png") repeat; }
+          .content .store .shopBar ul li .productbb {
+            width: 108px; }
+          .content .store .shopBar ul li .cartbb {
+            width: 81px; }
+          .content .store .shopBar ul li .itemsbb {
+            width: 145px; }
+      .content .store .shopBar .checkOutul {
+        width: 124px;
+        height: 70px;
+        background: url("../img/bar-bg-active-red.png") repeat; }
+        .content .store .shopBar .checkOutul .checkoutbb {
+          width: 124px;
+          height: 70px;
+          float: left;
+          color: #ffffff;
+          font-size: 13px;
+          line-height: 70px;
+          text-align: center;
+          text-decoration: none;
+          vertical-align: middle; }
+        .content .store .shopBar .checkOutul a:hover {
+          background: url("../img/bar-bg-active-red.png") repeat; }
+    .content .store .productsListMainArea {
+      width: 780px;
+      height: 200px;
+      margin: 20px 0 0 0;
+      float: left;
+      background: yellow; }
+      .content .store .productsListMainArea .productTree li, .content .store .productsListMainArea .productTree span {
+        display: list-item;
+        list-style-type: none; }
+  .content .shows {
+    display: none;
+    width: 100%; }
+    .content .shows .showlist {
+      margin: 0;
+      padding: 0; }
+      .content .shows .showlist li {
+        margin: 0 0 23px 0;
+        color: white;
+        list-style-type: none; }
+        .content .shows .showlist li div {
+          padding: 0;
+          margin: 0;
+          vertical-align: top;
+          display: inline-block; }
+        .content .shows .showlist li .date {
+          width: 140px;
+          height: 140px;
+          line-height: 25px;
+          position: relative;
+          text-align: center;
+          vertical-align: middle;
+          background: url("../img/bar-bg-active.png") repeat; }
+          .content .shows .showlist li .date .dateContainer {
+            margin: 30px 0 0 0; }
+          .content .shows .showlist li .date .month {
+            font-size: 34.46px; }
+          .content .shows .showlist li .date .day {
+            font-size: 59.6px; }
+        .content .shows .showlist li .place {
+          width: 615px;
+          height: 140px;
+          margin: 0 0 0 20px;
+          background: url("../img/bar-bg-active.png") repeat; }
+          .content .shows .showlist li .place .namePlace {
+            font-size: 29px;
+            margin: 0 0 0 30px;
+            line-height: 135px; }
+          .content .shows .showlist li .place .button {
+            width: 140px;
+            height: 140px;
+            float: right;
+            background: url("../img/bar-bg-active.png") repeat; }
+  .content .about {
+    display: none;
+    width: 100%;
+    background: url("../img/bar-bg-active.png") repeat; }
+    .content .about .aboutContainer {
+      width: 740px;
+      padding: 0 20px;
+      color: #ffffff; }
+      .content .about .aboutContainer .aboutTitle {
+        font-size: 29px;
+        margin: 0 0 15px 0;
+        padding: 25px 0 0 0; }
+      .content .about .aboutContainer .aboutImage {
+        width: 740px;
+        height: 358px;
+        margin: 20px 0;
+        background: #366c9a; }
+      .content .about .aboutContainer .aboutText {
+        width: 740px;
+        padding: 0 0 20px 0;
+        font-size: 13px;
+        line-height: 23px; }
+        .content .about .aboutContainer .aboutText div {
+          display: inline-block; }
+        .content .about .aboutContainer .aboutText .columText {
+          width: 360px; }
+        .content .about .aboutContainer .aboutText div:nth-child(2n+1) {
+          margin: 0 17px 0 0; }
 
 /* =============================================================================
 	Isotope
@@ -265,4 +411,4 @@ body {
    ========================================================================== */
 @media (max-width: 780px) {
   .content {
-    width: 420px; } }
+    width: 480px; } }

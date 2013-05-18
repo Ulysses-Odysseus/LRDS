@@ -9,6 +9,8 @@
 
 /* Background */
 $background:url('../img/bar-bg-active.png') repeat;
+$backgroundRed:url('../img/bar-bg-active-red.png') repeat;
+$mainGreen:#9fa326;
 
 /* Font Color */ 
 $fc-white: #efefef;
@@ -25,7 +27,7 @@ html,
 body {
 	width:100%!important;
 	height:100%!important;
-	background: #000 url('../img/body-bg.jpg') no-repeat top left!important;
+	background: #000 url('../img/body-bg.jpg') no-repeat top left fixed!important;
 	background-size:100%!important;
 }
 
@@ -58,6 +60,7 @@ body {
 .sideBar{
 	width: 150px; height: 100%!important;
 	float: left;
+	position: fixed;
 	// background: yellow;
 
 	/* Logo */
@@ -66,8 +69,14 @@ body {
 		// float: left;
 		background: $background;		
 		.logo{
-			width: inherit; height: inherit;
-			background:url('../img/logo.png');
+			background: $background;
+			h1{
+				margin: 0; padding: 0;
+				width: 150px; height: 168px;
+				display: block;
+				text-indent: -99999em;
+				background:url('../img/logo.png');
+			}
 		}
 	}
 
@@ -94,7 +103,8 @@ body {
 	Header
    ========================================================================== */
 .header{
-	width: 630px; height: 168px;
+	width: 480px; height: 168px;
+	margin:0 0 0 150px;
 	background: $background;
 
 	.feuturedArea{
@@ -159,10 +169,51 @@ body {
 	width: 780px;
 	margin: 19px 0 0 169px;
 	// background: yellow;
+	
+	/* Search Bar
+	-------------------------*/
+	.searchBar{
+		width: 300px; height: 70px;
+		margin: 0 0 0 19px;
+		// background: green;
+		float: $leftIm;
+
+		.searchForm{
+			height: 70px;
+
+			.searchInput{
+				width: 220px;
+				border: none;
+				height: 100%;
+				color: $fc-grey;
+				font-size: 16px;
+				position: relative;
+				padding: 0 60px 0 20px;				
+			}
+			.searchInput:focus{
+				outline: none;
+			    border-color: #999999;
+			   	-webkit-box-shadow: 0 0 5px #999999;
+		           -moz-box-shadow: 0 0 5px #999999;
+			    	    box-shadow: 0 0 5px #999999;
+			}
+			.searchIcon{
+				z-index: 1;
+				width: 10px; height: inherit;
+				margin: 0 0 0 240px; padding: 0px 30px;
+				float: right;
+				position: absolute;
+				border: none!important;
+				outline: none!important;
+				background:white url('../img/icon-search.png') no-repeat center;
+			}
+		}
+	}
 
 	/* HOME
 	=============================*/
 	.home{
+		display: none;
 		width: 100%;
 
 		/* Social Sub Nav
@@ -177,61 +228,18 @@ body {
 				li{
 					float: $leftIm;
 					a{
+						width: 76px; height:inherit; 
+						vertical-align: middle;
+						float: $leftIm;
 						img{
 							margin: 0 auto;
 							padding: 30% 0;
 							display: block;
 						}
 					}
-				}
-				.socialIcon{
-					width: 76px; height:inherit; 
-					vertical-align: middle;
-					float: $leftIm;
-					// background: green;
-				}
-				li:hover{
-					background: $background;
-				}
-			}
-		}
-
-		/* Search Bar
-		-------------------------*/
-		.searchBar{
-			width: 300px; height: 70px;
-			margin: 0 0 0 19px;
-			// background: green;
-			float: $leftIm;
-
-			.searchForm{
-				height: 70px;
-
-				.searchInput{
-					width: 220px;
-					border: none;
-					height: 100%;
-					color: $fc-grey;
-					font-size: 16px;
-					position: relative;
-					padding: 0 60px 0 20px;				
-				}
-				.searchInput:focus{
-					outline: none;
-				    border-color: #999999;
-				   	-webkit-box-shadow: 0 0 5px #999999;
-			           -moz-box-shadow: 0 0 5px #999999;
-				    	    box-shadow: 0 0 5px #999999;
-				}
-				.searchIcon{
-					z-index: 1;
-					width: 10px; height: inherit;
-					margin: 0 0 0 240px; padding: 0px 30px;
-					float: right;
-					position: absolute;
-					border: none!important;
-					outline: none!important;
-					background:white url('../img/icon-search.png') no-repeat center;
+					a:hover, .active{
+						background: $background;
+					}
 				}
 			}
 		}
@@ -239,17 +247,15 @@ body {
 		/* Social Feed Area
 		-------------------------*/
 		.socialFeedArea{
-			// float: left;
 			width: 100%;
 			// background: gray;
 			ul{
-				width: 110%;
+				width: 105%;
 				margin: 0; padding: 0;
 				overflow: hidden;
 				list-style-type: none;
-				background: yellow;
+				// background: yellow;
 				li{
-					float: left;
 					margin: 20px 20px 0 0;
 					overflow: hidden;
 				}
@@ -268,8 +274,178 @@ body {
 	/* STORE
 	=============================*/
 	.store{
-		
+		// display: none;
+		width: 100%;
+
+		/* Shop Sub Nav
+		-------------------------*/
+		.shopBar{
+			float: left;
+			width: 461px;
+			// background: red;
+
+			div{
+				float: left;
+			}
+			ul{	
+				margin: 0; padding: 0;
+				width: 337px; height: 70px;
+				list-style-type: none;
+				background: $background;
+				
+				li{
+					float: $leftIm;
+					text-align: center;
+					line-height: 70px;
+					vertical-align: middle;
+
+					a{
+						height:inherit; 
+						float: $leftIm;
+						color: #ffffff;
+						font-size: 13px;
+						text-decoration: none;
+					}
+					a:hover, .active{
+						background: $background;
+					}
+					.productbb{
+						width: 108px;
+					}
+					.cartbb{
+						width: 81px;
+					}
+					.itemsbb{
+						width: 145px;
+					}
+				}
+			}
+			.checkOutul{
+				width: 124px; height: 70px;
+				background: $backgroundRed;
+
+				.checkoutbb{
+					width: 124px; height: 70px;
+					float: left;
+					color: #ffffff;	
+					font-size: 13px;				
+					line-height: 70px;
+					text-align: center;
+					text-decoration: none;
+					vertical-align: middle;
+				}
+				a:hover{
+						background: $backgroundRed;
+					}
+			}
+		}
+
+		/* Products List Area
+		-------------------------*/
+		.productsListMainArea{
+			width: 780px; height: 200px;
+			margin: 20px 0 0 0;
+			float: left;
+			background: yellow;
+
+			.productTree{
+				li, span{display:list-item; list-style-type: none; }
+			}
+		}
+
 	} /* End Store */
+
+	/* SHOWS
+	=============================*/
+	.shows{
+		display: none;
+		// background: green;
+		width: 100%;
+		.showlist{
+			margin: 0; padding: 0;
+			li{
+				margin: 0 0 23px 0;
+				color: white;
+				list-style-type: none;
+				div{
+					padding: 0; margin: 0;
+					vertical-align: top;
+					display: inline-block;
+				}
+				.date{
+					width: 140px; height: 140px;
+					line-height: 25px;
+					position: relative;
+					text-align: center;
+					vertical-align: middle;
+					background: $background;
+					.dateContainer{
+						margin: 30px 0 0 0;
+					}
+					.month{
+						font-size: 34.46px;
+					}
+					.day{
+						font-size: 59.6px;
+					}
+				}
+				.place{
+					width: 615px; height: 140px;
+					margin: 0 0 0 20px;
+					background: $background;
+					.namePlace{
+						font-size: 29px;
+						margin: 0 0 0 30px;
+						line-height: 135px;
+					}
+					.button{
+						width: 140px; height: 140px;
+						float: right;
+						background: $background;
+					}
+				}
+			}
+		}
+	} /* End Shows */
+
+	/* ABOUT
+	=============================*/
+	.about{
+		display: none;
+		width: 100%;
+		background: $background;
+		.aboutContainer{
+			width: 740px;
+			padding: 0 20px;
+			color: #ffffff;
+			.aboutTitle{
+				font-size: 29px;
+				margin: 0 0 15px 0;
+				padding: 25px 0 0 0;
+			}
+			.aboutImage{
+				width: 740px; height: 358px;
+				margin: 20px 0;
+				background: #366c9a;
+			}
+			.aboutText{
+				width: 740px;
+				padding: 0 0 20px 0;
+				font-size: 13px;
+				line-height: 23px;
+				div{
+					display: inline-block;
+				}
+				.columText{
+					width: 360px;
+					// background: red;
+				}
+				div:nth-child(2n+1){
+					margin: 0 17px 0 0;
+				}
+			}
+		}
+	} /* End About */
 }
 
 /* =============================================================================
@@ -330,6 +506,6 @@ body {
    ========================================================================== */
 @media (max-width: 780px) {
 	.content{
-		width: 420px;
+		width: 480px;
 	}
 }
