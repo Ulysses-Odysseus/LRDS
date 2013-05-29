@@ -219,6 +219,7 @@ body {
         list-style-type: none; }
         .content .home .socialFeedArea ul li {
           margin: 20px 20px 0 0;
+          font-weight: 2001;
           overflow: hidden; }
         .content .home .socialFeedArea ul .small {
           width: 140px;

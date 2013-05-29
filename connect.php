@@ -1,17 +1,19 @@
 <?php
-// $user = 'root';
-// $pass = 'root';
 
-// try {
-//     $con = new PDO('mysql:host=localhost;dbname=lrds_news;charset=utf8', $user, $pass);
-//     $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-// } catch(PDOException $e) {
-//     echo 'ERROR: ' . $e->getMessage();
-// }
+//Setup User and Password
+$user = 'fatcatadmin';
+$pass = 'F@TC@T';
 
-$user = 'root';
-$pass = 'root';
 
-$con = new PDO('mysql:host=localhost;dbname=lrds_news;charset=utf8', $user, $pass);
+//Attempt a connection to DB and catch the error if any
+try {
 
+	$con = new PDO('mysql:host=mysql.fatcatonline.net;dbname=lrds;charset=utf8', $user, $pass);
+    $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+} catch(PDOException $e) {
+
+    echo 'ERROR: ' . $e->getMessage();
+    
+}
 ?>
