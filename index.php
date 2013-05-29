@@ -1,3 +1,43 @@
+<?php
+
+require_once('connect.php');
+
+////////////////////////////////
+//GET THE FUCKING NEWS!! WOOOO!!
+$sql = $con->prepare("SELECT * FROM news_items ORDER BY created_time DESC");
+$sql->execute();
+
+if(!$sql) {
+
+    //Show the error
+    print_r($sql->errorInfo());
+
+} elseif($sql->rowCount() > 0){
+
+    //Reset variable
+    $result = '';
+
+    while($item = $sql->fetch()){
+
+        $type  = $item['type'];
+        $text  = $item['title'];
+        $image = $item['image_url'];
+        
+        //Add instagram shit
+        if($type == 'instagram'){
+            $result .= '<li class="socialItem big instagram">
+                            <img src="'.$image.'" width="300px" height="300px">
+                        </li>';
+
+        //Add twitter shit
+        } elseif ($type == 'twitter'){
+            $result .= '<li class="socialItem small twitter">'.$text.'</li>';
+        }
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html class="no-js">
 
@@ -130,14 +170,17 @@
           <!-- Social Feed Area
           ---------------------->
           <div class="socialFeedArea">
+            <!-- <div id="loading">
+              <img src="img/loading.gif">
+            </div> -->
             <ul>
-              <li class="socialItem big blog"></li>
+              <?php echo $result; ?>
+              <!-- <li class="socialItem big blog"></li>
               <li class="socialItem small facebook"></li>
               <li class="socialItem small facebook"></li>
               <li class="socialItem small twitter"></li>
-              <li class="socialItem small instagram"></li>
               <li class="socialItem big"></li>
-              <li class="socialItem small"></li>
+              <li class="socialItem small"></li> -->
             </ul>
           </div><!-- End Social Area -->
         </div><!-- End Home Div -->
@@ -289,8 +332,19 @@
     ================================================== -->
     <script src="./js/jquery.js"></script>
     <script src="./js/isotope.js"></script>
+    <script src="./js/newsfeed.js"></script>
     <script>
     $(document).ready(function(){
+
+      // $.ajax({
+      //   url: "objectTest.php",
+      //   cache: false,
+      //   success:
+      //   function(data) {
+      //     $('.socialFeedArea ul').html(data);
+      //     $('#loading').remove();
+      //   }
+      // });
 
       // Isotope 
       $('.socialFeedArea ul').isotope({
