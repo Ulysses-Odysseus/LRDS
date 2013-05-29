@@ -213,7 +213,7 @@ body {
 	/* HOME
 	=============================*/
 	.home{
-		/*display: none;*/
+		display: none;
 		width: 100%;
 
 		/* Social Sub Nav
@@ -257,7 +257,6 @@ body {
 				// background: yellow;
 				li{
 					margin: 20px 20px 0 0;
-					font-weight: 2001;
 					overflow: hidden;
 				}
 				.small{
@@ -275,7 +274,7 @@ body {
 	/* STORE
 	=============================*/
 	.store{
-		display: none;
+		// display: none;
 		width: 100%;
 
 		/* Shop Sub Nav
