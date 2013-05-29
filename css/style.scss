@@ -1,11 +1,16 @@
 /* =============================================================================
-	Style CSS by FatCat Online											
-  	http://fatcatonline.net/ 
-	Last Update May/03/13 
-   ========================================================================== */
+Style CSS by FatCat											
+	http://fatcatonline.net/
+Last Update May/29/13 
+========================================================================== */
 
-/* SASS Settings -- Delete this title when done ediitng
-=============================*/  
+/* SASS Settings -- Delete this title when done editing
+=============================*/
+/* Background */
+/* Font Color */
+/* Line Color */
+/* General Settings
+=============================*/
 
 /* Background */
 $background:url('../img/bar-bg-active.png') repeat;
@@ -213,7 +218,7 @@ body {
 	/* HOME
 	=============================*/
 	.home{
-		display: none;
+		// display: none;
 		width: 100%;
 
 		/* Social Sub Nav
@@ -274,7 +279,7 @@ body {
 	/* STORE
 	=============================*/
 	.store{
-		// display: none;
+		display: none;
 		width: 100%;
 
 		/* Shop Sub Nav

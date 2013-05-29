@@ -1,109 +1,4 @@
-<?php
-
-require_once('connect.php');
-
-////////////////////////////////
-//GET THE FUCKING NEWS!! WOOOO!!
-$sql = $con->prepare("SELECT * FROM news_items ORDER BY created_time DESC");
-$sql->execute();
-
-if(!$sql) {
-
-    //Show the error
-    print_r($sql->errorInfo());
-
-} elseif($sql->rowCount() > 0){
-
-    //Reset variable
-    $result = '';
-
-    while($item = $sql->fetch()){
-
-        $type  = $item['type'];
-        $text  = $item['title'];
-        $image = $item['image_url'];
-        
-        //Add instagram shit
-        if($type == 'instagram'){
-            $result .= '<li class="socialItem big instagram">
-                            <img src="'.$image.'" width="300px" height="300px">
-                        </li>';
-
-        //Add twitter shit
-        } elseif ($type == 'twitter'){
-            $result .= '<li class="socialItem small twitter">'.$text.'</li>';
-        }
-    }
-}
-
-?>
-
-<!DOCTYPE html>
-<html class="no-js">
-
-  <head>
-  	<!-- Basic Page Needs
-  	================================================== -->
-  	<meta charset="utf-8"/>
-  	<title>LRDS - Los Rodriguez de Sinalo</title>
-  	<meta name="description" content="">
-  	<meta name="author" content="">
-
-  	<!-- Mobile Metas
-  	================================================== -->
-  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  	<!-- CSS
-  	================================================== -->
-  	<link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/fonts.css">
-    <link rel="stylesheet" href="./css/normalize.css">
-
-    
-  	<!-- JS
-  	================================================== -->
-    <script src="./js/modernizr.js"></script>
-
-  </head>
-
-  <body>
-    <!-- Container
-    ================================================== -->
-    <div class="container">
-      
-      <!-- SideBar
-      ================================================== -->
-      <div class="sideBar">
-        
-        <!-- Logo
-        ---------------------->
-        <div class="logoarea">
-          <div class="logo">
-            <a href="#">
-              <h1> LRDS - Los Rodriguez de Sinaloa </h1>
-            </a>
-          </div>
-        </div>
-
-        <!-- Navigation Bar
-        ---------------------->
-        <div class="navBar">
-          <ul>
-            <li class="navButton"><a href="#home"><img src="./img/nav-icon-home.png" alt=""></a></li>
-            <li class="divider"></li>
-            <li class="navButton"><a href="#store"><img src="./img/nav-icon-store.png" alt=""></a></li>
-            <li class="divider"></li>
-            <li class="navButton"><a href="#shows"><img src="./img/nav-icon-shows.png" alt=""></a></li>
-            <li class="divider"></li>
-            <li class="navButton"><a href="#about"><img src="./img/nav-icon-about.png" alt=""></a></li>
-            <li class="divider"></li>
-            <li class="navButton"><a href="#contact"><img src="./img/nav-icon-home.png" alt=""></a></li>
-            <li class="divider"></li>
-          </ul>
-        </div>
-
-      </div>
-      <!-- End Sidebar
+<?php get_header(); ?>
 
       <!-- Header Section
       ================================================== -->
@@ -144,17 +39,17 @@ if(!$sql) {
           ---------------------->
           <div class="socialFeedBar">
             <ul class="filters">
-              <li class="socialIcon"><a class="active" href="#all" data-filter="*"><img src="./img/media-icon-view-all.png" alt=""></a></li>
+              <li class="socialIcon"><a class="active" href="#all" data-filter="*"><img src="<?php echo get_template_directory_uri(); ?>/img/media-icon-view-all.png" alt=""></a></li>
               <li class="dividerVertical"></li>
-              <li class="socialIcon"><a href="#blog" data-filter=".blog"><img src="./img/media-icon-blog.png" alt=""></a></li>
+              <li class="socialIcon"><a href="#blog" data-filter=".blog"><img src="<?php echo get_template_directory_uri(); ?>/img/media-icon-blog.png" alt=""></a></li>
               <li class="dividerVertical"></li>
-              <li class="socialIcon"><a href="#facebook" data-filter=".facebook"><img src="./img/media-icon-facebook.png" alt=""></a></li>
+              <li class="socialIcon"><a href="#facebook" data-filter=".facebook"><img src="<?php echo get_template_directory_uri(); ?>/img/media-icon-facebook.png" alt=""></a></li>
               <li class="dividerVertical"></li>
-              <li class="socialIcon"><a href="#twitter" data-filter=".twitter"><img src="./img/media-icon-twitter.png" alt=""></a></li>
+              <li class="socialIcon"><a href="#twitter" data-filter=".twitter"><img src="<?php echo get_template_directory_uri(); ?>/img/media-icon-twitter.png" alt=""></a></li>
               <li class="dividerVertical"></li>
-              <li class="socialIcon"><a href="#instagram" data-filter=".instagram"><img src="./img/media-icon-instagram.png" alt=""></a></li>
+              <li class="socialIcon"><a href="#instagram" data-filter=".instagram"><img src="<?php echo get_template_directory_uri(); ?>/img/media-icon-instagram.png" alt=""></a></li>
               <li class="dividerVertical"></li>
-              <li class="socialIcon"><a href="#rss"><img src="./img/media-icon-rss.png" alt=""></a></li>
+              <li class="socialIcon"><a href="#rss"><img src="<?php echo get_template_directory_uri(); ?>/img/media-icon-rss.png" alt=""></a></li>
             </ul>
           </div>
 
@@ -170,17 +65,14 @@ if(!$sql) {
           <!-- Social Feed Area
           ---------------------->
           <div class="socialFeedArea">
-            <!-- <div id="loading">
-              <img src="img/loading.gif">
-            </div> -->
             <ul>
-              <?php echo $result; ?>
-              <!-- <li class="socialItem big blog"></li>
+              <li class="socialItem big blog"></li>
               <li class="socialItem small facebook"></li>
               <li class="socialItem small facebook"></li>
               <li class="socialItem small twitter"></li>
+              <li class="socialItem small instagram"></li>
               <li class="socialItem big"></li>
-              <li class="socialItem small"></li> -->
+              <li class="socialItem small"></li>
             </ul>
           </div><!-- End Social Area -->
         </div><!-- End Home Div -->
@@ -326,55 +218,5 @@ if(!$sql) {
         </div>
 
       </div> <!-- End Content -->
-    </div> <!-- End Container -->
 
-    <!-- Heavy JS
-    ================================================== -->
-    <script src="./js/jquery.js"></script>
-    <script src="./js/isotope.js"></script>
-    <script src="./js/newsfeed.js"></script>
-    <script>
-    $(document).ready(function(){
-
-      // $.ajax({
-      //   url: "objectTest.php",
-      //   cache: false,
-      //   success:
-      //   function(data) {
-      //     $('.socialFeedArea ul').html(data);
-      //     $('#loading').remove();
-      //   }
-      // });
-
-      // Isotope 
-      $('.socialFeedArea ul').isotope({
-        // Options
-        itemSelector:'.socialItem',
-        layoutMode:'masonry',
-        animationEngine: 'best-available',
-        masonry: {
-            columnWidth: 160,
-            gutterWidth: 20
-          }
-        });
-
-        // Filter items when filter link is clicked
-        $('.filters a').click(function(){
-
-          var filter   = $(this).attr('class');
-
-          if(filter != 'active') {
-            $('.active').removeClass('active');
-            $(this).addClass('active');
-          }
-
-          var selector = $(this).attr('data-filter');
-          $('.socialFeedArea ul').isotope({ filter: selector });
-          return false;
-        });
-    });
-    </script>
-    <!-- <script src="http://code.jquery.com/jquery-latest.js"></script> -->
-
-  </body>
-</html>
+<?php get_footer(); ?>

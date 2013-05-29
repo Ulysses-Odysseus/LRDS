@@ -1,9 +1,14 @@
 /* =============================================================================
-	Style CSS by FatCat Online											
-  	http://fatcatonline.net/ 
-	Last Update May/03/13 
-   ========================================================================== */
-/* SASS Settings -- Delete this title when done ediitng
+Style CSS by FatCat											
+	http://fatcatonline.net/
+Last Update May/29/13 
+========================================================================== */
+/* SASS Settings -- Delete this title when done editing
+=============================*/
+/* Background */
+/* Font Color */
+/* Line Color */
+/* General Settings
 =============================*/
 /* Background */
 /* Font Color */
@@ -181,7 +186,6 @@ body {
         outline: none !important;
         background: white url("../img/icon-search.png") no-repeat center; }
   .content .home {
-    display: none;
     width: 100%;
     /* Social Sub Nav
     -------------------------*/
@@ -229,6 +233,7 @@ body {
           height: 300px;
           background: url("../img/bar-bg-active.png") repeat; }
   .content .store {
+    display: none;
     width: 100%;
     /* Shop Sub Nav
     -------------------------*/
