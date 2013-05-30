@@ -66,13 +66,28 @@
           ---------------------->
           <div class="socialFeedArea">
             <ul>
-              <li class="socialItem big blog"></li>
-              <li class="socialItem small facebook"></li>
-              <li class="socialItem small facebook"></li>
-              <li class="socialItem small twitter"></li>
-              <li class="socialItem small instagram"></li>
-              <li class="socialItem big"></li>
-              <li class="socialItem small"></li>
+
+              <!-- Start the loop
+              -------------------->
+              <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
+                <li class="socialItem big blog">
+                  <!-- If featured image exists, load it in
+                  ------------------------------------------>
+                  <a href="<?php the_permalink(); ?>" target="_top" title="<?php the_title(); ?>">
+                    <?php if (has_post_thumbnail()) { the_post_thumbnail(); } ?>
+                    <div class="title ralelight">
+                      <?php the_title(); ?>
+                    </div>
+                  </a>
+                </li>
+
+                <?php endwhile; else: ?>
+
+                  <p>Sorry, there are no posts at this time</p>
+
+              <?php endif; ?><!-- End the loop -->
+
             </ul>
           </div><!-- End Social Area -->
         </div><!-- End Home Div -->
