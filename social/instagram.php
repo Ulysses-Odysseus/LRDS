@@ -16,9 +16,9 @@ require_once('connect.php');
 // $instaItems = array();
 
 // Get the latest 5 inserted timestamps from instagram
-$sql = $con->prepare("SELECT created_time
-                      FROM news_items
-                      WHERE type = 'instagram'
+$sql = $con->prepare("SELECT post_date
+                      FROM wp_posts
+                      WHERE category = 22
                       LIMIT 0, 5");
 $sql->execute();
 
@@ -63,7 +63,7 @@ if(!$sql) {
 
             // Post Info
             $type  = 'instagram';
-            $time  = $value->created_time;
+            $time  = date('Y-m-d H:i:s', $value->created_time);
             $image = $value->images->standard_resolution->url;
             $text  = $value->caption->text;
             $link  = $value->link;
@@ -71,7 +71,18 @@ if(!$sql) {
             // If the timestamp doesn't already exist, add Post Info to db
             if(!in_array($time, $times)){
 
-                $sql = $con->prepare("INSERT INTO news_items (type, created_time, image_url, title, link)
+                // $new_post = array(
+                //     'post_title' => 'My New Post',
+                //     'post_content' => $image,
+                //     'post_status' => 'publish',
+                //     'post_date' => date('Y-m-d H:i:s', $time),
+                //     'post_type' => 'post',
+                //     'post_category' => array(22)
+                // );
+                
+                // $post_id = wp_insert_post($new_post);
+
+                $sql = $con->prepare("INSERT INTO wp_posts (type, created_time, image_url, title, link)
                                       VALUES ('$type', '$time', '$image', '$text', '$link')");
                 $sql->execute();
 

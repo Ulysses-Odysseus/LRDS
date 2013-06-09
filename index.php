@@ -69,18 +69,55 @@
 
               <!-- Start the loop
               -------------------->
-              <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+              <?php 
 
-                <li class="socialItem big blog">
-                  <!-- If featured image exists, load it in
-                  ------------------------------------------>
-                  <a href="<?php the_permalink(); ?>" target="_top" title="<?php the_title(); ?>">
-                    <?php if (has_post_thumbnail()) { the_post_thumbnail(); } ?>
-                    <div class="title ralelight">
-                      <?php the_title(); ?>
-                    </div>
-                  </a>
-                </li>
+              if (have_posts()) : while (have_posts()) : the_post(); 
+
+                if(in_category('news')) { ?>
+                  
+                    <li class="socialItem big blog">
+                      <a href="<?php the_permalink(); ?>" target="_top" title="<?php the_title(); ?>">
+                        <?php if (has_post_thumbnail()) { the_post_thumbnail(); } ?>
+                        <div class="title ralelight">
+                          <?php the_title(); ?>
+                        </div>
+                      </a>
+                    </li>
+
+                  <?php } elseif(in_category('instagram')) { 
+
+                    $src = get_the_content();
+
+                  ?>
+                    
+                    <li class="socialItem big instagram">
+                      <a href="<?php echo get_the_excerpt(); ?>" target="_blank" title="<?php the_title(); ?>">
+                        <img src="<?php echo $src; ?>" alt="<?php the_title(); ?>">
+                          
+                          <?php
+                          $title = get_the_title();
+
+                          if($title != the_title(' ', ' ', false)) { ?>
+                            <div class="title ralelight"><?php the_title(); ?></div>
+                          <?php } ?>
+
+                      </a>
+                    </li>
+
+                  <?php } elseif(in_category('twitter')) { 
+
+                    $text = get_the_content(); ?>
+                    
+                    <li class="socialItem small twitter">
+                      <a href="http://twitter.com/lrds" target="_top" title="<?php the_title(); ?>">
+                        <?php echo $text; ?>
+                        <div class="title ralelight">
+                          <?php the_title(); ?>
+                        </div>
+                      </a>
+                    </li>
+
+                  <?php } ?>
 
                 <?php endwhile; else: ?>
 
