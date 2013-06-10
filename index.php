@@ -4,7 +4,7 @@
       ---------------------->
       <div class="linkUp">
         <div class="linkUpButton">
-          <a href=""><img src="./img/arrow-up.png" alt="Go Top"></a>
+          <a href=""><img src="<?php echo get_template_directory_uri(); ?>/img/arrow-up.png" alt="Go Top"></a>
         </div>
       </div>
 
@@ -184,7 +184,7 @@
               <ul class="allProducts">
                 <li>
                   <div class="productInfo">
-                    <a href="#"><img class="imgProduct" src="./img/tee.jpg" alt=""></a>
+                    <a href="#"><img class="imgProduct" src="<?php echo get_template_directory_uri(); ?>/img/tee.jpg" alt=""></a>
                     <div class="price ralelight">$19.99</div>
                     <div class="productBottomBar">
                       <span class="productName ralelight">THIS IS A PRODUCT</span>
@@ -194,7 +194,7 @@
                 </li>
                 <li>
                   <div class="productInfo">
-                    <a href="#"><img class="imgProduct" src="./img/tee.jpg" alt=""></a>
+                    <a href="#"><img class="imgProduct" src="<?php echo get_template_directory_uri(); ?>/img/tee.jpg" alt=""></a>
                     <div class="price ralelight">$19.99</div>
                     <div class="productBottomBar">
                       <span class="productName ralelight">THIS IS A PRODUCT</span>
@@ -204,7 +204,7 @@
                 </li>
                 <li>
                   <div class="productInfo">
-                    <a href="#"><img class="imgProduct" src="./img/tee.jpg" alt=""></a>
+                    <a href="#"><img class="imgProduct" src="<?php echo get_template_directory_uri(); ?>/img/tee.jpg" alt=""></a>
                     <div class="price ralelight">$19.99</div>
                     <div class="productBottomBar">
                       <span class="productName ralelight">THIS IS A PRODUCT</span>
@@ -214,7 +214,7 @@
                 </li>
                 <li>
                   <div class="productInfo">
-                    <a href="#"><img class="imgProduct" src="./img/tee.jpg" alt=""></a>
+                    <a href="#"><img class="imgProduct" src="<?php echo get_template_directory_uri(); ?>/img/tee.jpg" alt=""></a>
                     <div class="price ralelight">$19.99</div>
                     <div class="productBottomBar">
                       <span class="productName ralelight">THIS IS A PRODUCT</span>
@@ -229,18 +229,18 @@
                 <div class="singleProduct">
                   <ul class="productBig">
                     <li>
-                       <a href="#"><img class="" src="./img/tee.jpg" alt=""></a>
+                       <a href="#"><img class="" src="<?php echo get_template_directory_uri(); ?>/img/tee.jpg" alt=""></a>
                     </li>
                   </ul>
                   <ul class="productSmall">
                     <li>
-                      <a href="#"><img class="" src="./img/tee.jpg" alt=""></a>
+                      <a href="#"><img class="" src="<?php echo get_template_directory_uri(); ?>/img/tee.jpg" alt=""></a>
                     </li>
                     <li>
-                      <a href="#"><img class="" src="./img/tee.jpg" alt=""></a>
+                      <a href="#"><img class="" src="<?php echo get_template_directory_uri(); ?>/img/tee.jpg" alt=""></a>
                     </li>
                     <li>
-                      <a href="#"><img class="" src="./img/tee.jpg" alt=""></a>
+                      <a href="#"><img class="" src="<?php echo get_template_directory_uri(); ?>/img/tee.jpg" alt=""></a>
                     </li>
                   </ul>
                 </div>
@@ -302,7 +302,7 @@
               <div class="place">
                 <span class="namePlace ralelight"><a href="#">LOS ANGELES, CA</a></span>
                 <span class="button">
-                  <a href="#"><img src="./img/arrow-forward.png" alt=""></a>
+                  <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/arrow-forward.png" alt=""></a>
                 </span>
               </div>
             </li>
@@ -316,7 +316,7 @@
               <div class="place">
                 <span class="namePlace ralelight"><a href="#">LOS ANGELES, CA</a></span>
                 <span class="button">
-                  <a href="#"><img src="./img/arrow-forward.png" alt=""></a>
+                  <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/arrow-forward.png" alt=""></a>
                 </span>
               </div>
             </li>
@@ -330,7 +330,7 @@
               <div class="place">
                 <span class="namePlace ralelight"><a href="#">LOS ANGELES, CA</a></span>
                 <span class="button">
-                  <a href="#"><img src="./img/arrow-forward.png" alt=""></a>
+                  <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/arrow-forward.png" alt=""></a>
                 </span>
               </div>
             </li>
@@ -344,7 +344,7 @@
               <div class="place">
                 <span class="namePlace ralelight"><a href="#">LOS ANGELES, CA</a></span>
                 <span class="button">
-                  <a href="#"><img src="./img/arrow-forward.png" alt=""></a>
+                  <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/arrow-forward.png" alt=""></a>
                 </span>
               </div>
             </li>
@@ -358,7 +358,7 @@
               <div class="place">
                 <span class="namePlace ralelight"><a href="#">LOS ANGELES, CA</a></span>
                 <span class="button">
-                  <a href="#"><img src="./img/arrow-forward.png" alt=""></a>
+                  <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/arrow-forward.png" alt=""></a>
                 </span>
               </div>
             </li>
