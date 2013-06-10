@@ -16,8 +16,10 @@
     <!-- CSS
     ================================================== -->
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/mobile.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/fonts.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/normalize.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/formalize.css">
 
     <!-- JS
     ================================================== -->
@@ -30,12 +32,14 @@
   </head>
 
   <body>
-    <!-- Container
-    ================================================== -->
-    <div class="container">
+    <!-- =============================================================================
+     Container
+    ============================================================================= -->
+    <div class="container" name="top">
       
-      <!-- SideBar
-      ================================================== -->
+      <!-- =============================================================================
+        Side Bar
+      ============================================================================== -->
       <div class="sideBar">
         
         <!-- Logo
@@ -48,22 +52,34 @@
           </div>
         </div>
 
+        <!-- Text Active Bar
+        ---------------------->
+        <div id="textActiveBar">
+          <ul>
+            <li id="texthome" class="ralelight liActive">Home</li>
+            <li id="textstore" class="ralelight liNoActive">Store</li>
+            <li id="textshows" class="ralelight liNoActive">Shows</li>
+            <li id="textabout" class="ralelight liNoActive">About</li>
+            <li id="textsubscribe" class="ralelight liNoActive">Rss</li>
+          </ul>
+        </div>
+
         <!-- Navigation Bar
         ---------------------->
         <div class="navBar">
           <ul>
-            <li class="navButton"><a href="#home"><img src="<?php echo get_template_directory_uri(); ?>/img/nav-icon-home.png" alt=""></a></li>
+            <li class="navButton activeNav"><a class="home"><img src="<?php echo get_template_directory_uri(); ?>/img/nav-icon-home.png"></a></li>
             <li class="divider"></li>
-            <li class="navButton"><a href="#store"><img src="<?php echo get_template_directory_uri(); ?>/img/nav-icon-store.png" alt=""></a></li>
+            <li class="navButton"><a class="store"><img src="<?php echo get_template_directory_uri(); ?>/img/nav-icon-store.png"></a></li>
             <li class="divider"></li>
-            <li class="navButton"><a href="#shows"><img src="<?php echo get_template_directory_uri(); ?>/img/nav-icon-shows.png" alt=""></a></li>
+            <li class="navButton"><a class="shows"><img src="<?php echo get_template_directory_uri(); ?>/img/nav-icon-shows.png"></a></li>
             <li class="divider"></li>
-            <li class="navButton"><a href="#about"><img src="<?php echo get_template_directory_uri(); ?>/img/nav-icon-about.png" alt=""></a></li>
+            <li class="navButton"><a class="about"><img src="<?php echo get_template_directory_uri(); ?>/img/nav-icon-about.png"></a></li>
             <li class="divider"></li>
-            <li class="navButton"><a href="#contact"><img src="<?php echo get_template_directory_uri(); ?>/img/nav-icon-home.png" alt=""></a></li>
+            <li class="navButton"><a class="subscribe"><img src="<?php echo get_template_directory_uri(); ?>/img/nav-icon-newsletter.png"></a></li>
             <li class="divider"></li>
           </ul>
         </div>
-
+        
       </div>
       <!-- End Sidebar -->

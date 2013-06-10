@@ -1,25 +1,21 @@
 /* =============================================================================
-Style CSS by FatCat											
-	http://fatcatonline.net/
-Last Update May/29/13 
-========================================================================== */
-/* SASS Settings -- Delete this title when done editing
+	Style CSS by FatCat Online											
+  	http://fatcatonline.net/ 
+	Last Update May/03/13 
+   ========================================================================== */
+/* SASS Settings -- Delete this title when done ediitng
 =============================*/
 /* Background */
 /* Font Color */
 /* Line Color */
-/* General Settings
-=============================*/
-/* Background */
-/* Font Color */
-/* Line Color */
+/* Background Colors */
 /* General Settings
 =============================*/
 html,
 body {
   width: 100% !important;
   height: 100% !important;
-  background: black url("../img/body-bg.jpg") no-repeat top left fixed !important;
+  background: white url("../img/body-bg.jpg") no-repeat top left fixed !important;
   background-size: 100% !important; }
 
 /* Divider for nav Bar */
@@ -27,6 +23,7 @@ body {
   height: 0;
   padding: 0;
   opacity: 0.3;
+  display: block;
   list-style: none;
   border-top: 1px solid;
   border-top-color: #858585; }
@@ -36,6 +33,126 @@ body {
   height: 70px;
   list-style: none;
   border-right: 1px solid #858585; }
+
+li {
+  list-style-type: none; }
+
+a {
+  color: inherit;
+  text-decoration: none; }
+
+/* Keyframes Arrow animation (under "show" div)
+=============================*/
+@-webkit-keyframes fordward {
+  0% {
+    margin: 0 0 0 0px; }
+
+  100% {
+    margin: 0 0 0 90px; } }
+
+@-moz-keyframes fordward {
+  0% {
+    margin: 0 0 0 0px; }
+
+  100% {
+    margin: 0 0 0 90px; } }
+
+@-o-keyframes fordward {
+  0% {
+    margin: 0 0 0 0px; }
+
+  100% {
+    margin: 0 0 0 90px; } }
+
+/* Keyframes Fade In/Out Animation (under ".content" div) 
+=============================*/
+/* Fade In */
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+/* Fade Out */
+@keyframes fadeOut {
+  0% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0; } }
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0; } }
+
+@-moz-keyframes fadeOut {
+  0% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0; } }
+
+@-o-keyframes fadeOut {
+  0% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0; } }
+
+/* Slide In Text Side Bar 
+=============================*/
+@keyframes slideIn {
+  0% {
+    margin: 0 0 0 -40px; }
+
+  100% {
+    margin: 0 0 0 0; } }
+
+@-webkit-keyframes slideIn {
+  0% {
+    margin: 0 0 0 -40px; }
+
+  100% {
+    margin: 0 0 0 0; } }
+
+@-moz-keyframes slideIn {
+  0% {
+    margin: 0 0 0 -40px; }
+
+  100% {
+    margin: 0 0 0 0; } }
+
+@-o-keyframes slideIn {
+  0% {
+    margin: 0 0 0 -40px; }
+
+  100% {
+    margin: 0 0 0 0; } }
 
 /* =============================================================================
 	Container
@@ -50,7 +167,6 @@ body {
 .sideBar {
   width: 150px;
   height: 100% !important;
-  float: left;
   position: fixed;
   /* Logo */
   /* Navigation Bar
@@ -60,15 +176,70 @@ body {
     height: 168px;
     background: url("../img/bar-bg-active.png") repeat; }
     .sideBar .logoarea .logo {
+      width: inherit;
+      height: inherit;
       background: url("../img/bar-bg-active.png") repeat; }
-      .sideBar .logoarea .logo h1 {
-        margin: 0;
-        padding: 0;
-        width: 150px;
-        height: 168px;
-        display: block;
-        text-indent: -99999em;
-        background: url("../img/logo.png"); }
+      .sideBar .logoarea .logo a {
+        width: inherit;
+        height: inherit; }
+        .sideBar .logoarea .logo a h1 {
+          margin: 0;
+          padding: 0;
+          width: inherit;
+          height: inherit;
+          display: block;
+          text-indent: -99999em;
+          background: url("../img/logo.png") no-repeat; }
+  .sideBar #textActiveBar {
+    width: 80px;
+    margin: 19px 0 0 0;
+    float: right;
+    overflow: hidden; }
+    .sideBar #textActiveBar ul {
+      margin: 0;
+      padding: 0;
+      /* Li Active/Non Active */
+      /* Li Colors */ }
+      .sideBar #textActiveBar ul li {
+        width: 80px;
+        height: 70px;
+        margin-bottom: 1px;
+        color: #efefef;
+        line-height: 70px;
+        text-align: center; }
+      .sideBar #textActiveBar ul .liActive {
+        visibility: visible;
+        transition: all 0.1s ease-in-out;
+        -webkit-animation-name: slideIn;
+        -webkit-animation-duration: 0.3s;
+        -webkit-animation-iteration-count: 1;
+        -webkit-animation-delay: 0.0s;
+        -webkit-animation-direction: alternate;
+        -webkit-transition: all 0.1s ease-in-out;
+        -moz-animation-name: slideIn;
+        -moz-animation-duration: 0.3s;
+        -moz-animation-iteration-count: 1;
+        -moz-animation-delay: 0.0s;
+        -moz-animation-direction: alternate;
+        -moz-transition: all 0.1s ease-in-out;
+        -o-animation-name: slideIn;
+        -o-animation-duration: 0.3s;
+        -o-animation-iteration-count: 1;
+        -o-animation-delay: 0.0s;
+        -o-animation-direction: alternate;
+        -o-transition: all 0.1s ease-in-out; }
+      .sideBar #textActiveBar ul .liNoActive {
+        visibility: hidden; }
+      .sideBar #textActiveBar ul #texthome {
+        background: url("../img/bar-bg-active.png") repeat; }
+      .sideBar #textActiveBar ul #textstore {
+        background: url("../img/bar-bg-active-red.png") repeat; }
+      .sideBar #textActiveBar ul #textshows {
+        background: url("../img/bar-bg-active-green.png") repeat; }
+      .sideBar #textActiveBar ul #textabout {
+        background: url("../img/bar-bg-active-blue.png") repeat; }
+      .sideBar #textActiveBar ul #textsubscribe {
+        background: url("../img/bar-bg-active-orange.png") repeat; }
   .sideBar .navBar {
     width: 70px;
     height: 100%;
@@ -76,11 +247,25 @@ body {
     .sideBar .navBar ul {
       padding: 0;
       margin: 19px 0 0 0; }
+      .sideBar .navBar ul .navButton {
+        height: 70px; }
       .sideBar .navBar ul li {
         width: 70px;
         list-style-type: none; }
       .sideBar .navBar ul li:hover {
         background: url("../img/bar-bg-active.png") repeat; }
+      .sideBar .navBar ul .activeNav {
+        background: url("../img/bar-bg-active.png") repeat; }
+
+/* Link Up
+-------------------------*/
+.linkUp {
+  bottom: 2%;
+  display: none;
+  position: fixed; }
+  .linkUp .linkUpButton a img {
+    width: 70px;
+    height: 20px; }
 
 /* =============================================================================
 	Header
@@ -141,18 +326,70 @@ body {
   margin: 19px 0 0 169px;
   /* Search Bar
   -------------------------*/
-  /* HOME
-  =============================*/
+  /* =============================================================================
+  	HOME
+     ========================================================================== */
   /* End Home */
-  /* STORE
-  =============================*/
+  /* =============================================================================
+  	STORE
+     ========================================================================== */
   /* End Store */
-  /* SHOWS
-  =============================*/
+  /* =============================================================================
+  	SHOWS
+     ========================================================================== */
   /* End Shows */
-  /* ABOUT
-  =============================*/
-  /* End About */ }
+  /* =============================================================================
+  	ABOUT
+     ========================================================================== */
+  /* End About */
+  /* =============================================================================
+  	NEWSLETTER
+     ========================================================================== */ }
+  .content .activeContent {
+    display: block;
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-duration: 0.8s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-delay: 0.0s;
+    -webkit-animation-direction: alternate;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-animation-name: fadeIn;
+    -moz-animation-duration: 0.8s;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-delay: 0.0s;
+    -moz-animation-direction: alternate;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-animation-name: fadeIn;
+    -o-animation-duration: 0.8s;
+    -o-animation-iteration-count: 1;
+    -o-animation-delay: 0.0s;
+    -o-animation-direction: alternate;
+    -o-transition: all 0.1s ease-in-out;
+    animation: fadeIn 0.5s 1;
+    transition: all 0.1s ease-in-out; }
+  .content .no-active {
+    display: none;
+    opacity: 0;
+    -webkit-animation-name: fadeOut;
+    -webkit-animation-duration: 0.8s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-delay: 0.0s;
+    -webkit-animation-direction: alternate;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-animation-name: fadeOut;
+    -moz-animation-duration: 0.8s;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-delay: 0.0s;
+    -moz-animation-direction: alternate;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-animation-name: fadeOut;
+    -o-animation-duration: 0.8s;
+    -o-animation-iteration-count: 1;
+    -o-animation-delay: 0.0s;
+    -o-animation-direction: alternate;
+    -o-transition: all 0.1s ease-in-out;
+    animation: fadeOut 0.5s 1;
+    transition: all 0.1s ease-in-out; }
   .content .searchBar {
     width: 300px;
     height: 70px;
@@ -161,13 +398,15 @@ body {
     .content .searchBar .searchForm {
       height: 70px; }
       .content .searchBar .searchForm .searchInput {
-        width: 220px;
+        width: 300px;
         border: none;
         height: 100%;
         color: #555555;
         font-size: 16px;
         position: relative;
-        padding: 0 60px 0 20px; }
+        padding: 0 60px 0 20px;
+        font-family: 'Raleway', arial , sans-serif;
+        font-weight: 100; }
       .content .searchBar .searchForm .searchInput:focus {
         outline: none;
         border-color: #999999;
@@ -175,7 +414,7 @@ body {
         -moz-box-shadow: 0 0 5px #999999;
         box-shadow: 0 0 5px #999999; }
       .content .searchBar .searchForm .searchIcon {
-        z-index: 1;
+        z-index: 2;
         width: 10px;
         height: inherit;
         margin: 0 0 0 240px;
@@ -185,47 +424,51 @@ body {
         border: none !important;
         outline: none !important;
         background: white url("../img/icon-search.png") no-repeat center; }
-  .content .home {
+  .content #home {
     width: 100%;
     /* Social Sub Nav
     -------------------------*/
     /* Social Feed Area
     -------------------------*/ }
-    .content .home .socialFeedBar {
+    .content #home .socialFeedBar {
       float: left; }
-      .content .home .socialFeedBar ul {
+      .content #home .socialFeedBar ul {
         margin: 0;
         padding: 0;
         width: 461px;
         height: 70px;
         list-style-type: none;
         background: url("../img/bar-bg-active.png") repeat; }
-        .content .home .socialFeedBar ul li {
-          float: left !important; }
-          .content .home .socialFeedBar ul li a {
+        .content #home .socialFeedBar ul li {
+          float: left !important;
+          height: inherit; }
+          .content #home .socialFeedBar ul li a {
             width: 76px;
             height: inherit;
-            vertical-align: middle;
-            float: left !important; }
-            .content .home .socialFeedBar ul li a img {
+            outline: none;
+            float: left !important;
+            vertical-align: middle; }
+            .content #home .socialFeedBar ul li a img {
               margin: 0 auto;
               padding: 30% 0;
               display: block; }
-          .content .home .socialFeedBar ul li a:hover, .content .home .socialFeedBar ul li .active {
+          .content #home .socialFeedBar ul li a:hover, .content #home .socialFeedBar ul li .active {
+            outline: none;
             background: url("../img/bar-bg-active.png") repeat; }
-    .content .home .socialFeedArea {
+    .content #home .socialFeedArea {
       width: 100%; }
-      .content .home .socialFeedArea ul {
+      .content #home .socialFeedArea ul {
         width: 105%;
         margin: 0;
         padding: 0;
+        float: left;
         overflow: hidden;
         list-style-type: none; }
-        .content .home .socialFeedArea ul li {
+        .content #home .socialFeedArea ul li {
           position: relative;
           margin: 20px 20px 0 0;
           overflow: hidden; }
-          .content .home .socialFeedArea ul li a {
+          .content #home .socialFeedArea ul li a {
             font-size: 13px;
             color: white;
             opacity: 1;
@@ -235,66 +478,67 @@ body {
             -ms-transition: all 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
             -o-transition: all 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
             transition: all 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75); }
-            .content .home .socialFeedArea ul li a:hover {
+            .content #home .socialFeedArea ul li a:hover {
               opacity: .7; }
-        .content .home .socialFeedArea ul .small {
-          width: 140px;
-          height: 140px;
+        .content #home .socialFeedArea ul .small {
+          width: 120px;
+          height: 120px;
+          padding: 10px;
+          word-wrap: break-word;
           background: url("../img/bar-bg-active.png") repeat; }
-        .content .home .socialFeedArea ul .big {
+        .content #home .socialFeedArea ul .big {
           width: 300px;
           height: 300px;
           background: black; }
-        .content .home .socialFeedArea ul .title {
+        .content #home .socialFeedArea ul .title {
           width: 100%;
           position: absolute;
           bottom: 0;
           left: 0;
           padding: 10px;
           background: url("../img/bar-bg-active.png") repeat; }
-  .content .store {
-    display: none;
+  .content #store {
     width: 100%;
     /* Shop Sub Nav
     -------------------------*/
     /* Products List Area
     -------------------------*/ }
-    .content .store .shopBar {
+    .content #store .shopBar {
       float: left;
       width: 461px; }
-      .content .store .shopBar div {
+      .content #store .shopBar div {
         float: left; }
-      .content .store .shopBar ul {
-        margin: 0;
-        padding: 0;
-        width: 337px;
-        height: 70px;
-        list-style-type: none;
-        background: url("../img/bar-bg-active.png") repeat; }
-        .content .store .shopBar ul li {
-          float: left !important;
-          text-align: center;
-          line-height: 70px;
-          vertical-align: middle; }
-          .content .store .shopBar ul li a {
-            height: inherit;
+        .content #store .shopBar div ul {
+          margin: 0;
+          padding: 0;
+          width: 337px;
+          height: 70px;
+          list-style-type: none;
+          background: url("../img/bar-bg-active.png") repeat; }
+          .content #store .shopBar div ul li {
             float: left !important;
-            color: #ffffff;
-            font-size: 13px;
-            text-decoration: none; }
-          .content .store .shopBar ul li a:hover, .content .store .shopBar ul li .active {
-            background: url("../img/bar-bg-active.png") repeat; }
-          .content .store .shopBar ul li .productbb {
-            width: 108px; }
-          .content .store .shopBar ul li .cartbb {
-            width: 81px; }
-          .content .store .shopBar ul li .itemsbb {
-            width: 145px; }
-      .content .store .shopBar .checkOutul {
+            text-align: center;
+            line-height: 70px;
+            vertical-align: middle; }
+            .content #store .shopBar div ul li a {
+              height: inherit;
+              float: left !important;
+              color: #ffffff;
+              font-size: 13px;
+              text-decoration: none; }
+            .content #store .shopBar div ul li a:hover, .content #store .shopBar div ul li .active {
+              background: url("../img/bar-bg-active.png") repeat; }
+            .content #store .shopBar div ul li .productbb {
+              width: 108px; }
+            .content #store .shopBar div ul li .cartbb {
+              width: 81px; }
+            .content #store .shopBar div ul li .itemsbb {
+              width: 145px; }
+      .content #store .shopBar .checkOutul {
         width: 124px;
         height: 70px;
         background: url("../img/bar-bg-active-red.png") repeat; }
-        .content .store .shopBar .checkOutul .checkoutbb {
+        .content #store .shopBar .checkOutul .checkoutbb {
           width: 124px;
           height: 70px;
           float: left;
@@ -304,87 +548,287 @@ body {
           text-align: center;
           text-decoration: none;
           vertical-align: middle; }
-        .content .store .shopBar .checkOutul a:hover {
+        .content #store .shopBar .checkOutul a:hover {
           background: url("../img/bar-bg-active-red.png") repeat; }
-    .content .store .productsListMainArea {
-      width: 780px;
-      height: 200px;
+    .content #store .productsListMainArea {
+      width: 100%;
       margin: 20px 0 0 0;
       float: left;
-      background: yellow; }
-      .content .store .productsListMainArea .productTree li, .content .store .productsListMainArea .productTree span {
-        display: list-item;
-        list-style-type: none; }
-  .content .shows {
-    display: none;
-    width: 100%; }
-    .content .shows .showlist {
+      /* Product Tree */
+      /* Product Area */ }
+      .content #store .productsListMainArea ul {
+        padding: 0;
+        margin: 0; }
+      .content #store .productsListMainArea .productTree {
+        font-size: 13px; }
+        .content #store .productsListMainArea .productTree li, .content #store .productsListMainArea .productTree span {
+          color: #555555;
+          display: inline-block;
+          list-style-type: none; }
+          .content #store .productsListMainArea .productTree li a, .content #store .productsListMainArea .productTree span a {
+            color: #555555;
+            text-decoration: none; }
+      .content #store .productsListMainArea .productsArea {
+        margin: 20px 0 0 0;
+        /* Single Product Page */
+        /* End singleProductContainer */ }
+        .content #store .productsListMainArea .productsArea .allProducts .oddItem {
+          margin: 0 20px 0 0; }
+        .content #store .productsListMainArea .productsArea .allProducts li {
+          width: 380px;
+          height: 380px;
+          margin: 0 0 20px 0;
+          float: left;
+          background: white;
+          position: relative;
+          list-style-type: none; }
+          .content #store .productsListMainArea .productsArea .allProducts li .productInfo {
+            position: absolute;
+            bottom: 0;
+            right: 0; }
+            .content #store .productsListMainArea .productsArea .allProducts li .productInfo .imgProduct {
+              width: 380px;
+              height: 380px;
+              bottom: 0;
+              z-index: 1;
+              border: none;
+              position: absolute; }
+            .content #store .productsListMainArea .productsArea .allProducts li .productInfo .imgProduct:hover {
+              opacity: 0.8; }
+            .content #store .productsListMainArea .productsArea .allProducts li .productInfo div {
+              z-index: 2;
+              position: relative; }
+            .content #store .productsListMainArea .productsArea .allProducts li .productInfo .price {
+              width: 137px;
+              height: 72px;
+              margin: 0 0 20px 0;
+              float: right;
+              color: #ffffff;
+              font-size: 29px;
+              line-height: 72px;
+              text-align: center;
+              background: url("../img/bar-bg-active-black.png") repeat; }
+            .content #store .productsListMainArea .productsArea .allProducts li .productInfo .productBottomBar {
+              width: 380px;
+              height: 45px; }
+              .content #store .productsListMainArea .productsArea .allProducts li .productInfo .productBottomBar span {
+                display: inline-block;
+                float: left; }
+              .content #store .productsListMainArea .productsArea .allProducts li .productInfo .productBottomBar .productName {
+                padding: 0 0 0 20px;
+                color: #ffffff;
+                line-height: 45px;
+                width: 315px;
+                height: inherit;
+                background: url("../img/bar-bg-active-black.png") repeat; }
+              .content #store .productsListMainArea .productsArea .allProducts li .productInfo .productBottomBar .productLink {
+                width: 45px;
+                height: inherit; }
+                .content #store .productsListMainArea .productsArea .allProducts li .productInfo .productBottomBar .productLink a {
+                  width: inherit;
+                  height: inherit;
+                  display: block;
+                  background: #575757 url("../img/icon-eye-product.png") no-repeat center;
+                  background-size: 55%; }
+                .content #store .productsListMainArea .productsArea .allProducts li .productInfo .productBottomBar .productLink a:hover {
+                  background: #575757 url("../img/icon-eye-productAnim.gif") no-repeat center;
+                  background-size: 55%; }
+        .content #store .productsListMainArea .productsArea .singleProductContainer {
+          display: none;
+          /* Product Info Single Page */ }
+          .content #store .productsListMainArea .productsArea .singleProductContainer .singleProduct {
+            float: left; }
+            .content #store .productsListMainArea .productsArea .singleProductContainer .singleProduct .productBig {
+              width: 461px;
+              height: 461px;
+              margin: 0 0 10px 0;
+              background: #ffffff; }
+              .content #store .productsListMainArea .productsArea .singleProductContainer .singleProduct .productBig li {
+                width: inherit;
+                height: inherit; }
+                .content #store .productsListMainArea .productsArea .singleProductContainer .singleProduct .productBig li a {
+                  width: inherit;
+                  height: inherit; }
+                  .content #store .productsListMainArea .productsArea .singleProductContainer .singleProduct .productBig li a img {
+                    width: inherit;
+                    height: inherit; }
+            .content #store .productsListMainArea .productsArea .singleProductContainer .singleProduct .productSmall {
+              margin: 0 0 20px 0; }
+              .content #store .productsListMainArea .productsArea .singleProductContainer .singleProduct .productSmall .allbutlast {
+                margin: 0 9px 0 0; }
+              .content #store .productsListMainArea .productsArea .singleProductContainer .singleProduct .productSmall li {
+                display: inline-block; }
+                .content #store .productsListMainArea .productsArea .singleProductContainer .singleProduct .productSmall li a img {
+                  width: 60px;
+                  height: 60px; }
+          .content #store .productsListMainArea .productsArea .singleProductContainer .productInfoSinglePage {
+            width: 300px;
+            float: right;
+            background: url("../img/bar-bg-active.png") repeat; }
+            .content #store .productsListMainArea .productsArea .singleProductContainer .productInfoSinglePage .infoContainer {
+              color: #ffffff;
+              padding: 20px; }
+              .content #store .productsListMainArea .productsArea .singleProductContainer .productInfoSinglePage .infoContainer .productTitle {
+                padding: 0;
+                margin: 0 0 10px 0;
+                font-size: 24px; }
+              .content #store .productsListMainArea .productsArea .singleProductContainer .productInfoSinglePage .infoContainer .line {
+                width: 40%;
+                height: 0;
+                padding: 0;
+                display: block;
+                list-style: none;
+                border-top: 1px solid;
+                border-top-color: #858585; }
+              .content #store .productsListMainArea .productsArea .singleProductContainer .productInfoSinglePage .infoContainer .productPrice {
+                width: inherit;
+                margin: 35px 0 35px 33px;
+                display: block;
+                font-size: 29px; }
+              .content #store .productsListMainArea .productsArea .singleProductContainer .productInfoSinglePage .infoContainer .info {
+                font-size: 13px; }
+              .content #store .productsListMainArea .productsArea .singleProductContainer .productInfoSinglePage .infoContainer ul {
+                margin: 20px 0 0 0; }
+                .content #store .productsListMainArea .productsArea .singleProductContainer .productInfoSinglePage .infoContainer ul li {
+                  margin: 0 0px 0 0;
+                  display: inline-block; }
+                  .content #store .productsListMainArea .productsArea .singleProductContainer .productInfoSinglePage .infoContainer ul li p {
+                    margin: 0 0 15px 0;
+                    padding: 0;
+                    font-size: 13px; }
+                  .content #store .productsListMainArea .productsArea .singleProductContainer .productInfoSinglePage .infoContainer ul li .size {
+                    width: 175px;
+                    height: 35px;
+                    margin: 0 20px 0 0;
+                    padding: 0 14px;
+                    display: block;
+                    font-size: 13px; }
+                    .content #store .productsListMainArea .productsArea .singleProductContainer .productInfoSinglePage .infoContainer ul li .size option {
+                      font-size: 13px; }
+                  .content #store .productsListMainArea .productsArea .singleProductContainer .productInfoSinglePage .infoContainer ul li .qty {
+                    width: 60px;
+                    height: 35px;
+                    padding: 0 0 0 16px;
+                    display: block;
+                    font-size: 13px; }
+              .content #store .productsListMainArea .productsArea .singleProductContainer .productInfoSinglePage .infoContainer .addCartSpace .addToCart {
+                width: 120px;
+                height: 45px;
+                margin: 32px 0 0 0;
+                display: block;
+                line-height: 45px;
+                background: #841212;
+                text-align: center; }
+  .content #shows {
+    width: 100%;
+    padding: 0 0 20px 0; }
+    .content #shows .showlist {
       margin: 0;
       padding: 0; }
-      .content .shows .showlist li {
+      .content #shows .showlist li {
         margin: 0 0 23px 0;
         color: white;
         list-style-type: none; }
-        .content .shows .showlist li div {
+        .content #shows .showlist li div {
           padding: 0;
           margin: 0;
           vertical-align: top;
           display: inline-block; }
-        .content .shows .showlist li .date {
+        .content #shows .showlist li .date {
           width: 140px;
           height: 140px;
-          line-height: 25px;
+          line-height: 30px;
           position: relative;
           text-align: center;
           vertical-align: middle;
-          background: url("../img/bar-bg-active.png") repeat; }
-          .content .shows .showlist li .date .dateContainer {
-            margin: 30px 0 0 0; }
-          .content .shows .showlist li .date .month {
+          background: url("../img/bar-bg-active-green.png") repeat; }
+          .content #shows .showlist li .date .dateContainer {
+            padding: 30px 0 0 0; }
+          .content #shows .showlist li .date .month {
             font-size: 34.46px; }
-          .content .shows .showlist li .date .day {
+          .content #shows .showlist li .date .day {
             font-size: 59.6px; }
-        .content .shows .showlist li .place {
+        .content #shows .showlist li .place {
           width: 615px;
           height: 140px;
           margin: 0 0 0 20px;
-          background: url("../img/bar-bg-active.png") repeat; }
-          .content .shows .showlist li .place .namePlace {
+          background: url("../img/bar-bg-active.png") repeat;
+          /* HOVER ON */ }
+          .content #shows .showlist li .place .namePlace {
             font-size: 29px;
             margin: 0 0 0 30px;
             line-height: 135px; }
-          .content .shows .showlist li .place .button {
+          .content #shows .showlist li .place .button {
             width: 140px;
             height: 140px;
             float: right;
-            background: url("../img/bar-bg-active.png") repeat; }
-  .content .about {
-    display: none;
+            cursor: pointer;
+            overflow: hidden;
+            background: url("../img/bar-bg-active.png") repeat;
+            -webkit-transition: all 0.2s ease-in-out;
+            -moz-transition: all 0.2s ease-in-out;
+            -ms-transition: all 0.2s ease-in-out;
+            -o-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out; }
+            .content #shows .showlist li .place .button a {
+              width: inherit;
+              height: inherit;
+              display: block;
+              text-align: center;
+              line-height: 210px;
+              vertical-align: middle;
+              -webkit-transition: all 0.2s ease-in-out;
+              -moz-transition: all 0.2s ease-in-out;
+              -ms-transition: all 0.2s ease-in-out;
+              -o-transition: all 0.2s ease-in-out;
+              transition: all 0.2s ease-in-out; }
+          .content #shows .showlist li .place .namePlace:hover ~ .button a, .content #shows .showlist li .place .button:hover a {
+            margin: 0 0 0 -85px;
+            transition: all 0.1s ease-in-out;
+            -webkit-animation-name: fordward;
+            -webkit-animation-duration: 0.3s;
+            -webkit-animation-iteration-count: 1;
+            -webkit-animation-delay: 0.0s;
+            -webkit-animation-direction: alternate;
+            -webkit-transition: all 0.1s ease-in-out;
+            -moz-animation-name: fordward;
+            -moz-animation-duration: 0.3s;
+            -moz-animation-iteration-count: 1;
+            -moz-animation-delay: 0.0s;
+            -moz-animation-direction: alternate;
+            -moz-transition: all 0.1s ease-in-out;
+            -o-animation-name: fordward;
+            -o-animation-duration: 0.3s;
+            -o-animation-iteration-count: 1;
+            -o-animation-delay: 0.0s;
+            -o-animation-direction: alternate;
+            -o-transition: all 0.1s ease-in-out; }
+  .content #about {
     width: 100%;
     background: url("../img/bar-bg-active.png") repeat; }
-    .content .about .aboutContainer {
+    .content #about .aboutContainer {
       width: 740px;
       padding: 0 20px;
       color: #ffffff; }
-      .content .about .aboutContainer .aboutTitle {
+      .content #about .aboutContainer .aboutTitle {
         font-size: 29px;
         margin: 0 0 15px 0;
         padding: 25px 0 0 0; }
-      .content .about .aboutContainer .aboutImage {
+      .content #about .aboutContainer .aboutImage {
         width: 740px;
         height: 358px;
         margin: 20px 0;
         background: #366c9a; }
-      .content .about .aboutContainer .aboutText {
+      .content #about .aboutContainer .aboutText {
         width: 740px;
         padding: 0 0 20px 0;
         font-size: 13px;
         line-height: 23px; }
-        .content .about .aboutContainer .aboutText div {
+        .content #about .aboutContainer .aboutText div {
           display: inline-block; }
-        .content .about .aboutContainer .aboutText .columText {
+        .content #about .aboutContainer .aboutText .columText {
           width: 360px; }
-        .content .about .aboutContainer .aboutText div:nth-child(2n+1) {
+        .content #about .aboutContainer .aboutText .pfgSpace {
           margin: 0 17px 0 0; }
 
 /* =============================================================================
@@ -430,10 +874,3 @@ body {
   -ms-transition-duration: 0s;
   -o-transition-duration: 0s;
   transition-duration: 0s; }
-
-/* =============================================================================
-	Media Query's
-   ========================================================================== */
-@media (max-width: 780px) {
-  .content {
-    width: 480px; } }

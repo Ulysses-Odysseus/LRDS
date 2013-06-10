@@ -1,5 +1,13 @@
 <?php get_header(); ?>
 
+      <!-- Go Up 
+      ---------------------->
+      <div class="linkUp">
+        <div class="linkUpButton">
+          <a href=""><img src="./img/arrow-up.png" alt="Go Top"></a>
+        </div>
+      </div>
+
       <!-- Header Section
       ================================================== -->
       <div class="header">
@@ -12,6 +20,7 @@
           <!-- Video Area
           ---------------------->
           <div class="videoArea">
+            <iframe width="231" height="130" src="http://www.youtube.com/embed/JMOmTG4BWUQ?rel=0" frameborder="0" allowfullscreen></iframe>
           </div>
 
           <!-- Video Info Area
@@ -20,7 +29,7 @@
             <ul>
               <li class="info ralelight">LA ENTREVISTA</li>
               <li class="divider"></li>
-              <li class="videolink ralelight"><a href="http://www.youtube.com/watch?feature=player_embedded&v=YuwwsB9eKcU">WATCH NOW</a></li>
+              <li class="videolink ralelight"><a target="_blank" href="http://www.youtube.com/watch?feature=player_embedded&v=JMOmTG4BWUQ">WATCH NOW</a></li>
             </ul>
           </div>
 
@@ -31,9 +40,10 @@
       ================================================== -->
       <div class="content">
         
-        <!-- HOME PAGE
-        ================================================== -->
-        <div class="home">
+        <!-- =============================================================================
+          HOME PAGE
+        ============================================================================== -->
+        <div id="home" class="activeContent">
 
           <!-- Social Media Bar
           ---------------------->
@@ -64,7 +74,7 @@
 
           <!-- Social Feed Area
           ---------------------->
-          <div class="socialFeedArea">
+          <div class="socialFeedArea ralelight">
             <ul>
 
               <!-- Start the loop
@@ -78,7 +88,7 @@
                     <li class="socialItem big blog">
                       <a href="<?php the_permalink(); ?>" target="_top" title="<?php the_title(); ?>">
                         <?php if (has_post_thumbnail()) { the_post_thumbnail(); } ?>
-                        <div class="title ralelight">
+                        <div class="title">
                           <?php the_title(); ?>
                         </div>
                       </a>
@@ -98,7 +108,7 @@
                           $title = get_the_title();
 
                           if($title != the_title(' ', ' ', false)) { ?>
-                            <div class="title ralelight"><?php the_title(); ?></div>
+                            <div class="title"><?php the_title(); ?></div>
                           <?php } ?>
 
                       </a>
@@ -111,9 +121,6 @@
                     <li class="socialItem small twitter">
                       <a href="http://twitter.com/lrds" target="_top" title="<?php the_title(); ?>">
                         <?php echo $text; ?>
-                        <div class="title ralelight">
-                          <?php the_title(); ?>
-                        </div>
                       </a>
                     </li>
 
@@ -129,9 +136,10 @@
           </div><!-- End Social Area -->
         </div><!-- End Home Div -->
 
-        <!-- STORE  
-        ================================================== -->
-        <div class="store">
+        <!-- =============================================================================
+             STORE
+             ========================================================================== -->
+        <div id="store" class="no-active">
           
            <!-- Social Media Bar
           ---------------------->
@@ -163,30 +171,126 @@
           <!-- Products List Display Area
           ---------------------->
           <div class="productsListMainArea">
+            <!-- Bread Crumbs -->
             <div class="productTree">
               <ul>
-                <li>ALL PRODCUTS</li>
+                <li class="ralebold"><a href="#">ALL PRODCUTS</a></li>
                 <span>/</span>
-                <li>TEES</li>
+                <li class="ralenormal"><a href="#">TEES</a></li>
               </ul>
             </div>
+            <!-- Product Area  -->
             <div class="productsArea">
-              <ul>
+              <ul class="allProducts">
                 <li>
                   <div class="productInfo">
-                    <div class="price"></div>
-                    <div class="productBottomBar"></div>
+                    <a href="#"><img class="imgProduct" src="./img/tee.jpg" alt=""></a>
+                    <div class="price ralelight">$19.99</div>
+                    <div class="productBottomBar">
+                      <span class="productName ralelight">THIS IS A PRODUCT</span>
+                      <span class="productLink"><a href="#" title="See Product"></a></span>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="productInfo">
+                    <a href="#"><img class="imgProduct" src="./img/tee.jpg" alt=""></a>
+                    <div class="price ralelight">$19.99</div>
+                    <div class="productBottomBar">
+                      <span class="productName ralelight">THIS IS A PRODUCT</span>
+                      <span class="productLink"><a href="#" title="See Product"></a></span>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="productInfo">
+                    <a href="#"><img class="imgProduct" src="./img/tee.jpg" alt=""></a>
+                    <div class="price ralelight">$19.99</div>
+                    <div class="productBottomBar">
+                      <span class="productName ralelight">THIS IS A PRODUCT</span>
+                      <span class="productLink"><a href="#" title="See Product"></a></span>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="productInfo">
+                    <a href="#"><img class="imgProduct" src="./img/tee.jpg" alt=""></a>
+                    <div class="price ralelight">$19.99</div>
+                    <div class="productBottomBar">
+                      <span class="productName ralelight">THIS IS A PRODUCT</span>
+                      <span class="productLink"><a href="#" title="See Product"></a></span>
+                    </div>
                   </div>
                 </li>
               </ul>
+
+              <!-- Single Item -->
+              <div class="singleProductContainer">
+                <div class="singleProduct">
+                  <ul class="productBig">
+                    <li>
+                       <a href="#"><img class="" src="./img/tee.jpg" alt=""></a>
+                    </li>
+                  </ul>
+                  <ul class="productSmall">
+                    <li>
+                      <a href="#"><img class="" src="./img/tee.jpg" alt=""></a>
+                    </li>
+                    <li>
+                      <a href="#"><img class="" src="./img/tee.jpg" alt=""></a>
+                    </li>
+                    <li>
+                      <a href="#"><img class="" src="./img/tee.jpg" alt=""></a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- Product Info Single Page -->
+                <div class="productInfoSinglePage">
+                  <div class="infoContainer">
+                    <h2 class="productTitle ralenormal">THIS IS A PRODUCT</h2>
+                    <span class="line"></span>
+                    <span class="productPrice ralelight">$15.00</span>
+                    <span class="info ralenormal">
+                      This is a product description of some stuff that I am making up. If there was internet right now then I would just copy and paste some lorem ipsum but no.
+                    </span>
+                    <ul>
+                      <li>
+                        <p>SIZE</p>
+                        <select class="size" name="" id="">
+                          <option value="">Small</option>
+                          <option value="">Medium</option>
+                          <option value="">Big</option>
+                        </select>
+                      </li>
+                      <li>
+                        <p>QTY</p>
+                        <select class="qty" name="" id="">
+                          <option value="">1</option>
+                          <option value="">2</option>
+                          <option value="">3</option>
+                          <option value="">4</option>
+                          <option value="">5</option>
+                          <option value="">6</option>
+                        </select>
+                      </li>
+                    </ul>
+                    <span class="addCartSpace">
+                      <a href="#" class="addToCart ralelight">
+                        ADD TO CART
+                      </a>
+                    </span>
+                  </div>
+                </div>
+              </div> <!-- singleProductContainer -->
             </div>
           </div>
 
         </div><!-- End Store Div -->
 
-        <!-- SHOWS  
-        ================================================== -->
-        <div class="shows"> 
+        <!-- =============================================================================
+              SHOWS
+             ========================================================================== -->
+        <div id="shows" class="no-active"> 
           <ul class="showlist">
             <li>
               <div class="date">
@@ -196,8 +300,10 @@
                 </div>
               </div>
               <div class="place">
-                <span class="namePlace ralelight">LOS ANGELES, CA</span>
-                <span class="button"></span>
+                <span class="namePlace ralelight"><a href="#">LOS ANGELES, CA</a></span>
+                <span class="button">
+                  <a href="#"><img src="./img/arrow-forward.png" alt=""></a>
+                </span>
               </div>
             </li>
             <li>
@@ -208,8 +314,10 @@
                 </div>
               </div>
               <div class="place">
-                <span class="namePlace ralelight">LOS ANGELES, CA</span>
-                <span class="button"></span>
+                <span class="namePlace ralelight"><a href="#">LOS ANGELES, CA</a></span>
+                <span class="button">
+                  <a href="#"><img src="./img/arrow-forward.png" alt=""></a>
+                </span>
               </div>
             </li>
             <li>
@@ -220,8 +328,10 @@
                 </div>
               </div>
               <div class="place">
-                <span class="namePlace ralelight">LOS ANGELES, CA</span>
-                <span class="button"></span>
+                <span class="namePlace ralelight"><a href="#">LOS ANGELES, CA</a></span>
+                <span class="button">
+                  <a href="#"><img src="./img/arrow-forward.png" alt=""></a>
+                </span>
               </div>
             </li>
             <li>
@@ -232,8 +342,10 @@
                 </div>
               </div>
               <div class="place">
-                <span class="namePlace ralelight">LOS ANGELES, CA</span>
-                <span class="button"></span>
+                <span class="namePlace ralelight"><a href="#">LOS ANGELES, CA</a></span>
+                <span class="button">
+                  <a href="#"><img src="./img/arrow-forward.png" alt=""></a>
+                </span>
               </div>
             </li>
             <li>
@@ -244,16 +356,19 @@
                 </div>
               </div>
               <div class="place">
-                <span class="namePlace ralelight">LOS ANGELES, CA</span>
-                <span class="button"></span>
+                <span class="namePlace ralelight"><a href="#">LOS ANGELES, CA</a></span>
+                <span class="button">
+                  <a href="#"><img src="./img/arrow-forward.png" alt=""></a>
+                </span>
               </div>
             </li>
           </ul>
         </div><!-- End Shows Div -->
 
-        <!-- ABOUT
-        ================================================== -->
-        <div class="about">
+        <!-- =============================================================================
+              ABOUT
+             ========================================================================== -->
+        <div id="about" class="no-active">
           <div class="aboutContainer">
             <div class="aboutTitle ralelight">LOS RODRIGUEZ DE SINALOA</div>
             <div class="divider"></div>
@@ -268,7 +383,13 @@
             </div>
           </div>
         </div>
-
+        
+        <!-- =============================================================================
+              SUBSCRIBE
+             ========================================================================== -->
+        <div id="subscribe" class="no-active">
+          dsfdsdf
+        </div>
       </div> <!-- End Content -->
 
 <?php get_footer(); ?>

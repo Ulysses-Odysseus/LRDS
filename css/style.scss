@@ -1,20 +1,19 @@
 /* =============================================================================
-Style CSS by FatCat											
-	http://fatcatonline.net/
-Last Update May/29/13 
-========================================================================== */
+	Style CSS by FatCat Online											
+  	http://fatcatonline.net/ 
+	Last Update May/03/13 
+   ========================================================================== */
 
-/* SASS Settings -- Delete this title when done editing
-=============================*/
-/* Background */
-/* Font Color */
-/* Line Color */
-/* General Settings
-=============================*/
+/* SASS Settings -- Delete this title when done ediitng
+=============================*/  
 
 /* Background */
 $background:url('../img/bar-bg-active.png') repeat;
 $backgroundRed:url('../img/bar-bg-active-red.png') repeat;
+$backgroundBlack:url('../img/bar-bg-active-black.png') repeat;
+$backgroundGreen:url('../img/bar-bg-active-green.png') repeat;
+$backgroundBlue:url('../img/bar-bg-active-blue.png') repeat;
+$backgroundOrange:url('../img/bar-bg-active-orange.png') repeat;
 $mainGreen:#9fa326;
 
 /* Font Color */ 
@@ -24,6 +23,10 @@ $fc-grey: #555555;
 /* Line Color */
 $lc-white: #858585;
 
+/* Background Colors */
+$bcRed:#841212;
+$bcGray: #575757;
+
 $leftIm:left!important;
 
 /* General Settings
@@ -32,7 +35,7 @@ html,
 body {
 	width:100%!important;
 	height:100%!important;
-	background: #000 url('../img/body-bg.jpg') no-repeat top left fixed!important;
+	background: #ffffff url('../img/body-bg.jpg') no-repeat top left fixed!important;
 	background-size:100%!important;
 }
 
@@ -41,6 +44,7 @@ body {
 	height: 0;
 	padding: 0;
 	opacity: 0.3;
+	display: block;
 	list-style: none;
 	border-top: 1px solid;
 	border-top-color: $lc-white;
@@ -51,7 +55,87 @@ body {
 	list-style: none;
 	border-right: 1px solid $lc-white;
 }
+li{
+	list-style-type: none;
+}
+a{
+	color:inherit;
+	text-decoration: none;
+}
+/* Keyframes Arrow animation (under "show" div)
+=============================*/
+// @keyframes fordward {
+//   0% {margin: 0 0 0 0px;}
+//   100% {margin: 0 0 0 90px;}
+// }
+@-webkit-keyframes fordward {
+  0% {margin: 0 0 0 0px;}
+  100% {margin: 0 0 0 90px;}
+}
+@-moz-keyframes fordward {
+  0% {margin: 0 0 0 0px;}
+  100% {margin: 0 0 0 90px;}
+}
+@-o-keyframes fordward {
+  0% {margin: 0 0 0 0px;}
+  100% {margin: 0 0 0 90px;}
+}
 
+/* Keyframes Fade In/Out Animation (under ".content" div) 
+=============================*/
+/* Fade In */
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+@-webkit-keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+@-moz-keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+@-o-keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+/* Fade Out */
+@keyframes fadeOut {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+@-webkit-keyframes fadeOut {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+@-moz-keyframes fadeOut {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+@-o-keyframes fadeOut {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+/* Slide In Text Side Bar 
+=============================*/
+@keyframes slideIn {
+  0% {margin: 0 0 0 -40px;}
+  100% {margin: 0 0 0 0;}
+}
+@-webkit-keyframes slideIn {
+  0% {margin: 0 0 0 -40px;}
+  100% {margin: 0 0 0 0;}
+}
+@-moz-keyframes slideIn {
+  0% {margin: 0 0 0 -40px;}
+  100% {margin: 0 0 0 0;}
+}
+@-o-keyframes slideIn {
+  0% {margin: 0 0 0 -40px;}
+  100% {margin: 0 0 0 0;}
+}
 /* =============================================================================
 	Container
    ========================================================================== */
@@ -64,7 +148,6 @@ body {
    ========================================================================== */
 .sideBar{
 	width: 150px; height: 100%!important;
-	float: left;
 	position: fixed;
 	// background: yellow;
 
@@ -74,14 +157,73 @@ body {
 		// float: left;
 		background: $background;		
 		.logo{
+			width: inherit; height: inherit;
 			background: $background;
-			h1{
-				margin: 0; padding: 0;
-				width: 150px; height: 168px;
-				display: block;
-				text-indent: -99999em;
-				background:url('../img/logo.png');
+			a{
+				width: inherit; height: inherit;	
+				h1{
+					margin: 0; padding: 0;
+					width: inherit; height: inherit;
+					display: block;
+					text-indent: -99999em;
+					background:url('../img/logo.png') no-repeat;
+				}
 			}
+		}
+	}
+
+	#textActiveBar{
+		width: 80px;
+		margin:19px 0 0 0;
+		float: right;
+		overflow: hidden;
+		// background: orange;
+		ul{
+			margin: 0; padding: 0;
+			li{
+				width: 80px; height: 70px;
+				margin-bottom: 1px;
+				color: $fc-white;
+				line-height: 70px;
+				text-align: center;
+				// background: $background;
+			}
+			/* Li Active/Non Active */
+			.liActive{
+				visibility: visible;
+
+				transition: all 0.1s ease-in-out;
+
+				-webkit-animation-name: slideIn;
+				-webkit-animation-duration: 0.3s;
+				-webkit-animation-iteration-count: 1;
+				-webkit-animation-delay: 0.0s;
+				-webkit-animation-direction: alternate;
+				-webkit-transition: all 0.1s ease-in-out;
+
+				-moz-animation-name: slideIn;
+				-moz-animation-duration: 0.3s;
+				-moz-animation-iteration-count: 1;
+				-moz-animation-delay: 0.0s;
+				-moz-animation-direction: alternate;
+				-moz-transition: all 0.1s ease-in-out;
+
+				-o-animation-name: slideIn;
+				-o-animation-duration: 0.3s;
+				-o-animation-iteration-count: 1;
+				-o-animation-delay: 0.0s;
+				-o-animation-direction: alternate;
+				-o-transition: all 0.1s ease-in-out;
+			}
+			.liNoActive{
+				visibility: hidden;
+			}
+			/* Li Colors */
+			#texthome{background: $background;}
+			#textstore{background: $backgroundRed;}
+			#textshows{background: $backgroundGreen;}
+			#textabout{background: $backgroundBlue;}
+			#textsubscribe{background: $backgroundOrange}
 		}
 	}
 
@@ -89,9 +231,13 @@ body {
 	-------------------------*/
 	.navBar{
 		width: 70px;height: 100%;
+		// float: left;
 		background: $background;
 		// background: red;
 		ul{
+			.navButton{
+				height: 70px;
+			}
 			padding:0; margin:19px 0 0 0;
 			li{
 				width: 70px;
@@ -99,6 +245,25 @@ body {
 			}
 			li:hover{
 				background: $background;
+			}
+			.activeNav{
+				background: $background;
+			}
+		}
+	}
+
+}
+
+/* Link Up
+-------------------------*/
+.linkUp{
+	bottom: 2%;
+	display: none;
+	position: fixed;
+	.linkUpButton{
+		a{
+			img{
+				width: 70px; height: 20px;
 			}
 		}
 	}
@@ -174,6 +339,63 @@ body {
 	width: 780px;
 	margin: 19px 0 0 169px;
 	// background: yellow;
+
+	.activeContent{
+		display: block;
+
+		-webkit-animation-name: fadeIn;
+		-webkit-animation-duration: 0.8s;
+		-webkit-animation-iteration-count: 1;
+		-webkit-animation-delay: 0.0s;
+		-webkit-animation-direction: alternate;
+		-webkit-transition: all 0.1s ease-in-out;
+
+		-moz-animation-name: fadeIn;
+		-moz-animation-duration: 0.8s;
+		-moz-animation-iteration-count: 1;
+		-moz-animation-delay: 0.0s;
+		-moz-animation-direction: alternate;
+		-moz-transition: all 0.1s ease-in-out;
+
+		-o-animation-name: fadeIn;
+		-o-animation-duration: 0.8s;
+		-o-animation-iteration-count: 1;
+		-o-animation-delay: 0.0s;
+		-o-animation-direction: alternate;
+		-o-transition: all 0.1s ease-in-out;
+
+		animation:fadeIn 0.5s 1;
+		transition: all 0.1s ease-in-out;
+	}
+
+	.no-active{
+		display: none;
+		opacity: 0;
+
+		-webkit-animation-name: fadeOut;
+		-webkit-animation-duration: 0.8s;
+		-webkit-animation-iteration-count: 1;
+		-webkit-animation-delay: 0.0s;
+		-webkit-animation-direction: alternate;
+		-webkit-transition: all 0.1s ease-in-out;
+
+		-moz-animation-name: fadeOut;
+		-moz-animation-duration: 0.8s;
+		-moz-animation-iteration-count: 1;
+		-moz-animation-delay: 0.0s;
+		-moz-animation-direction: alternate;
+		-moz-transition: all 0.1s ease-in-out;
+
+		-o-animation-name: fadeOut;
+		-o-animation-duration: 0.8s;
+		-o-animation-iteration-count: 1;
+		-o-animation-delay: 0.0s;
+		-o-animation-direction: alternate;
+		-o-transition: all 0.1s ease-in-out;
+
+		animation:fadeOut 0.5s 1;
+		transition: all 0.1s ease-in-out;
+	}
 	
 	/* Search Bar
 	-------------------------*/
@@ -187,13 +409,14 @@ body {
 			height: 70px;
 
 			.searchInput{
-				width: 220px;
+				width: 300px;
 				border: none;
 				height: 100%;
 				color: $fc-grey;
 				font-size: 16px;
 				position: relative;
-				padding: 0 60px 0 20px;				
+				padding: 0 60px 0 20px;	
+				font-family: 'Raleway', arial , sans-serif;font-weight: 100;			
 			}
 			.searchInput:focus{
 				outline: none;
@@ -203,7 +426,7 @@ body {
 			    	    box-shadow: 0 0 5px #999999;
 			}
 			.searchIcon{
-				z-index: 1;
+				z-index: 2;
 				width: 10px; height: inherit;
 				margin: 0 0 0 240px; padding: 0px 30px;
 				float: right;
@@ -215,10 +438,10 @@ body {
 		}
 	}
 
-	/* HOME
-	=============================*/
-	.home{
-		// display: none;
+	/* =============================================================================
+		HOME
+	   ========================================================================== */
+	#home{
 		width: 100%;
 
 		/* Social Sub Nav
@@ -232,10 +455,12 @@ body {
 				background: $background;
 				li{
 					float: $leftIm;
+					height: inherit;
 					a{
 						width: 76px; height:inherit; 
-						vertical-align: middle;
+						outline: none;
 						float: $leftIm;
+						vertical-align: middle;
 						img{
 							margin: 0 auto;
 							padding: 30% 0;
@@ -243,6 +468,7 @@ body {
 						}
 					}
 					a:hover, .active{
+						outline: none;
 						background: $background;
 					}
 				}
@@ -253,13 +479,12 @@ body {
 		-------------------------*/
 		.socialFeedArea{
 			width: 100%;
-			// background: gray;
 			ul{
 				width: 105%;
 				margin: 0; padding: 0;
+				float: left;
 				overflow: hidden;
 				list-style-type: none;
-				// background: yellow;
 				li{
 					position: relative;
 					margin: 20px 20px 0 0;
@@ -282,7 +507,9 @@ body {
 					}
 				}
 				.small{
-					width: 140px; height: 140px;
+					width: 120px; height: 120px;
+					padding: 10px;
+					word-wrap: break-word;
 					background: $background;
 				}
 				.big{
@@ -300,10 +527,10 @@ body {
 		}
 	} /* End Home */
 
-	/* STORE
-	=============================*/
-	.store{
-		display: none;
+	/* =============================================================================
+		STORE
+	   ========================================================================== */
+	#store{
 		width: 100%;
 
 		/* Shop Sub Nav
@@ -311,44 +538,44 @@ body {
 		.shopBar{
 			float: left;
 			width: 461px;
-			// background: red;
 
 			div{
 				float: left;
-			}
-			ul{	
-				margin: 0; padding: 0;
-				width: 337px; height: 70px;
-				list-style-type: none;
-				background: $background;
-				
-				li{
-					float: $leftIm;
-					text-align: center;
-					line-height: 70px;
-					vertical-align: middle;
-
-					a{
-						height:inherit; 
+				ul{	
+					margin: 0; padding: 0;
+					width: 337px; height: 70px;
+					list-style-type: none;
+					background: $background;
+					
+					li{
 						float: $leftIm;
-						color: #ffffff;
-						font-size: 13px;
-						text-decoration: none;
-					}
-					a:hover, .active{
-						background: $background;
-					}
-					.productbb{
-						width: 108px;
-					}
-					.cartbb{
-						width: 81px;
-					}
-					.itemsbb{
-						width: 145px;
+						text-align: center;
+						line-height: 70px;
+						vertical-align: middle;
+
+						a{
+							height:inherit; 
+							float: $leftIm;
+							color: #ffffff;
+							font-size: 13px;
+							text-decoration: none;
+						}
+						a:hover, .active{
+							background: $background;
+						}
+						.productbb{
+							width: 108px;
+						}
+						.cartbb{
+							width: 81px;
+						}
+						.itemsbb{
+							width: 145px;
+						}
 					}
 				}
 			}
+				
 			.checkOutul{
 				width: 124px; height: 70px;
 				background: $backgroundRed;
@@ -372,24 +599,223 @@ body {
 		/* Products List Area
 		-------------------------*/
 		.productsListMainArea{
-			width: 780px; height: 200px;
+			width: 100%;
 			margin: 20px 0 0 0;
 			float: left;
-			background: yellow;
 
+			ul{
+				padding: 0; margin: 0;
+			}
+			
+			/* Product Tree */
 			.productTree{
-				li, span{display:list-item; list-style-type: none; }
+				font-size: 13px;
+				
+				li, span{
+					color: $fc-grey;
+					display:inline-block; 
+					list-style-type:none;
+					a{
+						color: $fc-grey;
+						text-decoration: none;
+					}
+				}
+			}
+
+			/* Product Area */
+			.productsArea{
+				margin: 20px 0 0 0;
+
+				.allProducts{
+					// display: none;
+					.oddItem{
+						margin: 0 20px 0 0;
+					}
+					li{
+						width: 380px; height: 380px;
+						margin: 0 0 20px 0;
+						float: left;
+						background: white;
+						position: relative;
+						list-style-type: none;
+						.productInfo{
+							position: absolute;
+							bottom: 0; right: 0;
+							.imgProduct{
+								width: 380px; height: 380px;
+								bottom: 0; 
+								z-index: 1;
+								border: none;
+								position: absolute;
+							}
+							.imgProduct:hover{
+								opacity: 0.8;
+							}
+							div{
+								z-index: 2;
+								position: relative;
+							}
+							.price{
+								width: 137px; height: 72px;
+								margin: 0 0 20px 0;
+								float: right;
+								color: #ffffff;
+								font-size: 29px;
+								line-height: 72px;
+								text-align: center;
+								background: $backgroundBlack;
+							}
+							.productBottomBar{
+								width: 380px; height: 45px;
+								span{
+									display: inline-block;
+									float: left;
+								}
+								.productName{
+									padding: 0 0 0 20px;
+									color:#ffffff;
+									line-height: 45px;
+									width: 315px; height: inherit;
+									background: $backgroundBlack;
+								}
+								.productLink{
+									width: 45px; height: inherit;
+									// background: gray;
+									a{
+										width: inherit; height: inherit;
+										display: block;
+										background:$bcGray url('../img/icon-eye-product.png') no-repeat center;
+										background-size: 55%;
+									}
+									a:hover{
+										background:$bcGray url('../img/icon-eye-productAnim.gif') no-repeat center;
+										background-size: 55%;
+									}
+								}
+							}
+						}
+					}
+				}
+
+				/* Single Product Page */
+				.singleProductContainer{
+					display: none;
+				
+					.singleProduct{
+						float: left;
+
+						.productBig{
+							width: 461px; height: 461px;
+							margin: 0 0 10px 0;
+							background: #ffffff;
+							li{
+								width: inherit; height: inherit;
+								a{
+									width: inherit; height: inherit;
+									img{
+										width: inherit; height: inherit;
+									}
+								}
+							}
+						}
+						.productSmall{
+							margin: 0 0 20px 0;
+							.allbutlast{
+								margin: 0 9px 0 0;
+							}
+							li{
+								display: inline-block;
+								a{
+									img{
+										width: 60px; height: 60px;
+									}
+								}
+							}
+						}
+					}
+					
+					/* Product Info Single Page */
+					.productInfoSinglePage{
+						width: 300px;
+						float: right;
+						background: $background;
+						.infoContainer{
+							color: #ffffff;
+							padding: 20px;
+							.productTitle{
+								padding: 0;margin: 0 0 10px 0;
+								font-size: 24px;
+							}
+							.line{
+								width: 40%; height: 0;
+								padding: 0;
+								display: block;
+								list-style: none;
+								border-top: 1px solid;
+								border-top-color: $lc-white;
+							}
+							.productPrice{
+								width: inherit;
+								margin: 35px 0 35px 33px;
+								display: block;
+								font-size: 29px;
+							}
+							.info{
+								font-size: 13px;
+							}
+							ul{
+								margin: 20px 0 0 0;
+								li{
+									margin: 0 0px 0 0;
+									display: inline-block;
+									p{
+										margin: 0 0 15px 0; padding: 0;
+										font-size: 13px;
+									}
+									.size{
+										width: 175px; height: 35px;
+										margin: 0 20px 0 0;
+										padding: 0 14px;
+										display: block;
+										font-size: 13px;
+										option{
+										font-size: 13px;
+										}
+									}
+									.qty{
+										width: 60px; height: 35px;
+										padding: 0 0 0 16px;
+										display: block;
+										font-size: 13px;
+									}
+								}
+							}
+							.addCartSpace{
+								.addToCart{
+									width: 120px; height: 45px;
+									margin: 32px 0 0 0;
+									display: block;
+									line-height: 45px;
+									background: $bcRed;
+									text-align: center;
+								}
+							}
+						}
+					}
+				} /* End singleProductContainer */
 			}
 		}
 
 	} /* End Store */
 
-	/* SHOWS
-	=============================*/
-	.shows{
-		display: none;
+	/* =============================================================================
+		SHOWS
+	   ========================================================================== */
+	#shows{
+		// display: none;
 		// background: green;
 		width: 100%;
+		padding: 0 0 20px 0;
 		.showlist{
 			margin: 0; padding: 0;
 			li{
@@ -403,13 +829,13 @@ body {
 				}
 				.date{
 					width: 140px; height: 140px;
-					line-height: 25px;
+					line-height: 30px;
 					position: relative;
 					text-align: center;
 					vertical-align: middle;
-					background: $background;
+					background: $backgroundGreen;
 					.dateContainer{
-						margin: 30px 0 0 0;
+						padding: 30px 0 0 0;
 					}
 					.month{
 						font-size: 34.46px;
@@ -427,20 +853,67 @@ body {
 						margin: 0 0 0 30px;
 						line-height: 135px;
 					}
+
 					.button{
 						width: 140px; height: 140px;
 						float: right;
+						cursor: pointer;
+						overflow: hidden;
 						background: $background;
+						-webkit-transition: all 0.2s ease-in-out;
+					       -moz-transition: all 0.2s ease-in-out;
+					        -ms-transition: all 0.2s ease-in-out;
+					         -o-transition: all 0.2s ease-in-out;
+					            transition: all 0.2s ease-in-out;
+
+						a{
+							width: inherit; height: inherit;
+							display: block;
+							text-align: center;
+							line-height: 210px;
+							vertical-align: middle;
+							-webkit-transition: all 0.2s ease-in-out;
+						       -moz-transition: all 0.2s ease-in-out;
+						        -ms-transition: all 0.2s ease-in-out;
+						         -o-transition: all 0.2s ease-in-out;
+						            transition: all 0.2s ease-in-out;
+						}
+					}
+					/* HOVER ON */
+					.namePlace:hover ~ .button a, .button:hover a{
+						margin: 0 0 0 -85px;
+						transition: all 0.1s ease-in-out;
+
+						-webkit-animation-name: fordward;
+						-webkit-animation-duration: 0.3s;
+						-webkit-animation-iteration-count: 1;
+						-webkit-animation-delay: 0.0s;
+						-webkit-animation-direction: alternate;
+						-webkit-transition: all 0.1s ease-in-out;
+
+						-moz-animation-name: fordward;
+						-moz-animation-duration: 0.3s;
+						-moz-animation-iteration-count: 1;
+						-moz-animation-delay: 0.0s;
+						-moz-animation-direction: alternate;
+						-moz-transition: all 0.1s ease-in-out;
+
+						-o-animation-name: fordward;
+						-o-animation-duration: 0.3s;
+						-o-animation-iteration-count: 1;
+						-o-animation-delay: 0.0s;
+						-o-animation-direction: alternate;
+						-o-transition: all 0.1s ease-in-out;
 					}
 				}
 			}
 		}
 	} /* End Shows */
 
-	/* ABOUT
-	=============================*/
-	.about{
-		display: none;
+	/* =============================================================================
+		ABOUT
+	   ========================================================================== */
+	#about{
 		width: 100%;
 		background: $background;
 		.aboutContainer{
@@ -467,14 +940,17 @@ body {
 				}
 				.columText{
 					width: 360px;
-					// background: red;
 				}
-				div:nth-child(2n+1){
+				.pfgSpace{
 					margin: 0 17px 0 0;
 				}
 			}
 		}
 	} /* End About */
+
+	/* =============================================================================
+		NEWSLETTER
+	   ========================================================================== */
 }
 
 /* =============================================================================
@@ -530,11 +1006,5 @@ body {
           transition-duration: 0s;
 }
 
-/* =============================================================================
-	Media Query's
-   ========================================================================== */
-@media (max-width: 780px) {
-	.content{
-		width: 480px;
-	}
-}
+
+
