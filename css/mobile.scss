@@ -1,0 +1,207 @@
+/* =============================================================================
+	Media Query Tablets
+   ========================================================================== */
+@media screen and (max-width: 970px) {
+	/* =============================================================================
+		Container
+	   ========================================================================== */
+	// .container{width: 100%; overflow: hidden; }
+}
+@media screen and (max-width: 860px) {
+
+	/* General Settings
+	=============================*/
+	// html,body{overflow-y:hidden; }
+
+	/* =============================================================================
+		Container
+	   ========================================================================== */
+	.container{
+		width: 100%;
+		// overflow: hidden;
+	}	
+	/* =============================================================================
+		Side Bar
+	   ========================================================================== */
+	.sideBar{
+		width: 70px; height: 100%!important;
+		position: fixed;
+
+		/* Logo Tablet */
+		.logoarea{
+			width: 70px; height: 168px;
+			.logo{
+				a{
+					h1{
+						background:url('../img/logo-mobile.png') 50% 50% no-repeat;
+						background-size: 90%;
+					}
+				}
+			}
+		}
+
+		/* Text Active Bar Tablet */
+		#textActiveBar{
+			display: none;
+		}
+	}
+	/* Link Up
+	-------------------------*/
+	.linkUp{
+		// bottom: 10px;
+	}
+	/* =============================================================================
+		Header 
+	   ========================================================================== */
+	.header{
+		margin:0 0 0 70px;
+	}
+	/* =============================================================================
+		Content
+	   ========================================================================== */
+	.content{
+		width: 620px;
+		margin: 19px 0 0 90px;
+		overflow: hidden;
+		// background: orange;
+
+		/* Search Bar
+		-------------------------*/
+		.searchBar{
+			width: 140px; height: 70px;
+
+			.searchForm{
+				.searchInput{
+					width: 140px;
+					padding: 0 40px 0 10px;	
+				}
+				.searchIcon{
+					margin: 0 0 0 105px; padding: 0px 0px 0 25px;
+				}
+			}
+		}
+
+		/* =============================================================================
+		   STORE
+	   	   ========================================================================== */
+   	   	#store{
+			.productsListMainArea{
+
+				/* Product Area */
+				.productsArea{
+					.allProducts{
+						li{
+							width: 300px; height: 300px;
+							.productInfo{
+								.imgProduct{
+									width: 300px; height: 300px;
+								}
+								.productBottomBar{
+									width: 300px; height: 45px;
+									.productName{
+										width: 235px; height: inherit;
+									}
+								}
+							}
+						}
+					}
+
+					/* Single Product Page */
+					.singleProductContainer{
+						.singleProduct{
+							.productBig{
+								width: 350px; height: 350px;
+							}
+						}
+
+						/* Product Info Single Page */
+						.productInfoSinglePage{
+							width: 250px;
+							.infoContainer{
+								// width: inherit;
+								.productTitle{font-size: 20px;}
+								.productPrice{margin: 20px 0 20px 33px;}
+								.info{font-size: 11px;}
+								ul{
+									li{
+										.size{
+											width: 135px;
+										}
+										.qty{
+											width: 50px;
+										}
+									}
+								}
+								.addCartSpace{
+									width: inherit;
+									display: block;
+									margin: 0 20%;
+									.addToCart{
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		/* =============================================================================
+			SHOWS
+		   ========================================================================== */
+		#shows{   
+			.showlist{
+				li{
+					.date{
+						width: 110px; height: 110px;
+						.dateContainer{
+							padding: 20px 0;
+						}
+						.month{font-size: 30px;}
+						.day{font-size: 50px;}
+					}
+					.place{
+						width: 485px; height: 110px;
+						margin: 0 0 0 20px;
+						.namePlace{
+							font-size: 25px;
+							margin: 0 0 0 30px;
+							line-height: 110px;
+						}
+						.button{
+							width: 110px; height: 110px;
+							a{
+							width: inherit; height: 110px;
+							line-height: 160px;
+							img{
+								width: 20%; height: 50%;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		/* =============================================================================
+			ABOUT
+		   ========================================================================== */
+	    #about{
+	    	.aboutContainer{
+	    		width: 580px;
+	    		.aboutTitle{
+	    			font-size: 25px;
+	    		}
+	    		.aboutImage{
+					width: inherit;
+	    		}
+	    		.aboutText{
+					width: inherit;
+					font-size: 12px;
+					.columText{
+						width: 48%;
+					}
+	    		}
+	    	}
+	    }
+
+	}// End Content
+} // End Media Query Tablets 

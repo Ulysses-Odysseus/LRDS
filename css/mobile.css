@@ -1,0 +1,144 @@
+/* =============================================================================
+	Media Query Tablets
+   ========================================================================== */
+@media screen and (max-width: 970px) {
+  /* =============================================================================
+  	Container
+     ========================================================================== */ }
+@media screen and (max-width: 860px) {
+  /* General Settings
+  =============================*/
+  /* =============================================================================
+  	Container
+     ========================================================================== */
+  .container {
+    width: 100%; }
+
+  /* =============================================================================
+  	Side Bar
+     ========================================================================== */
+  .sideBar {
+    width: 70px;
+    height: 100% !important;
+    position: fixed;
+    /* Logo Tablet */
+    /* Text Active Bar Tablet */ }
+    .sideBar .logoarea {
+      width: 70px;
+      height: 168px; }
+      .sideBar .logoarea .logo a h1 {
+        background: url("../img/logo-mobile.png") 50% 50% no-repeat;
+        background-size: 90%; }
+    .sideBar #textActiveBar {
+      display: none; }
+
+  /* Link Up
+  -------------------------*/
+  /* =============================================================================
+  	Header 
+     ========================================================================== */
+  .header {
+    margin: 0 0 0 70px; }
+
+  /* =============================================================================
+  	Content
+     ========================================================================== */
+  .content {
+    width: 620px;
+    margin: 19px 0 0 90px;
+    overflow: hidden;
+    /* Search Bar
+    -------------------------*/
+    	/* =============================================================================
+    	   STORE
+       	   ========================================================================== */
+    /* =============================================================================
+    	SHOWS
+       ========================================================================== */
+    /* =============================================================================
+    	ABOUT
+       ========================================================================== */ }
+    .content .searchBar {
+      width: 140px;
+      height: 70px; }
+      .content .searchBar .searchForm .searchInput {
+        width: 140px;
+        padding: 0 40px 0 10px; }
+      .content .searchBar .searchForm .searchIcon {
+        margin: 0 0 0 105px;
+        padding: 0px 0px 0 25px; }
+    .content #store .productsListMainArea {
+      /* Product Area */ }
+      .content #store .productsListMainArea .productsArea {
+        /* Single Product Page */ }
+        .content #store .productsListMainArea .productsArea .allProducts li {
+          width: 300px;
+          height: 300px; }
+          .content #store .productsListMainArea .productsArea .allProducts li .productInfo .imgProduct {
+            width: 300px;
+            height: 300px; }
+          .content #store .productsListMainArea .productsArea .allProducts li .productInfo .productBottomBar {
+            width: 300px;
+            height: 45px; }
+            .content #store .productsListMainArea .productsArea .allProducts li .productInfo .productBottomBar .productName {
+              width: 235px;
+              height: inherit; }
+        .content #store .productsListMainArea .productsArea .singleProductContainer {
+          /* Product Info Single Page */ }
+          .content #store .productsListMainArea .productsArea .singleProductContainer .singleProduct .productBig {
+            width: 350px;
+            height: 350px; }
+          .content #store .productsListMainArea .productsArea .singleProductContainer .productInfoSinglePage {
+            width: 250px; }
+            .content #store .productsListMainArea .productsArea .singleProductContainer .productInfoSinglePage .infoContainer .productTitle {
+              font-size: 20px; }
+            .content #store .productsListMainArea .productsArea .singleProductContainer .productInfoSinglePage .infoContainer .productPrice {
+              margin: 20px 0 20px 33px; }
+            .content #store .productsListMainArea .productsArea .singleProductContainer .productInfoSinglePage .infoContainer .info {
+              font-size: 11px; }
+            .content #store .productsListMainArea .productsArea .singleProductContainer .productInfoSinglePage .infoContainer ul li .size {
+              width: 135px; }
+            .content #store .productsListMainArea .productsArea .singleProductContainer .productInfoSinglePage .infoContainer ul li .qty {
+              width: 50px; }
+            .content #store .productsListMainArea .productsArea .singleProductContainer .productInfoSinglePage .infoContainer .addCartSpace {
+              width: inherit;
+              display: block;
+              margin: 0 20%; }
+    .content #shows .showlist li .date {
+      width: 110px;
+      height: 110px; }
+      .content #shows .showlist li .date .dateContainer {
+        padding: 20px 0; }
+      .content #shows .showlist li .date .month {
+        font-size: 30px; }
+      .content #shows .showlist li .date .day {
+        font-size: 50px; }
+    .content #shows .showlist li .place {
+      width: 485px;
+      height: 110px;
+      margin: 0 0 0 20px; }
+      .content #shows .showlist li .place .namePlace {
+        font-size: 25px;
+        margin: 0 0 0 30px;
+        line-height: 110px; }
+      .content #shows .showlist li .place .button {
+        width: 110px;
+        height: 110px; }
+        .content #shows .showlist li .place .button a {
+          width: inherit;
+          height: 110px;
+          line-height: 160px; }
+          .content #shows .showlist li .place .button a img {
+            width: 20%;
+            height: 50%; }
+    .content #about .aboutContainer {
+      width: 580px; }
+      .content #about .aboutContainer .aboutTitle {
+        font-size: 25px; }
+      .content #about .aboutContainer .aboutImage {
+        width: inherit; }
+      .content #about .aboutContainer .aboutText {
+        width: inherit;
+        font-size: 12px; }
+        .content #about .aboutContainer .aboutText .columText {
+          width: 48%; } }
