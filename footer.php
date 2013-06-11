@@ -83,6 +83,26 @@
               $(activeText).removeClass('liNoActive').addClass('liActive');
             }
         });
+
+        /* Single Post functionality
+        =============================*/
+        $('.showlist a').click(function(e){
+
+            var postid = $(this).attr('class');
+            var margin = $(this).css('margin');
+
+            //alert(margin);
+
+            if($('.singleshow').hasClass('no-active')){
+
+              $('.showlist').css('margin','0 0 0 -50%');
+              $('.singleshow').removeClass('no-active');
+              $('.singleshow').addClass('active');
+
+            }
+
+            e.preventDefault();
+        });
     });
     /* ]]> */
     </script>
