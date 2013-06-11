@@ -124,6 +124,14 @@
                       </a>
                     </li>
 
+                  <?php } elseif(in_category('facebook')) { ?>
+                    
+                    <li class="socialItem small facebook">
+                      <a href="http://twitter.com/lrds" target="_top" title="<?php the_title(); ?>">
+                        <?php the_title(); ?>
+                      </a>
+                    </li>
+
                   <?php } ?>
 
                 <?php endwhile; else: ?>
