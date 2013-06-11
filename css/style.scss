@@ -33,10 +33,13 @@ $leftIm:left!important;
 =============================*/
 html,
 body {
-	width:100%!important;
-	height:100%!important;
-	background: #ffffff url('../img/body-bg.jpg') no-repeat top left fixed!important;
-	background-size:100%!important;
+/*	width:100%!important;
+	height:100%!important;*/
+	background: #ffffff url('../img/body-bg.jpg') no-repeat center center fixed!important;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 /* Divider for nav Bar */
@@ -160,7 +163,7 @@ a{
 			width: inherit; height: inherit;
 			background: $background;
 			a{
-				width: inherit; height: inherit;	
+				width: inherit; height: inherit;
 				h1{
 					margin: 0; padding: 0;
 					width: inherit; height: inherit;
@@ -235,16 +238,18 @@ a{
 		background: $background;
 		// background: red;
 		ul{
+			padding:0; margin:19px 0 0 0;
 			.navButton{
 				height: 70px;
 			}
-			padding:0; margin:19px 0 0 0;
 			li{
 				width: 70px;
 				list-style-type: none;
-			}
-			li:hover{
-				background: $background;
+
+				&:hover {
+					cursor: pointer;
+					background: $background;
+				}
 			}
 			.activeNav{
 				background: $background;
@@ -491,7 +496,7 @@ a{
 					overflow: hidden;
 					a{
 						font-size: 13px;
-						color: white;
+						color: #ccc;
 						opacity: 1;
 
 						/* linear */

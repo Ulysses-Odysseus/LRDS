@@ -81,7 +81,7 @@
               -------------------->
               <?php 
 
-              if (have_posts()) : while (have_posts()) : the_post(); 
+              if(have_posts()) : while(have_posts()) : the_post();
 
                 if(in_category('news')) { ?>
                   
@@ -292,76 +292,34 @@
              ========================================================================== -->
         <div id="shows" class="no-active"> 
           <ul class="showlist">
-            <li>
-              <div class="date">
-                <div class="dateContainer">
-                  <span class="month ralenormal">MAY</span>
-                  <span class="day ralelight">30</span>
-                </div>
-              </div>
-              <div class="place">
-                <span class="namePlace ralelight"><a href="#">LOS ANGELES, CA</a></span>
-                <span class="button">
-                  <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/arrow-forward.png" alt=""></a>
-                </span>
-              </div>
-            </li>
-            <li>
-              <div class="date">
-                <div class="dateContainer">
-                  <span class="month ralenormal">MAY</span>
-                  <span class="day ralelight">30</span>
-                </div>
-              </div>
-              <div class="place">
-                <span class="namePlace ralelight"><a href="#">LOS ANGELES, CA</a></span>
-                <span class="button">
-                  <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/arrow-forward.png" alt=""></a>
-                </span>
-              </div>
-            </li>
-            <li>
-              <div class="date">
-                <div class="dateContainer">
-                  <span class="month ralenormal">MAY</span>
-                  <span class="day ralelight">30</span>
-                </div>
-              </div>
-              <div class="place">
-                <span class="namePlace ralelight"><a href="#">LOS ANGELES, CA</a></span>
-                <span class="button">
-                  <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/arrow-forward.png" alt=""></a>
-                </span>
-              </div>
-            </li>
-            <li>
-              <div class="date">
-                <div class="dateContainer">
-                  <span class="month ralenormal">MAY</span>
-                  <span class="day ralelight">30</span>
-                </div>
-              </div>
-              <div class="place">
-                <span class="namePlace ralelight"><a href="#">LOS ANGELES, CA</a></span>
-                <span class="button">
-                  <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/arrow-forward.png" alt=""></a>
-                </span>
-              </div>
-            </li>
-            <li>
-              <div class="date">
-                <div class="dateContainer">
-                  <span class="month ralenormal">MAY</span>
-                  <span class="day ralelight">30</span>
-                </div>
-              </div>
-              <div class="place">
-                <span class="namePlace ralelight"><a href="#">LOS ANGELES, CA</a></span>
-                <span class="button">
-                  <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/arrow-forward.png" alt=""></a>
-                </span>
-              </div>
-            </li>
+            <?php if(have_posts()) : while(have_posts()) : the_post();
+
+                $title = get_the_excerpt();;
+
+                if(in_category('shows')) { ?>
+
+                  <li>
+                    <div class="date">
+                      <div class="dateContainer">
+                        <span class="month ralenormal">MAY</span>
+                        <span class="day ralelight">30</span>
+                      </div>
+                    </div>
+                    <div class="place">
+                      <span class="namePlace ralelight"><a href="<?php the_permalink(); ?>"><?php echo $title; ?></a></span>
+                      <span class="button">
+                        <a href="<?php the_permalink(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/arrow-forward.png" alt="<?php echo $title; ?>"></a>
+                      </span>
+                    </div>
+                  </li>
+
+                <?php }
+
+                endwhile; else: ?>
+
+                  <p>Sorry, there are no shows at this time</p>
+
+              <?php endif; ?><!-- End the loop -->
           </ul>
         </div><!-- End Shows Div -->
 
