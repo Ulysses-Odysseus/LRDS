@@ -42,6 +42,13 @@ body {
 	background-size: cover;
 }
 
+/* Clearfix */
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 /* Divider for nav Bar */
 .divider{
 	height: 0;
@@ -967,7 +974,7 @@ a{
 			}
 			.aboutText{
 				width: 740px;
-				padding: 0 0 20px 0;
+				padding: 20px 0 20px 0;
 				font-size: 13px;
 				line-height: 23px;
 				div{
@@ -975,6 +982,7 @@ a{
 				}
 				.columText{
 					width: 360px;
+					float: left;
 				}
 				.pfgSpace{
 					margin: 0 17px 0 0;

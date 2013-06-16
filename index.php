@@ -309,8 +309,8 @@
                   <li>
                     <div class="date">
                       <div class="dateContainer">
-                        <span class="month ralenormal">MAY</span>
-                        <span class="day ralelight">30</span>
+                        <span class="month ralenormal"><?php echo get_post_meta(get_the_id(), 'Event Month', true); ?></span><br />
+                        <span class="day ralelight"><?php echo get_post_meta(get_the_id(), 'Event Day', true); ?></span>
                       </div>
                     </div>
                     <a class="<?php echo get_the_id(); ?>" href="<?php the_permalink(); ?>">
@@ -331,9 +331,9 @@
 
               <?php endif; ?><!-- End the loop -->
           </ul>
-          <div id="single" class="no-active">
+          <div id="single" class="no-active ralelight">
             <div class="aboutContainer">
-              <a class="back ralelight" href="#">Back</a>
+              <a class="back" href="#">Back</a>
               <div class="postcontent"></div>
             </div>
           </div><!-- End Single Shows Div -->

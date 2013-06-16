@@ -21,6 +21,12 @@ body {
   -o-background-size: cover;
   background-size: cover; }
 
+/* Clearfix */
+.group:after {
+  content: "";
+  display: table;
+  clear: both; }
+
 /* Divider for nav Bar */
 .divider {
   height: 0;
@@ -851,13 +857,14 @@ a {
         background: #366c9a; }
       .content #about .aboutContainer .aboutText, .content #single .aboutContainer .aboutText {
         width: 740px;
-        padding: 0 0 20px 0;
+        padding: 20px 0 20px 0;
         font-size: 13px;
         line-height: 23px; }
         .content #about .aboutContainer .aboutText div, .content #single .aboutContainer .aboutText div {
           display: inline-block; }
         .content #about .aboutContainer .aboutText .columText, .content #single .aboutContainer .aboutText .columText {
-          width: 360px; }
+          width: 360px;
+          float: left; }
         .content #about .aboutContainer .aboutText .pfgSpace, .content #single .aboutContainer .aboutText .pfgSpace {
           margin: 0 17px 0 0; }
 
