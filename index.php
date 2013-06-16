@@ -74,7 +74,7 @@
 
           <!-- Social Feed Area
           ---------------------->
-          <div class="socialFeedArea ralelight">
+          <div class="socialFeedArea ralenormal">
             <ul>
 
               <!-- Start the loop
@@ -108,7 +108,7 @@
                           $title = get_the_title();
 
                           if($title != the_title(' ', ' ', false)) { ?>
-                            <div class="title"><?php the_title(); ?></div>
+                            <div class="title"><?php echo substr($title, 0, 40).'...'; ?></div>
                           <?php } ?>
 
                       </a>
@@ -120,7 +120,7 @@
                     
                     <li class="socialItem small twitter">
                       <a href="http://twitter.com/lrds" target="_top" title="<?php the_title(); ?>">
-                        <?php echo $text; ?>
+                        <?php echo substr($text, 0, 70).'...'; ?>
                       </a>
                     </li>
 
@@ -331,24 +331,11 @@
 
               <?php endif; ?><!-- End the loop -->
           </ul>
-          <div class="singleshow no-active">
-
-            
-            
+          <div id="single" class="no-active">
             <div class="aboutContainer">
-              <div class="aboutTitle ralelight">LOS RODRIGUEZ DE SINALOA</div>
-              <div class="divider"></div>
-              <div class="aboutImage"></div>
-              <div class="aboutText ralelight">
-                <div class="columText">
-                  Claw lick climb the curtains litter box jump on the table claw, meow stretching tail flick litter box chase the red dot. Leap stretching chase the red dot give me fish stretching toss the mousie, puking attack fluffy fur jump lick attack your ankles. Scratched sunbathe run scratched chuf catnip, claw rip the couch sunbathe stretching run. Shed everywhere jump on the table jump on the table hiss, attack sleep in the sink meow litter box purr eat the grass catnip give me fish. Judging you jump on the table purr sleep on your keyboard stuck in a tree judging you, meow claw lay down in your way rip the couch. Bat knock over the lamp sleep on your keyboard jump claw hiss, run biting chase the red dot chuf feed me. your keyboard sunbathe chase the red dot litter box, biting sleep on your face biting feed me zzz hairball leap. Jump scratched judging you leap, leap lay down in your way toss the mousie leap I don't like that food zzz run litter box. Claw zzz meow biting give me fish sleep on your face, toss the mousie hiss kittens judging you. Lay down in your way chase the red dot stretching chuf litter box, jump on the table meow hiss hiss judging you jump catnip.
-                </div>
-                <div class="columText">
-                  Claw lick climb the curtains litter box jump on the table claw, meow stretching tail flick litter box chase the red dot. Leap stretching chase the red dot give me fish stretching toss the mousie, puking attack fluffy fur jump lick attack your ankles. Scratched sunbathe run scratched chuf catnip, claw rip the couch sunbathe stretching run. Shed everywhere jump on the table jump on the table hiss, attack sleep in the sink meow litter box purr eat the grass catnip give me fish. Judging you jump on the table purr sleep on your keyboard stuck in a tree judging you, meow claw lay down in your way rip the couch. Bat knock over the lamp sleep on your keyboard jump claw hiss, run biting chase the red dot chuf feed me. your keyboard sunbathe chase the red dot litter box, biting sleep on your face biting feed me zzz hairball leap. Jump scratched judging you leap, leap lay down in your way toss the mousie leap I don't like that food zzz run litter box. Claw zzz meow biting give me fish sleep on your face, toss the mousie hiss kittens judging you. Lay down in your way chase the red dot stretching chuf litter box, jump on the table meow hiss hiss judging you jump catnip.
-                </div>
-              </div>
+              <a class="back ralelight" href="#">Back</a>
+              <div class="postcontent"></div>
             </div>
-
           </div><!-- End Single Shows Div -->
         </div><!-- End Shows Div -->
 

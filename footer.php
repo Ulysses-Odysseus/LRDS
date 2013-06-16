@@ -86,22 +86,40 @@
 
         /* Single Post functionality
         =============================*/
-        $('.showlist a').click(function(e){
+        $('.showlist a, #shows .back').click(function(e){
 
             var postid = $(this).attr('class');
-            var margin = $(this).css('margin');
+            // var margin = $(this).css('margin');
 
-            //alert(margin);
+            // alert(postid);
+            e.preventDefault();
 
-            if($('.singleshow').hasClass('no-active')){
+            if($('#single').hasClass('no-active')){
 
-              $('.showlist').css('margin','0 0 0 -50%');
-              $('.singleshow').removeClass('no-active');
-              $('.singleshow').addClass('active');
+              var data = "postid=" + postid;
+              
+              $.ajax({
+                url: "./single.php",
+                type: "get",
+                data: data,
+                success:
+                  function(data){
+                    $('#single .postcontent').html(data);
+
+                    $('.showlist').css('margin-left','-50%');
+                    $('#single').removeClass('no-active');
+                    $('#single').addClass('active');
+                  }
+              });
+
+            } else {
+
+              $('.showlist').css('margin-left','0');
+              $('#single').removeClass('active');
+              $('#single').addClass('no-active');
 
             }
 
-            e.preventDefault();
         });
     });
     /* ]]> */
