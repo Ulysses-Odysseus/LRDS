@@ -490,6 +490,8 @@ a{
 
 		/* Social Feed Area
 		-------------------------*/
+		/* Social Feed Area
+		-------------------------*/
 		.socialFeedArea{
 			width: 100%;
 			ul{
@@ -499,43 +501,120 @@ a{
 				overflow: hidden;
 				list-style-type: none;
 				li{
-					position: relative;
-					margin: 20px 20px 0 0;
+					margin: 20px 0 0 0;
 					overflow: hidden;
-					a{
-						font-size: .70em;
-						color: #999;
-						letter-spacing: 0;
-						opacity: 1;
 
+					a{
+						font-size: 11px;
+						color: #ccc;
+						opacity: 1;
+					}
+					.mainContentEffect{
 						/* linear */
-						-webkit-transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750); 
-						   -moz-transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750); 
-						    -ms-transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750); 
-						     -o-transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750); 
-						        transition: all 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+						-webkit-transition: all 200ms cubic-bezier(0.250, 0.250, 0.750, 0.750); 
+						   -moz-transition: all 200ms cubic-bezier(0.250, 0.250, 0.750, 0.750); 
+						    -ms-transition: all 200ms cubic-bezier(0.250, 0.250, 0.750, 0.750); 
+						     -o-transition: all 200ms cubic-bezier(0.250, 0.250, 0.750, 0.750); 
+						        transition: all 200ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
 
 						&:hover{
 							opacity: .7;
 						}
 					}
 				}
+
+				.feedBar{
+					height: 45px;
+					display: block;
+					bottom: 0;
+					position: absolute;
+					background: $background;
+					line-height: 45px;
+
+					&:before {
+						content: "";
+						width: 29px; height: 25px;
+						bottom: 6px; right: 3px;
+						display: block;
+						position: absolute;
+						background-size: 80%!important;
+					}
+				}
+
+				// Icons Feed Back
+				.facebook{
+					.feedBar:before{
+						background: url('../img/media-icon-facebook.png') no-repeat;
+					}
+				}
+				.blog{
+					.feedBar:before{
+						background: url('../img/media-icon-blog.png') no-repeat;
+					}
+				}
+				.twitter{
+					.feedBar:before{
+						background: url('../img/media-icon-twitter.png') no-repeat;
+					}
+				}
+				.instagram{
+					.feedBar:before{
+						background: url('../img/media-icon-instagram.png') no-repeat;
+					}
+				}
+
+				//Video Feed
+				.video{
+					.play{
+						bottom: 50%; left: 37%;
+						position: absolute;
+					}
+					.videoImage{
+						background: black;
+						padding-bottom: 100%;
+						img{
+							width: 100%!important;
+						}
+					}
+				}
+
+				// Style for Feed images
+				.verticalImage{
+					a{
+						img{width: 100%;}
+					}
+				}
+				.horizontalImage{
+					a{
+						img{height: 100%;}
+					}
+				}
+
+				// Style for Boxes
+				.small, .big {
+					word-wrap: break-word;
+					background: $background;
+					background-color: black;
+				}
 				.small{
 					width: 120px; height: 120px;
 					padding: 10px;
-					word-wrap: break-word;
-					background: $background;
+
+					.feedBar{
+						width: 100%;
+
+						&:before {
+							bottom: 6px; right: 8px;
+						}
+					}
 				}
 				.big{
 					width: 300px; height: 300px;
-					background: black;
-				}
-				.title{
-					width:100%;
-					position: absolute;
-					bottom: 0; left: 0;
-					padding: 10px;
-					background: $background;
+
+					.feedBar{
+						width: 96.5%;
+						padding-left: 3.5%;
+					}
 				}
 			}
 		}
@@ -981,12 +1060,9 @@ a{
 					display: inline-block;
 				}
 				.columText{
-					width: 45%;
-					padding: 0 2.5% 0 2.5%;
+					width: 47.5%;
+					padding: 0 2.5% 0 0;
 					float: left;
-				}
-				.pfgSpace{
-					margin: 0 17px 0 0;
 				}
 			}
 		}

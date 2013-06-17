@@ -136,9 +136,4 @@
       .content #about .aboutContainer .aboutTitle {
         font-size: 25px; }
       .content #about .aboutContainer .aboutImage {
-        width: inherit; }
-      .content #about .aboutContainer .aboutText {
-        width: inherit;
-        font-size: 12px; }
-        .content #about .aboutContainer .aboutText .columText {
-          width: 48%; } }
+        width: inherit; } }

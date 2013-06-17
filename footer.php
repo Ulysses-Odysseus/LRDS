@@ -13,7 +13,7 @@
       $('.productsArea .allProducts li:nth-child(2n+1)').addClass('oddItem');
       $('.productSmall li:not(:last-child)').addClass('allbutlast');
       $('.infoContainer ul li:not(:last-child)').addClass('allbutlast');
-      $('.aboutContainer .aboutText div:nth-child(2n+1)').addClass('pfgSpace');
+      $('.socialFeedArea ul li a:nth-child(1)').addClass('mainContentEffect');
 
       /* Isotope 
       =============================*/

@@ -74,70 +74,86 @@
 
           <!-- Social Feed Area
           ---------------------->
-          <div class="socialFeedArea ralenormal">
+          <div class="socialFeedArea ralelight">
             <ul>
-
               <!-- Start the loop
               -------------------->
               <?php 
               if(have_posts()) : while(have_posts()) : the_post();
 
                 // News items
-                if(in_category('news')) {
+                if(in_category('news')) { ?>
 
-                  if (has_post_thumbnail()) {
-                    $image = the_post_thumbnail();
-                  }
-                  
-                  echo '<li class="socialItem big blog">
-                          <a href="'.the_permalink().'" target="_top" title="'.the_title().'">
-                          '.$image.'
-                          <div class="title">
-                              '.the_title().'
-                            </div>
-                          </a>
-                        </li>';
+                  <li class="socialItem big blog">
+                    <a href="<?php the_permalink(); ?>" target="_top" title="<?php the_title(); ?>">
 
-                } elseif(in_category('instagram')) { 
+                      <?php if(has_post_thumbnail()) { the_post_thumbnail(); } ?>
 
-                    $image = get_the_content();
-                    $title = get_the_title();
+                      <span class="feedBar"><?php the_title(); ?></span>
+                    </a>
+                  </li>
 
-                    if($title != the_title(' ', ' ', false)) {
-                      $text = substr($title, 0, 40).'...';
-                    }
+                <?php } elseif(in_category('instagram')) {
+
+                  $title    = get_the_title();
+                  $image    = get_the_content();
+                  $boxSize  = array('big', 'small');
+                  $size     = $boxSize[array_rand($boxSize)];
                     
-                    echo '<li class="socialItem big instagram">
-                            <a href="'.get_the_excerpt().'" target="_blank" title="'.the_title().'">
-                              <img src="'.$image.'" alt="'.the_title().'">
-                                  <div class="title">'.$text.'</div>
-                            </a>
-                          </li>';
+                  // If it's a portrait image - ie. width is < than height
+                  if($size == 'big') { ?>
+                    
+                    <li class="socialItem big instagram verticalImage">
+                      <a href="<?php echo get_the_excerpt(); ?>" target="_blank" title="<?php the_title(); ?>">
+                        <img src="<?php echo $image; ?>" alt="<?php the_title(); ?>" />
+                      </a>
+                      <span class="feedBar">
+                        <a href="<?php echo get_the_excerpt(); ?>" target="_blank" title="">
+                          View on Instagram
+                        </a>
+                      </span>
+                    </li>
+
+                  <?php } else { ?>
+
+                    <li class="socialItem small instagram verticalImage">
+                      <a href="<?php echo get_the_excerpt(); ?>" target="_blank" title="<?php the_title(); ?>">
+                        <img src="<?php echo $image; ?>" alt="<?php the_title(); ?>" />
+                      </a>
+                      <span class="feedBar">
+                        <a href="<?php echo get_the_excerpt(); ?>" target="_blank" title="">
+                          View on Instagram
+                        </a>
+                      </span>
+                    </li>
+
+                  <?php }
 
                 } elseif(in_category('twitter')) { 
 
-                    $text = substr(get_the_content(), 0, 70).'...';
+                  $text = get_the_content(); ?>
                     
-                    echo '<li class="socialItem small twitter">
-                            <a href="http://twitter.com/lrds" target="_top" title="'.the_title().'">
-                              '.$text.'
-                            </a>
-                          </li>';
+                  <li class="socialItem small twitter">
+                    <a href="http://twitter.com/lrds" target="_top" title="<?php the_title(); ?>">
+                      <?php echo substr($text, 0, 70); ?>...
+                      <span class="feedBar"></span>
+                    </a>
+                  </li>
 
-                } elseif(in_category('facebook')) {
+                <?php } elseif(in_category('facebook') && in_category('message')) { ?>
 
-                    echo '<li class="socialItem small facebook ralelight">
-                              <a href="'.get_the_excerpt().'" target="_blank">
-                                <span class="feedMessage">'.the_title().'</span>
-                              </a>
-                              <span class="feedBar">
-                                <a href="'.get_the_excerpt().'" target="_blank">
-                                  View on Facebook
-                                </a>
-                              </span>
-                            </li>';
+                    <li class="socialItem small facebook ralelight">
+                      <a href="<?php echo get_the_excerpt(); ?>" target="_blank">
+                        <span class="feedMessage"><?php the_title(); ?></span>
+                      </a>
+                      <span class="feedBar">
+                        <a href="<?php echo get_the_excerpt(); ?>" target="_blank">
+                          View on Facebook
+                        </a>
+                      </span>
+                    </li>
 
-                } elseif(in_category('facebook') && in_category('photo')) {
+                <?php } elseif(in_category('facebook') && in_category('photo')) {
 
                     $image = get_the_content();
 
@@ -151,61 +167,60 @@
                     $size     = getimagesize($bigImage);
                     
                     // If it's a portrait image - ie. width is < than height
-                    if ($size[0] < $size[1]) {
+                    if($size[0] < $size[1]) { ?>
 
-                      echo '<li class="socialItem '.$boxSize[array_rand($boxSize)].' facebook verticalImage">
-                              <a href="'.get_the_excerpt().'" target="_blank">
-                                <img src="'.$bigImage.'">
-                              </a>
-                              <span class="feedBar ralelight">
-                                <a href="'.get_the_excerpt().'" target="_blank">
-                                  View on Facebook
-                                </a>
-                              </span>
-                            </li>';
+                      <li class="socialItem <?php echo $boxSize[array_rand($boxSize)]; ?> facebook verticalImage">
+                        <a href="<?php echo get_the_excerpt(); ?>" target="_blank">
+                          <img src="<?php echo $bigImage; ?>">
+                        </a>
+                        <span class="feedBar">
+                          <a href="<?php echo get_the_excerpt(); ?>" target="_blank">
+                            View on Facebook
+                          </a>
+                        </span>
+                      </li>
 
-                    } else {
+                    <?php } else { ?>
 
-                      echo '<li class="socialItem '.$boxSize[array_rand($boxSize)].' facebook horizontalImage">
-                            <a href="'.get_the_excerpt().'" target="_blank">
-                              <img src="'.$bigImage.'">
-                            </a>
-                            <span class="feedBar ralelight">
-                              <a href="'.get_the_excerpt().'" target="_blank">
-                                View on Facebook
-                              </a>
-                            </span>
-                          </li>';
+                      <li class="socialItem <?php echo $boxSize[array_rand($boxSize)]; ?> facebook horizontalImage">
+                        <a href="<?php echo get_the_excerpt(); ?>" target="_blank">
+                          <img src="<?php echo $bigImage; ?>">
+                        </a>
+                        <span class="feedBar">
+                          <a href="<?php echo get_the_excerpt(); ?>" target="_blank">
+                            View on Facebook
+                          </a>
+                        </span>
+                      </li>
 
-                    }
+                    <?php }
 
                 } elseif(in_category('facebook') && in_category('video')) {
 
-                    $image = get_the_content();
+                    $image = get_the_content(); ?>
 
-                    echo '<li class="socialItem small facebook ralelight video">
-                            <a class="videoImage" href="'.get_the_excerpt().'" target="_blank">
-                              <img src="'.$image.'">
-                            </a>
-                            <span class="play">
-                              <a href="'.get_the_excerpt().'" target="_blank">
-                                <img src="'.get_template_directory_uri().'/img/media-icon-play.png">
-                              </a>
-                            </span>
-                            <span class="feedBar">
-                              <a href="'.get_the_excerpt().'" target="_blank">
-                                View on Facebook
-                              </a>
-                            </span>
-                          </li>';
-                }
+                    <li class="socialItem small facebook video">
+                      <a class="videoImage" href="<?php get_the_excerpt(); ?>" target="_blank">
+                        <img src="<?php echo $image; ?>">
+                      </a>
+                      <span class="play">
+                        <a href="<?php echo get_the_excerpt(); ?>" target="_blank">
+                          <img src="<?php echo get_template_directory_uri(); ?>/img/media-icon-play.png">
+                        </a>
+                      </span>
+                      <span class="feedBar">
+                        <a href="<?php echo get_the_excerpt(); ?>" target="_blank">
+                          View on Facebook
+                        </a>
+                      </span>
+                    </li>
+                <?php } ?>
 
-              endwhile; else:
+              <?php endwhile; else: ?>
 
-                echo '<p>Sorry, there are no posts at this time</p>';
+                <p>Sorry, there are no posts at this time</p>
 
-              endif;
-              ?><!-- End the loop -->
+              <?php endif; ?><!-- End the loop -->
 
             </ul>
           </div><!-- End Social Area -->
@@ -414,7 +429,7 @@
             <div class="aboutTitle ralelight">LOS RODRIGUEZ DE SINALOA</div>
             <div class="divider"></div>
             <div class="aboutImage"></div>
-            <div class="aboutText ralelight">
+            <div class="aboutText ralelight group">
               <div class="columText">
                 Claw lick climb the curtains litter box jump on the table claw, meow stretching tail flick litter box chase the red dot. Leap stretching chase the red dot give me fish stretching toss the mousie, puking attack fluffy fur jump lick attack your ankles. Scratched sunbathe run scratched chuf catnip, claw rip the couch sunbathe stretching run. Shed everywhere jump on the table jump on the table hiss, attack sleep in the sink meow litter box purr eat the grass catnip give me fish. Judging you jump on the table purr sleep on your keyboard stuck in a tree judging you, meow claw lay down in your way rip the couch. Bat knock over the lamp sleep on your keyboard jump claw hiss, run biting chase the red dot chuf feed me. your keyboard sunbathe chase the red dot litter box, biting sleep on your face biting feed me zzz hairball leap. Jump scratched judging you leap, leap lay down in your way toss the mousie leap I don't like that food zzz run litter box. Claw zzz meow biting give me fish sleep on your face, toss the mousie hiss kittens judging you. Lay down in your way chase the red dot stretching chuf litter box, jump on the table meow hiss hiss judging you jump catnip.
               </div>
