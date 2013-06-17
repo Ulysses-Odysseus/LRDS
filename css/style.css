@@ -843,8 +843,8 @@ a {
     width: 100%;
     background: url("../img/bar-bg-active.png") repeat; }
     .content #about .aboutContainer, .content #single .aboutContainer {
-      width: 740px;
-      padding: 20px;
+      width: 95%;
+      padding: 2.5%;
       color: #ffffff; }
       .content #about .aboutContainer .aboutTitle, .content #single .aboutContainer .aboutTitle {
         font-size: 29px;
@@ -856,14 +856,15 @@ a {
         margin: 20px 0;
         background: #366c9a; }
       .content #about .aboutContainer .aboutText, .content #single .aboutContainer .aboutText {
-        width: 740px;
-        padding: 20px 0 20px 0;
+        width: 95%;
+        padding: 2.5% 0 2.5% 0;
         font-size: 13px;
         line-height: 23px; }
         .content #about .aboutContainer .aboutText div, .content #single .aboutContainer .aboutText div {
           display: inline-block; }
         .content #about .aboutContainer .aboutText .columText, .content #single .aboutContainer .aboutText .columText {
-          width: 360px;
+          width: 45%;
+          padding: 0 2.5% 0 2.5%;
           float: left; }
         .content #about .aboutContainer .aboutText .pfgSpace, .content #single .aboutContainer .aboutText .pfgSpace {
           margin: 0 17px 0 0; }

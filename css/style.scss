@@ -959,8 +959,8 @@ a{
 		width: 100%;
 		background: $background;
 		.aboutContainer{
-			width: 740px;
-			padding: 20px;
+			width: 95%;
+			padding: 2.5%;
 			color: #ffffff;
 			.aboutTitle{
 				font-size: 29px;
@@ -973,15 +973,16 @@ a{
 				background: #366c9a;
 			}
 			.aboutText{
-				width: 740px;
-				padding: 20px 0 20px 0;
+				width: 95%;
+				padding: 2.5% 0 2.5% 0;
 				font-size: 13px;
 				line-height: 23px;
 				div{
 					display: inline-block;
 				}
 				.columText{
-					width: 360px;
+					width: 45%;
+					padding: 0 2.5% 0 2.5%;
 					float: left;
 				}
 				.pfgSpace{

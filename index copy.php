@@ -80,65 +80,52 @@
               <!-- Start the loop
               -------------------->
               <?php 
+
               if(have_posts()) : while(have_posts()) : the_post();
 
-                // News items
-                if(in_category('news')) {
-
-                  if (has_post_thumbnail()) {
-                    $image = the_post_thumbnail();
-                  }
+                if(in_category('news')) { ?>
                   
-                  echo '<li class="socialItem big blog">
-                          <a href="'.the_permalink().'" target="_top" title="'.the_title().'">
-                          '.$image.'
-                          <div class="title">
-                              '.the_title().'
-                            </div>
-                          </a>
-                        </li>';
+                    <li class="socialItem big blog">
+                      <a href="<?php the_permalink(); ?>" target="_top" title="<?php the_title(); ?>">
+                        <?php if (has_post_thumbnail()) { the_post_thumbnail(); } ?>
+                        <div class="title">
+                          <?php the_title(); ?>
+                        </div>
+                      </a>
+                    </li>
 
-                } elseif(in_category('instagram')) { 
+                  <?php } elseif(in_category('instagram')) { 
 
-                    $image = get_the_content();
-                    $title = get_the_title();
+                    $src = get_the_content();
 
-                    if($title != the_title(' ', ' ', false)) {
-                      $text = substr($title, 0, 40).'...';
-                    }
+                  ?>
                     
-                    echo '<li class="socialItem big instagram">
-                            <a href="'.get_the_excerpt().'" target="_blank" title="'.the_title().'">
-                              <img src="'.$image.'" alt="'.the_title().'">
-                                  <div class="title">'.$text.'</div>
-                            </a>
-                          </li>';
+                    <li class="socialItem big instagram">
+                      <a href="<?php echo get_the_excerpt(); ?>" target="_blank" title="<?php the_title(); ?>">
+                        <img src="<?php echo $src; ?>" alt="<?php the_title(); ?>">
+                          
+                          <?php
+                          $title = get_the_title();
 
-                } elseif(in_category('twitter')) { 
+                          if($title != the_title(' ', ' ', false)) { ?>
+                            <div class="title"><?php echo substr($title, 0, 40).'...'; ?></div>
+                          <?php } ?>
 
-                    $text = substr(get_the_content(), 0, 70).'...';
+                      </a>
+                    </li>
+
+                  <?php } elseif(in_category('twitter')) { 
+
+                    $text = get_the_content(); ?>
                     
-                    echo '<li class="socialItem small twitter">
-                            <a href="http://twitter.com/lrds" target="_top" title="'.the_title().'">
-                              '.$text.'
-                            </a>
-                          </li>';
+                    <li class="socialItem small twitter">
+                      <a href="http://twitter.com/lrds" target="_top" title="<?php the_title(); ?>">
+                        <?php echo substr($text, 0, 70).'...'; ?>
+                      </a>
+                    </li>
 
-                } elseif(in_category('facebook')) {
-
-                    echo '<li class="socialItem small facebook ralelight">
-                              <a href="'.get_the_excerpt().'" target="_blank">
-                                <span class="feedMessage">'.the_title().'</span>
-                              </a>
-                              <span class="feedBar">
-                                <a href="'.get_the_excerpt().'" target="_blank">
-                                  View on Facebook
-                                </a>
-                              </span>
-                            </li>';
-
-                } elseif(in_category('facebook') && in_category('photo')) {
-
+                  <?php } elseif(in_category('facebook')) { 
+                    
                     $image = get_the_content();
 
                     // Setting up image
@@ -154,58 +141,24 @@
                     if ($size[0] < $size[1]) {
 
                       echo '<li class="socialItem '.$boxSize[array_rand($boxSize)].' facebook verticalImage">
-                              <a href="'.get_the_excerpt().'" target="_blank">
+                              <a href="'.$linkPostFB.'" target="_blank">
                                 <img src="'.$bigImage.'">
                               </a>
                               <span class="feedBar ralelight">
-                                <a href="'.get_the_excerpt().'" target="_blank">
+                                <a href="'.$linkPostFB.'" target="_blank">
                                   View on Facebook
                                 </a>
                               </span>
                             </li>';
-
-                    } else {
-
-                      echo '<li class="socialItem '.$boxSize[array_rand($boxSize)].' facebook horizontalImage">
-                            <a href="'.get_the_excerpt().'" target="_blank">
-                              <img src="'.$bigImage.'">
-                            </a>
-                            <span class="feedBar ralelight">
-                              <a href="'.get_the_excerpt().'" target="_blank">
-                                View on Facebook
-                              </a>
-                            </span>
-                          </li>';
-
                     }
 
-                } elseif(in_category('facebook') && in_category('video')) {
+                  } ?>
 
-                    $image = get_the_content();
+                <?php endwhile; else: ?>
 
-                    echo '<li class="socialItem small facebook ralelight video">
-                            <a class="videoImage" href="'.get_the_excerpt().'" target="_blank">
-                              <img src="'.$image.'">
-                            </a>
-                            <span class="play">
-                              <a href="'.get_the_excerpt().'" target="_blank">
-                                <img src="'.get_template_directory_uri().'/img/media-icon-play.png">
-                              </a>
-                            </span>
-                            <span class="feedBar">
-                              <a href="'.get_the_excerpt().'" target="_blank">
-                                View on Facebook
-                              </a>
-                            </span>
-                          </li>';
-                }
+                  <p>Sorry, there are no posts at this time</p>
 
-              endwhile; else:
-
-                echo '<p>Sorry, there are no posts at this time</p>';
-
-              endif;
-              ?><!-- End the loop -->
+              <?php endif; ?><!-- End the loop -->
 
             </ul>
           </div><!-- End Social Area -->
