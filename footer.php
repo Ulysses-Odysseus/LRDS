@@ -86,7 +86,7 @@
 
         /* Single Post functionality
         =============================*/
-        $('.showlist a, #showsingle .back, .bloglist a, #blogsingle .back').click(function(e){
+        $('.showlist a, #showsingle .back, .bloglist .blog a, #blogsingle .back').click(function(e){
 
           // Prevent default link action
           e.preventDefault();
@@ -119,8 +119,6 @@
               data: data,
               success:
                 function(data){
-                  //console.log(data);
-                  
                   // Add post content to page
                   $(singleType + ' ' + content).html(data);
 
@@ -128,11 +126,12 @@
                   $(listType).css('margin-left','-50%');
                   $(singleType).removeClass('no-active');
                   $(singleType).addClass('active');
+
                 }
             });
           } else {
             // Animate and hide post
-            $(listType).css('margin-left','0');
+            $(listType).css('margin-left','0').delay(1000);
             $(singleType).removeClass('active');
             $(singleType).addClass('no-active');
           }

@@ -475,6 +475,7 @@ a {
       padding: 0; }
       .content #home .bloglist .socialFeedArea ul {
         width: 105%;
+        float: left;
         margin: 0;
         padding: 0;
         overflow: hidden;
