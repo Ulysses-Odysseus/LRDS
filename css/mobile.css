@@ -61,12 +61,14 @@
     .content .searchBar {
       width: 140px;
       height: 70px; }
-      .content .searchBar .searchForm .searchInput {
+      .content .searchBar .searchForm {
         width: 140px;
-        padding: 0 40px 0 10px; }
-      .content .searchBar .searchForm .searchIcon {
-        margin: 0 0 0 105px;
-        padding: 0px 0px 0 25px; }
+        height: 70px; }
+        .content .searchBar .searchForm .searchInput {
+          width: 115px;
+          padding: 0 40px 0 10px; }
+        .content .searchBar .searchForm .searchIcon {
+          padding: 0px 25px 0 25px; }
     .content #store .productsListMainArea {
       /* Product Area */ }
       .content #store .productsListMainArea .productsArea {
