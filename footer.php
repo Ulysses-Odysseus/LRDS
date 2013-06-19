@@ -96,10 +96,10 @@
 
             if($('#single').hasClass('no-active')){
 
-              var data = "postid=" + postid;
+              var data = "postid=" + postid + "type=";
               
               $.ajax({
-                url: "./single.php",
+                url: '<?php echo get_template_directory_uri(); ?>/php/single.php',
                 type: "get",
                 data: data,
                 success:

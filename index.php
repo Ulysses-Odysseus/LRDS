@@ -224,6 +224,12 @@
 
             </ul>
           </div><!-- End Social Area -->
+          <div id="single" class="no-active ralelight">
+            <div class="aboutContainer">
+              <a class="back" href="#">Back</a>
+              <div class="postcontent"></div>
+            </div>
+          </div><!-- End Single Shows Div -->
         </div><!-- End Home Div -->
 
         <!-- =============================================================================
