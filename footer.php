@@ -86,41 +86,57 @@
 
         /* Single Post functionality
         =============================*/
-        $('.showlist a, #shows .back').click(function(e){
+        $('.showlist a, #showsingle .back, .bloglist a, #blogsingle .back').click(function(e){
 
-            var postid = $(this).attr('class');
-            // var margin = $(this).css('margin');
+          // Prevent default link action
+          e.preventDefault();
 
-            // alert(postid);
-            e.preventDefault();
+          // Get the class and split at '_'
+          var postInfo = $(this).data('id');
+          var postData  = postInfo.split('_');
 
-            if($('#single').hasClass('no-active')){
+          // Create variables to pass
+          var postid = postData[0];
+          var type   = postData[1];
 
-              var data = "postid=" + postid + "type=";
-              
-              $.ajax({
-                url: '<?php echo get_template_directory_uri(); ?>/php/single.php',
-                type: "get",
-                data: data,
-                success:
-                  function(data){
-                    $('#single .postcontent').html(data);
+          var singleType = '#' + type + 'single';
+          var listType   = '.' + type + 'list';
+          var content    = '.' + type + 'content';
+          
+          // console.log(type);
+          // console.log(singleType + ' ' + content);
+          // console.log(listType);
 
-                    $('.showlist').css('margin-left','-50%');
-                    $('#single').removeClass('no-active');
-                    $('#single').addClass('active');
-                  }
-              });
+          if(type != 'back' && $(singleType).hasClass('no-active')){
 
-            } else {
+            var data = "postid=" + postid + "&type=" + type;
 
-              $('.showlist').css('margin-left','0');
-              $('#single').removeClass('active');
-              $('#single').addClass('no-active');
+            //console.log(data);
+            
+            $.ajax({
+              url: '<?php echo get_template_directory_uri(); ?>/php/single.php',
+              type: "get",
+              data: data,
+              success:
+                function(data){
+                  //console.log(data);
+                  
+                  // Add post content to page
+                  $(singleType + ' ' + content).html(data);
 
-            }
-
-        });
+                  // Animate and show post
+                  $(listType).css('margin-left','-50%');
+                  $(singleType).removeClass('no-active');
+                  $(singleType).addClass('active');
+                }
+            });
+          } else {
+            // Animate and hide post
+            $(listType).css('margin-left','0');
+            $(singleType).removeClass('active');
+            $(singleType).addClass('no-active');
+          }
+      });
     });
     /* ]]> */
     </script>

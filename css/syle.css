@@ -348,9 +348,9 @@ a {
      ========================================================================== */
   /* End Shows */
   /* =============================================================================
-  	SINGLE PAGE
+  	ABOUT
      ========================================================================== */
-  /* End single */
+  /* End About */
   /* =============================================================================
   	NEWSLETTER
      ========================================================================== */ }
@@ -405,15 +405,14 @@ a {
     margin: 0 0 0 19px;
     float: left !important; }
     .content .searchBar .searchForm {
-      width: 300px;
-      height: 70px;
-      position: relative; }
+      height: 70px; }
       .content .searchBar .searchForm .searchInput {
         width: 300px;
         border: none;
         height: 100%;
         color: #555555;
         font-size: 16px;
+        position: relative;
         padding: 0 60px 0 20px;
         font-family: 'Raleway', arial , sans-serif;
         font-weight: 100; }
@@ -427,10 +426,10 @@ a {
         z-index: 2;
         width: 10px;
         height: inherit;
+        margin: 0 0 0 240px;
         padding: 0px 30px;
+        float: right;
         position: absolute;
-        right: 0;
-        top: 0;
         border: none !important;
         outline: none !important;
         background: white url("../img/icon-search.png") no-repeat center; }
@@ -467,42 +466,40 @@ a {
           .content #home .socialFeedBar ul li a:hover, .content #home .socialFeedBar ul li .active {
             outline: none;
             background: url("../img/bar-bg-active.png") repeat; }
-    .content #home .bloglist {
-      width: 50%;
-      float: left;
-      overflow-x: hidden;
-      margin: 0;
-      padding: 0; }
-      .content #home .bloglist .socialFeedArea ul {
-        width: 105%;
+    .content #home .socialFeedArea {
+      width: 200%;
+      overflow-x: hidden; }
+      .content #home .socialFeedArea .bloglist {
+        width: 50%;
         margin: 0;
         padding: 0;
+        float: left;
         overflow: hidden;
         list-style-type: none; }
-        .content #home .bloglist .socialFeedArea ul li {
+        .content #home .socialFeedArea .bloglist li {
           margin: 20px 0 0 0;
           overflow: hidden; }
-          .content #home .bloglist .socialFeedArea ul li a {
+          .content #home .socialFeedArea .bloglist li a {
             font-size: 11px;
             color: #ccc;
             opacity: 1; }
-          .content #home .bloglist .socialFeedArea ul li .mainContentEffect {
+          .content #home .socialFeedArea .bloglist li .mainContentEffect {
             /* linear */
             -webkit-transition: all 200ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
             -moz-transition: all 200ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
             -ms-transition: all 200ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
             -o-transition: all 200ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
             transition: all 200ms cubic-bezier(0.25, 0.25, 0.75, 0.75); }
-            .content #home .bloglist .socialFeedArea ul li .mainContentEffect:hover {
+            .content #home .socialFeedArea .bloglist li .mainContentEffect:hover {
               opacity: .7; }
-        .content #home .bloglist .socialFeedArea ul .feedBar {
+        .content #home .socialFeedArea .bloglist .feedBar {
           height: 45px;
           display: block;
           bottom: 0;
           position: absolute;
           background: url("../img/bar-bg-active.png") repeat;
           line-height: 45px; }
-          .content #home .bloglist .socialFeedArea ul .feedBar:before {
+          .content #home .socialFeedArea .bloglist .feedBar:before {
             content: "";
             width: 29px;
             height: 25px;
@@ -511,44 +508,44 @@ a {
             display: block;
             position: absolute;
             background-size: 80% !important; }
-        .content #home .bloglist .socialFeedArea ul .facebook .feedBar:before {
+        .content #home .socialFeedArea .bloglist .facebook .feedBar:before {
           background: url("../img/media-icon-facebook.png") no-repeat; }
-        .content #home .bloglist .socialFeedArea ul .blog .feedBar:before {
+        .content #home .socialFeedArea .bloglist .blog .feedBar:before {
           background: url("../img/media-icon-blog.png") no-repeat; }
-        .content #home .bloglist .socialFeedArea ul .twitter .feedBar:before {
+        .content #home .socialFeedArea .bloglist .twitter .feedBar:before {
           background: url("../img/media-icon-twitter.png") no-repeat; }
-        .content #home .bloglist .socialFeedArea ul .instagram .feedBar:before {
+        .content #home .socialFeedArea .bloglist .instagram .feedBar:before {
           background: url("../img/media-icon-instagram.png") no-repeat; }
-        .content #home .bloglist .socialFeedArea ul .video .play {
+        .content #home .socialFeedArea .bloglist .video .play {
           bottom: 50%;
           left: 37%;
           position: absolute; }
-        .content #home .bloglist .socialFeedArea ul .video .videoImage {
+        .content #home .socialFeedArea .bloglist .video .videoImage {
           background: black;
           padding-bottom: 100%; }
-          .content #home .bloglist .socialFeedArea ul .video .videoImage img {
+          .content #home .socialFeedArea .bloglist .video .videoImage img {
             width: 100% !important; }
-        .content #home .bloglist .socialFeedArea ul .verticalImage a img {
+        .content #home .socialFeedArea .bloglist .verticalImage a img {
           width: 100%; }
-        .content #home .bloglist .socialFeedArea ul .horizontalImage a img {
+        .content #home .socialFeedArea .bloglist .horizontalImage a img {
           height: 100%; }
-        .content #home .bloglist .socialFeedArea ul .small, .content #home .bloglist .socialFeedArea ul .big {
+        .content #home .socialFeedArea .bloglist .small, .content #home .socialFeedArea .bloglist .big {
           word-wrap: break-word;
           background: url("../img/bar-bg-active.png") repeat;
           background-color: black; }
-        .content #home .bloglist .socialFeedArea ul .small {
+        .content #home .socialFeedArea .bloglist .small {
           width: 120px;
           height: 120px;
           padding: 10px; }
-          .content #home .bloglist .socialFeedArea ul .small .feedBar {
+          .content #home .socialFeedArea .bloglist .small .feedBar {
             width: 100%; }
-            .content #home .bloglist .socialFeedArea ul .small .feedBar:before {
+            .content #home .socialFeedArea .bloglist .small .feedBar:before {
               bottom: 6px;
               right: 8px; }
-        .content #home .bloglist .socialFeedArea ul .big {
+        .content #home .socialFeedArea .bloglist .big {
           width: 300px;
           height: 300px; }
-          .content #home .bloglist .socialFeedArea ul .big .feedBar {
+          .content #home .socialFeedArea .bloglist .big .feedBar {
             width: 96.5%;
             padding-left: 3.5%; }
   .content #store {
@@ -776,7 +773,8 @@ a {
   .content #shows {
     width: 200%;
     padding: 0 0 20px 0;
-    overflow-x: hidden; }
+    overflow-x: hidden;
+    /* SINGLE PAGE */ }
     .content #shows .showlist {
       width: 50%;
       float: left;
@@ -862,9 +860,26 @@ a {
             -o-animation-delay: 0.0s;
             -o-animation-direction: alternate;
             -o-transition: all 0.1s ease-in-out; }
-  .content #about {
-    width: 100%; }
+    .content #shows #blogsingle, .content #shows #showsingle {
+      width: 50%;
+      float: left;
+      margin: 0;
+      padding: 0; }
+      .content #shows #blogsingle .back, .content #shows #showsingle .back {
+        color: #ccc;
+        padding: 10px;
+        background: url("../img/bar-bg-active-green.png") repeat; }
+        .content #shows #blogsingle .back:hover, .content #shows #showsingle .back:hover {
+          background: url("../img/bar-bg-active-black.png") repeat; }
+    .content #shows #blogsingle, .content #shows #showsingle, .content #shows .bloglist, .content #shows .showlist, .content #shows .back {
+      /* ease-out */
+      -webkit-transition: all 300ms cubic-bezier(0, 0, 0.58, 1);
+      -moz-transition: all 300ms cubic-bezier(0, 0, 0.58, 1);
+      -ms-transition: all 300ms cubic-bezier(0, 0, 0.58, 1);
+      -o-transition: all 300ms cubic-bezier(0, 0, 0.58, 1);
+      transition: all 300ms cubic-bezier(0, 0, 0.58, 1); }
   .content #about, .content #blogsingle, .content #showsingle {
+    width: 100%;
     background: url("../img/bar-bg-active.png") repeat; }
     .content #about .aboutContainer, .content #blogsingle .aboutContainer, .content #showsingle .aboutContainer {
       width: 95%;
@@ -880,42 +895,16 @@ a {
         margin: 20px 0;
         background: #366c9a; }
       .content #about .aboutContainer .aboutText, .content #blogsingle .aboutContainer .aboutText, .content #showsingle .aboutContainer .aboutText {
-        width: 100%;
+        width: 95%;
         padding: 2.5% 0 2.5% 0;
         font-size: 13px;
         line-height: 23px; }
         .content #about .aboutContainer .aboutText div, .content #blogsingle .aboutContainer .aboutText div, .content #showsingle .aboutContainer .aboutText div {
           display: inline-block; }
-        .content #about .aboutContainer .aboutText img, .content #blogsingle .aboutContainer .aboutText img, .content #showsingle .aboutContainer .aboutText img {
-          width: 100%; }
         .content #about .aboutContainer .aboutText .columText, .content #blogsingle .aboutContainer .aboutText .columText, .content #showsingle .aboutContainer .aboutText .columText {
           width: 47.5%;
           padding: 0 2.5% 0 0;
           float: left; }
-  .content #blogsingle,
-  .content #showsingle {
-    width: 50%;
-    float: left;
-    margin: 0;
-    padding: 0; }
-    .content #blogsingle .back,
-    .content #showsingle .back {
-      color: #ccc;
-      line-height: 45px;
-      padding: 10px 15px 10px 15px;
-      background: url("../img/bar-bg-active-green.png") repeat; }
-      .content #blogsingle .back:hover,
-      .content #showsingle .back:hover {
-        background: url("../img/bar-bg-active-black.png") repeat; }
-  .content #blogsingle, .content .bloglist,
-  .content #showsingle, .content .showlist,
-  .content .back {
-    /* ease-out */
-    -webkit-transition: all 300ms cubic-bezier(0, 0, 0.58, 1);
-    -moz-transition: all 300ms cubic-bezier(0, 0, 0.58, 1);
-    -ms-transition: all 300ms cubic-bezier(0, 0, 0.58, 1);
-    -o-transition: all 300ms cubic-bezier(0, 0, 0.58, 1);
-    transition: all 300ms cubic-bezier(0, 0, 0.58, 1); }
 
 /* =============================================================================
 	Isotope

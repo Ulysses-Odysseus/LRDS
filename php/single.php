@@ -22,7 +22,10 @@ require_once('../../../../wp-load.php');
 $postid = $_GET['postid'];
 $type   = $_GET['type'];
 
-if(isset($postid) && $postid != '') {
+// echo $postid;
+// echo $type;
+
+if(isset($postid) && $postid != '' && isset($type) && $type != '') {
 
     // Instantiate wpdb object and Query db for our post based on the postid
     $posts = $wpdb->get_results(
@@ -38,6 +41,7 @@ if(isset($postid) && $postid != '') {
     foreach($posts as $postData) {
 
         if($type == 'show'){
+
         	// Setup variables for the post
         	$timestamp = $postData->post_date;
         	$title     = $postData->post_title;
@@ -81,7 +85,7 @@ if(isset($postid) && $postid != '') {
                             </div>
                         </div>';
 
-        } elseif($type = 'news') {
+        } elseif($type = 'blog') {
 
             // Setup variables for the post
             $title     = $postData->post_title;
@@ -90,9 +94,13 @@ if(isset($postid) && $postid != '') {
             // Build the post
             $thepost = '<div class="aboutTitle">'.$title.'</div>
                         <div class="divider"></div>
-                        <div class="aboutText">
+                        <div class="aboutText group">
                             '.$content.'
                         </div>';
+
+        } else {
+
+            echo "Sorry, there is no post at this time";
 
         }
     }
