@@ -70,7 +70,7 @@
               <input type="button" class="searchIcon" value="">
               <input type="text" class="searchInput ralelight" placeholder="search">
             </form>
-          </div> <!-- End Search Bar --> 
+          </div> <!-- End Search Bar -->
 
           <!-- Social Feed Area
           ---------------------->
