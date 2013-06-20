@@ -56,8 +56,8 @@
         ---------------------->
         <div class="logoarea">
           <div class="logo">
-            <a href="#">
-              <h1> LRDS - Los Rodriguez de Sinaloa </h1>
+            <a href="<?php echo esc_url(home_url('/')); ?>">
+              <h1>LRDS - Los Rodriguez de Sinaloa</h1>
             </a>
           </div>
         </div>

@@ -1,10 +1,7 @@
-          <form role="search" method="get" id="searchform" action="<?= esc_url(home_url('/')); ?>" >
-            <div class="row">
-              <div class="ten columns">
-                <input type="text" name="s" id="s" onfocus="if(this.value == 'Search the Blog...') { this.value = ''; }" value="Search the Blog..." />
-              </div>
-              <div class="two columns">
-                <input type="submit" id="searchsubmit">
-              </div>
-            </div>
+            <div class="searchBar">
+              <form class="searchForm row" role="search" method="get" id="searchform" action="<?php echo esc_url(home_url('/')); ?>" >
+                <input id="s" name="s" type="text" class="searchInput ralelight" placeholder="search">
+                <input type="submit" class="searchIcon" value="">
+              </form>
+            </div> <!-- End Search Bar -->
           </form>

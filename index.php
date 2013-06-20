@@ -4,7 +4,7 @@
       ---------------------->
       <div class="linkUp">
         <div class="linkUpButton">
-          <a href=""><img src="<?php echo get_template_directory_uri(); ?>/img/arrow-up.png" alt="Go Top"></a>
+          <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/arrow-up.png" alt="Go Top"></a>
         </div>
       </div>
 
@@ -66,17 +66,12 @@
 
             <!-- Search Bar
             ---------------------->
-            <div class="searchBar">
-              <form class="searchForm row" action="">
-                <input type="text" class="searchInput ralelight" placeholder="search">
-                <input type="button" class="searchIcon" value="">
-              </form>
-            </div> <!-- End Search Bar -->
+            <?php get_search_form(); ?>
 
             <!-- Social Feed Area
             ---------------------->
             <div class="socialFeedArea ralelight">
-              <ul>
+              <ul class="newsfeed">
                 <!-- Start the loop
                 -------------------->
                 <?php 

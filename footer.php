@@ -8,6 +8,16 @@
     /* <![CDATA[ */
     $(document).ready(function(){
 
+      $('input[name=s]').keypress(function() {
+        var value = $(this).val();
+        var lenght = value.length;
+        if(lenght > 1) {
+            $.post(ajaxurl, { action: 'ajax_search', s: value }, function(output) {
+                $('#home .newsfeed').html(output);
+            });
+        }
+      });
+
       /* CSS Selectors All Browsers
       =============================*/
       $('.productsArea .allProducts li:nth-child(2n+1)').addClass('oddItem');
