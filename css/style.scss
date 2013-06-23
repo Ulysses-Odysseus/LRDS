@@ -255,6 +255,19 @@ a{
 					cursor: pointer;
 					background: $background;
 				}
+
+				a{	
+					display: block;
+					width: inherit;
+					height: inherit;
+					text-indent: -999em;
+				}
+
+				.home  { background: url(../img/nav-icon-home.png) no-repeat center; }
+				.store { background: url(../img/nav-icon-store.png) no-repeat center; }
+				.shows { background: url(../img/nav-icon-shows.png) no-repeat center; }
+				.about { background: url(../img/nav-icon-about.png) no-repeat center; }
+				.subscribe { background: url(../img/nav-icon-newsletter.png) no-repeat center; }
 			}
 			.activeNav{
 				background: $background;

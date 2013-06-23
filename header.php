@@ -78,15 +78,15 @@
         ---------------------->
         <div class="navBar">
           <ul>
-            <li class="navButton activeNav"><a class="home"><img src="<?php echo get_template_directory_uri(); ?>/img/nav-icon-home.png"></a></li>
+            <li class="navButton activeNav"><a class="home">HOME</a></li>
             <li class="divider"></li>
-            <li class="navButton"><a class="store"><img src="<?php echo get_template_directory_uri(); ?>/img/nav-icon-store.png"></a></li>
+            <li class="navButton"><a class="store">STORE</a></li>
             <li class="divider"></li>
-            <li class="navButton"><a class="shows"><img src="<?php echo get_template_directory_uri(); ?>/img/nav-icon-shows.png"></a></li>
+            <li class="navButton"><a class="shows">SHOWS</a></li>
             <li class="divider"></li>
-            <li class="navButton"><a class="about"><img src="<?php echo get_template_directory_uri(); ?>/img/nav-icon-about.png"></a></li>
+            <li class="navButton"><a class="about">ABOUT</a></li>
             <li class="divider"></li>
-            <li class="navButton"><a class="subscribe"><img src="<?php echo get_template_directory_uri(); ?>/img/nav-icon-newsletter.png"></a></li>
+            <li class="navButton"><a class="subscribe">NEWSLETTER</a></li>
             <li class="divider"></li>
           </ul>
         </div>

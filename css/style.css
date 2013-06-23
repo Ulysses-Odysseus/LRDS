@@ -262,6 +262,21 @@ a {
         .sideBar .navBar ul li:hover {
           cursor: pointer;
           background: url("../img/bar-bg-active.png") repeat; }
+        .sideBar .navBar ul li a {
+          display: block;
+          width: inherit;
+          height: inherit;
+          text-indent: -999em; }
+        .sideBar .navBar ul li .home {
+          background: url(../img/nav-icon-home.png) no-repeat center; }
+        .sideBar .navBar ul li .store {
+          background: url(../img/nav-icon-store.png) no-repeat center; }
+        .sideBar .navBar ul li .shows {
+          background: url(../img/nav-icon-shows.png) no-repeat center; }
+        .sideBar .navBar ul li .about {
+          background: url(../img/nav-icon-about.png) no-repeat center; }
+        .sideBar .navBar ul li .subscribe {
+          background: url(../img/nav-icon-newsletter.png) no-repeat center; }
       .sideBar .navBar ul .activeNav {
         background: url("../img/bar-bg-active.png") repeat; }
 
