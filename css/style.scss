@@ -609,12 +609,23 @@ a{
 					}
 
 					// Style for Boxes
-					.small, .big {
+					.small, .smallBorder, .big {
 						word-wrap: break-word;
 						background: $background;
 						background-color: black;
 					}
 					.small{
+						width: 140px; height: 140px;
+
+						.feedBar{
+							width: 100%;
+
+							&:before {
+								bottom: 6px; right: 8px;
+							}
+						}
+					}
+					.smallBorder{
 						width: 120px; height: 120px;
 						padding: 10px;
 
@@ -977,26 +988,9 @@ a{
 						cursor: pointer;
 						overflow: hidden;
 						background: $background;
-						/*-webkit-transition: all 0.2s ease-in-out;
-					       -moz-transition: all 0.2s ease-in-out;
-					        -ms-transition: all 0.2s ease-in-out;
-					         -o-transition: all 0.2s ease-in-out;
-					            transition: all 0.2s ease-in-out;*/
 						img{
 							padding: 24% 0;
 						}
-						// a{
-						// 	width: inherit; height: inherit;
-						// 	display: block;
-						// 	text-align: center;
-						// 	line-height: 210px;
-						// 	vertical-align: middle;
-						// 	-webkit-transition: all 0.2s ease-in-out;
-						//        -moz-transition: all 0.2s ease-in-out;
-						//         -ms-transition: all 0.2s ease-in-out;
-						//          -o-transition: all 0.2s ease-in-out;
-						//             transition: all 0.2s ease-in-out;
-						// }
 					}
 					/* HOVER ON */
 					.namePlace:hover ~ .button a, .button:hover a{

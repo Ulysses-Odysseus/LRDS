@@ -127,7 +127,7 @@
 
                     $text = get_the_content(); ?>
                       
-                    <li class="socialItem small twitter">
+                    <li class="socialItem smallBorder twitter">
                       <a href="http://twitter.com/lrds" target="_blank" title="<?php the_title(); ?>">
                         <?php echo substr($text, 0, 70); ?>...
                       </a>
@@ -137,7 +137,7 @@
 
                   <?php } elseif(in_category('facebook') && in_category('message')) { ?>
 
-                      <li class="socialItem small facebook ralelight">
+                      <li class="socialItem smallBorder facebook ralelight">
                         <a href="<?php echo get_the_excerpt(); ?>" target="_blank">
                           <span class="feedMessage"><?php the_title(); ?></span>
                         </a>
