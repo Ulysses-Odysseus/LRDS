@@ -82,11 +82,9 @@
 
                     <li class="socialItem big blog">
                       <a data-id="<?php echo get_the_id(); ?>_blog" href="<?php the_permalink(); ?>" target="_top" title="<?php the_title(); ?>">
-
                         <?php if(has_post_thumbnail()) { the_post_thumbnail(); } ?>
-
-                        <span class="feedBar"><?php the_title(); ?></span>
                       </a>
+                      <span class="feedBar"><?php the_title(); ?></span>
                     </li>
 
                   <?php } elseif(in_category('instagram')) {
@@ -130,10 +128,11 @@
                     $text = get_the_content(); ?>
                       
                     <li class="socialItem small twitter">
-                      <a href="http://twitter.com/lrds" target="_top" title="<?php the_title(); ?>">
+                      <a href="http://twitter.com/lrds" target="_blank" title="<?php the_title(); ?>">
                         <?php echo substr($text, 0, 70); ?>...
-                        <span class="feedBar"></span>
                       </a>
+                        <span class="feedBar"></span>
+                      
                     </li>
 
                   <?php } elseif(in_category('facebook') && in_category('message')) { ?>

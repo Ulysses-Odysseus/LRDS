@@ -126,13 +126,9 @@
       .content #shows .showlist li .place .button {
         width: 110px;
         height: 110px; }
-        .content #shows .showlist li .place .button a {
-          width: inherit;
-          height: 110px;
-          line-height: 160px; }
-          .content #shows .showlist li .place .button a img {
-            width: 20%;
-            height: 50%; }
+        .content #shows .showlist li .place .button img {
+          width: 20%;
+          height: 50%; }
     .content #about .aboutContainer {
       width: 580px; }
       .content #about .aboutContainer .aboutTitle {

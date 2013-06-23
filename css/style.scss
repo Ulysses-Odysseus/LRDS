@@ -568,7 +568,7 @@ a{
 						}
 					}
 
-					//Video Feed
+					// Video Feed
 					.video{
 						.play{
 							bottom: 50%; left: 37%;
@@ -957,9 +957,9 @@ a{
 					}
 
 					.button{
-						width: 140px; height: 108px;
+						width: 140px; height: 140px;
 						float: right;
-						padding: 32px 0 0 0;
+						// padding: 32px 0 0 0;
 						text-align: center;
 						cursor: pointer;
 						overflow: hidden;
@@ -969,19 +969,21 @@ a{
 					        -ms-transition: all 0.2s ease-in-out;
 					         -o-transition: all 0.2s ease-in-out;
 					            transition: all 0.2s ease-in-out;*/
-
-						a{
-							width: inherit; height: inherit;
-							display: block;
-							text-align: center;
-							line-height: 210px;
-							vertical-align: middle;
-							/*-webkit-transition: all 0.2s ease-in-out;
-						       -moz-transition: all 0.2s ease-in-out;
-						        -ms-transition: all 0.2s ease-in-out;
-						         -o-transition: all 0.2s ease-in-out;
-						            transition: all 0.2s ease-in-out;*/
+						img{
+							padding: 24% 0;
 						}
+						// a{
+						// 	width: inherit; height: inherit;
+						// 	display: block;
+						// 	text-align: center;
+						// 	line-height: 210px;
+						// 	vertical-align: middle;
+						// 	-webkit-transition: all 0.2s ease-in-out;
+						//        -moz-transition: all 0.2s ease-in-out;
+						//         -ms-transition: all 0.2s ease-in-out;
+						//          -o-transition: all 0.2s ease-in-out;
+						//             transition: all 0.2s ease-in-out;
+						// }
 					}
 					/* HOVER ON */
 					.namePlace:hover ~ .button a, .button:hover a{
