@@ -48,20 +48,8 @@
 
             <!-- Social Media Bar
             ---------------------->
-            <div class="socialFeedBar">
-              <ul class="filters">
-                <li class="socialIcon"><a class="active" href="#all" data-filter="*"><img src="<?php echo get_template_directory_uri(); ?>/img/media-icon-view-all.png" alt=""></a></li>
-                <li class="dividerVertical"></li>
-                <li class="socialIcon"><a href="#blog" data-filter=".blog"><img src="<?php echo get_template_directory_uri(); ?>/img/media-icon-blog.png" alt=""></a></li>
-                <li class="dividerVertical"></li>
-                <li class="socialIcon"><a href="#facebook" data-filter=".facebook"><img src="<?php echo get_template_directory_uri(); ?>/img/media-icon-facebook.png" alt=""></a></li>
-                <li class="dividerVertical"></li>
-                <li class="socialIcon"><a href="#twitter" data-filter=".twitter"><img src="<?php echo get_template_directory_uri(); ?>/img/media-icon-twitter.png" alt=""></a></li>
-                <li class="dividerVertical"></li>
-                <li class="socialIcon"><a href="#instagram" data-filter=".instagram"><img src="<?php echo get_template_directory_uri(); ?>/img/media-icon-instagram.png" alt=""></a></li>
-                <li class="dividerVertical"></li>
-                <li class="socialIcon"><a href="#rss"><img src="<?php echo get_template_directory_uri(); ?>/img/media-icon-rss.png" alt=""></a></li>
-              </ul>
+            <div class="socialFeedBar ralelight">
+              <a class="active" href="<?php echo esc_url(home_url('/')); ?>" target="_top">Back to home page</a></li>
             </div>
 
             <!-- Search Bar

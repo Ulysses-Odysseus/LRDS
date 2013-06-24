@@ -19,6 +19,10 @@ body {
   -o-background-size: cover;
   background-size: cover; }
 
+/* Visible Elements */
+.visible {
+  display: none; }
+
 /* Clearfix */
 .group:after {
   content: "";
@@ -167,6 +171,44 @@ a {
 .container {
   width: 960px;
   height: 100%; }
+
+/* Search Bar
+-------------------------*/
+.searchBar {
+  width: 300px;
+  height: 70px;
+  margin: 0 0 0 19px;
+  float: left !important; }
+  .searchBar .searchForm {
+    width: 300px;
+    height: 70px;
+    position: relative; }
+    .searchBar .searchForm .searchInput {
+      width: 300px;
+      border: none;
+      height: 100%;
+      color: #555555;
+      font-size: 16px;
+      padding: 0 60px 0 20px;
+      font-family: 'Raleway', arial , sans-serif;
+      font-weight: 100; }
+    .searchBar .searchForm .searchInput:focus {
+      outline: none;
+      border-color: #999999;
+      -webkit-box-shadow: 0 0 5px #999999;
+      -moz-box-shadow: 0 0 5px #999999;
+      box-shadow: 0 0 5px #999999; }
+    .searchBar .searchForm .searchIcon {
+      z-index: 2;
+      width: 10px;
+      height: inherit;
+      padding: 0px 30px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      border: none !important;
+      outline: none !important;
+      background: white url("../img/icon-search.png") no-repeat center; }
 
 /* =============================================================================
 	Side Bar
@@ -348,8 +390,6 @@ a {
   width: 780px;
   overflow: hidden;
   margin: 19px 0 0 169px;
-  /* Search Bar
-  -------------------------*/
   /* =============================================================================
   	HOME
      ========================================================================== */
@@ -414,41 +454,6 @@ a {
     -o-transition: all 0.1s ease-in-out;
     animation: fadeOut 0.5s 1;
     transition: all 0.1s ease-in-out; }
-  .content .searchBar {
-    width: 300px;
-    height: 70px;
-    margin: 0 0 0 19px;
-    float: left !important; }
-    .content .searchBar .searchForm {
-      width: 300px;
-      height: 70px;
-      position: relative; }
-      .content .searchBar .searchForm .searchInput {
-        width: 300px;
-        border: none;
-        height: 100%;
-        color: #555555;
-        font-size: 16px;
-        padding: 0 60px 0 20px;
-        font-family: 'Raleway', arial , sans-serif;
-        font-weight: 100; }
-      .content .searchBar .searchForm .searchInput:focus {
-        outline: none;
-        border-color: #999999;
-        -webkit-box-shadow: 0 0 5px #999999;
-        -moz-box-shadow: 0 0 5px #999999;
-        box-shadow: 0 0 5px #999999; }
-      .content .searchBar .searchForm .searchIcon {
-        z-index: 2;
-        width: 10px;
-        height: inherit;
-        padding: 0px 30px;
-        position: absolute;
-        right: 0;
-        top: 0;
-        border: none !important;
-        outline: none !important;
-        background: white url("../img/icon-search.png") no-repeat center; }
   .content #home {
     width: 200%;
     padding: 0 0 20px 0;
@@ -474,7 +479,8 @@ a {
             height: inherit;
             outline: none;
             float: left !important;
-            vertical-align: middle; }
+            vertical-align: middle;
+            text-indent: -999em; }
             .content #home .socialFeedBar ul li a img {
               margin: 0 auto;
               padding: 30% 0;
@@ -482,6 +488,18 @@ a {
           .content #home .socialFeedBar ul li a:hover, .content #home .socialFeedBar ul li .active {
             outline: none;
             background: url("../img/bar-bg-active.png") repeat; }
+        .content #home .socialFeedBar ul .all {
+          background: url(../img/media-icon-view-all.png) center no-repeat; }
+        .content #home .socialFeedBar ul .blog {
+          background: url(../img/media-icon-blog.png) center no-repeat; }
+        .content #home .socialFeedBar ul .facebook {
+          background: url(../img/media-icon-facebook.png) center no-repeat; }
+        .content #home .socialFeedBar ul .twitter {
+          background: url(../img/media-icon-twitter.png) center no-repeat; }
+        .content #home .socialFeedBar ul .instagram {
+          background: url(../img/media-icon-instagram.png) center no-repeat; }
+        .content #home .socialFeedBar ul .rss {
+          background: url(../img/media-icon-rss.png) center no-repeat; }
     .content #home .bloglist {
       width: 50%;
       float: left;
