@@ -261,6 +261,7 @@
 		Content
 	   ========================================================================== */
 	.content{
+		width: 100%;
 		margin: 0; padding: 50px 0 0 0;
 
 		.searchBar{
@@ -274,10 +275,14 @@
 				-------------------------*/
 				.socialFeedBar{
 					width:100%;
+					height: 50px;
 					position: fixed;
 					z-index: 100;
 					text-align: center;
 					background: url('../img/bar-bg-active.png') repeat;
+					line-height: 50px;
+					color: white;
+
 					ul{
 						width: 307px;
 						height: 50px;
@@ -305,7 +310,13 @@
 				}
 
 				.socialFeedArea{
-					padding: 50px 0 0 0;
+					width: 100%;
+					padding: 40px 0 0 0;
+
+					ul{
+						width: 95%;
+						padding: 0 2.5% 0 2.5%;
+					}
 				}
 			}
 		}

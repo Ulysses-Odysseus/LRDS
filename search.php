@@ -48,20 +48,8 @@
 
             <!-- Social Media Bar
             ---------------------->
-            <div class="socialFeedBar">
-              <ul class="filters">
-                <li class="all socialIcon"><a class="active" href="#all" data-filter="*">View All</a></li>
-                <li class="dividerVertical"></li>
-                <li class="blog socialIcon"><a href="#blog" data-filter=".blog">Blog</a></li>
-                <li class="dividerVertical"></li>
-                <li class="facebook socialIcon"><a href="#facebook" data-filter=".facebook">Facebook</a></li>
-                <li class="dividerVertical"></li>
-                <li class="twitter socialIcon"><a href="#twitter" data-filter=".twitter">Twitter</a></li>
-                <li class="dividerVertical"></li>
-                <li class="instagram socialIcon"><a href="#instagram" data-filter=".instagram">Instagram</a></li>
-                <li class="dividerVertical"></li>
-                <li class="rss socialIcon"><a href="#rss">RSS</a></li>
-              </ul>
+            <div class="socialFeedBar ralelight">
+              <a class="active" href="<?php echo esc_url(home_url('/')); ?>" target="_top">Back to home page</a></li>
             </div>
 
             <!-- Search Bar
