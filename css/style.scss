@@ -40,6 +40,9 @@ body {
 	background-size: cover;
 }
 
+/* Visible Elements */
+.visible { display:none; }
+
 /* Clearfix */
 .group:after {
   content: "";
@@ -150,6 +153,51 @@ a{
 .container{
 	width: 960px; height: 100%;
 }
+
+
+/* Search Bar
+-------------------------*/
+.searchBar{
+	width: 300px; height: 70px;
+	margin: 0 0 0 19px;
+	// background: green;
+	float: $leftIm;
+
+	.searchForm{
+		width: 300px;
+		height: 70px;
+		position: relative;
+
+		.searchInput{
+			width: 300px;
+			border: none;
+			height: 100%;
+			color: $fc-grey;
+			font-size: 16px;
+			padding: 0 60px 0 20px;	
+			font-family: 'Raleway', arial , sans-serif;font-weight: 100;			
+		}
+		.searchInput:focus{
+			outline: none;
+		    border-color: #999999;
+		   	-webkit-box-shadow: 0 0 5px #999999;
+	           -moz-box-shadow: 0 0 5px #999999;
+		    	    box-shadow: 0 0 5px #999999;
+		}
+		.searchIcon{
+			z-index: 2;
+			width: 10px; height: inherit;
+			padding: 0px 30px;
+			position: absolute;
+			right: 0;
+			top: 0;
+			border: none!important;
+			outline: none!important;
+			background:white url('../img/icon-search.png') no-repeat center;
+		}
+	}
+}
+	
 
 /* =============================================================================
 	Side Bar
@@ -263,7 +311,7 @@ a{
 					text-indent: -999em;
 				}
 
-				.home  { background: url(../img/nav-icon-home.png) no-repeat center; }
+				.home  { background: url(../img/nav-icon-home.png) no-repeat center;  }
 				.store { background: url(../img/nav-icon-store.png) no-repeat center; }
 				.shows { background: url(../img/nav-icon-shows.png) no-repeat center; }
 				.about { background: url(../img/nav-icon-about.png) no-repeat center; }
@@ -421,49 +469,6 @@ a{
 		transition: all 0.1s ease-in-out;
 	}
 	
-	/* Search Bar
-	-------------------------*/
-	.searchBar{
-		width: 300px; height: 70px;
-		margin: 0 0 0 19px;
-		// background: green;
-		float: $leftIm;
-
-		.searchForm{
-			width: 300px;
-			height: 70px;
-			position: relative;
-
-			.searchInput{
-				width: 300px;
-				border: none;
-				height: 100%;
-				color: $fc-grey;
-				font-size: 16px;
-				padding: 0 60px 0 20px;	
-				font-family: 'Raleway', arial , sans-serif;font-weight: 100;			
-			}
-			.searchInput:focus{
-				outline: none;
-			    border-color: #999999;
-			   	-webkit-box-shadow: 0 0 5px #999999;
-		           -moz-box-shadow: 0 0 5px #999999;
-			    	    box-shadow: 0 0 5px #999999;
-			}
-			.searchIcon{
-				z-index: 2;
-				width: 10px; height: inherit;
-				padding: 0px 30px;
-				position: absolute;
-				right: 0;
-				top: 0;
-				border: none!important;
-				outline: none!important;
-				background:white url('../img/icon-search.png') no-repeat center;
-			}
-		}
-	}
-
 	/* =============================================================================
 		HOME
 	   ========================================================================== */
@@ -489,6 +494,7 @@ a{
 						outline: none;
 						float: $leftIm;
 						vertical-align: middle;
+						text-indent: -999em;
 						img{
 							margin: 0 auto;
 							padding: 30% 0;
@@ -500,6 +506,12 @@ a{
 						background: $background;
 					}
 				}
+				.all      { background: url(../img/media-icon-view-all.png) center no-repeat; }
+				.blog     { background: url(../img/media-icon-blog.png) center no-repeat; }
+				.facebook { background: url(../img/media-icon-facebook.png) center no-repeat; }
+				.twitter  { background: url(../img/media-icon-twitter.png) center no-repeat; }
+				.instagram{ background: url(../img/media-icon-instagram.png) center no-repeat; }
+				.rss      { background: url(../img/media-icon-rss.png) center no-repeat; }
 			}
 		}
 		

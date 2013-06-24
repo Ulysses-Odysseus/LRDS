@@ -1,12 +1,6 @@
 /* =============================================================================
 	Media Query Tablets
    ========================================================================== */
-@media screen and (max-width: 970px) {
-	/* =============================================================================
-		Container
-	   ========================================================================== */
-	// .container{width: 100%; overflow: hidden; }
-}
 @media screen and (max-width: 860px) {
 
 	/* General Settings
@@ -73,8 +67,8 @@
 			.searchForm{
 				width: 140px; height: 70px;
 				.searchInput{
-					width: 115px;
-					padding: 0 40px 0 10px;	
+					width: 140px;
+					padding: 0 40px 0 10px;
 				}
 				.searchIcon{
 					padding: 0px 25px 0 25px;
@@ -199,4 +193,243 @@
 	    }
 
 	}// End Content
-} // End Media Query Tablets 
+} // End Media Query Tablets
+
+@media screen and (max-width: 725px) {
+
+	.visible{
+		display: block;
+	}
+
+	.novisible{
+		display: none;
+	}
+
+	/* =============================================================================
+		Header
+	   ========================================================================== */
+	.header{
+		display: none;
+	}
+
+	/* Mobile Nav
+	-------------------------*/
+	.mobileNav{
+		width: 100%;
+		height: 50px;
+		position: fixed;
+		text-align: center;
+		z-index: 100;
+		background: url('../img/bar-bg-active-black.png') repeat;
+
+		&:before {
+			content: "";
+			width: 100%; height: 50px;
+			bottom: 0; left: 0;
+			display: block;
+			position: absolute;
+			background: url('../img/logo-mobile-phone.png') no-repeat center;
+		}
+		
+		.home, .toggle{
+			width: 50px;
+			height: 50px;
+			position: relative;
+			z-index: 101;
+			a{
+				display: block;
+				width: 100%;
+				height: 50px;
+				cursor: pointer;
+
+				&:hover, &:active{
+					background: url('../img/bar-bg-active-black.png') repeat;
+				}
+			}
+
+			.active{
+				background: url('../img/bar-bg-active-black.png') repeat;
+			}
+		}
+
+		.home{ float: left; }
+		.toggle{ float: right; }
+	}
+
+
+	/* =============================================================================
+		Content
+	   ========================================================================== */
+	.content{
+		margin: 0; padding: 50px 0 0 0;
+
+		.searchBar{
+			display:none;
+		}
+
+		#home{
+			.bloglist{
+				width: 50%;
+				/* Social Sub Nav
+				-------------------------*/
+				.socialFeedBar{
+					width:100%;
+					position: fixed;
+					z-index: 100;
+					text-align: center;
+					background: url('../img/bar-bg-active.png') repeat;
+					ul{
+						width: 307px;
+						height: 50px;
+						margin: 0 auto;
+						.socialIcon{
+							display: block;
+							width: 50px;
+							height: 50px;
+							a{
+								width: 100%;
+								img{
+									width: 35%;
+									height: auto;
+									padding: 15px 0 0 0;
+								}
+							}
+						}
+						.all      { background: url(../img/media-icon-view-all-phone.png) center no-repeat; }
+						.blog     { background: url(../img/media-icon-blog-phone.png) center no-repeat; }
+						.facebook { background: url(../img/media-icon-facebook-phone.png) center no-repeat; }
+						.twitter  { background: url(../img/media-icon-twitter-phone.png) center no-repeat; }
+						.instagram{ background: url(../img/media-icon-instagram-phone.png) center no-repeat; }
+						.rss      { background: url(../img/media-icon-rss-phone.png) center no-repeat; }
+					}
+				}
+
+				.socialFeedArea{
+					padding: 50px 0 0 0;
+				}
+			}
+		}
+	}
+
+
+	/* =============================================================================
+		Side Bar
+	   ========================================================================== */
+	.sideBar{
+		font-size: 80%;
+		width: 80%!important;
+		position: fixed;
+		top: 0;
+		left: -80%;
+		z-index: 999;
+		-webkit-box-shadow:  5px 0px 15px 5px rgba(0, 0, 0, .5);
+        		box-shadow:  5px 0px 15px 5px rgba(0, 0, 0, .5);
+
+        /* ease-out */
+		-webkit-transition: all 100ms cubic-bezier(0.000, 0.000, 0.580, 1.000); 
+		   -moz-transition: all 100ms cubic-bezier(0.000, 0.000, 0.580, 1.000); 
+		    -ms-transition: all 100ms cubic-bezier(0.000, 0.000, 0.580, 1.000); 
+		     -o-transition: all 100ms cubic-bezier(0.000, 0.000, 0.580, 1.000); 
+		        transition: all 100ms cubic-bezier(0.000, 0.000, 0.580, 1.000);
+
+		/* Logo Tablet */
+		.logoarea{
+			display: none;
+		}
+
+		/* Search Bar
+		-------------------------*/
+		.searchBar{
+			width: 100%; height: 50px;
+			margin: 0; padding: 0;
+			clear: both;
+
+			.searchForm{
+				width: 100%; height: 50px;
+				margin: 0;
+
+				.searchInput{
+					width: 100%;
+					padding: 0 2.5% 0 2.5%;
+					background: #363636;
+
+					&:focus{
+						outline: none;
+					    border-color: none;
+					   	-webkit-box-shadow: none;
+				           -moz-box-shadow: none;
+					    	    box-shadow: none;
+					}
+				}
+
+				.searchIcon{
+					padding: 0px 25px 0 25px;
+					border-radius: none;
+					background-color: #363636;
+				}
+			}
+		}
+
+		/* Navigation Bar
+		-------------------------*/
+		.navBar{
+			width: 90%;
+			padding: 5%;
+			color: #9e9e9e;
+			background: #252525;
+
+			p{ margin: 25px 0 10px 0; }
+
+			ul{
+				width: 100%;
+				padding:0; margin:65px 0 0 0;
+
+				.navButton{
+					height: 45px;
+					line-height: 45px;
+				}
+				li{
+					width: inherit;
+					list-style-type: none;
+
+					&:active {
+						cursor: pointer;
+						background: #141414
+					}
+
+					&:last-child{
+						display: none;
+						border: none;
+					}
+
+					a{
+						font-size: 13px;
+						display: block;
+						width: 100%;
+						text-align: left;
+						text-indent: 0;
+					}
+
+					.home, .store, .shows,
+					.about, .subscribe{
+						background: none;
+					}
+				}
+
+				/* Divider for nav Bar */
+				.divider{
+					height: 0;
+					padding: 0;
+					opacity: 0.3;
+					display: block;
+					list-style: none;
+					border-top: 1px solid;
+					border-top-color: #858585;
+				}
+				.activeNav{
+					background: none;
+				}
+			}
+		}
+	}
+}

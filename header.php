@@ -56,7 +56,7 @@
         ---------------------->
         <div class="logoarea">
           <div class="logo">
-            <a href="<?php echo esc_url(home_url('/')); ?>">
+            <a href="<?php echo esc_url(home_url('/')); ?>" target="_top">
               <h1>LRDS - Los Rodriguez de Sinaloa</h1>
             </a>
           </div>
@@ -76,7 +76,12 @@
 
         <!-- Navigation Bar
         ---------------------->
-        <div class="navBar">
+        <div class="navBar ralelight">
+
+          <div class="visible">
+            <?php get_search_form(); ?>
+          </div>
+
           <ul>
             <li class="navButton activeNav"><a class="home">HOME</a></li>
             <li class="divider"></li>
@@ -86,10 +91,34 @@
             <li class="divider"></li>
             <li class="navButton"><a class="about">ABOUT</a></li>
             <li class="divider"></li>
-            <li class="navButton"><a class="subscribe">NEWSLETTER</a></li>
+            <li class="navButton novisible"><a class="subscribe">NEWSLETTER</a></li>
             <li class="divider"></li>
           </ul>
+
+          <div class="newsletterBar visible">
+            <p>Sign up for the newsletter:</p>
+            <form class="newsletterForm row" role="newsletter" method="get" id="newsletterform" >
+              <input id="n" name="n" type="text" class="newsletterInput ralelight" placeholder="Enter Email...">
+              <input type="submit" class="newsletterIcon" value="GO">
+            </form>
+          </div>
+
         </div>
-        
+
       </div>
       <!-- End Sidebar -->
+
+      <!-- Mobile Nav Bar
+      ---------------------->
+      <div class="mobileNav visible">
+        <div class="home">
+          <a href="<?php echo esc_url(home_url('/')); ?>" target="_top">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/nav-icon-home-phone.png" alt="">
+          </a>
+        </div>
+        <div class="toggle">
+          <a class="noactive" href="#" onclick="toggle(this)">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/nav-icon-toggle.png" alt="">
+          </a>
+        </div>
+      </div>

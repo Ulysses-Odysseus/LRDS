@@ -1,10 +1,6 @@
 /* =============================================================================
 	Media Query Tablets
    ========================================================================== */
-@media screen and (max-width: 970px) {
-  /* =============================================================================
-  	Container
-     ========================================================================== */ }
 @media screen and (max-width: 860px) {
   /* General Settings
   =============================*/
@@ -65,7 +61,7 @@
         width: 140px;
         height: 70px; }
         .content .searchBar .searchForm .searchInput {
-          width: 115px;
+          width: 140px;
           padding: 0 40px 0 10px; }
         .content .searchBar .searchForm .searchIcon {
           padding: 0px 25px 0 25px; }
@@ -139,3 +135,192 @@
         font-size: 25px; }
       .content #about .aboutContainer .aboutImage {
         width: inherit; } }
+@media screen and (max-width: 725px) {
+  .visible {
+    display: block; }
+
+  .novisible {
+    display: none; }
+
+  /* =============================================================================
+  	Header
+     ========================================================================== */
+  .header {
+    display: none; }
+
+  /* Mobile Nav
+  -------------------------*/
+  .mobileNav {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    text-align: center;
+    z-index: 100;
+    background: url("../img/bar-bg-active-black.png") repeat; }
+    .mobileNav:before {
+      content: "";
+      width: 100%;
+      height: 50px;
+      bottom: 0;
+      left: 0;
+      display: block;
+      position: absolute;
+      background: url("../img/logo-mobile-phone.png") no-repeat center; }
+    .mobileNav .home, .mobileNav .toggle {
+      width: 50px;
+      height: 50px;
+      position: relative;
+      z-index: 101; }
+      .mobileNav .home a, .mobileNav .toggle a {
+        display: block;
+        width: 100%;
+        height: 50px;
+        cursor: pointer; }
+        .mobileNav .home a:hover, .mobileNav .home a:active, .mobileNav .toggle a:hover, .mobileNav .toggle a:active {
+          background: url("../img/bar-bg-active-black.png") repeat; }
+      .mobileNav .home .active, .mobileNav .toggle .active {
+        background: url("../img/bar-bg-active-black.png") repeat; }
+    .mobileNav .home {
+      float: left; }
+    .mobileNav .toggle {
+      float: right; }
+
+  /* =============================================================================
+  	Content
+     ========================================================================== */
+  .content {
+    margin: 0;
+    padding: 50px 0 0 0; }
+    .content .searchBar {
+      display: none; }
+    .content #home .bloglist {
+      width: 50%;
+      /* Social Sub Nav
+      -------------------------*/ }
+      .content #home .bloglist .socialFeedBar {
+        width: 100%;
+        position: fixed;
+        z-index: 100;
+        text-align: center;
+        background: url("../img/bar-bg-active.png") repeat; }
+        .content #home .bloglist .socialFeedBar ul {
+          width: 307px;
+          height: 50px;
+          margin: 0 auto; }
+          .content #home .bloglist .socialFeedBar ul .socialIcon {
+            display: block;
+            width: 50px;
+            height: 50px; }
+            .content #home .bloglist .socialFeedBar ul .socialIcon a {
+              width: 100%; }
+              .content #home .bloglist .socialFeedBar ul .socialIcon a img {
+                width: 35%;
+                height: auto;
+                padding: 15px 0 0 0; }
+          .content #home .bloglist .socialFeedBar ul .all {
+            background: url(../img/media-icon-view-all-phone.png) center no-repeat; }
+          .content #home .bloglist .socialFeedBar ul .blog {
+            background: url(../img/media-icon-blog-phone.png) center no-repeat; }
+          .content #home .bloglist .socialFeedBar ul .facebook {
+            background: url(../img/media-icon-facebook-phone.png) center no-repeat; }
+          .content #home .bloglist .socialFeedBar ul .twitter {
+            background: url(../img/media-icon-twitter-phone.png) center no-repeat; }
+          .content #home .bloglist .socialFeedBar ul .instagram {
+            background: url(../img/media-icon-instagram-phone.png) center no-repeat; }
+          .content #home .bloglist .socialFeedBar ul .rss {
+            background: url(../img/media-icon-rss-phone.png) center no-repeat; }
+      .content #home .bloglist .socialFeedArea {
+        padding: 50px 0 0 0; }
+
+  /* =============================================================================
+  	Side Bar
+     ========================================================================== */
+  .sideBar {
+    font-size: 80%;
+    width: 80% !important;
+    position: fixed;
+    top: 0;
+    left: -80%;
+    z-index: 999;
+    -webkit-box-shadow: 5px 0px 15px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 0px 15px 5px rgba(0, 0, 0, 0.5);
+    /* ease-out */
+    -webkit-transition: all 100ms cubic-bezier(0, 0, 0.58, 1);
+    -moz-transition: all 100ms cubic-bezier(0, 0, 0.58, 1);
+    -ms-transition: all 100ms cubic-bezier(0, 0, 0.58, 1);
+    -o-transition: all 100ms cubic-bezier(0, 0, 0.58, 1);
+    transition: all 100ms cubic-bezier(0, 0, 0.58, 1);
+    /* Logo Tablet */
+    /* Search Bar
+    -------------------------*/
+    /* Navigation Bar
+    -------------------------*/ }
+    .sideBar .logoarea {
+      display: none; }
+    .sideBar .searchBar {
+      width: 100%;
+      height: 50px;
+      margin: 0;
+      padding: 0;
+      clear: both; }
+      .sideBar .searchBar .searchForm {
+        width: 100%;
+        height: 50px;
+        margin: 0; }
+        .sideBar .searchBar .searchForm .searchInput {
+          width: 100%;
+          padding: 0 2.5% 0 2.5%;
+          background: #363636; }
+          .sideBar .searchBar .searchForm .searchInput:focus {
+            outline: none;
+            border-color: none;
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none; }
+        .sideBar .searchBar .searchForm .searchIcon {
+          padding: 0px 25px 0 25px;
+          border-radius: none;
+          background-color: #363636; }
+    .sideBar .navBar {
+      width: 90%;
+      padding: 5%;
+      color: #9e9e9e;
+      background: #252525; }
+      .sideBar .navBar p {
+        margin: 25px 0 10px 0; }
+      .sideBar .navBar ul {
+        width: 100%;
+        padding: 0;
+        margin: 65px 0 0 0;
+        /* Divider for nav Bar */ }
+        .sideBar .navBar ul .navButton {
+          height: 45px;
+          line-height: 45px; }
+        .sideBar .navBar ul li {
+          width: inherit;
+          list-style-type: none; }
+          .sideBar .navBar ul li:active {
+            cursor: pointer;
+            background: #141414; }
+          .sideBar .navBar ul li:last-child {
+            display: none;
+            border: none; }
+          .sideBar .navBar ul li a {
+            font-size: 13px;
+            display: block;
+            width: 100%;
+            text-align: left;
+            text-indent: 0; }
+          .sideBar .navBar ul li .home, .sideBar .navBar ul li .store, .sideBar .navBar ul li .shows,
+          .sideBar .navBar ul li .about, .sideBar .navBar ul li .subscribe {
+            background: none; }
+        .sideBar .navBar ul .divider {
+          height: 0;
+          padding: 0;
+          opacity: 0.3;
+          display: block;
+          list-style: none;
+          border-top: 1px solid;
+          border-top-color: #858585; }
+        .sideBar .navBar ul .activeNav {
+          background: none; } }

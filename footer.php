@@ -8,16 +8,6 @@
     /* <![CDATA[ */
     $(document).ready(function(){
 
-      $('input[name=s]').keypress(function() {
-        var value = $(this).val();
-        var lenght = value.length;
-        if(lenght > 1) {
-            $.post(ajaxurl, { action: 'ajax_search', s: value }, function(output) {
-                $('#home .newsfeed').html(output);
-            });
-        }
-      });
-
       /* CSS Selectors All Browsers
       =============================*/
       $('.productsArea .allProducts li:nth-child(2n+1)').addClass('oddItem');
@@ -145,6 +135,25 @@
             $(singleType).removeClass('active');
             $(singleType).addClass('no-active');
           }
+      });
+
+      /* Mobile Navigation functionality
+        =============================*/
+      $('.toggle a, .navBar a').click(function(e) {
+
+        var toggle = $('.toggle a');
+
+        //alert(toggleClass);
+
+        if(toggle.attr('class') == "noactive"){
+          $('.sideBar').css('left', '0');
+          toggle.removeClass().addClass('active');
+        } else {
+          $('.sideBar').css('left', '-80%');
+          toggle.removeClass().addClass('noactive');
+        }
+
+        e.preventDefault();
       });
     });
     /* ]]> */
