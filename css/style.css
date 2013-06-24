@@ -48,29 +48,6 @@ a {
   color: inherit;
   text-decoration: none; }
 
-/* Keyframes Arrow animation (under "show" div)
-=============================*/
-@-webkit-keyframes fordward {
-  0% {
-    margin: 0 0 0 0px; }
-
-  100% {
-    margin: 0 0 0 90px; } }
-
-@-moz-keyframes fordward {
-  0% {
-    margin: 0 0 0 0px; }
-
-  100% {
-    margin: 0 0 0 90px; } }
-
-@-o-keyframes fordward {
-  0% {
-    margin: 0 0 0 0px; }
-
-  100% {
-    margin: 0 0 0 90px; } }
-
 /* Keyframes Fade In/Out Animation (under ".content" div) 
 =============================*/
 /* Fade In */
@@ -254,8 +231,6 @@ a {
     .sideBar .navBar ul {
       padding: 0;
       margin: 19px 0 0 0; }
-      .sideBar .navBar ul .navButton {
-        height: 70px; }
       .sideBar .navBar ul li {
         width: 70px;
         list-style-type: none; }
@@ -277,6 +252,8 @@ a {
           background: url(../img/nav-icon-about.png) no-repeat center; }
         .sideBar .navBar ul li .subscribe {
           background: url(../img/nav-icon-newsletter.png) no-repeat center; }
+      .sideBar .navBar ul .navButton {
+        height: 70px; }
       .sideBar .navBar ul .activeNav {
         background: url("../img/bar-bg-active.png") repeat; }
 
@@ -363,12 +340,12 @@ a {
      ========================================================================== */
   /* End Shows */
   /* =============================================================================
-  	SINGLE PAGE
-     ========================================================================== */
-  /* End single */
-  /* =============================================================================
   	NEWSLETTER
-     ========================================================================== */ }
+     ========================================================================== */
+  /* =============================================================================
+  	SINGLE PAGE ~ about, blog-single, shows-single
+     ========================================================================== */
+  /* End single */ }
   .content .activeContent {
     display: block;
     -webkit-animation-name: fadeIn;
@@ -556,7 +533,8 @@ a {
           width: 140px;
           height: 140px; }
           .content #home .bloglist .socialFeedArea ul .small .feedBar {
-            width: 100%; }
+            width: 100%;
+            padding-left: 10px; }
             .content #home .bloglist .socialFeedArea ul .small .feedBar:before {
               bottom: 6px;
               right: 8px; }
@@ -843,9 +821,9 @@ a {
             width: 140px;
             height: 140px;
             float: right;
-            text-align: center;
             cursor: pointer;
             overflow: hidden;
+            text-align: center;
             background: url("../img/bar-bg-active.png") repeat; }
             .content #shows .showlist li .place .button img {
               padding: 24% 0; }
@@ -870,6 +848,20 @@ a {
             -o-animation-delay: 0.0s;
             -o-animation-direction: alternate;
             -o-transition: all 0.1s ease-in-out; }
+  .content #subscribe {
+    width: 421px;
+    padding: 20px;
+    color: #efefef;
+    background: url("../img/bar-bg-active.png") repeat; }
+    .content #subscribe .rssTitle {
+      font-size: 25px; }
+    .content #subscribe .rssText {
+      display: block;
+      font-size: 13px;
+      margin: 10px 0 0 0; }
+    .content #subscribe .rssSubscribe {
+      margin: 15px 0 0 0;
+      font-size: 16px; }
   .content #about {
     width: 100%; }
   .content #about, .content #blogsingle, .content #showsingle {
@@ -894,12 +886,14 @@ a {
         line-height: 23px; }
         .content #about .aboutContainer .aboutText div, .content #blogsingle .aboutContainer .aboutText div, .content #showsingle .aboutContainer .aboutText div {
           display: inline-block; }
-        .content #about .aboutContainer .aboutText img, .content #blogsingle .aboutContainer .aboutText img, .content #showsingle .aboutContainer .aboutText img {
-          width: 100%; }
+        .content #about .aboutContainer .aboutText a, .content #blogsingle .aboutContainer .aboutText a, .content #showsingle .aboutContainer .aboutText a {
+          text-decoration: underline; }
         .content #about .aboutContainer .aboutText .columText, .content #blogsingle .aboutContainer .aboutText .columText, .content #showsingle .aboutContainer .aboutText .columText {
           width: 47.5%;
           padding: 0 2.5% 0 0;
           float: left; }
+          .content #about .aboutContainer .aboutText .columText a, .content #blogsingle .aboutContainer .aboutText .columText a, .content #showsingle .aboutContainer .aboutText .columText a {
+            text-decoration: none !important; }
   .content #blogsingle,
   .content #showsingle {
     width: 50%;

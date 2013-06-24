@@ -62,9 +62,6 @@
           }
         });
 
-        /* Store ~ Product Functionality 
-        =============================*/
-
         /* Main Nav Bar functionality
         =============================*/
         $('.navBar ul li').click(function(){
