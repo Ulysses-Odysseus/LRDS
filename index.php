@@ -72,9 +72,8 @@
             ---------------------->
             <div class="socialFeedArea ralelight">
               <ul class="newsfeed">
-                <!-- Start the loop
-                -------------------->
                 <?php 
+                // Start the loop
                 if(have_posts()) : while(have_posts()) : the_post();
 
                   // News items
@@ -84,7 +83,11 @@
                       <a data-id="<?php echo get_the_id(); ?>_blog" href="<?php the_permalink(); ?>" target="_top" title="<?php the_title(); ?>">
                         <?php if(has_post_thumbnail()) { the_post_thumbnail(); } ?>
                       </a>
-                      <span class="feedBar"><?php the_title(); ?></span>
+                      <span class="feedBar">
+                        <a data-id="<?php echo get_the_id(); ?>_blog" href="<?php the_permalink(); ?>">
+                        <?php the_title(); ?>
+                        </a>
+                      </span>
                     </li>
 
                   <?php } elseif(in_category('instagram')) {
@@ -446,7 +449,15 @@
               SUBSCRIBE
              ========================================================================== -->
         <div id="subscribe" class="no-active">
-          dsfdsdf
+          <span class="ralelight rssTitle">Subscribe</span>
+          <div class="divider"></div>
+          <span class="rssText ralelight">
+            Sign up with your email to get updates on our posts, our releases and special offers!
+          </span>
+          <form class="rssSubscribe" action="">
+            <input type="text" class="ralelight" placeholder="enter you eamil">
+            <input type="button" class="rssjoin" value="Join">
+          </form>
         </div>
       </div> <!-- End Content -->
 
