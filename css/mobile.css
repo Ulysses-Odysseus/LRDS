@@ -234,7 +234,8 @@
         padding: 40px 0 0 0; }
         .content #home .bloglist .socialFeedArea ul {
           width: 95%;
-          padding: 0 2.5% 0 2.5%; }
+          margin: 0 auto;
+          padding: 0 5px 0 5px; }
 
   /* =============================================================================
   	Side Bar
@@ -272,6 +273,7 @@
         height: 50px;
         margin: 0; }
         .sideBar .searchBar .searchForm .searchInput {
+          color: #efefef;
           width: 100%;
           padding: 0 2.5% 0 2.5%;
           background: #363636; }

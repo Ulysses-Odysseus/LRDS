@@ -505,13 +505,13 @@ a{
 
 			.socialFeedArea{
 				ul{
-					width: 105%;
+					min-width: 105%;
 					float: left;
 					margin: 0; padding: 0;
 					overflow: hidden;
 					list-style-type: none;
 					li{
-						margin: 20px 0 0 0;
+						margin: 20px 20px 0 0;
 						overflow: hidden;
 
 						a{
