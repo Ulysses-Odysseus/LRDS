@@ -152,7 +152,7 @@
             $('.sideBar').css('left', '0');
             toggle.removeClass().addClass('active');
           } else {
-            $('.sideBar').css('left', '-80%');
+            $('.sideBar').css('left', '-90%');
             toggle.removeClass().addClass('noactive');
           }
 
