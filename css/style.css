@@ -483,94 +483,96 @@ a {
       overflow-x: hidden;
       margin: 0;
       padding: 0; }
-      .content #home .bloglist .socialFeedArea ul {
+      .content #home .bloglist .socialFeedArea {
         width: 105%;
-        float: left;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        list-style-type: none; }
-        .content #home .bloglist .socialFeedArea ul li {
-          margin: 20px 0 0 0;
-          overflow: hidden; }
-          .content #home .bloglist .socialFeedArea ul li a {
-            font-size: 11px;
-            color: #ccc;
-            opacity: 1; }
-          .content #home .bloglist .socialFeedArea ul li .mainContentEffect {
-            /* linear */
-            -webkit-transition: all 200ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
-            -moz-transition: all 200ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
-            -ms-transition: all 200ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
-            -o-transition: all 200ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
-            transition: all 200ms cubic-bezier(0.25, 0.25, 0.75, 0.75); }
-            .content #home .bloglist .socialFeedArea ul li .mainContentEffect:hover {
-              opacity: .7; }
-        .content #home .bloglist .socialFeedArea ul .feedBar {
-          height: 45px;
-          display: block;
-          bottom: 0;
-          position: absolute;
-          background: url("../img/bar-bg-active.png") repeat;
-          line-height: 45px; }
-          .content #home .bloglist .socialFeedArea ul .feedBar:before {
-            content: "";
-            width: 29px;
-            height: 25px;
-            bottom: 6px;
-            right: 3px;
+        margin: 0 auto; }
+        .content #home .bloglist .socialFeedArea ul {
+          min-width: 105%;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          list-style-type: none; }
+          .content #home .bloglist .socialFeedArea ul li {
+            margin: 20px 0 0 0;
+            overflow: hidden; }
+            .content #home .bloglist .socialFeedArea ul li a {
+              font-size: 11px;
+              color: #ccc;
+              opacity: 1; }
+            .content #home .bloglist .socialFeedArea ul li .mainContentEffect {
+              /* linear */
+              -webkit-transition: all 200ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+              -moz-transition: all 200ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+              -ms-transition: all 200ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+              -o-transition: all 200ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+              transition: all 200ms cubic-bezier(0.25, 0.25, 0.75, 0.75); }
+              .content #home .bloglist .socialFeedArea ul li .mainContentEffect:hover {
+                opacity: .7; }
+          .content #home .bloglist .socialFeedArea ul .feedBar {
+            height: 45px;
             display: block;
+            bottom: 0;
             position: absolute;
-            background-size: 80% !important; }
-        .content #home .bloglist .socialFeedArea ul .facebook .feedBar:before {
-          background: url("../img/media-icon-facebook.png") no-repeat; }
-        .content #home .bloglist .socialFeedArea ul .blog .feedBar:before {
-          background: url("../img/media-icon-blog.png") no-repeat; }
-        .content #home .bloglist .socialFeedArea ul .twitter .feedBar:before {
-          background: url("../img/media-icon-twitter.png") no-repeat; }
-        .content #home .bloglist .socialFeedArea ul .instagram .feedBar:before {
-          background: url("../img/media-icon-instagram.png") no-repeat; }
-        .content #home .bloglist .socialFeedArea ul .video .play {
-          bottom: 50%;
-          left: 37%;
-          position: absolute; }
-        .content #home .bloglist .socialFeedArea ul .video .videoImage {
-          background: black;
-          padding-bottom: 100%; }
-          .content #home .bloglist .socialFeedArea ul .video .videoImage img {
-            width: 100% !important; }
-        .content #home .bloglist .socialFeedArea ul .verticalImage a img {
-          width: 100%; }
-        .content #home .bloglist .socialFeedArea ul .horizontalImage a img {
-          height: 100%; }
-        .content #home .bloglist .socialFeedArea ul .small, .content #home .bloglist .socialFeedArea ul .smallBorder, .content #home .bloglist .socialFeedArea ul .big {
-          word-wrap: break-word;
-          background: url("../img/bar-bg-active.png") repeat;
-          background-color: black; }
-        .content #home .bloglist .socialFeedArea ul .small {
-          width: 140px;
-          height: 140px; }
-          .content #home .bloglist .socialFeedArea ul .small .feedBar {
-            width: 100%;
-            padding-left: 10px; }
-            .content #home .bloglist .socialFeedArea ul .small .feedBar:before {
+            background: url("../img/bar-bg-active.png") repeat;
+            line-height: 45px; }
+            .content #home .bloglist .socialFeedArea ul .feedBar:before {
+              content: "";
+              width: 29px;
+              height: 25px;
               bottom: 6px;
-              right: 8px; }
-        .content #home .bloglist .socialFeedArea ul .smallBorder {
-          width: 120px;
-          height: 120px;
-          padding: 10px; }
-          .content #home .bloglist .socialFeedArea ul .smallBorder .feedBar {
+              right: 3px;
+              display: block;
+              position: absolute;
+              background-size: 80% !important; }
+          .content #home .bloglist .socialFeedArea ul .facebook .feedBar:before {
+            background: url("../img/media-icon-facebook.png") no-repeat; }
+          .content #home .bloglist .socialFeedArea ul .blog .feedBar:before {
+            background: url("../img/media-icon-blog.png") no-repeat; }
+          .content #home .bloglist .socialFeedArea ul .twitter .feedBar:before {
+            background: url("../img/media-icon-twitter.png") no-repeat; }
+          .content #home .bloglist .socialFeedArea ul .instagram .feedBar:before {
+            background: url("../img/media-icon-instagram.png") no-repeat; }
+          .content #home .bloglist .socialFeedArea ul .video .play {
+            bottom: 50%;
+            left: 37%;
+            position: absolute; }
+          .content #home .bloglist .socialFeedArea ul .video .videoImage {
+            background: black;
+            padding-bottom: 100%; }
+            .content #home .bloglist .socialFeedArea ul .video .videoImage img {
+              width: 100% !important; }
+          .content #home .bloglist .socialFeedArea ul .verticalImage a img {
             width: 100%; }
-            .content #home .bloglist .socialFeedArea ul .smallBorder .feedBar:before {
-              bottom: 6px;
-              right: 8px; }
-        .content #home .bloglist .socialFeedArea ul .big {
-          width: 300px;
-          height: 300px; }
-          .content #home .bloglist .socialFeedArea ul .big .feedBar {
-            width: 96.5%;
-            padding-left: 3.5%; }
+          .content #home .bloglist .socialFeedArea ul .horizontalImage a img {
+            height: 100%; }
+          .content #home .bloglist .socialFeedArea ul .small, .content #home .bloglist .socialFeedArea ul .smallBorder, .content #home .bloglist .socialFeedArea ul .big {
+            word-wrap: break-word;
+            background: url("../img/bar-bg-active.png") repeat;
+            background-color: black; }
+          .content #home .bloglist .socialFeedArea ul .small {
+            width: 140px;
+            height: 140px; }
+            .content #home .bloglist .socialFeedArea ul .small .feedBar {
+              width: 100%;
+              padding-left: 10px; }
+              .content #home .bloglist .socialFeedArea ul .small .feedBar:before {
+                bottom: 6px;
+                right: 8px; }
+          .content #home .bloglist .socialFeedArea ul .smallBorder {
+            width: 120px;
+            height: 120px;
+            padding: 10px; }
+            .content #home .bloglist .socialFeedArea ul .smallBorder .feedBar {
+              width: 100%; }
+              .content #home .bloglist .socialFeedArea ul .smallBorder .feedBar:before {
+                bottom: 6px;
+                right: 8px; }
+          .content #home .bloglist .socialFeedArea ul .big {
+            width: 300px;
+            height: 300px; }
+            .content #home .bloglist .socialFeedArea ul .big .feedBar {
+              width: 96.5%;
+              padding-left: 3.5%; }
   .content #store {
     width: 100%;
     /* Shop Sub Nav

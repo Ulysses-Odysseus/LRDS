@@ -310,9 +310,9 @@
 					padding: 40px 0 0 0;
 
 					ul{
-						width: 95%;
+						min-width: 0%;
 						margin: 0 auto;
-						padding: 0 5px 0 5px;
+						padding: 0 0 0 0;
 					}
 				}
 			}
@@ -437,6 +437,27 @@
 				}
 				.activeNav{
 					background: none;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 325px) {
+	/* =============================================================================
+		Content
+	   ========================================================================== */
+	.content{
+		#home{
+			.bloglist{
+				.socialFeedArea{
+					width: 100%;
+					padding: 40px 0 0 0;
+
+					ul{
+						min-width: 105%;
+						padding: 0 0 0 10px;
+					}
 				}
 			}
 		}

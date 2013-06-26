@@ -20,56 +20,50 @@
       var screenWidth = $(window).width();
 
       // If screen width is smaller or equal to 725px
-      if(screenWidth <= 335){
-        var gutterW = 1;
-        var columnW = 12;
-      }else if(screenWidth > 335){
-        var gutterW = 20; 
-        var columnW = 160;
-      }
-
-      $('.socialFeedArea ul').isotope({
-        itemSelector:'.socialItem',
-        layoutMode:'masonry',
-        animationEngine: 'best-available',
-        masonry: {
-          columnWidth: columnW,
-          gutterWidth: gutterW
-        }
-      });
-      // $(window).smartresize(function(){
       // if(screenWidth <= 335){
-      //   .isotope('reLayout');}
+      //   var gutterW = 1;
+      //   var columnW = 12;
+      // }else if(screenWidth > 335){
+      //   var gutterW = 20; 
+      //   var columnW = 160;
       // }
-      // }).smartresize();
 
-      // var $container = $('.socialFeedArea ul'),
-      // $body = $('.socialFeedArea'),
-      // colW = 160,
-      // columns = null;
-      
-      // $container.isotope({
-      //   // disable window resizing
-      //   resizable: false,
+      // $('.socialFeedArea ul').isotope({
       //   itemSelector:'.socialItem',
+      //   layoutMode:'masonry',
+      //   animationEngine: 'best-available',
       //   masonry: {
-      //     columnWidth: colW,
-      //     gutterWidth: 5
+      //     columnWidth: columnW,
+      //     gutterWidth: gutterW
       //   }
       // });
+
+      var $container = $('.socialFeedArea ul'),
+      $body = $('.socialFeedArea ul'),
+      colW = 160,
+      columns = null;
+  
+      $container.isotope({
+        // disable window resizing
+        resizable: false,
+        masonry: {
+          columnWidth: colW,
+          gutterWidth: 0
+        }
+      });
       
-      // $(window).smartresize(function(){
-      //   // check if columns has changed
-      //   var currentColumns = Math.floor( ( $body.width()) / colW );
-      //   if ( currentColumns !== columns ) {
-      //     // set new column count
-      //     columns = currentColumns;
-      //     // apply width to container manually, then trigger relayout
-      //     $container.width( columns * colW )
-      //       .isotope('reLayout');
-      //   }
+      $(window).smartresize(function(){
+        // check if columns has changed
+        var currentColumns = Math.floor( ( $body.width() -10 ) / colW );
+        if ( currentColumns !== columns ) {
+          // set new column count
+          columns = currentColumns;
+          // apply width to container manually, then trigger relayout
+          $container.width( columns * colW )
+            .isotope('reLayout');
+        }
         
-      // }).smartresize(); // trigger resize to set container width
+      }).smartresize(); // trigger resize to set container width
 
       // Filter items for Social Feed Area when filter link is clicked
       $('.filters a').click(function(){

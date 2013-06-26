@@ -504,9 +504,11 @@ a{
 			margin: 0; padding: 0;
 
 			.socialFeedArea{
+				width: 105%;
+				margin: 0 auto;
 				ul{
 					min-width: 105%;
-					float: left;
+					// float: left;
 					margin: 0; padding: 0;
 					overflow: hidden;
 					list-style-type: none;

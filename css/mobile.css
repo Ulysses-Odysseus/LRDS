@@ -233,9 +233,9 @@
         width: 100%;
         padding: 40px 0 0 0; }
         .content #home .bloglist .socialFeedArea ul {
-          width: 95%;
+          min-width: 0%;
           margin: 0 auto;
-          padding: 0 5px 0 5px; }
+          padding: 0 0 0 0; }
 
   /* =============================================================================
   	Side Bar
@@ -330,3 +330,13 @@
           border-top-color: #858585; }
         .sideBar .navBar ul .activeNav {
           background: none; } }
+@media screen and (max-width: 325px) {
+  /* =============================================================================
+  	Content
+     ========================================================================== */
+  .content #home .bloglist .socialFeedArea {
+    width: 100%;
+    padding: 40px 0 0 0; }
+    .content #home .bloglist .socialFeedArea ul {
+      min-width: 105%;
+      padding: 0 0 0 10px; } }
