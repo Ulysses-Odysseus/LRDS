@@ -292,13 +292,14 @@
 	   ========================================================================== */
 	.content{
 		width: 100%;
-		margin: 0; padding: 99px 0 0 0;
+		margin: 0; padding: 49px 0 0 0;
 
 		.searchBar{
 			display:none;
 		}
 
 		#home{
+			padding-top: 50px;
 			.bloglist{
 				width: 50%;
 				/* Social Sub Nav

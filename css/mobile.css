@@ -209,59 +209,61 @@
   .content {
     width: 100%;
     margin: 0;
-    padding: 99px 0 0 0;
+    padding: 49px 0 0 0;
     /* =============================================================================
     	SHOWS
        ========================================================================== */ }
     .content .searchBar {
       display: none; }
-    .content #home .bloglist {
-      width: 50%;
-      /* Social Sub Nav
-      -------------------------*/ }
-      .content #home .bloglist .socialFeedBar {
-        width: 100%;
-        height: 50px;
-        position: fixed;
-        top: 49px;
-        left: 0;
-        z-index: 100;
-        text-align: center;
-        background: url("../img/bar-bg-active.png") repeat;
-        line-height: 50px;
-        color: white; }
-        .content #home .bloglist .socialFeedBar ul {
-          width: 307px;
+    .content #home {
+      padding-top: 50px; }
+      .content #home .bloglist {
+        width: 50%;
+        /* Social Sub Nav
+        -------------------------*/ }
+        .content #home .bloglist .socialFeedBar {
+          width: 100%;
           height: 50px;
-          margin: 0 auto; }
-          .content #home .bloglist .socialFeedBar ul .socialIcon {
-            display: block;
-            width: 50px;
-            height: 50px; }
-            .content #home .bloglist .socialFeedBar ul .socialIcon a {
-              width: 100%; }
-              .content #home .bloglist .socialFeedBar ul .socialIcon a img {
-                width: 35%;
-                height: auto;
-                padding: 15px 0 0 0; }
-          .content #home .bloglist .socialFeedBar ul .all {
-            background: url(../img/media-icon-view-all-phone.png) center no-repeat; }
-          .content #home .bloglist .socialFeedBar ul .blog {
-            background: url(../img/media-icon-blog-phone.png) center no-repeat; }
-          .content #home .bloglist .socialFeedBar ul .facebook {
-            background: url(../img/media-icon-facebook-phone.png) center no-repeat; }
-          .content #home .bloglist .socialFeedBar ul .twitter {
-            background: url(../img/media-icon-twitter-phone.png) center no-repeat; }
-          .content #home .bloglist .socialFeedBar ul .instagram {
-            background: url(../img/media-icon-instagram-phone.png) center no-repeat; }
-          .content #home .bloglist .socialFeedBar ul .rss {
-            background: url(../img/media-icon-rss-phone.png) center no-repeat; }
-      .content #home .bloglist .socialFeedArea {
-        width: 100%;
-        padding: 0; }
-        .content #home .bloglist .socialFeedArea ul {
-          width: 95%;
-          padding: 0 2.5% 0 2.5%; }
+          position: fixed;
+          top: 49px;
+          left: 0;
+          z-index: 100;
+          text-align: center;
+          background: url("../img/bar-bg-active.png") repeat;
+          line-height: 50px;
+          color: white; }
+          .content #home .bloglist .socialFeedBar ul {
+            width: 307px;
+            height: 50px;
+            margin: 0 auto; }
+            .content #home .bloglist .socialFeedBar ul .socialIcon {
+              display: block;
+              width: 50px;
+              height: 50px; }
+              .content #home .bloglist .socialFeedBar ul .socialIcon a {
+                width: 100%; }
+                .content #home .bloglist .socialFeedBar ul .socialIcon a img {
+                  width: 35%;
+                  height: auto;
+                  padding: 15px 0 0 0; }
+            .content #home .bloglist .socialFeedBar ul .all {
+              background: url(../img/media-icon-view-all-phone.png) center no-repeat; }
+            .content #home .bloglist .socialFeedBar ul .blog {
+              background: url(../img/media-icon-blog-phone.png) center no-repeat; }
+            .content #home .bloglist .socialFeedBar ul .facebook {
+              background: url(../img/media-icon-facebook-phone.png) center no-repeat; }
+            .content #home .bloglist .socialFeedBar ul .twitter {
+              background: url(../img/media-icon-twitter-phone.png) center no-repeat; }
+            .content #home .bloglist .socialFeedBar ul .instagram {
+              background: url(../img/media-icon-instagram-phone.png) center no-repeat; }
+            .content #home .bloglist .socialFeedBar ul .rss {
+              background: url(../img/media-icon-rss-phone.png) center no-repeat; }
+        .content #home .bloglist .socialFeedArea {
+          width: 100%;
+          padding: 0; }
+          .content #home .bloglist .socialFeedArea ul {
+            width: 95%;
+            padding: 0 2.5% 0 2.5%; }
     .content #shows {
       width: 200%; }
       .content #shows .showlist {
