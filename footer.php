@@ -23,7 +23,7 @@
       if(screenWidth <= 335){
         var gutterW = 1;
         var columnW = 12;
-      }else{
+      }else if(screenWidth > 335){
         var gutterW = 20; 
         var columnW = 160;
       }
@@ -34,6 +34,7 @@
         animationEngine: 'best-available',
         masonry: {
           columnWidth: columnW,
+          gutterWidth: gutterW
         }
       });
       // $(window).smartresize(function(){
