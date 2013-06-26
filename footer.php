@@ -7,6 +7,21 @@
     <script>
     /* <![CDATA[ */
     $(document).ready(function(){
+      
+      // var $windowTag = $(window);
+      // var $fixedElement = $(".mobileNav, .socialFeedBar");
+      // var fixedElementOffSet = $fixedElement.offset().top;
+
+      // $windowTag.scroll(function() {
+
+      //     var scrollTop = $windowTag.scrollTop();
+
+      //     if (fixedElementOffSet < scrollTop) {
+      //         $fixedElement.css('top', scrollTop);
+      //     } else {
+      //         $fixedElement.css('top', 0);
+      //     }
+      // });​
 
       /* CSS Selectors All Browsers
       =============================*/

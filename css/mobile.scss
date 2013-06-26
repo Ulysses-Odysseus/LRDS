@@ -5,7 +5,14 @@
 
 	/* General Settings
 	=============================*/
-	// html,body{overflow-y:hidden; }
+	html,
+	body {
+		background: #000000 url('../img/navy_blue.png') repeat top left!important;
+		-webkit-background-size: none;
+		-moz-background-size: none;
+		-o-background-size: none;
+		background-size: none;
+	}
 
 	/* =============================================================================
 		Container
@@ -207,6 +214,17 @@
 
 @media screen and (max-width: 725px) {
 
+	/* General Settings
+	=============================*/
+	html,
+	body {
+		background: #ccc!important;
+		-webkit-background-size: none;
+		-moz-background-size: none;
+		-o-background-size: none;
+		background-size: none;
+	}
+
 	.visible{
 		display: block;
 	}
@@ -228,6 +246,8 @@
 		width: 100%;
 		height: 50px;
 		position: fixed;
+		top: 0;
+		left: 0;
 		text-align: center;
 		z-index: 100;
 		background: url('../img/bar-bg-active-black.png') repeat;
@@ -272,7 +292,7 @@
 	   ========================================================================== */
 	.content{
 		width: 100%;
-		margin: 0; padding: 50px 0 0 0;
+		margin: 0; padding: 99px 0 0 0;
 
 		.searchBar{
 			display:none;
@@ -287,6 +307,8 @@
 					width: 100%;
 					height: 50px;
 					position: fixed;
+					top: 49px;
+					left: 0;
 					z-index: 100;
 					text-align: center;
 					background: url('../img/bar-bg-active.png') repeat;
@@ -321,7 +343,7 @@
 
 				.socialFeedArea{
 					width: 100%;
-					padding: 40px 0 0 0;
+					padding: 0;
 
 					ul{
 						width: 95%;
@@ -398,8 +420,8 @@
 		top: 0;
 		left: -90%;
 		z-index: 999;
-		-webkit-box-shadow:  5px 0px 15px 5px rgba(0, 0, 0, .5);
-        		box-shadow:  5px 0px 15px 5px rgba(0, 0, 0, .5);
+		// -webkit-box-shadow:  5px 0px 15px 5px rgba(0, 0, 0, .5);
+  //       		box-shadow:  5px 0px 15px 5px rgba(0, 0, 0, .5);
 
         /* ease-out */
 		-webkit-transition: all 100ms cubic-bezier(0.000, 0.000, 0.580, 1.000); 
@@ -451,7 +473,7 @@
 		.navBar{
 			width: 90%;
 			padding: 5%;
-			color: #9e9e9e;
+			color: #fff;
 			background: #252525;
 
 			p{ margin: 25px 0 10px 0; }

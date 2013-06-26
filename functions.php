@@ -6,6 +6,16 @@ if ( function_exists( 'add_theme_support' ) ) {
     set_post_thumbnail_size( 400, false );
 }
 
+// Remove width and Height attribute from posts
+// For responsive images
+add_filter( 'post_thumbnail_html', 'remove_width_attribute', 10 );
+add_filter( 'image_send_to_editor', 'remove_width_attribute', 10 );
+
+function remove_width_attribute( $html ) {
+   $html = preg_replace( '/(width|height)="\d*"\s/', "", $html );
+   return $html;
+}
+
 // Woocommerce
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
 remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
