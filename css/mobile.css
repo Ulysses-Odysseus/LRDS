@@ -1,6 +1,9 @@
-/* =============================================================================
-	Media Query Tablets
-   ========================================================================== */
+/*==========================*/
+/*							*/
+/***	  MEDIA QUERY     ***/
+/***		 860px        ***/
+/*							*/
+/*==========================*/
 @media screen and (max-width: 860px) {
   /* General Settings
   =============================*/
@@ -130,17 +133,19 @@
       .content #shows .showlist li .place .button {
         width: 110px;
         height: 110px; }
-        .content #shows .showlist li .place .button a {
-          width: inherit;
-          height: 110px;
-          line-height: 160px; }
-          .content #shows .showlist li .place .button a img {
-            width: 20%;
-            height: 50%; }
+        .content #shows .showlist li .place .button img {
+          width: 20%;
+          height: 50%; }
     .content #about .aboutContainer .aboutTitle {
       font-size: 25px; }
     .content #about .aboutContainer .aboutImage {
       width: inherit; } }
+/*==========================*/
+/*							*/
+/***	  MEDIA QUERY     ***/
+/***		 725px        ***/
+/*							*/
+/*==========================*/
 @media screen and (max-width: 725px) {
   /* General Settings
   =============================*/
@@ -262,8 +267,9 @@
           width: 100%;
           padding: 0; }
           .content #home .bloglist .socialFeedArea ul {
-            width: 95%;
-            padding: 0 2.5% 0 2.5%; }
+            min-width: 0%;
+            margin: 0 auto;
+            padding: 0 0 0 0; }
     .content #shows {
       width: 200%; }
       .content #shows .showlist {
@@ -345,6 +351,7 @@
         height: 50px;
         margin: 0; }
         .sideBar .searchBar .searchForm .searchInput {
+          color: #efefef;
           width: 100%;
           padding: 0 2.5% 0 2.5%;
           background: #363636; }
@@ -401,3 +408,19 @@
           border-top-color: #858585; }
         .sideBar .navBar ul .activeNav {
           background: none; } }
+/*==========================*/
+/*							*/
+/***	  MEDIA QUERY     ***/
+/***		 325px        ***/
+/*							*/
+/*==========================*/
+@media screen and (max-width: 325px) {
+  /* =============================================================================
+  	Content
+     ========================================================================== */
+  .content #home .bloglist .socialFeedArea {
+    width: 100%;
+    padding: 40px 0 0 0; }
+    .content #home .bloglist .socialFeedArea ul {
+      min-width: 105% !important;
+      padding: 0 0 0 10px; } }

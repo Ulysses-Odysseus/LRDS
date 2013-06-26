@@ -78,24 +78,6 @@ a{
 	color:inherit;
 	text-decoration: none;
 }
-/* Keyframes Arrow animation (under "show" div)
-=============================*/
-// @keyframes fordward {
-//   0% {margin: 0 0 0 0px;}
-//   100% {margin: 0 0 0 90px;}
-// }
-@-webkit-keyframes fordward {
-  0% {margin: 0 0 0 0px;}
-  100% {margin: 0 0 0 90px;}
-}
-@-moz-keyframes fordward {
-  0% {margin: 0 0 0 0px;}
-  100% {margin: 0 0 0 90px;}
-}
-@-o-keyframes fordward {
-  0% {margin: 0 0 0 0px;}
-  100% {margin: 0 0 0 90px;}
-}
 
 /* Keyframes Fade In/Out Animation (under ".content" div) 
 =============================*/
@@ -210,7 +192,6 @@ a{
 .sideBar{
 	width: 150px; height: 100%!important;
 	position: fixed;
-	// background: yellow;
 
 	/* Logo */
 	.logoarea{
@@ -238,7 +219,6 @@ a{
 		margin:19px 0 0 0;
 		float: right;
 		overflow: hidden;
-		// background: orange;
 		ul{
 			margin: 0; padding: 0;
 			li{
@@ -247,7 +227,6 @@ a{
 				color: $fc-white;
 				line-height: 70px;
 				text-align: center;
-				// background: $background;
 			}
 			/* Li Active/Non Active */
 			.liActive{
@@ -292,14 +271,9 @@ a{
 	-------------------------*/
 	.navBar{
 		width: 70px;height: 100%;
-		// float: left;
 		background: $background;
-		// background: red;
 		ul{
 			padding:0; margin:19px 0 0 0;
-			.navButton{
-				height: 70px;
-			}
 			li{
 				width: 70px;
 				list-style-type: none;
@@ -322,8 +296,14 @@ a{
 				.about { background: url(../img/nav-icon-about.png) no-repeat center; }
 				.subscribe { background: url(../img/nav-icon-newsletter.png) no-repeat center; }
 			}
+			.navButton{
+				height: 70px;
+			}
 			.activeNav{
 				background: $background;
+			}
+			.slideInCustom{
+
 			}
 		}
 	}
@@ -529,9 +509,11 @@ a{
 			margin: 0; padding: 0;
 
 			.socialFeedArea{
+				width: 105%;
+				margin: 0 auto;
 				ul{
-					width: 105%;
-					float: left;
+					min-width: 105%;
+					// float: left;
 					margin: 0; padding: 0;
 					overflow: hidden;
 					list-style-type: none;
@@ -598,7 +580,7 @@ a{
 						}
 					}
 
-					//Video Feed
+					// Video Feed
 					.video{
 						.play{
 							bottom: 50%; left: 37%;
@@ -626,12 +608,24 @@ a{
 					}
 
 					// Style for Boxes
-					.small, .big {
+					.small, .smallBorder, .big {
 						word-wrap: break-word;
 						background: $background;
 						background-color: black;
 					}
 					.small{
+						width: 140px; height: 140px;
+
+						.feedBar{
+							width: 100%;
+							padding-left: 10px;
+
+							&:before {
+								bottom: 6px; right: 8px;
+							}
+						}
+					}
+					.smallBorder{
 						width: 120px; height: 120px;
 						padding: 10px;
 
@@ -645,10 +639,16 @@ a{
 					}
 					.big{
 						width: 300px; height: 300px;
-
+						a{
+							display: block;
+							text-align: center;
+						}
 						.feedBar{
 							width: 96.5%;
 							padding-left: 3.5%;
+							a{
+								text-align: left;
+							}
 						}
 					}
 				}
@@ -987,30 +987,14 @@ a{
 					}
 
 					.button{
-						width: 140px; height: 108px;
+						width: 140px; height: 140px;
 						float: right;
-						padding: 32px 0 0 0;
-						text-align: center;
 						cursor: pointer;
 						overflow: hidden;
+						text-align: center;
 						background: $background;
-						/*-webkit-transition: all 0.2s ease-in-out;
-					       -moz-transition: all 0.2s ease-in-out;
-					        -ms-transition: all 0.2s ease-in-out;
-					         -o-transition: all 0.2s ease-in-out;
-					            transition: all 0.2s ease-in-out;*/
-
-						a{
-							width: inherit; height: inherit;
-							display: block;
-							text-align: center;
-							line-height: 210px;
-							vertical-align: middle;
-							/*-webkit-transition: all 0.2s ease-in-out;
-						       -moz-transition: all 0.2s ease-in-out;
-						        -ms-transition: all 0.2s ease-in-out;
-						         -o-transition: all 0.2s ease-in-out;
-						            transition: all 0.2s ease-in-out;*/
+						img{
+							padding: 24% 0;
 						}
 					}
 					/* HOVER ON */
@@ -1046,7 +1030,30 @@ a{
 	} /* End Shows */
 
 	/* =============================================================================
-		SINGLE PAGE
+		NEWSLETTER
+	   ========================================================================== */
+	#subscribe{
+		width: 421px;
+		padding: 20px;
+		color: $fc-white;
+		background: $background;
+		.rssTitle{
+			font-size: 25px;
+		}
+		.rssText{
+			display: block;
+			font-size: 13px;
+			margin: 10px 0 0 0;
+		}
+		.rssSubscribe{
+			margin: 15px 0 0 0;
+			font-size: 16px;
+			// text-align: right;
+		}
+	}
+
+	/* =============================================================================
+		SINGLE PAGE ~ about, blog-single, shows-single
 	   ========================================================================== */
 	#about { width: 100%; }
 
@@ -1074,13 +1081,16 @@ a{
 				div{
 					display: inline-block;
 				}
-				img {
-					width: 100%;
+				a{
+					text-decoration: underline;
 				}
 				.columText{
 					width: 47.5%;
 					padding: 0 2.5% 0 0;
 					float: left;
+					a{
+						text-decoration: none!important;
+					}
 				}
 			}
 		}
@@ -1111,10 +1121,6 @@ a{
 		     -o-transition: all 300ms cubic-bezier(0.000, 0.000, 0.580, 1.000); 
 		        transition: all 300ms cubic-bezier(0.000, 0.000, 0.580, 1.000);
 	} /* End single */
-
-	/* =============================================================================
-		NEWSLETTER
-	   ========================================================================== */
 }
 
 /* =============================================================================
