@@ -634,10 +634,16 @@ a{
 					}
 					.big{
 						width: 300px; height: 300px;
-
+						a{
+							display: block;
+							text-align: center;
+						}
 						.feedBar{
 							width: 96.5%;
 							padding-left: 3.5%;
+							a{
+								text-align: left;
+							}
 						}
 					}
 				}

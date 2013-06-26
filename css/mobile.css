@@ -338,5 +338,5 @@
     width: 100%;
     padding: 40px 0 0 0; }
     .content #home .bloglist .socialFeedArea ul {
-      min-width: 105%;
+      min-width: 105% !important;
       padding: 0 0 0 10px; } }

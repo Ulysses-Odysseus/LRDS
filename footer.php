@@ -17,27 +17,6 @@
 
       /* Isotope 
       =============================*/
-      var screenWidth = $(window).width();
-
-      // If screen width is smaller or equal to 725px
-      // if(screenWidth <= 335){
-      //   var gutterW = 1;
-      //   var columnW = 12;
-      // }else if(screenWidth > 335){
-      //   var gutterW = 20; 
-      //   var columnW = 160;
-      // }
-
-      // $('.socialFeedArea ul').isotope({
-      //   itemSelector:'.socialItem',
-      //   layoutMode:'masonry',
-      //   animationEngine: 'best-available',
-      //   masonry: {
-      //     columnWidth: columnW,
-      //     gutterWidth: gutterW
-      //   }
-      // });
-
       var $container = $('.socialFeedArea ul'),
       $body = $('.socialFeedArea ul'),
       colW = 160,
@@ -45,7 +24,7 @@
   
       $container.isotope({
         // disable window resizing
-        resizable: false,
+        // resizable: false,
         masonry: {
           columnWidth: colW,
           gutterWidth: 0

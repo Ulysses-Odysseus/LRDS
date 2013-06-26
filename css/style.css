@@ -570,9 +570,14 @@ a {
           .content #home .bloglist .socialFeedArea ul .big {
             width: 300px;
             height: 300px; }
+            .content #home .bloglist .socialFeedArea ul .big a {
+              display: block;
+              text-align: center; }
             .content #home .bloglist .socialFeedArea ul .big .feedBar {
               width: 96.5%;
               padding-left: 3.5%; }
+              .content #home .bloglist .socialFeedArea ul .big .feedBar a {
+                text-align: left; }
   .content #store {
     width: 100%;
     /* Shop Sub Nav
