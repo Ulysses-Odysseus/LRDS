@@ -6,7 +6,7 @@
   =============================*/
   html,
   body {
-    background: black url("../img/navy_blue.png") repeat top left !important;
+    background: #cccccc !important;
     -webkit-background-size: none;
     -moz-background-size: none;
     -o-background-size: none;
