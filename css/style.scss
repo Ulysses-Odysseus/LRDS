@@ -46,7 +46,8 @@ img{
 }
 
 /* Visible Elements */
-.visible { display:none; }
+.visible  { display: none;  }
+.novisible{ display: block; }
 
 /* Clearfix */
 .group:after {

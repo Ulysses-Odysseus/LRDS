@@ -221,13 +221,9 @@
 		background-size: none;
 	}
 
-	.visible{
-		display: block;
-	}
-
-	.novisible{
-		display: none;
-	}
+	/* Visible Elements */
+	.visible  { display: block; }
+	.novisible{ display: none;  }
 
 	/* =============================================================================
 		Header
@@ -362,7 +358,9 @@
 				li{
 					width: 100%;
 					height: 80px;
+					margin-bottom: 2%;
 					position: relative;
+					background: url('../img/bar-bg-active.png') repeat;
 					.date{
 						width: 80px; height: 80px;
 						.dateContainer{
@@ -375,32 +373,20 @@
 						}
 					}
 					.place{
-						width: 77.83900%; height: 80px;
-						margin: 0 0 0 ;
+						height: 80px;
+						margin: 0;
 						font-size: 120%;
 						position: absolute;
 						left: 90;
 						bottom: 0;
 						overflow: hidden;
+						background: none;
 						.namePlace{
 							font-size: 120%;
 							margin: 0 10px 0 10px;
 							line-height: 80px;
 						}
-						.button{
-							width: 80px; height: 65px;
-							padding: 15px 0 0 0;
-							position: absolute;
-							top: 0;
-							right: 0;
-							a{
-							width: inherit; height: 80px;
-							line-height: 80px;
-							}
-							img{
-								width: 20%; height: 70%;
-							}
-						}
+						.button{ display: none; }
 					}
 				}
 			}
@@ -418,8 +404,6 @@
 		top: 0;
 		left: -90%;
 		z-index: 999;
-		// -webkit-box-shadow:  5px 0px 15px 5px rgba(0, 0, 0, .5);
-	 //       		box-shadow:  5px 0px 15px 5px rgba(0, 0, 0, .5);
 
         /* ease-out */
 		-webkit-transition: all 100ms cubic-bezier(0.000, 0.000, 0.580, 1.000); 

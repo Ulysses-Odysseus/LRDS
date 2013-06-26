@@ -157,6 +157,7 @@
     -o-background-size: none;
     background-size: none; }
 
+  /* Visible Elements */
   .visible {
     display: block; }
 
@@ -278,7 +279,9 @@
         .content #shows .showlist li {
           width: 100%;
           height: 80px;
-          position: relative; }
+          margin-bottom: 2%;
+          position: relative;
+          background: url("../img/bar-bg-active.png") repeat; }
           .content #shows .showlist li .date {
             width: 80px;
             height: 80px; }
@@ -290,32 +293,20 @@
               line-height: 12px;
               font-size: 2.4em; }
           .content #shows .showlist li .place {
-            width: 77.83900%;
             height: 80px;
-            margin: 0 0 0;
+            margin: 0;
             font-size: 120%;
             position: absolute;
             left: 90;
             bottom: 0;
-            overflow: hidden; }
+            overflow: hidden;
+            background: none; }
             .content #shows .showlist li .place .namePlace {
               font-size: 120%;
               margin: 0 10px 0 10px;
               line-height: 80px; }
             .content #shows .showlist li .place .button {
-              width: 80px;
-              height: 65px;
-              padding: 15px 0 0 0;
-              position: absolute;
-              top: 0;
-              right: 0; }
-              .content #shows .showlist li .place .button a {
-                width: inherit;
-                height: 80px;
-                line-height: 80px; }
-              .content #shows .showlist li .place .button img {
-                width: 20%;
-                height: 70%; }
+              display: none; }
 
   /* =============================================================================
   	Side Bar
@@ -418,9 +409,6 @@
   /* =============================================================================
   	Content
      ========================================================================== */
-  .content #home .bloglist .socialFeedArea {
-    width: 100%;
-    padding: 40px 0 0 0; }
-    .content #home .bloglist .socialFeedArea ul {
-      min-width: 105% !important;
-      padding: 0 0 0 10px; } }
+  .content #home .bloglist .socialFeedArea ul {
+    min-width: 105% !important;
+    padding: 0 0 0 10px; } }
