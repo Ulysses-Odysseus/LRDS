@@ -461,7 +461,7 @@ a {
             outline: none;
             float: left !important;
             vertical-align: middle;
-            text-indent: -999em; }
+            text-indent: -9999em; }
             .content #home .socialFeedBar ul li a img {
               margin: 0 auto;
               padding: 30% 0;
@@ -884,13 +884,41 @@ a {
     background: url("../img/bar-bg-active.png") repeat; }
     .content #subscribe .rssTitle {
       font-size: 25px; }
+    .content #subscribe .rssSubTitle {
+      display: block;
+      margin: 10px 0 0 0;
+      font-size: 17px; }
     .content #subscribe .rssText {
       display: block;
       font-size: 13px;
-      margin: 10px 0 0 0; }
+      margin: 10px 0 10px 0; }
+      .content #subscribe .rssText a:hover {
+        color: #dc8d40; }
     .content #subscribe .rssSubscribe {
       margin: 15px 0 0 0;
       font-size: 16px; }
+    .content #subscribe .socialIconsButtons {
+      margin: 10px 0 0 0;
+      padding: 0;
+      text-align: left;
+      list-style-type: none; }
+      .content #subscribe .socialIconsButtons li {
+        margin: 0;
+        display: inline-block; }
+        .content #subscribe .socialIconsButtons li a {
+          display: block;
+          width: 49px;
+          height: 45px;
+          outline: none;
+          float: left;
+          vertical-align: middle;
+          text-indent: -9999em; }
+      .content #subscribe .socialIconsButtons .facebook {
+        background: url(../img/media-icon-facebook.png) center no-repeat; }
+      .content #subscribe .socialIconsButtons .twitter {
+        background: url(../img/media-icon-twitter.png) center no-repeat; }
+      .content #subscribe .socialIconsButtons .instagram {
+        background: url(../img/media-icon-instagram.png) center no-repeat; }
   .content #about {
     width: 100%; }
   .content #about, .content #blogsingle, .content #showsingle {
