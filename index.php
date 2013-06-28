@@ -481,9 +481,9 @@
             <input type="button" class="rssjoin" value="Join">
           </form>
           <ul class="socialIconsButtons">
-            <li class="facebook"><a href="https://www.facebook.com/lrdsmusic">Facebook</a></li>
-            <li class="twitter"><a href="https://twitter.com/lrds">Twitter</a></li>
-            <li class="instagram"><a href="http://instagram.com/losrodriguezdesinaloa/">Instagram</a></li>
+            <li class="facebook"><a href="https://www.facebook.com/lrdsmusic" target="_blank">Facebook</a></li>
+            <li class="twitter"><a href="https://twitter.com/lrds" target="_blank">Twitter</a></li>
+            <li class="instagram"><a href="http://instagram.com/losrodriguezdesinaloa/" target="_blank">Instagram</a></li>
           </ul>
         </div>
       </div> <!-- End Content -->
