@@ -14,7 +14,8 @@ $backgroundBlack:url('../img/bar-bg-active-black.png') repeat;
 $backgroundYellow:url('../img/bar-bg-active-green.png') repeat;
 $backgroundBlue:url('../img/bar-bg-active-blue.png') repeat;
 $backgroundOrange:url('../img/bar-bg-active-orange.png') repeat;
-$mainGreen:#9fa326;
+$mainGreen : #9fa326;
+$mainOrange: #dc8d40;
 
 /* Font Color */ 
 $fc-white: #efefef;
@@ -479,7 +480,7 @@ a{
 						outline: none;
 						float: $leftIm;
 						vertical-align: middle;
-						text-indent: -999em;
+						text-indent: -9999em;
 						img{
 							margin: 0 auto;
 							padding: 30% 0;
@@ -1040,16 +1041,44 @@ a{
 		.rssTitle{
 			font-size: 25px;
 		}
+		.rssSubTitle{
+			display: block;
+			margin: 10px 0 0 0;
+			font-size: 17px;
+		}
 		.rssText{
 			display: block;
 			font-size: 13px;
-			margin: 10px 0 0 0;
+			margin: 10px 0 10px 0;
+			a:hover{
+				color: $mainOrange;
+			}
 		}
 		.rssSubscribe{
 			margin: 15px 0 0 0;
 			font-size: 16px;
 			// text-align: right;
 		}
+		.socialIconsButtons{	
+				margin: 10px 0 0 0; padding: 0;
+				text-align: left;
+				list-style-type: none;
+				li{
+					margin: 0;
+					display: inline-block;
+					a{
+						display: block;
+						width: 49px; height: 45px; 
+						outline: none;
+						float: left;
+						vertical-align: middle;
+						text-indent: -9999em;
+					}
+				}
+				.facebook { background: url(../img/media-icon-facebook.png) center no-repeat; }
+				.twitter  { background: url(../img/media-icon-twitter.png) center no-repeat; }
+				.instagram{ background: url(../img/media-icon-instagram.png) center no-repeat; }
+			}
 	}
 
 	/* =============================================================================

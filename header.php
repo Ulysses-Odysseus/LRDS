@@ -38,7 +38,7 @@
     <!-- WP
     ================================================== -->
     <?php wp_head(); ?>
-
+    
   </head>
 
   <body>
@@ -70,7 +70,7 @@
             <li id="textstore" class="ralelight liNoActive">Store</li>
             <li id="textshows" class="ralelight liNoActive">Shows</li>
             <li id="textabout" class="ralelight liNoActive">About</li>
-            <li id="textsubscribe" class="ralelight liNoActive">Rss</li>
+            <li id="textsubscribe" class="ralelight liNoActive">Contact</li>
           </ul>
         </div>
 

@@ -149,33 +149,37 @@
           $(singleType).removeClass('active');
           $(singleType).addClass('no-active');
         }
-    });
+      });
 
-    /* Mobile Navigation functionality
-      =============================*/
-    $('.toggle a, .navBar a').click(function(e) {
+      /* Mobile Navigation functionality
+        =============================*/
+      $('.toggle a, .navBar a').click(function(e) {
 
-      var width = $(window).width();
+        var width = $(window).width();
 
-      // If screen width is smaller or equal to 725px
-      if(width <= 725){
+        // If screen width is smaller or equal to 725px
+        if(width <= 725){
 
-          var toggle = $('.toggle a');
+            var toggle = $('.toggle a');
 
-          if(toggle.attr('class') == "noactive"){
-            $('.sideBar').css('left', '0');
-            toggle.removeClass().addClass('active');
-          } else {
-            $('.sideBar').css('left', '-80%');
-            toggle.removeClass().addClass('noactive');
-          }
+            if(toggle.attr('class') == "noactive"){
+              $('.sideBar').css('left', '0');
+              toggle.removeClass().addClass('active');
+            } else {
+              $('.sideBar').css('left', '-80%');
+              toggle.removeClass().addClass('noactive');
+            }
 
-        e.preventDefault();
-      }
-    });
-  }); /* End Document Scrpit */
-  /* ]]> */
-  </script>
-
+          e.preventDefault();
+        }
+      });
+    }); /* End Document Scrpit */
+    /* ]]> */
+    </script>
+  
+    <!-- Google Analytics 
+    ================================================== -->
+    <?php include_once("./analyticstracking.php") ?>
+    
   </body>
 </html>
