@@ -247,11 +247,12 @@
                 <li class="dividerVertical"></li>
                 <li class="standarBack ralelight"><a class="itemsbb" href="#">2 ITEMS $40.00</a></li>
                 <li class="dividerVertical"></li>
+                <li class="standarBack ralelight"><a class="checkoutbb" href="#">CHECKOUT</a></li>
               </ul>
             </div>
-            <div class="checkOutul ralelight">
+            <!-- <div class="checkOutul ralelight">
               <a class="checkoutbb" href="#">CHECKOUT</a>
-            </div>
+            </div> -->
           </div>
 
           <!-- Search Bar
@@ -283,7 +284,7 @@
                     <div class="price ralelight">$19.99</div>
                     <div class="productBottomBar">
                       <span class="productName ralelight">THIS IS A PRODUCT</span>
-                      <span class="productLink"><a href="#" title="See Product"></a></span>
+                      <span class="productLink"><a href="#" title="View Product"></a></span>
                     </div>
                   </div>
                 </li>
@@ -436,18 +437,26 @@
             <div class="aboutImage"></div>
             <div class="aboutText ralelight group">
               <div class="columText">
+                <p>
                 Orginarios  de Guasave uno de los pequeños pueblos del estado se Sinaloa con mas tradición musical, los hermanos Geovanne “Geo” ( primera voz y acordeon ) y Jose “Checho” ( segunda voz y guitarra ), han estado unidos musicalmente desde 2006.
-                <br/>
+                </p>
+                <p>
                 Desde niños escucharon música sierreña, norteña y banda tradicional Sinaloense, lo que los motivo a tomar el acordeon y la guitarra, para interpretar la música que preferida por sus abuelos, consiguiendo pronto distinguirse por su estilo original.
-                <br/>
+                </p>
+                <p>
                 Haciendo uso de redes sociales y con la sencillez heredada de su familia, han logrado mantener el contacto con el publico, que los acompaña en todas sus presentaciones.
+                </p>
               </div>
               <div class="columText">
+                <p>
                 Recientemente después de algunas semanas en el estudio de grabación, terminaron lo que será su segunda producción musical que sera titulada  MUJERIEGOS A MORIR.
-                <br/>
+                </p>
+                <p>
                 Esta producción incluirá una recopilación de sus temas que han sido éxitos  UNDERGOUND  ( la entrevista, si ando en guerra, ojitos negros chinitos ) , asi como el tema Mujeriego a Morir, que empieza a escucharse en las principales radiodifusoras de la Mexico y la Union Americana.
-                <br/>
+                </p>
+                <p>
                 Los Rodriguez de Sinaloa, concientes de que les espera un largo camino por recorrer en la carrera musical, disfrutan cada oportunidad de cantar y ejecutar sus instrumentos, siempre complaciendo a todos sus seguidores.
+                </p>
               </div>
             </div>
           </div>

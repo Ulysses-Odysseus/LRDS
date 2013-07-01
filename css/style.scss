@@ -1,7 +1,7 @@
 /* =============================================================================
 	Style CSS by FatCat Online											
   	http://fatcatonline.net/ 
-	Last Update May/03/13 
+	Last Update June/28/13 
    ========================================================================== */
 
 /* SASS Settings -- Delete this title when done ediitng
@@ -16,6 +16,7 @@ $backgroundBlue:url('../img/bar-bg-active-blue.png') repeat;
 $backgroundOrange:url('../img/bar-bg-active-orange.png') repeat;
 $mainGreen : #9fa326;
 $mainOrange: #dc8d40;
+$mainred   : #841212;
 
 /* Font Color */ 
 $fc-white: #efefef;
@@ -305,6 +306,24 @@ a{
 			}
 			.slideInCustom{
 
+			}
+		}
+		.newsletterBar{
+			.rssTitle{
+				font-size: 25px;
+			}
+			.rssSubTitle{
+				display: block;
+				margin: 10px 0 0 0;
+				font-size: 17px;
+			}
+			.rssText{
+				display: block;
+				font-size: 13px;
+				margin: 10px 0 10px 0;
+				a:hover{
+					color: $mainOrange;
+				}
 			}
 		}
 	}
@@ -673,7 +692,7 @@ a{
 				float: left;
 				ul{	
 					margin: 0; padding: 0;
-					width: 337px; height: 70px;
+					width: 461px; height: 70px;
 					list-style-type: none;
 					background: $background;
 					
@@ -701,6 +720,10 @@ a{
 						}
 						.itemsbb{
 							width: 145px;
+						}
+						.checkoutbb{
+							width: 124px;
+							background: $backgroundRed;
 						}
 					}
 				}
@@ -757,7 +780,6 @@ a{
 				margin: 20px 0 0 0;
 
 				.allProducts{
-					// display: none;
 					.oddItem{
 						margin: 0 20px 0 0;
 					}
@@ -810,7 +832,6 @@ a{
 								}
 								.productLink{
 									width: 45px; height: inherit;
-									// background: gray;
 									a{
 										width: inherit; height: inherit;
 										display: block;
@@ -818,7 +839,7 @@ a{
 										background-size: 55%;
 									}
 									a:hover{
-										background:$bcGray url('../img/icon-eye-productAnim.gif') no-repeat center;
+										background:$mainred url('../img/icon-eye-product.png') no-repeat center;
 										background-size: 55%;
 									}
 								}
@@ -942,8 +963,6 @@ a{
 		SHOWS
 	   ========================================================================== */
 	#shows{
-		// display: none;
-		// background: green;
 		width: 200%;
 		padding: 0 0 20px 0;
 		overflow-x: hidden;
@@ -1057,7 +1076,6 @@ a{
 		.rssSubscribe{
 			margin: 15px 0 0 0;
 			font-size: 16px;
-			// text-align: right;
 		}
 		.socialIconsButtons{	
 				margin: 10px 0 0 0; padding: 0;

@@ -1,7 +1,7 @@
 /* =============================================================================
 	Style CSS by FatCat Online											
   	http://fatcatonline.net/ 
-	Last Update May/03/13 
+	Last Update June/28/13 
    ========================================================================== */
 /* SASS Settings -- Delete this title when done ediitng
 =============================*/
@@ -302,6 +302,18 @@ a {
         height: 70px; }
       .sideBar .navBar ul .activeNav {
         background: url("../img/bar-bg-active.png") repeat; }
+    .sideBar .navBar .newsletterBar .rssTitle {
+      font-size: 25px; }
+    .sideBar .navBar .newsletterBar .rssSubTitle {
+      display: block;
+      margin: 10px 0 0 0;
+      font-size: 17px; }
+    .sideBar .navBar .newsletterBar .rssText {
+      display: block;
+      font-size: 13px;
+      margin: 10px 0 10px 0; }
+      .sideBar .navBar .newsletterBar .rssText a:hover {
+        color: #dc8d40; }
 
 /* Link Up
 -------------------------*/
@@ -596,7 +608,7 @@ a {
         .content #store .shopBar div ul {
           margin: 0;
           padding: 0;
-          width: 337px;
+          width: 461px;
           height: 70px;
           list-style-type: none;
           background: url("../img/bar-bg-active.png") repeat; }
@@ -619,6 +631,9 @@ a {
               width: 81px; }
             .content #store .shopBar div ul li .itemsbb {
               width: 145px; }
+            .content #store .shopBar div ul li .checkoutbb {
+              width: 124px;
+              background: url("../img/bar-bg-active-red.png") repeat; }
       .content #store .shopBar .checkOutul {
         width: 124px;
         height: 70px;
@@ -716,7 +731,7 @@ a {
                   background: #575757 url("../img/icon-eye-product.png") no-repeat center;
                   background-size: 55%; }
                 .content #store .productsListMainArea .productsArea .allProducts li .productInfo .productBottomBar .productLink a:hover {
-                  background: #575757 url("../img/icon-eye-productAnim.gif") no-repeat center;
+                  background: #841212 url("../img/icon-eye-product.png") no-repeat center;
                   background-size: 55%; }
         .content #store .productsListMainArea .productsArea .singleProductContainer {
           display: none;
