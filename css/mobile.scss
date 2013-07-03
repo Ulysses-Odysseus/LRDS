@@ -1,3 +1,30 @@
+/* SASS Settings -- Delete this title when done ediitng
+=============================*/  
+
+/* Background */
+$background:url('../img/bar-bg-active.png') repeat;
+$backgroundRed:url('../img/bar-bg-active-red.png') repeat;
+$backgroundBlack:url('../img/bar-bg-active-black.png') repeat;
+$backgroundYellow:url('../img/bar-bg-active-green.png') repeat;
+$backgroundBlue:url('../img/bar-bg-active-blue.png') repeat;
+$backgroundOrange:url('../img/bar-bg-active-orange.png') repeat;
+$mainGreen : #9fa326;
+$mainOrange: #dc8d40;
+$mainred   : #841212;
+
+/* Font Color */ 
+$fc-white: #efefef;
+$fc-grey: #555555;
+
+/* Line Color */
+$lc-white: #858585;
+
+/* Background Colors */
+$bcRed:#841212;
+$bcGray: #575757;
+
+$leftIm:left!important;
+
 /*==========================*/
 /*							*/
 /***	  MEDIA QUERY     ***/
@@ -16,6 +43,7 @@
 		-moz-background-size: none;
 		-o-background-size: none;
 		background-size: none;
+		overflow: hidden; /* Removed on live */
 	}
 
 	/* =============================================================================
@@ -23,7 +51,7 @@
 	   ========================================================================== */
 	.container{
 		width: 100%;
-		// overflow: hidden;
+		overflow: hidden; /* Removed on live */
 	}	
 	/* =============================================================================
 		Side Bar
@@ -68,7 +96,6 @@
 		width: 620px;
 		margin: 19px 0 0 90px;
 		overflow: hidden;
-		// background: orange;
 
 		/* Search Bar
 		-------------------------*/
@@ -142,8 +169,6 @@
 									width: inherit;
 									display: block;
 									margin: 0 20%;
-									.addToCart{
-									}
 								}
 							}
 						}
@@ -177,6 +202,7 @@
 							width: 110px; height: 110px;
 							img{
 								width: 20%; height: 50%;
+								padding: 25% 0;
 							}
 						}
 					}
@@ -186,13 +212,13 @@
 		/* =============================================================================
 			ABOUT
 		   ========================================================================== */
-	    #about{
+	    #about, #blogsingle, #showsingle{
 	    	.aboutContainer{
 	    		.aboutTitle{
 	    			font-size: 25px;
 	    		}
 	    		.aboutImage{
-					width: inherit;
+					width: 100%;
 	    		}
 	    		
 	    	}
@@ -224,6 +250,10 @@
 	/* Visible Elements */
 	.visible  { display: block; }
 	.novisible{ display: none;  }
+
+	.dividerVertical {
+		height: 50px;
+	}
 
 	/* =============================================================================
 		Header
@@ -300,7 +330,7 @@
 					width: 100%;
 					height: 50px;
 					position: fixed;
-					top: 49px;
+					top: 50px;
 					left: 0;
 					z-index: 100;
 					text-align: center;
@@ -346,7 +376,52 @@
 				}
 			}
 		}
+		/* =============================================================================
+			   STORE
+		   ========================================================================== */
+	   	#store{
+	   		/* Shop Sub Nav
+			-------------------------*/
+			.shopBar{
+				width: 100%;
+				padding: 0 8%;
+				margin-top: 1px;
+				background: $background;
 
+				div{
+					ul{	
+						width: 100%;
+						height: 50px;
+						
+						li{
+							line-height: 50px;
+						}
+					}
+				}
+
+				.checkOutul{
+					height: 50px;
+
+					.checkoutbb{
+						height: 50px;
+						line-height: 50px;
+					}
+				}
+			}
+
+			/* Products List Area
+			-------------------------*/
+			.productsListMainArea{				
+				/* Product Tree */
+				.productTree{
+					margin-left: 1%;
+				}
+				/* Product Area */
+				.productsArea{
+					margin: 20px 0 0 1%;
+				}
+			}
+	   	}
 		/* =============================================================================
 			SHOWS
 		   ========================================================================== */
@@ -518,11 +593,55 @@
 /*==========================*/
 /*							*/
 /***	  MEDIA QUERY     ***/
+/***		 620px        ***/
+/*							*/
+/*==========================*/
+
+@media screen and (max-width: 620px) {
+	/* =============================================================================
+		Content
+	   ========================================================================== */
+	.content{
+		/* =============================================================================
+			   STORE
+		   ========================================================================== */
+	   	#store{
+			.productsListMainArea{
+
+				/* Product Area */
+				.productsArea{
+					.allProducts{
+						width: 100%;
+						margin: 0 auto;
+						li{
+							width: 250px; height: 250px;
+							.productInfo{
+								.imgProduct{
+									width: 250px; height: 250px;
+								}
+								.productBottomBar{
+									width: 250px; height: 45px;
+									.productName{
+										width: 185px; height: inherit;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/*==========================*/
+/*							*/
+/***	  MEDIA QUERY     ***/
 /***		 325px        ***/
 /*							*/
 /*==========================*/
 
-@media screen and (max-width: 325px) {
+@media screen and (max-width: 360px) {
 	/* =============================================================================
 		Content
 	   ========================================================================== */
@@ -537,5 +656,82 @@
 				}
 			}
 		}
+		/* =============================================================================
+		   STORE
+	   	   ========================================================================== */
+   	   	#store{
+   	   		/* Shop Sub Nav
+			-------------------------*/
+			.shopBar{
+				padding: 0;
+				div{
+					ul{
+						li{
+							.productbb{
+								width: 57px;
+							}
+							.cartbb{
+								width: 50px;
+							}
+							.itemsbb{
+								width: 120px;
+							}
+							.checkoutbb{
+								width: 90px;
+							}
+						}
+					}
+				}
+			}
+			.productsListMainArea{
+
+				/* Product Area */
+				.productsArea{
+					margin: 20px 0 0 8%;
+					.allProducts{
+						li{
+							float: none;
+							margin: 0 20px 0 0;
+						}
+						.oddItem{
+							margin: 0 0 20px 0;
+						}
+					}
+				}
+			}
+		}
+		/* =============================================================================
+			SHOWS
+		   ========================================================================== */
+		#shows{
+			.showlist{
+				li{
+					.place{
+						width: 74.839%;
+						.namePlace{
+							font-size: 100%;
+						}
+						.button{
+							display: none;
+						}
+					}
+				}
+			}
+		}
+		/* =============================================================================
+			ABOUT
+		   ========================================================================== */
+	    #about, #blogsingle, #showsingle{
+	    	.aboutContainer{
+	    		.aboutTitle{
+	    			font-size: 20px;
+	    		}
+	    		.aboutText{
+	    			.columText{
+						width: 100%;
+					}
+	    		}
+	    	}
+	    }
 	}
 }

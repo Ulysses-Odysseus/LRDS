@@ -38,7 +38,7 @@
     <!-- WP
     ================================================== -->
     <?php wp_head(); ?>
-
+    
   </head>
 
   <body>
@@ -70,7 +70,7 @@
             <li id="textstore" class="ralelight liNoActive">Store</li>
             <li id="textshows" class="ralelight liNoActive">Shows</li>
             <li id="textabout" class="ralelight liNoActive">About</li>
-            <li id="textsubscribe" class="ralelight liNoActive">Rss</li>
+            <li id="textsubscribe" class="ralelight liNoActive">Contact</li>
           </ul>
         </div>
 
@@ -96,13 +96,24 @@
           </ul>
 
           <div class="newsletterBar visible">
+            <span class="rssSubTitle ralelight">
+              Contact: 
+            </span>
+            <span class="rssText ralelight">
+              Alejandro Garza : (818)-400-8783
+            </span>
+            <span class="rssText ralelight">
+              Jose Rodriguez  : (760)-270-6323
+            </span>
+            <span class="rssText ralelight">
+              Email : <a href="mailto:music@lrds.tv?Subject=Hello" target="_blank">music@lrds.tv</a>
+            </span>
             <p>Sign up for the newsletter:</p>
             <form class="newsletterForm row" role="newsletter" method="get" id="newsletterform" >
               <input id="n" name="n" type="text" class="newsletterInput ralelight" placeholder="Enter Email...">
-              <input type="submit" class="newsletterIcon" value="GO">
+              <input type="submit" class="newsletterIcon" value="Join">
             </form>
           </div>
-
         </div>
 
       </div>

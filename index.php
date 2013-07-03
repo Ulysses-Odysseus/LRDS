@@ -247,11 +247,12 @@
                 <li class="dividerVertical"></li>
                 <li class="standarBack ralelight"><a class="itemsbb" href="#">2 ITEMS $40.00</a></li>
                 <li class="dividerVertical"></li>
+                <li class="standarBack ralelight"><a class="checkoutbb" href="#">CHECKOUT</a></li>
               </ul>
             </div>
-            <div class="checkOutul ralelight">
+            <!-- <div class="checkOutul ralelight">
               <a class="checkoutbb" href="#">CHECKOUT</a>
-            </div>
+            </div> -->
           </div>
 
           <!-- Search Bar
@@ -283,7 +284,7 @@
                     <div class="price ralelight">$19.99</div>
                     <div class="productBottomBar">
                       <span class="productName ralelight">THIS IS A PRODUCT</span>
-                      <span class="productLink"><a href="#" title="See Product"></a></span>
+                      <span class="productLink"><a href="#" title="View Product"></a></span>
                     </div>
                   </div>
                 </li>
@@ -436,10 +437,26 @@
             <div class="aboutImage"></div>
             <div class="aboutText ralelight group">
               <div class="columText">
-                Claw lick climb the curtains litter box jump on the table claw, meow stretching tail flick litter box chase the red dot. Leap stretching chase the red dot give me fish stretching toss the mousie, puking attack fluffy fur jump lick attack your ankles. Scratched sunbathe run scratched chuf catnip, claw rip the couch sunbathe stretching run. Shed everywhere jump on the table jump on the table hiss, attack sleep in the sink meow litter box purr eat the grass catnip give me fish. Judging you jump on the table purr sleep on your keyboard stuck in a tree judging you, meow claw lay down in your way rip the couch. Bat knock over the lamp sleep on your keyboard jump claw hiss, run biting chase the red dot chuf feed me. your keyboard sunbathe chase the red dot litter box, biting sleep on your face biting feed me zzz hairball leap. Jump scratched judging you leap, leap lay down in your way toss the mousie leap I don't like that food zzz run litter box. Claw zzz meow biting give me fish sleep on your face, toss the mousie hiss kittens judging you. Lay down in your way chase the red dot stretching chuf litter box, jump on the table meow hiss hiss judging you jump catnip.
+                <p>
+                Orginarios  de Guasave uno de los pequeños pueblos del estado se Sinaloa con mas tradición musical, los hermanos Geovanne “Geo” ( primera voz y acordeon ) y Jose “Checho” ( segunda voz y guitarra ), han estado unidos musicalmente desde 2006.
+                </p>
+                <p>
+                Desde niños escucharon música sierreña, norteña y banda tradicional Sinaloense, lo que los motivo a tomar el acordeon y la guitarra, para interpretar la música que preferida por sus abuelos, consiguiendo pronto distinguirse por su estilo original.
+                </p>
+                <p>
+                Haciendo uso de redes sociales y con la sencillez heredada de su familia, han logrado mantener el contacto con el publico, que los acompaña en todas sus presentaciones.
+                </p>
               </div>
               <div class="columText">
-                Claw lick climb the curtains litter box jump on the table claw, meow stretching tail flick litter box chase the red dot. Leap stretching chase the red dot give me fish stretching toss the mousie, puking attack fluffy fur jump lick attack your ankles. Scratched sunbathe run scratched chuf catnip, claw rip the couch sunbathe stretching run. Shed everywhere jump on the table jump on the table hiss, attack sleep in the sink meow litter box purr eat the grass catnip give me fish. Judging you jump on the table purr sleep on your keyboard stuck in a tree judging you, meow claw lay down in your way rip the couch. Bat knock over the lamp sleep on your keyboard jump claw hiss, run biting chase the red dot chuf feed me. your keyboard sunbathe chase the red dot litter box, biting sleep on your face biting feed me zzz hairball leap. Jump scratched judging you leap, leap lay down in your way toss the mousie leap I don't like that food zzz run litter box. Claw zzz meow biting give me fish sleep on your face, toss the mousie hiss kittens judging you. Lay down in your way chase the red dot stretching chuf litter box, jump on the table meow hiss hiss judging you jump catnip.
+                <p>
+                Recientemente después de algunas semanas en el estudio de grabación, terminaron lo que será su segunda producción musical que sera titulada  MUJERIEGOS A MORIR.
+                </p>
+                <p>
+                Esta producción incluirá una recopilación de sus temas que han sido éxitos  UNDERGOUND  ( la entrevista, si ando en guerra, ojitos negros chinitos ) , asi como el tema Mujeriego a Morir, que empieza a escucharse en las principales radiodifusoras de la Mexico y la Union Americana.
+                </p>
+                <p>
+                Los Rodriguez de Sinaloa, concientes de que les espera un largo camino por recorrer en la carrera musical, disfrutan cada oportunidad de cantar y ejecutar sus instrumentos, siempre complaciendo a todos sus seguidores.
+                </p>
               </div>
             </div>
           </div>
@@ -449,6 +466,20 @@
               SUBSCRIBE
              ========================================================================== -->
         <div id="subscribe" class="no-active">
+          <span class="ralelight rssTitle">Contact</span>
+          <div class="divider"></div>
+          <span class="rssSubTitle ralelight">
+            Management: 
+          </span>
+          <span class="rssText ralelight">
+            Alejandro Garza : (818)-400-8783
+          </span>
+          <span class="rssText ralelight">
+            Jose Rodriguez  : (760)-270-6323
+          </span>
+          <span class="rssText ralelight">
+            Email : <a href="mailto:music@lrds.tv?Subject=Hello" target="_blank">music@lrds.tv</a>
+          </span>
           <span class="ralelight rssTitle">Subscribe</span>
           <div class="divider"></div>
           <span class="rssText ralelight">
@@ -458,6 +489,11 @@
             <input type="text" class="ralelight" placeholder="enter you eamil">
             <input type="button" class="rssjoin" value="Join">
           </form>
+          <ul class="socialIconsButtons">
+            <li class="facebook"><a href="https://www.facebook.com/lrdsmusic" target="_blank">Facebook</a></li>
+            <li class="twitter"><a href="https://twitter.com/lrds" target="_blank">Twitter</a></li>
+            <li class="instagram"><a href="http://instagram.com/losrodriguezdesinaloa/" target="_blank">Instagram</a></li>
+          </ul>
         </div>
       </div> <!-- End Content -->
 

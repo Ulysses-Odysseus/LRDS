@@ -1,3 +1,9 @@
+/* SASS Settings -- Delete this title when done ediitng
+=============================*/
+/* Background */
+/* Font Color */
+/* Line Color */
+/* Background Colors */
 /*==========================*/
 /*							*/
 /***	  MEDIA QUERY     ***/
@@ -13,13 +19,17 @@
     -webkit-background-size: none;
     -moz-background-size: none;
     -o-background-size: none;
-    background-size: none; }
+    background-size: none;
+    overflow: hidden;
+    /* Removed on live */ }
 
   /* =============================================================================
   	Container
      ========================================================================== */
   .container {
-    width: 100%; }
+    width: 100%;
+    overflow: hidden;
+    /* Removed on live */ }
 
   /* =============================================================================
   	Side Bar
@@ -135,11 +145,12 @@
         height: 110px; }
         .content #shows .showlist li .place .button img {
           width: 20%;
-          height: 50%; }
-    .content #about .aboutContainer .aboutTitle {
+          height: 50%;
+          padding: 25% 0; }
+    .content #about .aboutContainer .aboutTitle, .content #blogsingle .aboutContainer .aboutTitle, .content #showsingle .aboutContainer .aboutTitle {
       font-size: 25px; }
-    .content #about .aboutContainer .aboutImage {
-      width: inherit; } }
+    .content #about .aboutContainer .aboutImage, .content #blogsingle .aboutContainer .aboutImage, .content #showsingle .aboutContainer .aboutImage {
+      width: 100%; } }
 /*==========================*/
 /*							*/
 /***	  MEDIA QUERY     ***/
@@ -163,6 +174,9 @@
 
   .novisible {
     display: none; }
+
+  .dividerVertical {
+    height: 50px; }
 
   /* =============================================================================
   	Header
@@ -217,6 +231,9 @@
     margin: 0;
     padding: 49px 0 0 0;
     /* =============================================================================
+    	   STORE
+       ========================================================================== */
+    /* =============================================================================
     	SHOWS
        ========================================================================== */ }
     .content .searchBar {
@@ -231,7 +248,7 @@
           width: 100%;
           height: 50px;
           position: fixed;
-          top: 49px;
+          top: 50px;
           left: 0;
           z-index: 100;
           text-align: center;
@@ -271,6 +288,33 @@
             min-width: 0%;
             margin: 0 auto;
             padding: 0 0 0 0; }
+    .content #store {
+   		/* Shop Sub Nav
+		-------------------------*/
+      /* Products List Area
+      -------------------------*/ }
+      .content #store .shopBar {
+        width: 100%;
+        padding: 0 8%;
+        margin-top: 1px;
+        background: url("../img/bar-bg-active.png") repeat; }
+        .content #store .shopBar div ul {
+          width: 100%;
+          height: 50px; }
+          .content #store .shopBar div ul li {
+            line-height: 50px; }
+        .content #store .shopBar .checkOutul {
+          height: 50px; }
+          .content #store .shopBar .checkOutul .checkoutbb {
+            height: 50px;
+            line-height: 50px; }
+      .content #store .productsListMainArea {
+        /* Product Tree */
+        /* Product Area */ }
+        .content #store .productsListMainArea .productTree {
+          margin-left: 1%; }
+        .content #store .productsListMainArea .productsArea {
+          margin: 20px 0 0 1%; }
     .content #shows {
       width: 200%; }
       .content #shows .showlist {
@@ -402,13 +446,86 @@
 /*==========================*/
 /*							*/
 /***	  MEDIA QUERY     ***/
-/***		 325px        ***/
+/***		 620px        ***/
 /*							*/
 /*==========================*/
-@media screen and (max-width: 325px) {
+@media screen and (max-width: 620px) {
   /* =============================================================================
   	Content
      ========================================================================== */
-  .content #home .bloglist .socialFeedArea ul {
-    min-width: 105% !important;
-    padding: 0 0 0 10px; } }
+  .content {
+    /* =============================================================================
+    	   STORE
+       ========================================================================== */ }
+    .content #store .productsListMainArea {
+      /* Product Area */ }
+      .content #store .productsListMainArea .productsArea .allProducts {
+        width: 100%;
+        margin: 0 auto; }
+        .content #store .productsListMainArea .productsArea .allProducts li {
+          width: 250px;
+          height: 250px; }
+          .content #store .productsListMainArea .productsArea .allProducts li .productInfo .imgProduct {
+            width: 250px;
+            height: 250px; }
+          .content #store .productsListMainArea .productsArea .allProducts li .productInfo .productBottomBar {
+            width: 250px;
+            height: 45px; }
+            .content #store .productsListMainArea .productsArea .allProducts li .productInfo .productBottomBar .productName {
+              width: 185px;
+              height: inherit; } }
+/*==========================*/
+/*							*/
+/***	  MEDIA QUERY     ***/
+/***		 325px        ***/
+/*							*/
+/*==========================*/
+@media screen and (max-width: 360px) {
+  /* =============================================================================
+  	Content
+     ========================================================================== */
+  .content {
+    	/* =============================================================================
+    	   STORE
+       	   ========================================================================== */
+    /* =============================================================================
+    	SHOWS
+       ========================================================================== */
+    /* =============================================================================
+    	ABOUT
+       ========================================================================== */ }
+    .content #home .bloglist .socialFeedArea ul {
+      min-width: 105% !important;
+      padding: 0 0 0 10px; }
+    .content #store {
+   	   		/* Shop Sub Nav
+			-------------------------*/ }
+      .content #store .shopBar {
+        padding: 0; }
+        .content #store .shopBar div ul li .productbb {
+          width: 57px; }
+        .content #store .shopBar div ul li .cartbb {
+          width: 50px; }
+        .content #store .shopBar div ul li .itemsbb {
+          width: 120px; }
+        .content #store .shopBar div ul li .checkoutbb {
+          width: 90px; }
+      .content #store .productsListMainArea {
+        /* Product Area */ }
+        .content #store .productsListMainArea .productsArea {
+          margin: 20px 0 0 8%; }
+          .content #store .productsListMainArea .productsArea .allProducts li {
+            float: none;
+            margin: 0 20px 0 0; }
+          .content #store .productsListMainArea .productsArea .allProducts .oddItem {
+            margin: 0 0 20px 0; }
+    .content #shows .showlist li .place {
+      width: 74.839%; }
+      .content #shows .showlist li .place .namePlace {
+        font-size: 100%; }
+      .content #shows .showlist li .place .button {
+        display: none; }
+    .content #about .aboutContainer .aboutTitle, .content #blogsingle .aboutContainer .aboutTitle, .content #showsingle .aboutContainer .aboutTitle {
+      font-size: 20px; }
+    .content #about .aboutContainer .aboutText .columText, .content #blogsingle .aboutContainer .aboutText .columText, .content #showsingle .aboutContainer .aboutText .columText {
+      width: 100%; } }
