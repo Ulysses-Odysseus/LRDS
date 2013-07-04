@@ -1,4 +1,7 @@
 <?php
+/*==========================*/
+/***	  Settings	      ***/
+/*==========================*/
 
 // Adding Featured Image for Posts
 if ( function_exists( 'add_theme_support' ) ) {
@@ -16,7 +19,22 @@ function remove_width_attribute( $html ) {
    return $html;
 }
 
-// Woocommerce
+/*==========================*/
+/***	Theme Settings 	  ***/
+/*==========================*/
+
+/** Tell WordPress to run LRDS() when the 'after_setup_theme' hook is run. */
+add_action( 'after_setup_theme', 'LRDS_setup' );
+function LRDS_setup(){
+	//Output theme settings
+	require_once( get_template_directory() . '/functions/wordpress_resets.php');
+	/*****/
+}
+
+
+/*==========================*/
+/***	 Woocommerce	  ***/
+/*==========================*/
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
 remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
 
