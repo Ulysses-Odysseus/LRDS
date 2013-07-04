@@ -27,6 +27,9 @@ img {
 .visible {
   display: none; }
 
+.novisible {
+  display: block; }
+
 /* Clearfix */
 .group:after {
   content: "";
@@ -680,59 +683,62 @@ a {
           margin: 0 0 20px 0;
           float: left;
           background: white;
-          position: relative;
           list-style-type: none; }
           .content #store .productsListMainArea .productsArea .allProducts li .productInfo {
-            position: absolute;
-            bottom: 0;
-            right: 0; }
-            .content #store .productsListMainArea .productsArea .allProducts li .productInfo .imgProduct {
-              width: 380px;
-              height: 380px;
+            width: inherit;
+            height: inherit;
+            position: relative; }
+            .content #store .productsListMainArea .productsArea .allProducts li .productInfo .productMeta {
+              position: absolute;
               bottom: 0;
-              z-index: 1;
-              border: none;
-              position: absolute; }
-            .content #store .productsListMainArea .productsArea .allProducts li .productInfo .imgProduct:hover {
-              opacity: 0.8; }
-            .content #store .productsListMainArea .productsArea .allProducts li .productInfo div {
-              z-index: 2;
-              position: relative; }
-            .content #store .productsListMainArea .productsArea .allProducts li .productInfo .price {
-              width: 137px;
-              height: 72px;
-              margin: 0 0 20px 0;
-              float: right;
-              color: #ffffff;
-              font-size: 29px;
-              line-height: 72px;
-              text-align: center;
-              background: url("../img/bar-bg-active-black.png") repeat; }
-            .content #store .productsListMainArea .productsArea .allProducts li .productInfo .productBottomBar {
-              width: 380px;
-              height: 45px; }
-              .content #store .productsListMainArea .productsArea .allProducts li .productInfo .productBottomBar span {
-                display: inline-block;
-                float: left; }
-              .content #store .productsListMainArea .productsArea .allProducts li .productInfo .productBottomBar .productName {
-                padding: 0 0 0 20px;
+              left: 0; }
+              .content #store .productsListMainArea .productsArea .allProducts li .productInfo .productMeta .imgProduct {
+                width: 380px;
+                height: 380px;
+                bottom: 0;
+                z-index: 1;
+                border: none;
+                position: absolute; }
+              .content #store .productsListMainArea .productsArea .allProducts li .productInfo .productMeta .imgProduct:hover {
+                opacity: 0.8; }
+              .content #store .productsListMainArea .productsArea .allProducts li .productInfo .productMeta div {
+                z-index: 2;
+                position: relative; }
+              .content #store .productsListMainArea .productsArea .allProducts li .productInfo .productMeta .price {
+                width: 137px;
+                height: 72px;
+                margin: 0 0 20px 0;
+                float: right;
                 color: #ffffff;
-                line-height: 45px;
-                width: 315px;
-                height: inherit;
+                font-size: 29px;
+                line-height: 72px;
+                text-align: center;
                 background: url("../img/bar-bg-active-black.png") repeat; }
-              .content #store .productsListMainArea .productsArea .allProducts li .productInfo .productBottomBar .productLink {
-                width: 45px;
-                height: inherit; }
-                .content #store .productsListMainArea .productsArea .allProducts li .productInfo .productBottomBar .productLink a {
-                  width: inherit;
+              .content #store .productsListMainArea .productsArea .allProducts li .productInfo .productMeta .productBottomBar {
+                width: 380px;
+                height: 45px; }
+                .content #store .productsListMainArea .productsArea .allProducts li .productInfo .productMeta .productBottomBar span {
+                  display: inline-block;
+                  float: left; }
+                .content #store .productsListMainArea .productsArea .allProducts li .productInfo .productMeta .productBottomBar .productName {
+                  padding: 0 0 0 20px;
+                  color: #ffffff;
+                  line-height: 45px;
+                  width: 315px;
                   height: inherit;
-                  display: block;
-                  background: #575757 url("../img/icon-eye-product.png") no-repeat center;
-                  background-size: 55%; }
-                .content #store .productsListMainArea .productsArea .allProducts li .productInfo .productBottomBar .productLink a:hover {
-                  background: #841212 url("../img/icon-eye-product.png") no-repeat center;
-                  background-size: 55%; }
+                  background: url("../img/bar-bg-active-black.png") repeat; }
+                .content #store .productsListMainArea .productsArea .allProducts li .productInfo .productMeta .productBottomBar .productLink {
+                  width: 45px;
+                  height: inherit; }
+                  .content #store .productsListMainArea .productsArea .allProducts li .productInfo .productMeta .productBottomBar .productLink a {
+                    width: inherit;
+                    height: inherit;
+                    display: block;
+                    background: #575757 url("../img/icon-eye-product.png") no-repeat center;
+                    background-size: 55%; }
+                  .content #store .productsListMainArea .productsArea .allProducts li .productInfo .productMeta .productBottomBar .productLink a:hover {
+                    background: #841212 url("../img/icon-eye-product.png") no-repeat center;
+                    background-size: 55%; }
         .content #store .productsListMainArea .productsArea .singleProductContainer {
           display: none;
           /* Product Info Single Page */ }

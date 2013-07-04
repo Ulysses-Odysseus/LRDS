@@ -7,4 +7,9 @@
  * @version     2.0.0
  */
 ?>
-<ul class="products">
+
+<!-- Products List Display Area
+---------------------->
+<div class="productsListMainArea">
+	<div class="productsArea">
+		<ul class="allProducts">
