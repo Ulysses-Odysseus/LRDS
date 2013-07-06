@@ -66,7 +66,7 @@
         ---------------------->
         <div id="textActiveBar">
           <ul>
-            <li id="texthome" class="ralelight liActive">Home</li>
+            <li id="texthome" class="ralelight liNoActive">Home</li>
             <li id="textstore" class="ralelight liNoActive">Store</li>
             <li id="textshows" class="ralelight liNoActive">Shows</li>
             <li id="textabout" class="ralelight liNoActive">About</li>
@@ -83,15 +83,15 @@
           </div>
 
           <ul>
-            <li class="navButton activeNav"><a class="home">HOME</a></li>
+            <li class="navButton"><a class="home" href="<?php echo esc_url(home_url('/')); ?>" target="_top">HOME</a></li>
             <li class="divider"></li>
-            <li class="navButton"><a class="store">STORE</a></li>
+            <li class="navButton"><a class="store" href="<?php echo esc_url(home_url('/')); ?>?post_type=product" target="_top">STORE</a></li>
             <li class="divider"></li>
-            <li class="navButton"><a class="shows">SHOWS</a></li>
+            <li class="navButton"><a class="shows" href="<?php echo esc_url(home_url('/')); ?>?page_id=411" target="_top">SHOWS</a></li>
             <li class="divider"></li>
-            <li class="navButton"><a class="about">ABOUT</a></li>
+            <li class="navButton"><a class="about" href="<?php echo esc_url(home_url('/')); ?>?page_id=418" target="_top">ABOUT</a></li>
             <li class="divider"></li>
-            <li class="navButton novisible"><a class="subscribe">NEWSLETTER</a></li>
+            <li class="navButton novisible"><a class="subscribe" href="<?php echo esc_url(home_url('/')); ?>?page_id=427" target="_top">NEWSLETTER</a></li>
             <li class="divider"></li>
           </ul>
 
@@ -133,3 +133,43 @@
           </a>
         </div>
       </div>
+
+            <!-- Go Up 
+      ---------------------->
+      <div class="linkUp">
+        <div class="linkUpButton">
+          <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/arrow-up.png" alt="Go Top"></a>
+        </div>
+      </div>
+
+      <!-- Header Section
+      ================================================== -->
+      <div class="header">
+        
+        <div class="feuturedArea">
+          <!-- Bar
+          ---------------------->
+          <div class="separationBar"></div>
+
+          <!-- Video Area
+          ---------------------->
+          <div class="videoArea">
+            <iframe width="231" height="130" src="http://www.youtube.com/embed/JMOmTG4BWUQ?rel=0" frameborder="0" allowfullscreen></iframe>
+          </div>
+
+          <!-- Video Info Area
+          ---------------------->
+          <div class="infoArea">
+            <ul>
+              <li class="info ralelight">LA ENTREVISTA</li>
+              <li class="divider"></li>
+              <li class="videolink ralelight"><a target="_blank" href="http://www.youtube.com/watch?feature=player_embedded&v=JMOmTG4BWUQ">WATCH NOW</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Content
+      ================================================== -->
+      <div class="content">

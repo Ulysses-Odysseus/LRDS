@@ -1,49 +1,9 @@
 <?php get_header(); ?>
-
-      <!-- Go Up 
-      ---------------------->
-      <div class="linkUp">
-        <div class="linkUpButton">
-          <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/arrow-up.png" alt="Go Top"></a>
-        </div>
-      </div>
-
-      <!-- Header Section
-      ================================================== -->
-      <div class="header">
-        
-        <div class="feuturedArea">
-          <!-- Bar
-          ---------------------->
-          <div class="separationBar"></div>
-
-          <!-- Video Area
-          ---------------------->
-          <div class="videoArea">
-            <iframe width="231" height="130" src="http://www.youtube.com/embed/JMOmTG4BWUQ?rel=0" frameborder="0" allowfullscreen></iframe>
-          </div>
-
-          <!-- Video Info Area
-          ---------------------->
-          <div class="infoArea">
-            <ul>
-              <li class="info ralelight">LA ENTREVISTA</li>
-              <li class="divider"></li>
-              <li class="videolink ralelight"><a target="_blank" href="http://www.youtube.com/watch?feature=player_embedded&v=JMOmTG4BWUQ">WATCH NOW</a></li>
-            </ul>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- Content
-      ================================================== -->
-      <div class="content">
         
         <!-- =============================================================================
           HOME PAGE
         ============================================================================== -->
-        <div id="home" class="activeContent">
+        <div id="home" class="activeCon">
           <div class="bloglist">
 
             <!-- Social Media Bar
@@ -288,36 +248,6 @@
                     </div>
                   </div>
                 </li>
-                <li>
-                  <div class="productInfo">
-                    <a href="#"><img class="imgProduct" src="<?php echo get_template_directory_uri(); ?>/img/tee.jpg" alt=""></a>
-                    <div class="price ralelight">$19.99</div>
-                    <div class="productBottomBar">
-                      <span class="productName ralelight">THIS IS A PRODUCT</span>
-                      <span class="productLink"><a href="#" title="See Product"></a></span>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="productInfo">
-                    <a href="#"><img class="imgProduct" src="<?php echo get_template_directory_uri(); ?>/img/tee.jpg" alt=""></a>
-                    <div class="price ralelight">$19.99</div>
-                    <div class="productBottomBar">
-                      <span class="productName ralelight">THIS IS A PRODUCT</span>
-                      <span class="productLink"><a href="#" title="See Product"></a></span>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="productInfo">
-                    <a href="#"><img class="imgProduct" src="<?php echo get_template_directory_uri(); ?>/img/tee.jpg" alt=""></a>
-                    <div class="price ralelight">$19.99</div>
-                    <div class="productBottomBar">
-                      <span class="productName ralelight">THIS IS A PRODUCT</span>
-                      <span class="productLink"><a href="#" title="See Product"></a></span>
-                    </div>
-                  </div>
-                </li>
               </ul>
 
               <!-- Single Item -->
@@ -382,119 +312,5 @@
           </div>
 
         </div><!-- End Store Div -->
-
-        <!-- =============================================================================
-              SHOWS
-             ========================================================================== -->
-        <div id="shows" class="no-active"> 
-          <ul class="showlist">
-            <?php if(have_posts()) : while(have_posts()) : the_post();
-
-                $title = get_the_excerpt();
-
-                if(in_category('shows')) { ?>
-
-                  <li>
-                    <div class="date">
-                      <div class="dateContainer">
-                        <span class="month ralenormal"><?php echo get_post_meta(get_the_id(), 'Event Month', true); ?></span><br />
-                        <span class="day ralelight"><?php echo get_post_meta(get_the_id(), 'Event Day', true); ?></span>
-                      </div>
-                    </div>
-                    <a data-id="<?php echo get_the_id(); ?>_show" href="<?php the_permalink(); ?>">
-                      <div class="place">
-                        <span class="namePlace ralelight"><?php echo $title; ?></span>
-                        <span class="button">
-                          <img src="<?php echo get_template_directory_uri(); ?>/img/arrow-forward.png" alt="<?php echo $title; ?>">
-                        </span>
-                      </div>
-                    </a>
-                  </li>
-
-                <?php }
-
-                endwhile; else: ?>
-
-                  <p>Sorry, there are no shows at this time</p>
-
-              <?php endif; ?><!-- End the loop -->
-          </ul>
-          <div id="showsingle" class="no-active ralelight">
-            <div class="aboutContainer">
-              <a data-id="back_show" class="back" href="#">Back</a>
-              <div class="showcontent"></div>
-            </div>
-          </div><!-- End Single Shows Div -->
-        </div><!-- End Shows Div -->
-
-        <!-- =============================================================================
-              ABOUT
-             ========================================================================== -->
-        <div id="about" class="no-active">
-          <div class="aboutContainer">
-            <div class="aboutTitle ralelight">LOS RODRIGUEZ DE SINALOA</div>
-            <div class="divider"></div>
-            <div class="aboutImage"></div>
-            <div class="aboutText ralelight group">
-              <div class="columText">
-                <p>
-                Orginarios  de Guasave uno de los pequeños pueblos del estado se Sinaloa con mas tradición musical, los hermanos Geovanne “Geo” ( primera voz y acordeon ) y Jose “Checho” ( segunda voz y guitarra ), han estado unidos musicalmente desde 2006.
-                </p>
-                <p>
-                Desde niños escucharon música sierreña, norteña y banda tradicional Sinaloense, lo que los motivo a tomar el acordeon y la guitarra, para interpretar la música que preferida por sus abuelos, consiguiendo pronto distinguirse por su estilo original.
-                </p>
-                <p>
-                Haciendo uso de redes sociales y con la sencillez heredada de su familia, han logrado mantener el contacto con el publico, que los acompaña en todas sus presentaciones.
-                </p>
-              </div>
-              <div class="columText">
-                <p>
-                Recientemente después de algunas semanas en el estudio de grabación, terminaron lo que será su segunda producción musical que sera titulada  MUJERIEGOS A MORIR.
-                </p>
-                <p>
-                Esta producción incluirá una recopilación de sus temas que han sido éxitos  UNDERGOUND  ( la entrevista, si ando en guerra, ojitos negros chinitos ) , asi como el tema Mujeriego a Morir, que empieza a escucharse en las principales radiodifusoras de la Mexico y la Union Americana.
-                </p>
-                <p>
-                Los Rodriguez de Sinaloa, concientes de que les espera un largo camino por recorrer en la carrera musical, disfrutan cada oportunidad de cantar y ejecutar sus instrumentos, siempre complaciendo a todos sus seguidores.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- =============================================================================
-              SUBSCRIBE
-             ========================================================================== -->
-        <div id="subscribe" class="no-active">
-          <span class="ralelight rssTitle">Contact</span>
-          <div class="divider"></div>
-          <span class="rssSubTitle ralelight">
-            Management: 
-          </span>
-          <span class="rssText ralelight">
-            Alejandro Garza : (818)-400-8783
-          </span>
-          <span class="rssText ralelight">
-            Jose Rodriguez  : (760)-270-6323
-          </span>
-          <span class="rssText ralelight">
-            Email : <a href="mailto:music@lrds.tv?Subject=Hello" target="_blank">music@lrds.tv</a>
-          </span>
-          <span class="ralelight rssTitle">Subscribe</span>
-          <div class="divider"></div>
-          <span class="rssText ralelight">
-            Sign up with your email to get updates on our posts, our releases and special offers!
-          </span>
-          <form class="rssSubscribe" action="">
-            <input type="text" class="ralelight" placeholder="enter you eamil">
-            <input type="button" class="rssjoin" value="Join">
-          </form>
-          <ul class="socialIconsButtons">
-            <li class="facebook"><a href="https://www.facebook.com/lrdsmusic" target="_blank">Facebook</a></li>
-            <li class="twitter"><a href="https://twitter.com/lrds" target="_blank">Twitter</a></li>
-            <li class="instagram"><a href="http://instagram.com/losrodriguezdesinaloa/" target="_blank">Instagram</a></li>
-          </ul>
-        </div>
-      </div> <!-- End Content -->
 
 <?php get_footer(); ?>

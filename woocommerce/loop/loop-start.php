@@ -10,6 +10,5 @@
 
 <!-- Products List Display Area
 ---------------------->
-<div class="productsListMainArea">
-	<div class="productsArea">
-		<ul class="allProducts">
+<div class="productsArea">
+	<ul class="allProducts">

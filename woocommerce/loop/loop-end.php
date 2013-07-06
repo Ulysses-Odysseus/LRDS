@@ -7,6 +7,5 @@
  * @version     2.0.0
  */
 ?>
-		</ul>
-	</div>
+	</ul>
 </div>

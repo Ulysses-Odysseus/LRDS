@@ -1,3 +1,4 @@
+      </div> <!-- End Content -->
     </div> <!-- End Container -->
 
     <!-- Heavy JS
@@ -7,6 +8,12 @@
     <script>
     /* <![CDATA[ */
     $(document).ready(function(){
+
+      var needle = $('.activeCon').attr('id');
+      $('#text' + needle).removeClass('liNoActive').addClass('liActive');
+      // $('.navButton .' + needle).addClass('activeNav');
+
+      // console.log('.navbar .' + needle);
       
       /* CSS Selectors All Browsers
       =============================*/
@@ -71,32 +78,32 @@
 
       /* Main Nav Bar functionality
       =============================*/
-      $('.navBar ul li').click(function(){
+      // $('.navBar ul li').click(function(){
 
-          //Get the link inside our clicked li
-          //Get the class of the clicked li
-          var activeCon    = '#'     + $(this).children('a').attr('class');
-          var activeText   = '#text' + $(this).children('a').attr('class');
-          var activeNav    = $(this).attr('class');
+      //     //Get the link inside our clicked li
+      //     //Get the class of the clicked li
+      //     var activeCon    = '#'     + $(this).children('a').attr('class');
+      //     var activeText   = '#text' + $(this).children('a').attr('class');
+      //     var activeNav    = $(this).attr('class');
 
-          console.log(activeNav);
+      //     console.log(activeNav);
 
-          //If the li class does not equal navButton activeNav
-          if(activeNav != 'activeNav'){
+      //     //If the li class does not equal navButton activeNav
+      //     if(activeNav != 'activeNav'){
 
-            //Remove the activeNav class and apply it to the current li
-            $('.navButton').removeClass('activeNav');
-            $(this).addClass('activeNav');
+      //       //Remove the activeNav class and apply it to the current li
+      //       $('.navButton').removeClass('activeNav');
+      //       $(this).addClass('activeNav');
 
-            //Find the active page in content and
-            $('.content .activeContent').addClass('no-active');
-            $(activeCon).removeClass('no-active').addClass('activeContent');
+      //       //Find the active page in content and
+      //       $('.content .activeContent').addClass('no-active');
+      //       $(activeCon).removeClass('no-active').addClass('activeContent');
 
-            //Add the active class to the sidebar link
-            $('#textActiveBar .liActive').removeClass('liActive').addClass('liNoActive');
-            $(activeText).removeClass('liNoActive').addClass('liActive');
-          }
-      });
+      //       //Add the active class to the sidebar link
+      //       $('#textActiveBar .liActive').removeClass('liActive').addClass('liNoActive');
+      //       $(activeText).removeClass('liNoActive').addClass('liActive');
+      //     }
+      // });
 
       /* Single Post functionality
       =============================*/
