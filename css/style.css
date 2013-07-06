@@ -602,7 +602,8 @@ a {
     /* Shop Sub Nav
     -------------------------*/
     /* Products List Area
-    -------------------------*/ }
+    -------------------------*/
+    /* WooCommerce Specific */ }
     .content #store .shopBar {
       float: left;
       width: 461px; }
@@ -745,11 +746,12 @@ a {
         .content #store .productsListMainArea .productsArea .singleProductContainer {
           /* Product Info Single Page */ }
           .content #store .productsListMainArea .productsArea .singleProductContainer .singleProduct {
+            width: 461px;
             float: left; }
             .content #store .productsListMainArea .productsArea .singleProductContainer .singleProduct .productBig {
               width: 461px;
               height: 461px;
-              margin: 0 0 10px 0;
+              margin: 0 0 80px 0;
               background: #ffffff; }
               .content #store .productsListMainArea .productsArea .singleProductContainer .singleProduct .productBig li {
                 width: inherit;
@@ -761,11 +763,16 @@ a {
                     width: inherit;
                     height: inherit; }
             .content #store .productsListMainArea .productsArea .singleProductContainer .singleProduct .productSmall {
+              width: 60px;
+              height: 60px;
               margin: 0 0 20px 0; }
               .content #store .productsListMainArea .productsArea .singleProductContainer .singleProduct .productSmall .allbutlast {
                 margin: 0 9px 0 0; }
               .content #store .productsListMainArea .productsArea .singleProductContainer .singleProduct .productSmall li {
-                display: inline-block; }
+                display: inline-block;
+                margin: 10px 10px 0 0; }
+                .content #store .productsListMainArea .productsArea .singleProductContainer .singleProduct .productSmall li:last-child {
+                  margin: 10px 0 0 0; }
                 .content #store .productsListMainArea .productsArea .singleProductContainer .singleProduct .productSmall li a img {
                   width: 60px;
                   height: 60px; }
@@ -827,6 +834,23 @@ a {
                 line-height: 45px;
                 background: #841212;
                 text-align: center; }
+    .content #store .single_add_to_cart_button {
+      width: 120px;
+      height: 45px;
+      margin: 32px 0;
+      padding: 0;
+      display: block;
+      line-height: 45px;
+      background: #841212;
+      text-align: center;
+      -webkit-border-radius: none;
+      border-radius: none;
+      text-shadow: none;
+      border: none;
+      color: white; }
+    .content #store .product_meta {
+      font-size: 12px;
+      color: #efefef; }
   .content #shows {
     width: 200%;
     padding: 0 0 20px 0;

@@ -860,11 +860,12 @@ a{
 				.singleProductContainer{
 				
 					.singleProduct{
+						width: 461px;
 						float: left;
 
 						.productBig{
 							width: 461px; height: 461px;
-							margin: 0 0 10px 0;
+							margin: 0 0 80px 0;
 							background: #ffffff;
 							li{
 								width: inherit; height: inherit;
@@ -877,12 +878,17 @@ a{
 							}
 						}
 						.productSmall{
+							width: 60px; height: 60px;
 							margin: 0 0 20px 0;
 							.allbutlast{
 								margin: 0 9px 0 0;
 							}
 							li{
 								display: inline-block;
+								margin: 10px 10px 0 0;
+								&:last-child{
+									margin:10px 0 0 0;
+								}
 								a{
 									img{
 										width: 60px; height: 60px;
@@ -962,6 +968,25 @@ a{
 					}
 				} /* End singleProductContainer */
 			}
+		}
+
+		/* WooCommerce Specific */
+		.single_add_to_cart_button{
+			width: 120px; height: 45px;
+			margin: 32px 0; padding: 0;
+			display: block;
+			line-height: 45px;
+			background: $bcRed;
+			text-align: center;
+			-webkit-border-radius: none;
+			border-radius: none;
+			text-shadow: none;
+			border: none;
+			color: white;
+		}
+		.product_meta{
+			font-size: 12px;
+			color: #efefef;
 		}
 
 	} /* End Store */
