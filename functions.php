@@ -1,6 +1,6 @@
 <?php
 /*==========================*/
-/***	  Settings	      ***/
+/***	  Settings	        ***/
 /*==========================*/
 
 // Adding Featured Image for Posts
@@ -19,6 +19,7 @@ function remove_width_attribute( $html ) {
    return $html;
 }
 
+
 /*==========================*/
 /***	Theme Settings 	  ***/
 /*==========================*/
@@ -33,8 +34,10 @@ function LRDS_setup(){
 
 
 /*==========================*/
-/***	 Woocommerce	  ***/
+/***	 Woocommerce	      ***/
 /*==========================*/
+
+// Woocommerce wrappers
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
 remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
 
@@ -42,12 +45,23 @@ add_action('woocommerce_before_main_content', 'my_theme_wrapper_start', 10);
 add_action('woocommerce_after_main_content', 'my_theme_wrapper_end', 10);
 
 function my_theme_wrapper_start() {
-  echo '<section id="main">';
+  echo '<div id="store">';
 }
 
 function my_theme_wrapper_end() {
-  echo '</section>';
+  echo '</div>';
 }
 
+// Enable woocommerce
 add_theme_support( 'woocommerce' );
+
+// Remove Breadcrumbs from main content
+remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0);
+
+// Remove Result Count, Sorting from shop loop
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20, 0);
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30, 0);
+
+// Add Breadcrumbs to shop loop
+add_action( 'woocommerce_before_shop_loop', 'woocommerce_breadcrumb', 20, 0 );
 ?>
