@@ -1,6 +1,6 @@
 <?php
 /*==========================*/
-/***	  Settings	        ***/
+/***	  Settings	      ***/
 /*==========================*/
 
 // Adding Featured Image for Posts
@@ -34,7 +34,7 @@ function LRDS_setup(){
 
 
 /*==========================*/
-/***	 Woocommerce	      ***/
+/***	 Woocommerce	  ***/
 /*==========================*/
 
 // Woocommerce wrappers
@@ -64,4 +64,10 @@ remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 3
 
 // Add Breadcrumbs to shop loop
 add_action( 'woocommerce_before_shop_loop', 'woocommerce_breadcrumb', 20, 0 );
+
+// Shop Single, data tabs and related products
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10, 0);
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20, 0);
+
+
 ?>

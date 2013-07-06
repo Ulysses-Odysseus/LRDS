@@ -16,105 +16,93 @@ global $woocommerce;
 get_header('shop'); ?>
 
 <?php
-		/**
-		 * woocommerce_before_main_content hook
-		 *
-		 * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
-		 * @hooked woocommerce_breadcrumb - 20
-		 */
-		do_action('woocommerce_before_main_content');
-	?>
+	/**
+	 * woocommerce_before_main_content hook
+	 *
+	 * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
+	 * @hooked woocommerce_breadcrumb - 20
+	 */
+	do_action('woocommerce_before_main_content');
+?>
 
-	<!-- Social Media Bar
-  ---------------------->
-  <div class="shopBar">
-    <div>
-      <ul>
-        <li class="standarBack ralenormal"><a class="productbb" href="#">TEES</a></li>
-        <li class="dividerVertical"></li>
-        <li class="standarBack ralenormal"><a class="cartbb" href="#">CART</a></li>
-        <li class="dividerVertical"></li>
-        <li class="standarBack ralelight"><a href="<?php echo $woocommerce->cart->get_cart_url(); ?>" class="itemsbb"><?php echo sprintf(_n('%d ITEM', '%d ITEMS', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count);?>&nbsp;<?php echo $woocommerce->cart->get_cart_total(); ?></a></li>
-        <li class="dividerVertical"></li>
-        <li class="standarBack ralelight"><a href="<?php echo $woocommerce->cart->get_cart_url(); ?>" class="checkoutbb">CHECKOUT</a></li>
-      </ul>
-    </div>
+<!-- Social Media Bar
+---------------------->
+<div class="shopBar">
+  <div>
+    <ul>
+      <li class="standarBack ralenormal"><a class="productbb" href="#">TEES</a></li>
+      <li class="dividerVertical"></li>
+      <li class="standarBack ralenormal"><a class="cartbb" href="#">CART</a></li>
+      <li class="dividerVertical"></li>
+      <li class="standarBack ralelight"><a href="<?php echo $woocommerce->cart->get_cart_url(); ?>" class="itemsbb"><?php echo sprintf(_n('%d ITEM', '%d ITEMS', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count);?>&nbsp;<?php echo $woocommerce->cart->get_cart_total(); ?></a></li>
+      <li class="dividerVertical"></li>
+      <li class="standarBack ralelight"><a href="<?php echo $woocommerce->cart->get_cart_url(); ?>" class="checkoutbb">CHECKOUT</a></li>
+    </ul>
   </div>
+</div>
 
-  <!-- Search Bar
-  ---------------------->
-  <?php get_search_form(); ?>
+<!-- Search Bar
+---------------------->
+<?php get_search_form(); ?>
 
-		<!-- <h1 class="page-title"><?php woocommerce_page_title(); ?></h1> -->
+<!-- Products List Display Area
+---------------------->
+<div class="productsListMainArea">
 
-		<?php do_action( 'woocommerce_archive_description' ); ?>
+	<?php do_action( 'woocommerce_archive_description' ); ?>
 
-		<?php if ( have_posts() ) : ?>
+	<?php if ( have_posts() ) : ?>
 
-		<!-- <div class="productsListMainArea"> Remove from content-single? -->
+	<div class="productTree">
+    <ul>
+		<?php
+			/**
+			 * woocommerce_before_shop_loop hook
+			 *
+			 * @hooked woocommerce_result_count - 20
+			 * @hooked woocommerce_catalog_ordering - 30
+			 */
+			do_action( 'woocommerce_before_shop_loop' );
+		?>
+		</ul>
+  </div>
+	
+	<?php woocommerce_product_loop_start(); ?>
 
-		<div class="productTree">
-      <ul>
+		<?php woocommerce_product_subcategories(); ?>
 
-      	<!-- Add to breadcrumb.php -->
-      	<li class="ralebold"><a href="#">ALL PRODCUTS</a></li>
-        <span>/</span>
-        <li class="ralenormal"><a href="#">TEES</a></li>
-			<?php
-				/**
-				 * woocommerce_before_shop_loop hook
-				 *
-				 * @hooked woocommerce_result_count - 20
-				 * @hooked woocommerce_catalog_ordering - 30
-				 */
-				do_action( 'woocommerce_before_shop_loop' );
-			?>
-			</ul>
-     </div>
-		
-			<?php woocommerce_product_loop_start(); ?>
+		<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php woocommerce_product_subcategories(); ?>
+			<?php woocommerce_get_template_part( 'content', 'product' ); ?>
 
-				<?php while ( have_posts() ) : the_post(); ?>
+		<?php endwhile; // end of the loop. ?>
 
-					<?php woocommerce_get_template_part( 'content', 'product' ); ?>
-
-				<?php endwhile; // end of the loop. ?>
-
-			<?php woocommerce_product_loop_end(); ?>
-
-			<?php
-				/**
-				 * woocommerce_after_shop_loop hook
-				 *
-				 * @hooked woocommerce_pagination - 10
-				 */
-				do_action( 'woocommerce_after_shop_loop' );
-			?>
-
-		<?php elseif ( ! woocommerce_product_subcategories( array( 'before' => woocommerce_product_loop_start( false ), 'after' => woocommerce_product_loop_end( false ) ) ) ) : ?>
-
-			<?php woocommerce_get_template( 'loop/no-products-found.php' ); ?>
-
-		<?php endif; ?>
+	<?php woocommerce_product_loop_end(); ?>
 
 	<?php
 		/**
-		 * woocommerce_after_main_content hook
+		 * woocommerce_after_shop_loop hook
 		 *
-		 * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
+		 * @hooked woocommerce_pagination - 10
 		 */
-		do_action('woocommerce_after_main_content');
+		do_action( 'woocommerce_after_shop_loop' );
 	?>
 
-	<?php
-		/**
-		 * woocommerce_sidebar hook
-		 *
-		 * @hooked woocommerce_get_sidebar - 10
-		 */
-		//do_action('woocommerce_sidebar');
-	?>
+	<?php elseif ( ! woocommerce_product_subcategories( array( 'before' => woocommerce_product_loop_start( false ), 'after' => woocommerce_product_loop_end( false ) ) ) ) : ?>
+
+		<?php woocommerce_get_template( 'loop/no-products-found.php' ); ?>
+
+	<?php endif; ?>
+
+</div> <!-- End Products List Display Area -->
+
+<?php
+	/**
+	 * woocommerce_after_main_content hook
+	 *
+	 * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
+	 */
+	do_action('woocommerce_after_main_content');
+?>
 
 <?php get_footer('shop'); ?>

@@ -18,7 +18,7 @@ $shop_page    = get_post( $shop_page_id );
 
 // If permalinks contain the shop page in the URI prepend the breadcrumb with shop
 if ( $shop_page_id && strstr( $permalinks['product_base'], '/' . $shop_page->post_name ) && get_option( 'page_on_front' ) !== $shop_page_id ) {
-	$prepend = $before . '<a href="' . get_permalink( $shop_page ) . '">' . $shop_page->post_title . '</a> ' . $after . $delimiter;
+	$prepend = $before . '<li class="ralebold"><a href="' . get_permalink( $shop_page ) . '">' . $shop_page->post_title . '</a></li> ' . $after . $delimiter;
 }
 
 if ( ( ! is_home() && ! is_front_page() && ! ( is_post_type_archive() && get_option( 'page_on_front' ) == woocommerce_get_page_id( 'shop' ) ) ) || is_paged() ) {
@@ -26,7 +26,7 @@ if ( ( ! is_home() && ! is_front_page() && ! ( is_post_type_archive() && get_opt
 	echo $wrap_before;
 
 	if ( ! empty( $home ) ) {
-		echo $before . '<a class="home" href="' . apply_filters( 'woocommerce_breadcrumb_home_url', home_url() ) . '">' . $home . '</a>' . $after . $delimiter;
+		echo $before . '<a class="home" href="' . apply_filters( 'woocommerce_breadcrumb_home_url', home_url() ) . '">' . $home . '</a></li>' . $after . $delimiter;
 	}
 
 	if ( is_category() ) {
@@ -58,7 +58,7 @@ if ( ( ! is_home() && ! is_front_page() && ! ( is_post_type_archive() && get_opt
 			$parents = array_reverse( $parents );
 			foreach ( $parents as $parent ) {
 				$item = get_term_by( 'id', $parent, get_query_var( 'taxonomy' ));
-				echo $before .  '<a href="' . get_term_link( $item->slug, 'product_cat' ) . '">' . esc_html( $item->name ) . '</a>' . $after . $delimiter;
+				echo $before .  '<li class="ralebold"><a href="' . get_term_link( $item->slug, 'product_cat' ) . '">' . esc_html( $item->name ) . '</a></li>' . $after . $delimiter;
 			}
 		}
 
@@ -72,13 +72,13 @@ if ( ( ! is_home() && ! is_front_page() && ! ( is_post_type_archive() && get_opt
 
 	} elseif ( is_day() ) {
 
-		echo $before . '<a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . '</a>' . $after . $delimiter;
-		echo $before . '<a href="' . get_month_link(get_the_time('Y'),get_the_time('m')) . '">' . get_the_time('F') . '</a>' . $after . $delimiter;
+		echo $before . '<li class="ralebold"><a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . '</a></li>' . $after . $delimiter;
+		echo $before . '<li class="ralebold"><a href="' . get_month_link(get_the_time('Y'),get_the_time('m')) . '">' . get_the_time('F') . '</a></li>' . $after . $delimiter;
 		echo $before . get_the_time('d') . $after;
 
 	} elseif ( is_month() ) {
 
-		echo $before . '<a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . '</a>' . $after . $delimiter;
+		echo $before . '<li class="ralebold"><a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . '</a></li>' . $after . $delimiter;
 		echo $before . get_the_time('F') . $after;
 
 	} elseif ( is_year() ) {
@@ -96,11 +96,11 @@ if ( ( ! is_home() && ! is_front_page() && ! ( is_post_type_archive() && get_opt
 
 		if ( is_search() ) {
 
-			echo $before . '<a href="' . get_post_type_archive_link('product') . '">' . $_name . '</a>' . $delimiter . __( 'Search results for &ldquo;', 'woocommerce' ) . get_search_query() . '&rdquo;' . $after;
+			echo $before . '<li class="ralebold"><a href="' . get_post_type_archive_link('product') . '">' . $_name . '</a></li>' . $delimiter . __( 'Search results for &ldquo;', 'woocommerce' ) . get_search_query() . '&rdquo;' . $after;
 
 		} elseif ( is_paged() ) {
 
-			echo $before . '<a href="' . get_post_type_archive_link('product') . '">' . $_name . '</a>' . $after;
+			echo $before . '<li class="ralebold"><a href="' . get_post_type_archive_link('product') . '">' . $_name . '</a></li>' . $after;
 
 		} else {
 
@@ -129,11 +129,11 @@ if ( ( ! is_home() && ! is_front_page() && ! ( is_post_type_archive() && get_opt
 					$parents = array_reverse($parents);
 					foreach ( $parents as $parent ) {
 						$item = get_term_by( 'id', $parent, 'product_cat');
-						echo $before . '<a href="' . get_term_link( $item->slug, 'product_cat' ) . '">' . $item->name . '</a>' . $after . $delimiter;
+						echo $before . '<li class="ralebold"><a href="' . get_term_link( $item->slug, 'product_cat' ) . '">' . $item->name . '</a></li>' . $after . $delimiter;
 					}
 				}
 
-				echo $before . '<a href="' . get_term_link( $term->slug, 'product_cat' ) . '">' . $term->name . '</a>' . $after . $delimiter;
+				echo $before . '<li class="ralebold"><a href="' . get_term_link( $term->slug, 'product_cat' ) . '">' . $term->name . '</a></li>' . $after . $delimiter;
 
 			}
 
@@ -143,7 +143,7 @@ if ( ( ! is_home() && ! is_front_page() && ! ( is_post_type_archive() && get_opt
 
 			$post_type = get_post_type_object( get_post_type() );
 			$slug = $post_type->rewrite;
-				echo $before . '<a href="' . get_post_type_archive_link( get_post_type() ) . '">' . $post_type->labels->singular_name . '</a>' . $after . $delimiter;
+				echo $before . '<li class="ralebold"><a href="' . get_post_type_archive_link( get_post_type() ) . '">' . $post_type->labels->singular_name . '</a></li>' . $after . $delimiter;
 			echo $before . get_the_title() . $after;
 
 		} else {
@@ -171,7 +171,7 @@ if ( ( ! is_home() && ! is_front_page() && ! ( is_post_type_archive() && get_opt
 		$cat = get_the_category( $parent->ID );
 		$cat = $cat[0];
 		echo get_category_parents( $cat, true, '' . $delimiter );
-		echo $before . '<a href="' . get_permalink( $parent ) . '">' . $parent->post_title . '</a>' . $after . $delimiter;
+		echo $before . '<li class="ralebold"><a href="' . get_permalink( $parent ) . '">' . $parent->post_title . '</a></li>' . $after . $delimiter;
 		echo $before . get_the_title() . $after;
 
 	} elseif ( is_page() && !$post->post_parent ) {
@@ -185,7 +185,7 @@ if ( ( ! is_home() && ! is_front_page() && ! ( is_post_type_archive() && get_opt
 
 		while ( $parent_id ) {
 			$page = get_page( $parent_id );
-			$breadcrumbs[] = '<a href="' . get_permalink($page->ID) . '">' . get_the_title( $page->ID ) . '</a>';
+			$breadcrumbs[] = '<li class="ralebold"><a href="' . get_permalink($page->ID) . '">' . get_the_title( $page->ID ) . '</a></li>';
 			$parent_id  = $page->post_parent;
 		}
 

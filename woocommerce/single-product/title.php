@@ -10,4 +10,5 @@
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 ?>
-<h1 itemprop="name" class="product_title entry-title"><?php the_title(); ?></h1>
+<h2 class="productTitle ralenormal" itemprop="name"><?php the_title(); ?></h2>
+<span class="line"></span>
