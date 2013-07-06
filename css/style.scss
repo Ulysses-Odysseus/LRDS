@@ -988,6 +988,34 @@ a{
 			font-size: 12px;
 			color: #efefef;
 		}
+		.woocommerce{
+			width: 100%;
+			.button{
+				line-height: 45px;
+				color: #ccc;
+				border: none;
+				-webkit-border-radius: none!important;
+				border-radius: none!important;
+				text-shadow: none!important;
+				background: $fc-grey;
+			}
+			.checkout-button{
+				background: $bcRed;
+			}
+			.coupon{
+				.input-text{
+					line-height: 45px;
+				}
+			}
+			.cart-collaterals{
+				.cart_totals{
+					table{
+						float: right;
+					}
+				}
+			}
+			#payment{ color: black; }
+		}
 
 	} /* End Store */
 
@@ -1136,7 +1164,7 @@ a{
 	   ========================================================================== */
 	#about { width: 100%; }
 
-	#about, #blogsingle, #showsingle{
+	#about, #blogsingle, #showsingle, #store{
 		background: $background;
 		.aboutContainer{
 			width: 95%;

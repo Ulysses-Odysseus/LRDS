@@ -851,6 +851,24 @@ a {
     .content #store .product_meta {
       font-size: 12px;
       color: #efefef; }
+    .content #store .woocommerce {
+      width: 100%; }
+      .content #store .woocommerce .button {
+        line-height: 45px;
+        color: #ccc;
+        border: none;
+        -webkit-border-radius: none !important;
+        border-radius: none !important;
+        text-shadow: none !important;
+        background: #555555; }
+      .content #store .woocommerce .checkout-button {
+        background: #841212; }
+      .content #store .woocommerce .coupon .input-text {
+        line-height: 45px; }
+      .content #store .woocommerce .cart-collaterals .cart_totals table {
+        float: right; }
+      .content #store .woocommerce #payment {
+        color: black; }
   .content #shows {
     width: 200%;
     padding: 0 0 20px 0;
@@ -968,35 +986,35 @@ a {
         background: url(../img/media-icon-instagram.png) center no-repeat; }
   .content #about {
     width: 100%; }
-  .content #about, .content #blogsingle, .content #showsingle {
+  .content #about, .content #blogsingle, .content #showsingle, .content #store {
     background: url("../img/bar-bg-active.png") repeat; }
-    .content #about .aboutContainer, .content #blogsingle .aboutContainer, .content #showsingle .aboutContainer {
+    .content #about .aboutContainer, .content #blogsingle .aboutContainer, .content #showsingle .aboutContainer, .content #store .aboutContainer {
       width: 95%;
       padding: 2.5%;
       color: #ffffff; }
-      .content #about .aboutContainer .aboutTitle, .content #blogsingle .aboutContainer .aboutTitle, .content #showsingle .aboutContainer .aboutTitle {
+      .content #about .aboutContainer .aboutTitle, .content #blogsingle .aboutContainer .aboutTitle, .content #showsingle .aboutContainer .aboutTitle, .content #store .aboutContainer .aboutTitle {
         font-size: 29px;
         margin: 0 0 15px 0;
         padding: 25px 0 0 0; }
-      .content #about .aboutContainer .aboutImage, .content #blogsingle .aboutContainer .aboutImage, .content #showsingle .aboutContainer .aboutImage {
+      .content #about .aboutContainer .aboutImage, .content #blogsingle .aboutContainer .aboutImage, .content #showsingle .aboutContainer .aboutImage, .content #store .aboutContainer .aboutImage {
         width: 740px;
         height: 358px;
         margin: 20px 0;
         background: #366c9a; }
-      .content #about .aboutContainer .aboutText, .content #blogsingle .aboutContainer .aboutText, .content #showsingle .aboutContainer .aboutText {
+      .content #about .aboutContainer .aboutText, .content #blogsingle .aboutContainer .aboutText, .content #showsingle .aboutContainer .aboutText, .content #store .aboutContainer .aboutText {
         width: 100%;
         padding: 2.5% 0 2.5% 0;
         font-size: 13px;
         line-height: 23px; }
-        .content #about .aboutContainer .aboutText div, .content #blogsingle .aboutContainer .aboutText div, .content #showsingle .aboutContainer .aboutText div {
+        .content #about .aboutContainer .aboutText div, .content #blogsingle .aboutContainer .aboutText div, .content #showsingle .aboutContainer .aboutText div, .content #store .aboutContainer .aboutText div {
           display: inline-block; }
-        .content #about .aboutContainer .aboutText a, .content #blogsingle .aboutContainer .aboutText a, .content #showsingle .aboutContainer .aboutText a {
+        .content #about .aboutContainer .aboutText a, .content #blogsingle .aboutContainer .aboutText a, .content #showsingle .aboutContainer .aboutText a, .content #store .aboutContainer .aboutText a {
           text-decoration: underline; }
-        .content #about .aboutContainer .aboutText .columText, .content #blogsingle .aboutContainer .aboutText .columText, .content #showsingle .aboutContainer .aboutText .columText {
+        .content #about .aboutContainer .aboutText .columText, .content #blogsingle .aboutContainer .aboutText .columText, .content #showsingle .aboutContainer .aboutText .columText, .content #store .aboutContainer .aboutText .columText {
           width: 47.5%;
           padding: 0 2.5% 0 0;
           float: left; }
-          .content #about .aboutContainer .aboutText .columText a, .content #blogsingle .aboutContainer .aboutText .columText a, .content #showsingle .aboutContainer .aboutText .columText a {
+          .content #about .aboutContainer .aboutText .columText a, .content #blogsingle .aboutContainer .aboutText .columText a, .content #showsingle .aboutContainer .aboutText .columText a, .content #store .aboutContainer .aboutText .columText a {
             text-decoration: none !important; }
   .content #blogsingle,
   .content #showsingle {
