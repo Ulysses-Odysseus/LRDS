@@ -9,9 +9,11 @@
     /* <![CDATA[ */
     $(document).ready(function(){
 
+      /* Active state for navigation
+      =============================*/
       var needle = $('.activeCon').attr('id');
       $('#text' + needle).removeClass('liNoActive').addClass('liActive');
-      // $('.navButton .' + needle).addClass('activeNav');
+      $('.navButton .' + needle).parent().addClass('activeNav');
 
       // console.log('.navbar .' + needle);
       
