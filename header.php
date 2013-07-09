@@ -85,13 +85,13 @@
           <ul>
             <li class="navButton"><a class="home" href="<?php echo esc_url(home_url('/')); ?>" target="_top">HOME</a></li>
             <li class="divider"></li>
-            <li class="navButton"><a class="store" href="<?php echo esc_url(home_url('/')); ?>?post_type=product" target="_top">STORE</a></li>
+            <li class="navButton"><a class="store" href="<?php echo esc_url(home_url('/')); ?>shop" target="_top">STORE</a></li>
             <li class="divider"></li>
-            <li class="navButton"><a class="shows" href="<?php echo esc_url(home_url('/')); ?>?page_id=411" target="_top">SHOWS</a></li>
+            <li class="navButton"><a class="shows" href="<?php echo esc_url(home_url('/')); ?>shows" target="_top">SHOWS</a></li>
             <li class="divider"></li>
-            <li class="navButton"><a class="about" href="<?php echo esc_url(home_url('/')); ?>?page_id=418" target="_top">ABOUT</a></li>
+            <li class="navButton"><a class="about" href="<?php echo esc_url(home_url('/')); ?>about" target="_top">ABOUT</a></li>
             <li class="divider"></li>
-            <li class="navButton novisible"><a class="subscribe" href="<?php echo esc_url(home_url('/')); ?>?page_id=427" target="_top">NEWSLETTER</a></li>
+            <li class="navButton novisible"><a class="subscribe" href="<?php echo esc_url(home_url('/')); ?>contact" target="_top">NEWSLETTER</a></li>
             <li class="divider"></li>
           </ul>
 

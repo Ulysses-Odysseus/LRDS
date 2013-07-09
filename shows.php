@@ -12,9 +12,9 @@ Template Name: shows
   <ul class="showlist">
     <?php if(have_posts()) : while(have_posts()) : the_post();
 
-        $title = get_the_excerpt();
+        if(in_category('shows')) { 
 
-        if(in_category('shows')) { ?>
+          $title = get_the_excerpt(); ?>
 
           <li>
             <div class="date">

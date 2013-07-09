@@ -55,12 +55,12 @@ foreach($posts as $postData) {
 	
 	// Push timestamps to relative array
 	// Category breakdown
-	// Instagram = 22
-	// Twitter   = 20
-    // Facebook  = 21
-	if($category == 22){ $instaTimestamps[]   = $timestamp; }
-	if($category == 20){ $twitterTimestamps[] = $timestamp; }
-    if($category == 21){ $fbTimestamps[]      = $timestamp; }
+	// Instagram = 13
+	// Twitter   = 14
+    // Facebook  = 15
+	if($category == 13){ $instaTimestamps[]   = $timestamp; }
+	if($category == 14){ $twitterTimestamps[] = $timestamp; }
+    if($category == 15){ $fbTimestamps[]      = $timestamp; }
 
 }
 
@@ -101,7 +101,7 @@ foreach($jsonData->data as $value) {
             'post_status'   => 'publish',
             'post_date'     => $time,
             'post_type'     => 'post',
-            'post_category' => array(22)
+            'post_category' => array(13)
         );
         
         $post_id = wp_insert_post($new_post);
@@ -154,7 +154,7 @@ foreach($twitterData as $item) {
             'post_status'   => 'publish',
             'post_date'     => $time,
             'post_type'     => 'post',
-            'post_category' => array(20)
+            'post_category' => array(14)
         );
         
         $post_id = wp_insert_post($new_post);
@@ -211,7 +211,7 @@ foreach($facebookdata->feed->data as $news) {
                     'post_status'   => 'publish',
                     'post_date'     => $time,
                     'post_type'     => 'post',
-                    'post_category' => array(21,24)
+                    'post_category' => array(15,19)
                 );
 
             // If it has a photo
@@ -224,7 +224,7 @@ foreach($facebookdata->feed->data as $news) {
                     'post_status'   => 'publish',
                     'post_date'     => $time,
                     'post_type'     => 'post',
-                    'post_category' => array(21,18)
+                    'post_category' => array(15,17)
                 );
 
             // If it is a video
@@ -237,7 +237,7 @@ foreach($facebookdata->feed->data as $news) {
                     'post_status'   => 'publish',
                     'post_date'     => $time,
                     'post_type'     => 'post',
-                    'post_category' => array(21,19)
+                    'post_category' => array(15,18)
                 );
 
             }
@@ -248,4 +248,6 @@ foreach($facebookdata->feed->data as $news) {
         }
     }
 }
+
+echo '<h1>POSTS INSERTED</h1>';
 ?>
