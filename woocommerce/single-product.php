@@ -28,9 +28,22 @@ get_header('shop'); ?>
 <div class="shopBar">
   <div>
     <ul>
-      <li class="standarBack ralenormal"><a class="productbb" href="#">TEES</a></li>
-      <li class="dividerVertical"></li>
-      <li class="standarBack ralenormal"><a class="cartbb" href="#">CART</a></li>
+      <li class="standarBack ralenormal">
+      	<select id="category_list">
+      		<?php
+      			$args  = array( 'taxonomy' => 'product_cat' );
+						$terms = get_terms('product_cat', $args);
+						$url   = get_permalink( woocommerce_get_page_id( 'shop' ) );
+						
+						$count = count($terms);
+				    if ($count > 0) {
+			        foreach ($terms as $term) {
+			        	echo '<option value="' . $url . '/' . $term->slug . '">' . $term->name . '</option>';
+			        }
+				    }
+      		?>
+      	</select>
+      </li>
       <li class="dividerVertical"></li>
       <li class="standarBack ralelight"><a href="<?php echo $woocommerce->cart->get_cart_url(); ?>" class="itemsbb"><?php echo sprintf(_n('%d ITEM', '%d ITEMS', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count);?>&nbsp;<?php echo $woocommerce->cart->get_cart_total(); ?></a></li>
       <li class="dividerVertical"></li>

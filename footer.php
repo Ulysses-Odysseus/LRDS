@@ -9,6 +9,12 @@
     /* <![CDATA[ */
     $(document).ready(function(){
 
+      /* Category Pages
+      =============================*/
+      document.getElementById("category_list").onchange = function() {
+          window.location.href = this.value;
+      };
+
       /* Active state for navigation
       =============================*/
       var needle = $('.activeCon').attr('id');
