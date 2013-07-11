@@ -81,6 +81,9 @@ a{
 	color:inherit;
 	text-decoration: none;
 }
+.top40px{
+	margin-top: 40px;
+}
 
 /* Keyframes Fade In/Out Animation (under ".content" div) 
 =============================*/
@@ -1118,6 +1121,7 @@ a{
 		color: $fc-white;
 		background: $background;
 		.rssTitle{
+			margin-bottom: 10px;
 			font-size: 25px;
 		}
 		.rssSubTitle{
@@ -1128,17 +1132,31 @@ a{
 		.rssText{
 			display: block;
 			font-size: 13px;
+			line-height: 18px;
 			margin: 10px 0 10px 0;
 			a:hover{
 				color: $mainOrange;
 			}
 		}
-		.rssSubscribe{
+		.rssSubscribe, #mc_embed_signup{
 			margin: 15px 0 0 0;
 			font-size: 16px;
+			form{
+				.rssjoin{
+					float: left;
+				}
+				.mc-field-group{
+					float: left;
+					margin: 0 0 0 10px;
+				}
+				#mce-responses{
+					margin: 15px 0 0 0;
+				}
+			}
 		}
 		.socialIconsButtons{	
-				margin: 10px 0 0 0; padding: 0;
+				margin: 25px 0 0 0; padding: 0;
+				clear: both;
 				text-align: left;
 				list-style-type: none;
 				li{

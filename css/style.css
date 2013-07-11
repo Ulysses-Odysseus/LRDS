@@ -59,6 +59,9 @@ a {
   color: inherit;
   text-decoration: none; }
 
+.top40px {
+  margin-top: 40px; }
+
 /* Keyframes Fade In/Out Animation (under ".content" div) 
 =============================*/
 /* Fade In */
@@ -948,6 +951,7 @@ a {
     color: #efefef;
     background: url("../img/bar-bg-active.png") repeat; }
     .content #subscribe .rssTitle {
+      margin-bottom: 10px;
       font-size: 25px; }
     .content #subscribe .rssSubTitle {
       display: block;
@@ -956,15 +960,24 @@ a {
     .content #subscribe .rssText {
       display: block;
       font-size: 13px;
+      line-height: 18px;
       margin: 10px 0 10px 0; }
       .content #subscribe .rssText a:hover {
         color: #dc8d40; }
-    .content #subscribe .rssSubscribe {
+    .content #subscribe .rssSubscribe, .content #subscribe #mc_embed_signup {
       margin: 15px 0 0 0;
       font-size: 16px; }
+      .content #subscribe .rssSubscribe form .rssjoin, .content #subscribe #mc_embed_signup form .rssjoin {
+        float: left; }
+      .content #subscribe .rssSubscribe form .mc-field-group, .content #subscribe #mc_embed_signup form .mc-field-group {
+        float: left;
+        margin: 0 0 0 10px; }
+      .content #subscribe .rssSubscribe form #mce-responses, .content #subscribe #mc_embed_signup form #mce-responses {
+        margin: 15px 0 0 0; }
     .content #subscribe .socialIconsButtons {
-      margin: 10px 0 0 0;
+      margin: 25px 0 0 0;
       padding: 0;
+      clear: both;
       text-align: left;
       list-style-type: none; }
       .content #subscribe .socialIconsButtons li {

@@ -91,29 +91,9 @@
             <li class="divider"></li>
             <li class="navButton"><a class="about" href="<?php echo esc_url(home_url('/')); ?>about" target="_top">ABOUT</a></li>
             <li class="divider"></li>
-            <li class="navButton novisible"><a class="subscribe" href="<?php echo esc_url(home_url('/')); ?>contact" target="_top">NEWSLETTER</a></li>
+            <li class="navButton"><a class="subscribe" href="<?php echo esc_url(home_url('/')); ?>contact" target="_top">CONTACT</a></li>
             <li class="divider"></li>
           </ul>
-
-          <div class="newsletterBar visible">
-            <span class="rssSubTitle ralelight">
-              Contact: 
-            </span>
-            <span class="rssText ralelight">
-              Alejandro Garza : (818)-400-8783
-            </span>
-            <span class="rssText ralelight">
-              Jose Rodriguez  : (760)-270-6323
-            </span>
-            <span class="rssText ralelight">
-              Email : <a href="mailto:music@lrds.tv?Subject=Hello" target="_blank">music@lrds.tv</a>
-            </span>
-            <p>Sign up for the newsletter:</p>
-            <form class="newsletterForm row" role="newsletter" method="get" id="newsletterform" >
-              <input id="n" name="n" type="text" class="newsletterInput ralelight" placeholder="Enter Email...">
-              <input type="submit" class="newsletterIcon" value="Join">
-            </form>
-          </div>
         </div>
 
       </div>

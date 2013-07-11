@@ -235,6 +235,9 @@
        ========================================================================== */
     /* =============================================================================
     	SHOWS
+       ========================================================================== */
+    /* =============================================================================
+    	NEWSLETTER
        ========================================================================== */ }
     .content .searchBar {
       display: none; }
@@ -351,6 +354,8 @@
               line-height: 80px; }
             .content #shows .showlist li .place .button {
               display: none; }
+    .content #subscribe {
+      width: 100%; }
 
   /* =============================================================================
   	Side Bar
@@ -493,7 +498,10 @@
        ========================================================================== */
     /* =============================================================================
     	ABOUT
-       ========================================================================== */ }
+       ========================================================================== */
+    /* =============================================================================
+		NEWSLETTER
+	   ========================================================================== */ }
     .content #home .bloglist .socialFeedArea ul {
       min-width: 105% !important;
       padding: 0 0 0 10px; }
@@ -528,4 +536,6 @@
     .content #about .aboutContainer .aboutTitle, .content #blogsingle .aboutContainer .aboutTitle, .content #showsingle .aboutContainer .aboutTitle {
       font-size: 20px; }
     .content #about .aboutContainer .aboutText .columText, .content #blogsingle .aboutContainer .aboutText .columText, .content #showsingle .aboutContainer .aboutText .columText {
-      width: 100%; } }
+      width: 100%; }
+    .content #subscribe {
+      width: 88%; } }
