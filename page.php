@@ -5,7 +5,7 @@
         <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
 
             <div class="aboutContainer">
-              <a style="font-size:12px;color:#ccc;" href="#">&larr;&nbsp;CONTINUE SHOPPING</a>
+              <a style="font-size:12px;color:#ccc;" href="<?php echo get_permalink( woocommerce_get_page_id( 'shop' ) ); ?>">&larr;&nbsp;CONTINUE SHOPPING</a>
               <div class="aboutTitle"><?php the_title(); ?></div>
                   <div class="divider"></div>
                   <div class="aboutText group">
