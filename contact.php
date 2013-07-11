@@ -225,6 +225,5 @@ function mce_success_cb(resp){
         }
     }
 }
-
 </script>
 <?php get_footer(); ?>

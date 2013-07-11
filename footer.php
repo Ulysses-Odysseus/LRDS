@@ -7,13 +7,15 @@
     <script src="<?php echo get_template_directory_uri(); ?>/js/isotope.js"></script>
     <script>
     /* <![CDATA[ */
-    $(document).ready(function(){
+    
+    /* Change Category Pages
+    =============================*/
+    function changeCat(sel){
+      var pageLink = sel.options[sel.selectedIndex].value;
+      window.location.href = pageLink;
+    }
 
-      /* Category Pages
-      =============================*/
-      document.getElementById("category_list").onchange = function() {
-          window.location.href = this.value;
-      };
+    $(document).ready(function(){
 
       /* Active state for navigation
       =============================*/

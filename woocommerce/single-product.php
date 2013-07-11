@@ -29,7 +29,7 @@ get_header('shop'); ?>
   <div>
     <ul>
       <li class="standarBack ralenormal">
-      	<select id="category_list">
+      	<select id="category_list" onchange="changeCat(this)">
       		<?php
       			$args  = array( 'taxonomy' => 'product_cat' );
 						$terms = get_terms('product_cat', $args);
