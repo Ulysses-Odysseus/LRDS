@@ -574,6 +574,10 @@ a {
           .content #home .bloglist .socialFeedArea ul .small {
             width: 140px;
             height: 140px; }
+            .content #home .bloglist .socialFeedArea ul .small a {
+              width: inherit;
+              height: inherit;
+              display: block; }
             .content #home .bloglist .socialFeedArea ul .small .feedBar {
               width: 100%;
               padding-left: 10px; }
@@ -593,6 +597,8 @@ a {
             width: 300px;
             height: 300px; }
             .content #home .bloglist .socialFeedArea ul .big a {
+              width: inherit;
+              height: inherit;
               display: block;
               text-align: center; }
             .content #home .bloglist .socialFeedArea ul .big .feedBar {

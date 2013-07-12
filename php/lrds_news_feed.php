@@ -1,8 +1,12 @@
 <?php
-// PHP ERROR STUFF
-error_reporting(E_ALL);
-ini_set('display_errors', 'On');
-ini_set('html_errors', 'On');
+/**
+*   PHP ERROR STUFF
+*
+    error_reporting(E_ALL);
+    ini_set('display_errors', 'On');
+    ini_set('html_errors', 'On');
+*/
+
 /**
 *   INSTRUCTIONS
 *
@@ -16,13 +20,11 @@ ini_set('html_errors', 'On');
 // To Do List:
 // - Close the db connection when we are finished with it
 // - Go through and tighten up the script
-// - Include Facebook
 // - Would be nice to convert to OOP
 
 // Load in the essentials
 require_once('../../../../wp-load.php');
 require_once('twitteroauth.php');
-// require_once('facebook.php'); 
 
 
 //////////////////////////////////
@@ -40,9 +42,9 @@ $fbTimestamps      = array();
 $posts = $wpdb->get_results(
 	"
 	SELECT post_date, post_content, post_title, term_taxonomy_id
-	FROM wp_posts
-	LEFT JOIN wp_term_relationships
-	ON wp_posts.ID = wp_term_relationships.object_id
+	FROM wp_9vfeuv_posts
+	LEFT JOIN wp_9vfeuv_term_relationships
+	ON wp_9vfeuv_posts.ID = wp_9vfeuv_term_relationships.object_id
 	"
 );
 

@@ -8,38 +8,42 @@ Template Name: shows
 <!-- =============================================================================
       SHOWS
      ========================================================================== -->
-<div id="shows" class="activeCon"> 
+<div id="shows" class="activeCon">
   <ul class="showlist">
-    <?php if(have_posts()) : while(have_posts()) : the_post();
+  <?php
+  // Get posts from shows category
+  query_posts('cat=16');
 
-        if(in_category('shows')) { 
+  if(have_posts()) : while(have_posts()) : the_post();
 
-          $title = get_the_excerpt(); ?>
+      if(in_category('shows')) { 
 
-          <li>
-            <div class="date">
-              <div class="dateContainer">
-                <span class="month ralenormal"><?php echo get_post_meta(get_the_id(), 'Event Month', true); ?></span><br />
-                <span class="day ralelight"><?php echo get_post_meta(get_the_id(), 'Event Day', true); ?></span>
-              </div>
+        $title = get_the_excerpt(); ?>
+
+        <li>
+          <div class="date">
+            <div class="dateContainer">
+              <span class="month ralenormal"><?php echo get_post_meta(get_the_id(), 'Event Month', true); ?></span><br />
+              <span class="day ralelight"><?php echo get_post_meta(get_the_id(), 'Event Day', true); ?></span>
             </div>
-            <a data-id="<?php echo get_the_id(); ?>_show" href="<?php the_permalink(); ?>">
-              <div class="place">
-                <span class="namePlace ralelight"><?php echo $title; ?></span>
-                <span class="button">
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/arrow-forward.png" alt="<?php echo $title; ?>">
-                </span>
-              </div>
-            </a>
-          </li>
+          </div>
+          <a data-id="<?php echo get_the_id(); ?>_show" href="<?php the_permalink(); ?>">
+            <div class="place">
+              <span class="namePlace ralelight"><?php echo $title; ?></span>
+              <span class="button">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/arrow-forward.png" alt="<?php echo $title; ?>">
+              </span>
+            </div>
+          </a>
+        </li>
 
-        <?php }
+      <?php }
 
-        endwhile; else: ?>
+      endwhile; else: ?>
 
-          <p>Sorry, there are no shows at this time</p>
+        <p>Sorry, there are no shows at this time</p>
 
-      <?php endif; ?><!-- End the loop -->
+  <?php endif; ?><!-- End the loop -->
   </ul>
   <div id="showsingle" class="no-active ralelight">
     <div class="aboutContainer">

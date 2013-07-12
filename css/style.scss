@@ -639,6 +639,10 @@ a{
 					}
 					.small{
 						width: 140px; height: 140px;
+						a{
+							width: inherit; height: inherit;
+							display: block;
+						}
 
 						.feedBar{
 							width: 100%;
@@ -664,6 +668,7 @@ a{
 					.big{
 						width: 300px; height: 300px;
 						a{
+							width: inherit; height: inherit;
 							display: block;
 							text-align: center;
 						}

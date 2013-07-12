@@ -31,8 +31,8 @@ if(isset($postid) && $postid != '' && isset($type) && $type != '') {
     $posts = $wpdb->get_results(
     	"
     	SELECT post_date, post_content, post_title
-    	FROM wp_posts
-        WHERE wp_posts.ID = $postid
+    	FROM wp_9vfeuv_posts
+        WHERE wp_9vfeuv_posts.ID = $postid
         LIMIT 0, 1
     	"
     );
@@ -88,8 +88,8 @@ if(isset($postid) && $postid != '' && isset($type) && $type != '') {
         } elseif($type = 'blog') {
 
             // Setup variables for the post
-            $title     = $postData->post_title;
-            $content   = $postData->post_content;
+            $title   = $postData->post_title;
+            $content = $postData->post_content;
 
             // Build the post
             $thepost = '<div class="aboutTitle">'.$title.'</div>
