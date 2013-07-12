@@ -973,7 +973,7 @@ a {
         float: left;
         margin: 0 0 0 10px; }
       .content #subscribe .rssSubscribe form #mce-responses, .content #subscribe #mc_embed_signup form #mce-responses {
-        margin: 15px 0 0 0; }
+        padding: 15px 0 0 0; }
     .content #subscribe .socialIconsButtons {
       margin: 25px 0 0 0;
       padding: 0;
