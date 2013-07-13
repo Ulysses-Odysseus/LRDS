@@ -624,7 +624,8 @@ a {
           width: 461px;
           height: 70px;
           list-style-type: none;
-          background: url("../img/bar-bg-active.png") repeat; }
+          background: url("../img/bar-bg-active.png") repeat;
+          /* Drop Down Menu Shop */ }
           .content #store .shopBar div ul li {
             float: left !important;
             text-align: center;
@@ -647,6 +648,21 @@ a {
             .content #store .shopBar div ul li .checkoutbb {
               width: 124px;
               background: url("../img/bar-bg-active-red.png") repeat; }
+          .content #store .shopBar div ul .dropDownMenu {
+            height: 100%; }
+            .content #store .shopBar div ul .dropDownMenu #category_list {
+              height: 100%;
+              padding: 0 40px 0 20px;
+              border: none;
+              outline: none;
+              color: #efefef;
+              text-align: center;
+              background: url("../img/bar-bg-active.png") repeat; }
+            .content #store .shopBar div ul .dropDownMenu #category_list:after {
+              content: "";
+              background-repeat: no-repeat;
+              background-position: right center;
+              background-image: url(data:image/png;base64,R0lGODlhDQAEAIAAAAAAAP8A/yH5BAEHAAEALAAAAAANAAQAAAILhA+hG5jMDpxvhgIAOw==); }
       .content #store .shopBar .checkOutul {
         width: 124px;
         height: 70px;
@@ -702,6 +718,7 @@ a {
             height: inherit;
             position: relative; }
             .content #store .productsListMainArea .productsArea .allProducts li .productInfo .productMeta {
+              width: 100%;
               position: absolute;
               bottom: 0;
               left: 0; }

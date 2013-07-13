@@ -43,7 +43,7 @@ $leftIm:left!important;
 		-moz-background-size: none;
 		-o-background-size: none;
 		background-size: none;
-		overflow: hidden; /* Removed on live */
+		// overflow: hidden; /* Removed on live */
 	}
 
 	/* =============================================================================
@@ -51,7 +51,7 @@ $leftIm:left!important;
 	   ========================================================================== */
 	.container{
 		width: 100%;
-		overflow: hidden; /* Removed on live */
+		// overflow: hidden; /* Removed on live */
 	}	
 	/* =============================================================================
 		Side Bar
@@ -419,6 +419,19 @@ $leftIm:left!important;
 				/* Product Area */
 				.productsArea{
 					margin: 20px 0 0 1%;
+					.allProducts{
+						li{
+							.productInfo{
+								.productMeta{
+									.productBottomBar{
+										.productName{
+											width: 236px;
+										}
+									}
+								}
+							}
+						}
+					}
 				}
 			}
 	   	}

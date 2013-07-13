@@ -739,6 +739,25 @@ a{
 							background: $backgroundRed;
 						}
 					}
+					/* Drop Down Menu Shop */
+					.dropDownMenu{
+						height: 100%;
+						#category_list{
+							height: 100%;
+							padding: 0 40px 0 20px;
+							border: none;
+							outline: none;
+							color: #efefef;
+							text-align: center;
+							background: url("../img/bar-bg-active.png") repeat;
+						}
+						#category_list:after{
+							content: "";
+							background-repeat: no-repeat;
+							background-position: right center;
+							background-image: url(data:image/png;base64,R0lGODlhDQAEAIAAAAAAAP8A/yH5BAEHAAEALAAAAAANAAQAAAILhA+hG5jMDpxvhgIAOw==);
+						}
+					}
 				}
 			}
 				
@@ -809,6 +828,7 @@ a{
 							width: inherit; height: inherit;
 							position: relative;
 							.productMeta{
+								width: 100%;
 								position: absolute;
 								bottom: 0;
 								left: 0;

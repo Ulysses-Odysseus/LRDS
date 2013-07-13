@@ -19,17 +19,13 @@
     -webkit-background-size: none;
     -moz-background-size: none;
     -o-background-size: none;
-    background-size: none;
-    overflow: hidden;
-    /* Removed on live */ }
+    background-size: none; }
 
   /* =============================================================================
   	Container
      ========================================================================== */
   .container {
-    width: 100%;
-    overflow: hidden;
-    /* Removed on live */ }
+    width: 100%; }
 
   /* =============================================================================
   	Side Bar
@@ -318,6 +314,8 @@
           margin-left: 1%; }
         .content #store .productsListMainArea .productsArea {
           margin: 20px 0 0 1%; }
+          .content #store .productsListMainArea .productsArea .allProducts li .productInfo .productMeta .productBottomBar .productName {
+            width: 236px; }
     .content #shows {
       width: 200%; }
       .content #shows .showlist {
