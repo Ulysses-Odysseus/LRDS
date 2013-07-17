@@ -361,7 +361,10 @@ $leftIm:left!important;
 							width: 50px;
 							height: 50px;
 							a{
+								display: block;
 								width: 100%;
+								height: 100%;
+								text-indent: -999em;
 								img{
 									width: 35%;
 									height: auto;
@@ -774,7 +777,7 @@ $leftIm:left!important;
 		   ========================================================================== */
 		#subscribe{
 			width: 90%;
-			min-height: 100%;
+			height: 100%;
 			padding: 5%;
 		}
 	}
