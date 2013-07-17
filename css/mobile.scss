@@ -116,8 +116,19 @@ $leftIm:left!important;
 
 		/* =============================================================================
 		   STORE
-	   	   ========================================================================== */
-   	   	#store{
+	  ========================================================================== */
+   	#store{
+   		/* Shop Sub Nav
+			-------------------------*/
+			.shopBar{
+				ul{	
+					.standarBack{
+						width: 30.318535%;
+						margin: 0; padding: 0;
+					}				
+				}
+			}
+
 			.productsListMainArea{
 
 				/* Product Area */
@@ -129,10 +140,12 @@ $leftIm:left!important;
 								.imgProduct{
 									width: 300px; height: 300px;
 								}
-								.productBottomBar{
-									width: 300px; height: 45px;
-									.productName{
-										width: 235px; height: inherit;
+								.productMeta{
+									.productBottomBar{
+										width: 100%; height: 45px;
+										.productName{
+											width: 235px; height: inherit;
+										}
 									}
 								}
 							}
@@ -142,6 +155,7 @@ $leftIm:left!important;
 					/* Single Product Page */
 					.singleProductContainer{
 						.singleProduct{
+							width: 350px;
 							.productBig{
 								width: 350px; height: 350px;
 							}
@@ -381,51 +395,38 @@ $leftIm:left!important;
 		   ========================================================================== */
 	   	#store{
 	   		/* Shop Sub Nav
-			-------------------------*/
-			.shopBar{
-				width: 100%;
-				padding: 0 8%;
-				margin-top: 1px;
-				background: $background;
-
-				div{
+				-------------------------*/
+				.shopBar{
+					width: 100%;
 					ul{	
-						width: 100%;
-						height: 50px;
-						
-						li{
-							line-height: 50px;
-						}
+						width: 100%; height: 70px;
+						.standarBack{
+							width: 30.278319%;
+						}						
 					}
-				}
+				} 		
 
-				.checkOutul{
-					height: 50px;
-
-					.checkoutbb{
-						height: 50px;
-						line-height: 50px;
+				/* Products List Area
+				-------------------------*/
+				.productsListMainArea{
+					padding: 20px;
+					/* Product Tree */
+					.productTree{
+						margin-left: 1%;
 					}
-				}
-			}
-
-			/* Products List Area
-			-------------------------*/
-			.productsListMainArea{				
-				/* Product Tree */
-				.productTree{
-					margin-left: 1%;
-				}
-				/* Product Area */
-				.productsArea{
-					margin: 20px 0 0 1%;
-					.allProducts{
-						li{
-							.productInfo{
-								.productMeta{
-									.productBottomBar{
-										.productName{
-											width: 236px;
+					/* Product Area */
+					.productsArea{
+						margin: 20px 0 0 0;
+						.allProducts{
+							li{
+								.productInfo{
+									.productMeta{
+										.productBottomBar{
+											.productName{
+												width: 82%;
+												padding: 0;
+												text-indent: 15px;
+											}
 										}
 									}
 								}
@@ -433,7 +434,6 @@ $leftIm:left!important;
 						}
 					}
 				}
-			}
 	   	}
 		/* =============================================================================
 			SHOWS
@@ -677,43 +677,59 @@ $leftIm:left!important;
 		}
 		/* =============================================================================
 		   STORE
-	   	   ========================================================================== */
-   	   	#store{
-   	   		/* Shop Sub Nav
-			-------------------------*/
-			.shopBar{
-				padding: 0;
-				div{
-					ul{
-						li{
-							.productbb{
-								width: 57px;
-							}
-							.cartbb{
-								width: 50px;
-							}
-							.itemsbb{
-								width: 120px;
-							}
-							.checkoutbb{
-								width: 90px;
-							}
-						}
-					}
-				}
-			}
+ 	   ========================================================================== */
+	   	#store{		
 			.productsListMainArea{
+				width: 90%;
+				padding: 5%;
+				margin:0;
+
+				.productTree{
+					margin:0;
+				}
 
 				/* Product Area */
 				.productsArea{
-					margin: 20px 0 0 8%;
+					width: 100%;
 					.allProducts{
 						li{
 							float: none;
+							width: 100%;
 							margin: 0 20px 0 0;
+							.productInfo{
+								.productMeta{
+									.productBottomBar{
+										.productName{
+											width: 84.38042%;
+										}
+									}
+								}
+							}
 						}
 						.oddItem{
+							width: 100%;
 							margin: 0 0 20px 0;
+						}
+					}
+					.singleProductContainer{
+						width: 100%;
+						.singleProduct{
+							width: 100%; height: auto;
+							margin: 0;
+							.productBig{
+								width: 100%;
+								margin: 0 0 80px 0;
+								li{
+									a{
+										img{
+											height: auto;
+										}
+									}
+								}
+							}
+						}
+						.productInfoSinglePage{
+							width: 100%;
 						}
 					}
 				}

@@ -85,7 +85,7 @@
           <ul>
             <li class="navButton"><a class="home" href="<?php echo esc_url(home_url('/')); ?>" target="_top">HOME</a></li>
             <li class="divider"></li>
-            <li class="navButton"><a class="store" href="<?php echo esc_url(home_url('/')); ?>shop" target="_top">STORE</a></li>
+            <li class="navButton"><a class="store" href="<?php echo esc_url(home_url('/')); ?>?post_type=product" target="_top">STORE</a></li>
             <li class="divider"></li>
             <li class="navButton"><a class="shows" href="<?php echo esc_url(home_url('/')); ?>shows" target="_top">SHOWS</a></li>
             <li class="divider"></li>

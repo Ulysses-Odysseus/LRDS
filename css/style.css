@@ -386,7 +386,7 @@ a {
 	Content
    ========================================================================== */
 .content {
-  width: 780px;
+  width: 81.3%;
   overflow: hidden;
   margin: 19px 0 0 169px;
   /* =============================================================================
@@ -615,42 +615,58 @@ a {
     /* WooCommerce Specific */ }
     .content #store .shopBar {
       float: left;
-      width: 461px; }
-      .content #store .shopBar div {
-        float: left; }
-        .content #store .shopBar div ul {
+      width: 59.102564%; }
+      .content #store .shopBar ul {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 70px;
+        list-style-type: none;
+        background: url("../img/bar-bg-active.png") repeat; }
+        .content #store .shopBar ul .standarBack {
+          width: 30.368764%;
           margin: 0;
-          padding: 0;
-          width: 461px;
-          height: 70px;
-          list-style-type: none;
-          background: url("../img/bar-bg-active.png") repeat;
+          padding: 0; }
+        .content #store .shopBar ul li {
+          float: left !important;
+          text-align: center;
+          line-height: 70px;
+          vertical-align: middle;
           /* Drop Down Menu Shop */ }
-          .content #store .shopBar div ul li {
-            float: left !important;
-            text-align: center;
+          .content #store .shopBar ul li:first-child {
+            width: 38.828633%; }
+          .content #store .shopBar ul li #category_list {
+            display: block;
+            width: 100%;
+            height: 70px;
             line-height: 70px;
-            vertical-align: middle; }
-            .content #store .shopBar div ul li a {
-              height: inherit;
-              float: left !important;
-              color: #ffffff;
-              font-size: 13px;
-              text-decoration: none; }
-            .content #store .shopBar div ul li a:hover, .content #store .shopBar div ul li .active {
-              background: url("../img/bar-bg-active.png") repeat; }
-            .content #store .shopBar div ul li .productbb {
-              width: 108px; }
-            .content #store .shopBar div ul li .cartbb {
-              width: 81px; }
-            .content #store .shopBar div ul li .itemsbb {
-              width: 145px; }
-            .content #store .shopBar div ul li .checkoutbb {
-              width: 124px;
-              background: url("../img/bar-bg-active-red.png") repeat; }
-          .content #store .shopBar div ul .dropDownMenu {
+            background: transparent;
+            border: none;
+            color: white;
+            text-indent: 11.173184%;
+            text-transform: uppercase; }
+            .content #store .shopBar ul li #category_list:hover {
+              cursor: pointer; }
+          .content #store .shopBar ul li a {
+            height: inherit;
+            float: left !important;
+            color: #ffffff;
+            font-size: 13px;
+            text-decoration: none; }
+          .content #store .shopBar ul li a:hover, .content #store .shopBar ul li .active {
+            background: url("../img/bar-bg-active.png") repeat; }
+          .content #store .shopBar ul li .productbb {
+            width: 108px; }
+          .content #store .shopBar ul li .cartbb {
+            width: 81px; }
+          .content #store .shopBar ul li .itemsbb {
+            width: 100%; }
+          .content #store .shopBar ul li .checkoutbb {
+            width: 100%;
+            background: url("../img/bar-bg-active-red.png") repeat; }
+          .content #store .shopBar ul li .dropDownMenu {
             height: 100%; }
-            .content #store .shopBar div ul .dropDownMenu #category_list {
+            .content #store .shopBar ul li .dropDownMenu #category_list {
               height: 100%;
               padding: 0 40px 0 20px;
               border: none;
@@ -658,7 +674,7 @@ a {
               color: #efefef;
               text-align: center;
               background: url("../img/bar-bg-active.png") repeat; }
-            .content #store .shopBar div ul .dropDownMenu #category_list:after {
+            .content #store .shopBar ul li .dropDownMenu #category_list:after {
               content: "";
               background-repeat: no-repeat;
               background-position: right center;
@@ -714,8 +730,7 @@ a {
           background: white;
           list-style-type: none; }
           .content #store .productsListMainArea .productsArea .allProducts li .productInfo {
-            width: inherit;
-            height: inherit;
+            width: 100%;
             position: relative; }
             .content #store .productsListMainArea .productsArea .allProducts li .productInfo .productMeta {
               width: 100%;

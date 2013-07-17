@@ -416,7 +416,7 @@ a{
 	Content
    ========================================================================== */
 .content{
-	width: 780px;
+	width: 81.3%;
 	overflow: hidden;
 	margin: 19px 0 0 169px;
 	// background: yellow;
@@ -695,50 +695,67 @@ a{
 		-------------------------*/
 		.shopBar{
 			float: left;
-			width: 461px;
+			width: 59.102564%;
+			ul{	
+				margin: 0; padding: 0;
+				width: 100%; height: 70px;
+				list-style-type: none;
+				background: $background;
 
-			div{
-				float: left;
-				ul{	
+				.standarBack{
+					width: 30.368764%;
 					margin: 0; padding: 0;
-					width: 461px; height: 70px;
-					list-style-type: none;
-					background: $background;
-					
-					li{
-						float: $leftIm;
-						text-align: center;
+				}
+				
+				li{
+					float: $leftIm;
+					text-align: center;
+					line-height: 70px;
+					vertical-align: middle;
+					&:first-child{
+						width: 38.828633%;
+					}
+
+					#category_list{
+						display: block;
+						width: 100%;
+						height: 70px;
+						// margin-top: 15px;
 						line-height: 70px;
-						vertical-align: middle;
-
-						#category_list{
-							
-						}
-
-						a{
-							height:inherit; 
-							float: $leftIm;
-							color: #ffffff;
-							font-size: 13px;
-							text-decoration: none;
-						}
-						a:hover, .active{
-							background: $background;
-						}
-						.productbb{
-							width: 108px;
-						}
-						.cartbb{
-							width: 81px;
-						}
-						.itemsbb{
-							width: 145px;
-						}
-						.checkoutbb{
-							width: 124px;
-							background: $backgroundRed;
+						background: transparent;
+						border: none;
+						color: white;
+						text-indent: 11.173184%;
+						text-transform: uppercase;
+						&:hover{
+							cursor: pointer;
 						}
 					}
+
+					a{
+						height:inherit; 
+						float: $leftIm;
+						color: #ffffff;
+						font-size: 13px;
+						text-decoration: none;
+					}
+					a:hover, .active{
+						background: $background;
+					}
+					.productbb{
+						width: 108px;
+					}
+					.cartbb{
+						width: 81px;
+					}
+					.itemsbb{
+						width: 100%;
+					}
+					.checkoutbb{
+						width: 100%;
+						background: $backgroundRed;
+					}
+					
 					/* Drop Down Menu Shop */
 					.dropDownMenu{
 						height: 100%;
@@ -825,7 +842,7 @@ a{
 						background: white;
 						list-style-type: none;
 						.productInfo{
-							width: inherit; height: inherit;
+							width: 100%;
 							position: relative;
 							.productMeta{
 								width: 100%;

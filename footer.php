@@ -35,8 +35,8 @@
       /* Isotope 
       =============================*/
       var $container = $('.socialFeedArea ul'),
-      $body = $('.socialFeedArea ul'),
-      colW = 160,
+      $body   = $('.socialFeedArea ul'),
+      colW    = 160,
       columns = null;
   
       $container.isotope({
@@ -170,7 +170,7 @@
 
       /* Mobile Navigation functionality
         =============================*/
-      $('.toggle a, .navBar a').click(function(e) {
+      $('.toggle a').click(function(e) {
 
         var width = $(window).width();
 
@@ -190,7 +190,7 @@
           e.preventDefault();
         }
       });
-    }); /* End Document Scrpit */
+    }); /* End Document Script */
     
     /* Google Analytics 
     ================================================== */

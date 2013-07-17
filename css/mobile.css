@@ -64,7 +64,7 @@
     -------------------------*/
     	/* =============================================================================
     	   STORE
-       	   ========================================================================== */
+      ========================================================================== */
     /* =============================================================================
     	SHOWS
        ========================================================================== */
@@ -82,43 +82,52 @@
           padding: 0 40px 0 10px; }
         .content .searchBar .searchForm .searchIcon {
           padding: 0px 25px 0 25px; }
-    .content #store .productsListMainArea {
-      /* Product Area */ }
-      .content #store .productsListMainArea .productsArea {
-        /* Single Product Page */ }
-        .content #store .productsListMainArea .productsArea .allProducts li {
-          width: 300px;
-          height: 300px; }
-          .content #store .productsListMainArea .productsArea .allProducts li .productInfo .imgProduct {
+    .content #store {
+   		/* Shop Sub Nav
+			-------------------------*/ }
+      .content #store .shopBar ul .standarBack {
+        width: 30.318535%;
+        margin: 0;
+        padding: 0; }
+      .content #store .productsListMainArea {
+        /* Product Area */ }
+        .content #store .productsListMainArea .productsArea {
+          /* Single Product Page */ }
+          .content #store .productsListMainArea .productsArea .allProducts li {
             width: 300px;
             height: 300px; }
-          .content #store .productsListMainArea .productsArea .allProducts li .productInfo .productBottomBar {
-            width: 300px;
-            height: 45px; }
-            .content #store .productsListMainArea .productsArea .allProducts li .productInfo .productBottomBar .productName {
-              width: 235px;
-              height: inherit; }
-        .content #store .productsListMainArea .productsArea .singleProductContainer {
-          /* Product Info Single Page */ }
-          .content #store .productsListMainArea .productsArea .singleProductContainer .singleProduct .productBig {
-            width: 350px;
-            height: 350px; }
-          .content #store .productsListMainArea .productsArea .singleProductContainer .productInfoSinglePage {
-            width: 250px; }
-            .content #store .productsListMainArea .productsArea .singleProductContainer .productInfoSinglePage .infoContainer .productTitle {
-              font-size: 20px; }
-            .content #store .productsListMainArea .productsArea .singleProductContainer .productInfoSinglePage .infoContainer .productPrice {
-              margin: 20px 0 20px 33px; }
-            .content #store .productsListMainArea .productsArea .singleProductContainer .productInfoSinglePage .infoContainer .info {
-              font-size: 11px; }
-            .content #store .productsListMainArea .productsArea .singleProductContainer .productInfoSinglePage .infoContainer ul li .size {
-              width: 135px; }
-            .content #store .productsListMainArea .productsArea .singleProductContainer .productInfoSinglePage .infoContainer ul li .qty {
-              width: 50px; }
-            .content #store .productsListMainArea .productsArea .singleProductContainer .productInfoSinglePage .infoContainer .addCartSpace {
-              width: inherit;
-              display: block;
-              margin: 0 20%; }
+            .content #store .productsListMainArea .productsArea .allProducts li .productInfo .imgProduct {
+              width: 300px;
+              height: 300px; }
+            .content #store .productsListMainArea .productsArea .allProducts li .productInfo .productMeta .productBottomBar {
+              width: 100%;
+              height: 45px; }
+              .content #store .productsListMainArea .productsArea .allProducts li .productInfo .productMeta .productBottomBar .productName {
+                width: 235px;
+                height: inherit; }
+          .content #store .productsListMainArea .productsArea .singleProductContainer {
+            /* Product Info Single Page */ }
+            .content #store .productsListMainArea .productsArea .singleProductContainer .singleProduct {
+              width: 350px; }
+              .content #store .productsListMainArea .productsArea .singleProductContainer .singleProduct .productBig {
+                width: 350px;
+                height: 350px; }
+            .content #store .productsListMainArea .productsArea .singleProductContainer .productInfoSinglePage {
+              width: 250px; }
+              .content #store .productsListMainArea .productsArea .singleProductContainer .productInfoSinglePage .infoContainer .productTitle {
+                font-size: 20px; }
+              .content #store .productsListMainArea .productsArea .singleProductContainer .productInfoSinglePage .infoContainer .productPrice {
+                margin: 20px 0 20px 33px; }
+              .content #store .productsListMainArea .productsArea .singleProductContainer .productInfoSinglePage .infoContainer .info {
+                font-size: 11px; }
+              .content #store .productsListMainArea .productsArea .singleProductContainer .productInfoSinglePage .infoContainer ul li .size {
+                width: 135px; }
+              .content #store .productsListMainArea .productsArea .singleProductContainer .productInfoSinglePage .infoContainer ul li .qty {
+                width: 50px; }
+              .content #store .productsListMainArea .productsArea .singleProductContainer .productInfoSinglePage .infoContainer .addCartSpace {
+                width: inherit;
+                display: block;
+                margin: 0 20%; }
     .content #shows .showlist li .date {
       width: 110px;
       height: 110px; }
@@ -289,33 +298,28 @@
             padding: 0 0 0 0; }
     .content #store {
    		/* Shop Sub Nav
-		-------------------------*/
+			-------------------------*/
       /* Products List Area
       -------------------------*/ }
       .content #store .shopBar {
-        width: 100%;
-        padding: 0 8%;
-        margin-top: 1px;
-        background: url("../img/bar-bg-active.png") repeat; }
-        .content #store .shopBar div ul {
+        width: 100%; }
+        .content #store .shopBar ul {
           width: 100%;
-          height: 50px; }
-          .content #store .shopBar div ul li {
-            line-height: 50px; }
-        .content #store .shopBar .checkOutul {
-          height: 50px; }
-          .content #store .shopBar .checkOutul .checkoutbb {
-            height: 50px;
-            line-height: 50px; }
+          height: 70px; }
+          .content #store .shopBar ul .standarBack {
+            width: 30.278319%; }
       .content #store .productsListMainArea {
+        padding: 20px;
         /* Product Tree */
         /* Product Area */ }
         .content #store .productsListMainArea .productTree {
           margin-left: 1%; }
         .content #store .productsListMainArea .productsArea {
-          margin: 20px 0 0 1%; }
+          margin: 20px 0 0 0; }
           .content #store .productsListMainArea .productsArea .allProducts li .productInfo .productMeta .productBottomBar .productName {
-            width: 236px; }
+            width: 82%;
+            padding: 0;
+            text-indent: 15px; }
     .content #shows {
       width: 200%; }
       .content #shows .showlist {
@@ -488,9 +492,9 @@
   	Content
      ========================================================================== */
   .content {
-    	/* =============================================================================
-    	   STORE
-       	   ========================================================================== */
+    		/* =============================================================================
+    		   STORE
+     	   ========================================================================== */
     /* =============================================================================
     	SHOWS
        ========================================================================== */
@@ -503,28 +507,37 @@
     .content #home .bloglist .socialFeedArea ul {
       min-width: 105% !important;
       padding: 0 0 0 10px; }
-    .content #store {
-   	   		/* Shop Sub Nav
-			-------------------------*/ }
-      .content #store .shopBar {
-        padding: 0; }
-        .content #store .shopBar div ul li .productbb {
-          width: 57px; }
-        .content #store .shopBar div ul li .cartbb {
-          width: 50px; }
-        .content #store .shopBar div ul li .itemsbb {
-          width: 120px; }
-        .content #store .shopBar div ul li .checkoutbb {
-          width: 90px; }
-      .content #store .productsListMainArea {
-        /* Product Area */ }
-        .content #store .productsListMainArea .productsArea {
-          margin: 20px 0 0 8%; }
-          .content #store .productsListMainArea .productsArea .allProducts li {
-            float: none;
-            margin: 0 20px 0 0; }
-          .content #store .productsListMainArea .productsArea .allProducts .oddItem {
-            margin: 0 0 20px 0; }
+    .content #store .productsListMainArea {
+      width: 90%;
+      padding: 5%;
+      margin: 0;
+      /* Product Area */ }
+      .content #store .productsListMainArea .productTree {
+        margin: 0; }
+      .content #store .productsListMainArea .productsArea {
+        width: 100%; }
+        .content #store .productsListMainArea .productsArea .allProducts li {
+          float: none;
+          width: 100%;
+          margin: 0 20px 0 0; }
+          .content #store .productsListMainArea .productsArea .allProducts li .productInfo .productMeta .productBottomBar .productName {
+            width: 84.38042%; }
+        .content #store .productsListMainArea .productsArea .allProducts .oddItem {
+          width: 100%;
+          margin: 0 0 20px 0; }
+        .content #store .productsListMainArea .productsArea .singleProductContainer {
+          width: 100%; }
+          .content #store .productsListMainArea .productsArea .singleProductContainer .singleProduct {
+            width: 100%;
+            height: auto;
+            margin: 0; }
+            .content #store .productsListMainArea .productsArea .singleProductContainer .singleProduct .productBig {
+              width: 100%;
+              margin: 0 0 80px 0; }
+              .content #store .productsListMainArea .productsArea .singleProductContainer .singleProduct .productBig li a img {
+                height: auto; }
+          .content #store .productsListMainArea .productsArea .singleProductContainer .productInfoSinglePage {
+            width: 100%; }
     .content #shows .showlist li .place {
       width: 74.839%; }
       .content #shows .showlist li .place .namePlace {
