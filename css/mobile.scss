@@ -760,6 +760,7 @@ $leftIm:left!important;
 	    	.aboutContainer{
 	    		.aboutTitle{
 	    			font-size: 20px;
+	    			min-height: 100%;
 	    		}
 	    		.aboutText{
 	    			.columText{
@@ -772,7 +773,9 @@ $leftIm:left!important;
 			NEWSLETTER
 		   ========================================================================== */
 		#subscribe{
-			width: 88%;
+			width: 90%;
+			min-height: 100%;
+			padding: 5%;
 		}
 	}
 }

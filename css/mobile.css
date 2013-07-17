@@ -545,8 +545,11 @@
       .content #shows .showlist li .place .button {
         display: none; }
     .content #about .aboutContainer .aboutTitle, .content #blogsingle .aboutContainer .aboutTitle, .content #showsingle .aboutContainer .aboutTitle {
-      font-size: 20px; }
+      font-size: 20px;
+      min-height: 100%; }
     .content #about .aboutContainer .aboutText .columText, .content #blogsingle .aboutContainer .aboutText .columText, .content #showsingle .aboutContainer .aboutText .columText {
       width: 100%; }
     .content #subscribe {
-      width: 88%; } }
+      width: 90%;
+      min-height: 100%;
+      padding: 5%; } }
