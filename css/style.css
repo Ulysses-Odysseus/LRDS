@@ -1049,9 +1049,7 @@ a {
         padding: 25px 0 0 0; }
       .content #about .aboutContainer .aboutImage, .content #blogsingle .aboutContainer .aboutImage, .content #showsingle .aboutContainer .aboutImage, .content #store .aboutContainer .aboutImage {
         width: 740px;
-        height: 358px;
-        margin: 20px 0;
-        background: #366c9a; }
+        margin: 20px 0 0 0; }
       .content #about .aboutContainer .aboutText, .content #blogsingle .aboutContainer .aboutText, .content #showsingle .aboutContainer .aboutText, .content #store .aboutContainer .aboutText {
         width: 100%;
         padding: 2.5% 0 2.5% 0;
