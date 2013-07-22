@@ -1,32 +1,28 @@
 /* =============================================================================
-	Style CSS by FatCat Online											
-  	http://fatcatonline.net/ 
-	Last Update June/28/13 
-   ========================================================================== */
-
-/* SASS Settings -- Delete this title when done ediitng
-=============================*/  
+	Style by FatCat											
+	http://fatcatonline.net/
+========================================================================== */
 
 /* Background */
-$background:url('../img/bar-bg-active.png') repeat;
-$backgroundRed:url('../img/bar-bg-active-red.png') repeat;
-$backgroundBlack:url('../img/bar-bg-active-black.png') repeat;
-$backgroundYellow:url('../img/bar-bg-active-green.png') repeat;
-$backgroundBlue:url('../img/bar-bg-active-blue.png') repeat;
-$backgroundOrange:url('../img/bar-bg-active-orange.png') repeat;
+$background:       url('../img/bar-bg-active.png') repeat;
+$backgroundRed:    url('../img/bar-bg-active-red.png') repeat;
+$backgroundBlack:  url('../img/bar-bg-active-black.png') repeat;
+$backgroundYellow: url('../img/bar-bg-active-green.png') repeat;
+$backgroundBlue:   url('../img/bar-bg-active-blue.png') repeat;
+$backgroundOrange: url('../img/bar-bg-active-orange.png') repeat;
 $mainGreen : #9fa326;
 $mainOrange: #dc8d40;
 $mainred   : #841212;
 
 /* Font Color */ 
 $fc-white: #efefef;
-$fc-grey: #555555;
+$fc-grey:  #555555;
 
 /* Line Color */
 $lc-white: #858585;
 
 /* Background Colors */
-$bcRed:#841212;
+$bcRed:  #841212;
 $bcGray: #575757;
 
 $leftIm:left!important;
@@ -37,9 +33,9 @@ html,
 body {
 	background: #ffffff url('../img/body-bg.jpg') no-repeat center center fixed!important;
 	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+	   -moz-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
 }
 
 img{
@@ -140,6 +136,8 @@ a{
   0% {margin: 0 0 0 -40px;}
   100% {margin: 0 0 0 0;}
 }
+
+
 /* =============================================================================
 	Container
    ========================================================================== */
@@ -190,7 +188,6 @@ a{
 		}
 	}
 }
-	
 
 /* =============================================================================
 	Side Bar
@@ -714,13 +711,14 @@ a{
 					vertical-align: middle;
 					&:first-child{
 						width: 38.828633%;
+						background: url("../img/select_arrow.png") no-repeat right center;
 					}
 
+					/* Drop Down Menu Shop */
 					#category_list{
 						display: block;
 						width: 100%;
 						height: 70px;
-						// margin-top: 15px;
 						line-height: 70px;
 						background: transparent;
 						border: none;
@@ -756,7 +754,9 @@ a{
 						background: $backgroundRed;
 					}
 					
-					/* Drop Down Menu Shop */
+					/** Duplicate code I believe - See line 717
+					*
+					*
 					.dropDownMenu{
 						height: 100%;
 						#category_list{
@@ -768,13 +768,8 @@ a{
 							text-align: center;
 							background: url("../img/bar-bg-active.png") repeat;
 						}
-						#category_list:after{
-							content: "";
-							background-repeat: no-repeat;
-							background-position: right center;
-							background-image: url(data:image/png;base64,R0lGODlhDQAEAIAAAAAAAP8A/yH5BAEHAAEALAAAAAANAAQAAAILhA+hG5jMDpxvhgIAOw==);
-						}
 					}
+					**/
 				}
 			}
 				

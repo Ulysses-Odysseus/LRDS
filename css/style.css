@@ -1,10 +1,7 @@
 /* =============================================================================
-	Style CSS by FatCat Online											
-  	http://fatcatonline.net/ 
-	Last Update June/28/13 
-   ========================================================================== */
-/* SASS Settings -- Delete this title when done ediitng
-=============================*/
+	Style by FatCat											
+	http://fatcatonline.net/
+========================================================================== */
 /* Background */
 /* Font Color */
 /* Line Color */
@@ -632,9 +629,26 @@ a {
           text-align: center;
           line-height: 70px;
           vertical-align: middle;
-          /* Drop Down Menu Shop */ }
+          /* Drop Down Menu Shop */
+          /** Duplicate code I believe - See line 717
+          *
+          *
+          .dropDownMenu{
+          	height: 100%;
+          	#category_list{
+          		height: 100%;
+          		padding: 0 40px 0 20px;
+          		border: none;
+          		outline: none;
+          		color: #efefef;
+          		text-align: center;
+          		background: url("../img/bar-bg-active.png") repeat;
+          	}
+          }
+          **/ }
           .content #store .shopBar ul li:first-child {
-            width: 38.828633%; }
+            width: 38.828633%;
+            background: url("../img/select_arrow.png") no-repeat right center; }
           .content #store .shopBar ul li #category_list {
             display: block;
             width: 100%;
@@ -664,21 +678,6 @@ a {
           .content #store .shopBar ul li .checkoutbb {
             width: 100%;
             background: url("../img/bar-bg-active-red.png") repeat; }
-          .content #store .shopBar ul li .dropDownMenu {
-            height: 100%; }
-            .content #store .shopBar ul li .dropDownMenu #category_list {
-              height: 100%;
-              padding: 0 40px 0 20px;
-              border: none;
-              outline: none;
-              color: #efefef;
-              text-align: center;
-              background: url("../img/bar-bg-active.png") repeat; }
-            .content #store .shopBar ul li .dropDownMenu #category_list:after {
-              content: "";
-              background-repeat: no-repeat;
-              background-position: right center;
-              background-image: url(data:image/png;base64,R0lGODlhDQAEAIAAAAAAAP8A/yH5BAEHAAEALAAAAAANAAQAAAILhA+hG5jMDpxvhgIAOw==); }
       .content #store .shopBar .checkOutul {
         width: 124px;
         height: 70px;

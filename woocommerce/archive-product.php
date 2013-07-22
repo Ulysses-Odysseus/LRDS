@@ -13,9 +13,8 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 global $woocommerce;
 
-get_header('shop'); ?>
+get_header('shop');
 
-<?php
 	/**
 	 * woocommerce_before_main_content hook
 	 *
@@ -54,12 +53,14 @@ get_header('shop'); ?>
   </div>
 </div>
 
+
 <!-- Search Bar
 ---------------------->
 <?php get_search_form(); ?>
 
+
 <!-- Products List Display Area
----------------------->
+-------------------------------->
 <div class="productsListMainArea">
 
 	<?php do_action( 'woocommerce_archive_description' ); ?>
@@ -107,7 +108,7 @@ get_header('shop'); ?>
 
 	<?php endif; ?>
 
-</div> <!-- End Products List Display Area -->
+</div> <!-- End Products List Display Area --> 
 
 <?php
 	/**
