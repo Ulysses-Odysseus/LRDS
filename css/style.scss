@@ -945,7 +945,7 @@ a{
 					
 					/* Product Info Single Page */
 					.productInfoSinglePage{
-						width: 300px;
+						width: 299px;
 						float: left;
 						margin-left:20px;
 						background: $background;
@@ -972,6 +972,9 @@ a{
 							}
 							.info{
 								font-size: 13px;
+							}
+							.quantity{
+								margin: 30px 0 10px 0;
 							}
 							ul{
 								margin: 20px 0 0 0;

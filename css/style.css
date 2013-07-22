@@ -818,7 +818,7 @@ a {
                   width: 60px;
                   height: 60px; }
           .content #store .productsListMainArea .productsArea .singleProductContainer .productInfoSinglePage {
-            width: 300px;
+            width: 299px;
             float: left;
             margin-left: 20px;
             background: url("../img/bar-bg-active.png") repeat; }
@@ -844,6 +844,8 @@ a {
                 font-size: 29px; }
               .content #store .productsListMainArea .productsArea .singleProductContainer .productInfoSinglePage .infoContainer .info {
                 font-size: 13px; }
+              .content #store .productsListMainArea .productsArea .singleProductContainer .productInfoSinglePage .infoContainer .quantity {
+                margin: 30px 0 10px 0; }
               .content #store .productsListMainArea .productsArea .singleProductContainer .productInfoSinglePage .infoContainer ul {
                 margin: 20px 0 0 0; }
                 .content #store .productsListMainArea .productsArea .singleProductContainer .productInfoSinglePage .infoContainer ul li {
