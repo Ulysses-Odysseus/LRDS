@@ -227,6 +227,7 @@ a{
 			li{
 				width: 80px; height: 70px;
 				margin-bottom: 1px;
+				font-size: .85em;
 				color: $fc-white;
 				line-height: 70px;
 				text-align: center;
@@ -831,7 +832,7 @@ a{
 						margin: 0 20px 0 0;
 					}
 					li{
-						width: 380px; height: 380px;
+						width: 380px; height: auto;
 						margin: 0 0 20px 0;
 						float: left;
 						background: white;
