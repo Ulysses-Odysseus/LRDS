@@ -910,7 +910,7 @@ a{
 
 						.productBig{
 							width: 461px; height: 461px;
-							margin: 0 0 80px 0;
+							margin: 0 20px 80px 0;
 							background: #ffffff;
 							li{
 								width: inherit; height: inherit;
@@ -946,7 +946,8 @@ a{
 					/* Product Info Single Page */
 					.productInfoSinglePage{
 						width: 300px;
-						float: right;
+						float: left;
+						margin-left:20px;
 						background: $background;
 						.infoContainer{
 							color: #ffffff;

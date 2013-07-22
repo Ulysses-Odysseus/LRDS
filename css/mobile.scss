@@ -40,9 +40,9 @@ $leftIm:left!important;
 	body {
 		background: #cccccc!important;
 		-webkit-background-size: none;
-		-moz-background-size: none;
-		-o-background-size: none;
-		background-size: none;
+		   -moz-background-size: none;
+		     -o-background-size: none;
+		        background-size: none;
 		// overflow: hidden; /* Removed on live */
 	}
 
@@ -613,10 +613,10 @@ $leftIm:left!important;
 }
 
 /*==========================*/
-/*							*/
-/***	  MEDIA QUERY     ***/
-/***		 620px        ***/
-/*							*/
+/*							            */
+/***	  MEDIA QUERY       ***/
+/***		 620px            ***/
+/*							            */
 /*==========================*/
 
 @media screen and (max-width: 620px) {
@@ -629,9 +629,19 @@ $leftIm:left!important;
 		   ========================================================================== */
 	   	#store{
 			.productsListMainArea{
-
+				padding:0;
 				/* Product Area */
 				.productsArea{
+					.singleProductContainer{
+						.productInfoSinglePage{
+							width: 100%;
+							margin: 0;
+						}
+						.singleProduct{
+							width: 100%;
+							background: white;
+						}
+					}
 					.allProducts{
 						width: 100%;
 						margin: 0 auto;

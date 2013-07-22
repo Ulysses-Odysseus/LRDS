@@ -5,10 +5,10 @@
 /* Line Color */
 /* Background Colors */
 /*==========================*/
-/*							*/
-/***	  MEDIA QUERY     ***/
-/***		 860px        ***/
-/*							*/
+/*							            */
+/***	  MEDIA QUERY       ***/
+/***		 860px            ***/
+/*							            */
 /*==========================*/
 @media screen and (max-width: 860px) {
   /* General Settings
@@ -454,10 +454,10 @@
         .sideBar .navBar ul .activeNav {
           background: none; } }
 /*==========================*/
-/*							*/
-/***	  MEDIA QUERY     ***/
-/***		 620px        ***/
-/*							*/
+/*							            */
+/***	  MEDIA QUERY       ***/
+/***		 620px            ***/
+/*							            */
 /*==========================*/
 @media screen and (max-width: 620px) {
   /* =============================================================================
@@ -468,7 +468,14 @@
     	   STORE
        ========================================================================== */ }
     .content #store .productsListMainArea {
+      padding: 0;
       /* Product Area */ }
+      .content #store .productsListMainArea .productsArea .singleProductContainer .productInfoSinglePage {
+        width: 100%;
+        margin: 0; }
+      .content #store .productsListMainArea .productsArea .singleProductContainer .singleProduct {
+        width: 100%;
+        background: white; }
       .content #store .productsListMainArea .productsArea .allProducts {
         width: 100%;
         margin: 0 auto; }
