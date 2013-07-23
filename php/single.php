@@ -45,7 +45,7 @@ if(isset($postid) && $postid != '' && isset($type) && $type != '') {
         	// Setup variables for the post
         	$timestamp = $postData->post_date;
         	$title     = $postData->post_title;
-            $content   = $postData->post_content;
+            $content   = apply_filters('the_content', $postData->post_content);
             $month     = get_post_meta($postid, 'Event Month', true);
             $day       = get_post_meta($postid, 'Event Day', true);
             $who       = get_post_meta($postid, 'Who', true);
@@ -89,7 +89,7 @@ if(isset($postid) && $postid != '' && isset($type) && $type != '') {
 
             // Setup variables for the post
             $title   = $postData->post_title;
-            $content = $postData->post_content;
+            $content = apply_filters('the_content', $postData->post_content);
 
             // Build the post
             $thepost = '<div class="aboutTitle">'.$title.'</div>

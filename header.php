@@ -7,11 +7,11 @@
     <meta charset="utf-8"/>
     <title>LRDS - Los Rodriguez De Sinaloa</title>
     <meta name="description" content="<?php bloginfo('description'); ?>">
-    <meta name="author" content="">
+    <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/img/favicon.png" />
 
     <!-- Mobile Metas
     ================================================== -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     
     <!-- Web App Metas
     ================================================== -->
